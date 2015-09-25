@@ -1,0 +1,104 @@
+html {
+  position: relative;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  color: transparent !important;
+  opacity: 1 !important;
+
+  body {
+    position: relative;
+    display: inline-block;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    opacity: 1 !important;
+    color: $primary-font-color;
+
+    > * {
+      opacity: 1 !important;
+    }
+
+    h4.slogan {
+      opacity: 0.5;
+    }
+
+    > .container {
+      position: relative;
+      background: transparent !important;
+
+      .content {
+        position: relative;
+        min-height: 100%;
+
+        .main,
+        .sidebar {
+          position: relative;
+          display: inline-block;
+          width: 100% !important;
+          max-width: 70%;
+          background-color: $primary-color;
+          padding: 30px !important;
+          > * > * {
+            margin: 0 10px 15px !important;
+          }
+-webkit-border-radius: 7px !important;
+border-radius: 7px !important;
+          border: 1px solid $border-color !important;
+-webkit-box-shadow: 0 0 6px 0 $shadow-color;
+box-shadow: 0 0 6px 0 $shadow-color;
+          overflow: hidden !important;
+
+          a {
+            color: $secondary-color !important;
+          }
+
+          div {
+            h1 {
+              span.vcard {
+                font-family: 'IM Fell Great Primer', serif !important;
+              }
+            }
+          }
+        }
+
+        .sidebar {
+          display: inline-block !important;
+          max-width: 28% !important;
+          padding: 15px !important;
+          margin-top: 15px !important;
+          margin-left: 2% !important;
+
+          .input-group {
+            position: relative;
+            display: inline-block;
+            float: left;
+            width: 100%;
+            min-height: 45px !important;
+            padding-bottom: 45px;
+
+            > input {
+              float: left;
+              min-width: 50%;
+              max-width: 70%;
+            }
+
+            > span {
+              float: right;
+              width: 100%;
+              max-width: 18%;
+            }
+          }
+        }
+
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      padding: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    margin-bottom: 15px !important;
+  }
+}

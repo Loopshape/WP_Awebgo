@@ -1,0 +1,28 @@
+html {
+  body {
+    > .container {
+      .content {
+        .sidebar {
+          .widget {
+            form.search-form.form-inline {
+              margin-top: 30px !important;
+            }
+          }
+
+          ul,
+          ol,
+          menu,
+          dir {
+              display: block;
+              list-style-type: square;
+              -webkit-margin-before: 1em;
+              -webkit-margin-after: 1em;
+              -webkit-margin-start: 0px;
+              -webkit-margin-end: 0px;
+              -webkit-padding-start: 15px !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.comment-list {
+  @include list-unstyled;
+
+  > article {
+    padding-bottom: 15px;
+
+    article {
+      margin-top: 15px;
+    }
+  }
+
+  .reply {
+    margin-bottom: 30px;
+  }
+}
+.comment-list ol {
+  list-style: none !important;
+}
+.comment-form p {
+  @extend .form-group;
+}
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  @extend .form-control;
+}
+.comment-form input[type="submit"] {
+  @extend .btn;
+  @extend .btn-primary;
+}

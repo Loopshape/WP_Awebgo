@@ -1,0 +1,28 @@
+body {
+  overflow: hidden !important;
+  overflow-y: scroll !important;
+
+  > footer {
+    position: absolute !important;
+    bottom: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 60px !important;
+    margin-top: -60px !important;
+    background-color: $primary-color;
+
+    .container {
+      margin-top: 15px !important;
+      margin-bottom: 30px !important;
+
+      a.brand {
+        font-size: 4.5em !important;
+        font-weight: bold !important;
+        font-family: 'IM Fell Great Primer', serif;
+        color: $secondary-color !important;
+        text-decoration: none !important;
+      }
+    }
+  }
+}

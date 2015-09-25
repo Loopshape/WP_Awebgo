@@ -1,0 +1,13 @@
+<img class="webArea" src="/wp-content/uploads/2015/09/raw_background.jpg" alt="" width="auto" height="100%">
+<header class="banner" role="banner">
+  <div class="container">
+    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+    <nav role="navigation">
+      <?php
+      if (has_nav_menu('primary_navigation')) :
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+      endif;
+      ?>
+    </nav>
+  </div>
+</header>
