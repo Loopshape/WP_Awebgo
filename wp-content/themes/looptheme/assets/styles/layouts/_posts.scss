@@ -19,6 +19,10 @@ html {
           width: 100%;
           margin-top: 15px !important;
 
+          > * {
+            margin: 15px !important;
+          }
+
           .page-header {
             border-color: transparent !important;
           }
@@ -51,8 +55,8 @@ html {
               background-attachment: fixed;
               padding: 10px 15px !important;
               border: 1px solid $border-color !important;
--webkit-border-radius: 25px !important;
-border-radius: 25px !important;
+-webkit-border-radius: 12px !important;
+border-radius: 12px !important;
               overflow: hidden !important;
             }
           }
@@ -182,6 +186,20 @@ border-radius: 6px !important;
           }
 
           padding-bottom: 15px !important;
+        }
+
+        .sidebar {
+          > * {
+            margin: 0 15px !important;
+
+            &:first-child {
+              margin-top: 15px !important;
+            }
+
+            &:last-child {
+              margin-bottom: 15px !important;
+            }
+          }
         }
 
         #comments {

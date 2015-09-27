@@ -21,7 +21,8 @@ body {
 
       a.brand {
         position: relative;
-        float: left;
+        display: block;
+        float: none;
         font-size: 4.2em !important;
         font-weight: bold !important;
         font-family: 'IM Fell Great Primer', serif;
@@ -29,13 +30,68 @@ body {
         text-decoration: none !important;
         text-shadow: 0 0 3px $quarter-color !important;
         margin-right: 2% !important;
+        z-index: 0;
+
+        img.mainLogo {
+          position: relative;
+          left: -20px;
+          display: block;
+          width: 100%;
+          max-width: 480px;
+          height: auto !important;
+          z-index: 10000;
+        }
       }
 
       .slogan {
         position: relative;
-        display: inline-block;
+        display: none !important;//inline-block;
+        visibility: hidden !important;
         margin-top: 2.25em !important;
         letter-spacing: 0.025em !important;
+      }
+
+      > nav {
+        position: relative;
+        clear: both;
+        display: inline-block;
+        z-index: 9500;
+
+        div {
+          ul {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto !important;
+
+            li {
+              display: inline-block;
+              padding: 0 !important;
+              margin-right: 0.5em !important;
+              background-color: none;
+              background-image: url('/wp-content/themes/looptheme/assets/images/RedColorArea.jpg');
+              background-size: 100%;
+              background-position: top left;
+              background-attachment: fixed;
+-webkit-border-radius: 12px !important;
+border-radius: 12px !important;
+              border: 1px solid $border-color !important;
+-webkit-box-shadow: 0 0 6px 0 $shadow-color;
+box-shadow: 0 0 6px 0 $shadow-color;
+              overflow: hidden !important;
+
+              a {
+                color: $tertiary-color !important;
+                font-size: 1.25em !important;
+                padding: 0.5em 0.75em !important;
+              }
+
+              &:hover {
+                background-image: url('/wp-content/themes/looptheme/assets/images/GreenColorArea.jpg');
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -12,17 +12,17 @@ $backbone-primary: rgba(0,16,32,1);
 $footer-color: rgba(0,0,0,0.5);
 
 $base-color: rgba(40,50,60,0.75);
-$ground-color: rgba(5,10,14,1);
-$primary-color: rgba(18,28,38,1);
-$secondary-color: rgba(160,170,180,1);
-$tertiary-color: rgba(245,220,15,1);
+$ground-color: rgba(5,10,14,0.8);
+$primary-color: rgba(18,28,38,0.8);
+$secondary-color: rgba(160,170,180,0.8);
+$tertiary-color: rgba(245,220,15,0.8);
 $quarter-color: rgba(0,0,0,0.75);
 $fifth-color: rgba(230,240,250,0.95);
 
 $main-font-color: $fifth-color;
 $primary-font-color: $fifth-color - rgba(40,40,40,0.95);
-$secondary-font-color: rgba(230,10,20,1);
-$tertiary-font-color: $tertiary-color + rgba(64,54,12,1);
+$secondary-font-color: rgba(180,10,20,1);
+$tertiary-font-color: $tertiary-color + rgba(64,54,12,0.8);
 $quarter-font-color: $fifth-color;
 
 $font-opacity: 1;
