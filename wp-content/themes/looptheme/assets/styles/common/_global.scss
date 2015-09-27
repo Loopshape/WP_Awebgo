@@ -188,6 +188,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28b006', end
       }
     }
 
+    .container {
+      .main {
+        img {
+          margin-right: 2% !important;
+          margin-bottom: 15px !important;
+          border: 5px solid $footer-border-color !important;
+          -webkit-border-radius: 12px !important;
+          border-radius: 12px !important;
+          overflow: hidden !important;
+        }
+      }
+    }
+
     .webArea {
       position: fixed;
       display: block;
