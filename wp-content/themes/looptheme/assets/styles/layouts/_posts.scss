@@ -14,6 +14,19 @@ html {
       .content {
         padding: 15px 0 !important;
 
+        > * pre {
+          font-size: 0.5em !important;
+          color: $fifth-color !important;
+
+          & > * {
+            font-size: 0.8em !important;
+            color: $tertiary-color !important;
+          }
+
+          background-color: rgba(0,0,0,0.8);
+          border-color: transparent !important;
+        }
+
         .main {
           display: inherit;
           width: 100%;
