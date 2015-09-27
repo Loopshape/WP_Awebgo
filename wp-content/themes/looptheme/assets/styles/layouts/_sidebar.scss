@@ -3,6 +3,11 @@ html {
     > .container {
       .content {
         .sidebar {
+
+          h1, h2, h3 {
+            color: $tertiary-color !important;
+          }
+
           .widget {
             form.search-form.form-inline {
               margin-top: 30px !important;

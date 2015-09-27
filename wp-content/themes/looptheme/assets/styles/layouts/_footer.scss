@@ -1,16 +1,33 @@
-body {
+html body {
   overflow: hidden !important;
   overflow-y: scroll !important;
 
   > footer {
-    position: absolute !important;
-    bottom: 0 !important;
-    display: block !important;
+    position: relative;
+    display: block;
     width: 100% !important;
     height: auto !important;
-    min-height: 60px !important;
-    margin-top: -60px !important;
-    background-color: $primary-color;
+    background-color: $footer-color !important;
+    padding: 30px !important;
+
+    > * > * {
+      margin: 0 10px 15px !important;
+    }
+
+//-webkit-border-radius: 7px !important;
+//border-radius: 7px !important;
+//    border: 1px solid $border-color !important;
+-webkit-box-shadow: 0 0 6px 0 $shadow-color;
+box-shadow: 0 0 6px 0 $shadow-color;
+    overflow: visible !important;
+
+    h1, h2, h3 {
+      color: $tertiary-color !important;
+    }
+
+    a {
+      color: $secondary-color !important;
+    }
 
     .container {
       margin-top: 15px !important;

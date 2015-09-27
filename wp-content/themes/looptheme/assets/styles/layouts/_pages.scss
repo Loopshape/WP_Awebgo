@@ -14,6 +14,7 @@ html {
     min-height: 100% !important;
     opacity: 1 !important;
     color: $primary-font-color;
+    margin-bottom: 15px !important;
 
     > * {
       opacity: 1 !important;
@@ -21,6 +22,12 @@ html {
 
     h4.slogan {
       opacity: 0.5;
+    }
+
+    > header > div > nav {
+      * {
+        background-color: transparent !important;
+      }
     }
 
     > .container {
@@ -38,7 +45,7 @@ html {
           width: 100% !important;
           max-width: 70%;
           background-color: $primary-color;
-          padding: 30px !important;
+          padding: 15px !important;
           > * > * {
             margin: 0 10px 15px !important;
           }
@@ -48,6 +55,11 @@ border-radius: 7px !important;
 -webkit-box-shadow: 0 0 6px 0 $shadow-color;
 box-shadow: 0 0 6px 0 $shadow-color;
           overflow: hidden !important;
+
+          .page-header {
+            border-color: $secondary-color !important;
+            border-width: 2px !important;
+          }
 
           a {
             color: $secondary-color !important;
@@ -69,6 +81,26 @@ box-shadow: 0 0 6px 0 $shadow-color;
           margin-top: 15px !important;
           margin-left: 2% !important;
 
+          > * {
+            background: url('/wp-content/themes/looptheme/assets/images/MetalPanel.png');
+            background-size: 100%;
+            padding: 15px !important;
+
+            &:first-child {
+-webkit-border-radius: 12px 12px 0 0 !important;
+border-radius: 12px 12px 0 0 !important;
+              border: 1px solid transparent !important;
+              overflow: hidden !important;
+            }
+
+            &:last-child {
+-webkit-border-radius: 0 0 12px 12px !important;
+border-radius: 0 0 12px 12px !important;
+              border: 1px solid transparent !important;
+              overflow: hidden !important;
+            }
+          }
+
           .input-group {
             position: relative;
             display: inline-block;
@@ -80,13 +112,14 @@ box-shadow: 0 0 6px 0 $shadow-color;
             > input {
               float: left;
               min-width: 50%;
-              max-width: 70%;
+              max-width: 74%;
             }
 
             > span {
               float: right;
               width: 100%;
               max-width: 18%;
+              margin-right: 4%;
             }
           }
         }
@@ -99,6 +132,6 @@ box-shadow: 0 0 6px 0 $shadow-color;
       margin-bottom: 0 !important;
     }
 
-    margin-bottom: 15px !important;
+    //body end
   }
 }

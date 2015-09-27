@@ -1,17 +1,36 @@
 html {
   background-color: black !important;
+  background-image: url('/wp-content/themes/looptheme/assets/images/ViewportBackground.jpg') !important;
+  background-size: 100%;
+  background-position: top left;
+  background-attachment: fixed;
 
   body {
-    background-color: $brand-primary !important;
+    //background-color: $brand-primary !important;
+    background-color: none !important;//rgba(8,18,28,1);
+    background: url('/wp-content/themes/looptheme/assets/images/DotPattern.png') repeat !important;
+    background-size: 100%;
+    background-position: top left;
+    background-attachment: fixed;
 
     div.container.wrap {
+      position: relative;
+      display: block;
+      min-height: 100%;
+
       div.content.row {
         background: none !important;
       }
     }
 
-    * {
+    a.brand {
       font-family: 'IM Fell Great Primer', serif !important;
+    }
+
+    * {
+      //font-family: 'IM Fell Great Primer', serif !important;
+      font-family: 'Josefin Sans', sans-serif !important;
+      line-height: 134% !important;
       color: $main-font-color !important;
       border-collapse: collapse !important;
       opacity: 1 !important;
@@ -23,14 +42,15 @@ html {
       }
     }
 
-    p {
-      font-family: 'Josefin Sans', sans-serif;
+    p, button, input[type="submit"], sup, sub, select, option {
+      font-family: 'Josefin Sans', sans-serif !important;
       color: $primary-font-color !important;
       opacity: $font-opacity !important;
     }
 
     a {
-      font-family: 'IM Fell Great Primer', serif !important;
+      //font-family: 'IM Fell Great Primer', serif !important;
+      font-family: 'Josefin Sans', sans-serif !important;
       color: $secondary-font-color !important;
       opacity: 1 !important;
       font-weight: bold !important;
@@ -117,7 +137,9 @@ box-shadow: 0 0 2px 3px rgba(220,235,255,0.33) !important;
 
     button,
     input[type="submit"] {
-      font-family: 'IM Fell Great Primer', serif !important;
+      //font-family: 'IM Fell Great Primer', serif !important;
+      font-family: 'Josefin Sans', sans-serif !important;
+      font-weight: bold !important;
       position: relative;
       display: inherit;
       &, * {
@@ -161,6 +183,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28b006', end
       width: 100%;
       height: 100%;
       max-height: 100%;
+      opacity: 0.2 !important;
     }
   }
 }
