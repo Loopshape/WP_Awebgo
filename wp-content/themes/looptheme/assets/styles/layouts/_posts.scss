@@ -38,16 +38,18 @@ html {
             height: auto !important;
 
             h1 {
-              color: $fifth-color !important;
+              display: inline-block;
+              color: $green-color !important;
+              width: 100%;
+              max-width: 72%;
             }
 
             time {
               position: absolute;
-              top: -5px;
-              right: 2%;
+              top: 15px;
+              right: 0;
               font-size: 1.25em !important;
               color: $tertiary-font-color !important;
-              //background-color: $date-field-color !important;
               background-color: none;//$answer-field-color !important;
               background-image: url('/wp-content/themes/looptheme/assets/images/RedColorArea.jpg');
               background-size: 100%;
@@ -58,6 +60,7 @@ html {
 -webkit-border-radius: 12px !important;
 border-radius: 12px !important;
               overflow: hidden !important;
+              opacity: 0.9 !important;
             }
           }
 
@@ -78,10 +81,20 @@ border-radius: 12px !important;
             margin-bottom: 15px;
 
             header {
+              display: block;
+              width: 100%;
+
               h2 {
+                display: inline-block;
+                width: 100%;
+                max-width: 72%;
+
                 a {
                   font-family: 'IM Fell Great Primer', serif !important;
-                  color: rgba(200,255,200,1) !important;
+
+                  &, * {
+                    color: $green-color !important;
+                  }
 
                   &:hover {
                     text-decoration: none !important;
@@ -103,7 +116,6 @@ border-radius: 12px !important;
             .entry-content {
               position: relative;
               display: inherit;
-              //background-color: $answer-field-color !important;
               background-color: none;//$answer-field-color !important;
               background-image: url('/wp-content/themes/looptheme/assets/images/TopicTextArea.jpg');
               background-size: 100%;

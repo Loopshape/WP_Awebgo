@@ -62,10 +62,6 @@ html {
       color: $secondary-font-color !important;
       opacity: 1 !important;
       font-weight: bold !important;
-
-      &:hover {
-        color: $secondary-font-color !important;
-      }
     }
 
     h1,
@@ -75,6 +71,7 @@ html {
     h5,
     h6 {
       font-family: 'IM Fell Great Primer', serif !important;
+      line-height: 100% !important;
       opacity: 1 !important;
     }
 
