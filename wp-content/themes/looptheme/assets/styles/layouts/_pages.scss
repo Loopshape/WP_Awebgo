@@ -34,6 +34,12 @@ html {
         position: relative;
         min-height: 100%;
 
+        p.byline.author.vcard {
+          &, * {
+            color: $green-font-color !important;
+          }
+        }
+
         .main,
         .sidebar {
           position: relative;
