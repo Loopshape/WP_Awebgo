@@ -51,6 +51,10 @@ html {
 
           .page-header {
             border-color: transparent !important;
+
+            h1 {
+              color: $green-font-color !important;
+            }
           }
 
           div.entry-content > * {
@@ -82,7 +86,7 @@ html {
               background-position: top left;
               background-attachment: scroll;
               padding: 10px 15px !important;
-              border: 1px solid $border-color !important;
+              border: 2px solid $red-border-color !important;
 -webkit-border-radius: 12px !important;
 border-radius: 12px !important;
               overflow: hidden !important;

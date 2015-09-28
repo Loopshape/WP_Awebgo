@@ -177,11 +177,16 @@ html body .container {
 
             a {
               font-weight: bold !important;
-              color: $green-font-color !important;
-              padding: 0 !important;
+              color: $tertiary-font-color !important;
+              background-color: $secondary-font-color !important;
+              padding: 0 0.3em !important;
+              border: 1px solid $red-border-color !important;
+-webkit-border-radius: 7px !important;
+border-radius: 7px !important;
+              overflow: hidden !important;
 
               &:hover {
-                color: $secondary-font-color !important;
+                color: $green-font-color !important;
               }
             }
           }
@@ -227,11 +232,12 @@ border-radius: 12px !important;
         font-size: 1em !important;
 -webkit-border-radius: 7px !important;
 border-radius: 7px !important;
-        border: 1px solid transparent !important;
+        border: 2px solid $red-border-color !important;
         overflow: hidden !important;
 
         &:hover {
           background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png') !important;
+          border-color: $green-border-color !important;
         }
       }
     }
