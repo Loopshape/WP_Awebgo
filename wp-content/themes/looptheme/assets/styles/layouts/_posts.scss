@@ -14,17 +14,30 @@ html {
       .content {
         padding: 15px 0 !important;
 
-        > * pre {
-          font-size: 0.5em !important;
+        figure {
+          position: relative;
+          display: inline-block;
+          background: none !important;
+          border-color: transparent !important;
+
+          figcaption {
+            padding: 0 0 15px;
+            margin-top: -10px;
+          }
+        }
+
+        pre,
+        code {
+          display: block;
+          font-size: 1em !important;
           color: $fifth-color !important;
+          background-color: rgba(0,0,0,0.8);
+          border-color: transparent !important;
 
           & > * {
             font-size: 0.8em !important;
             color: $tertiary-color !important;
           }
-
-          background-color: rgba(0,0,0,0.8);
-          border-color: transparent !important;
         }
 
         .main {
@@ -61,13 +74,13 @@ html {
               position: absolute;
               top: 15px;
               right: 0;
-              font-size: 1.25em !important;
+              font-size: 1em !important;
               color: $tertiary-font-color !important;
               background-color: none;//$answer-field-color !important;
-              background-image: url('/wp-content/themes/looptheme/assets/images/RedColorArea.jpg');
-              background-size: 100%;
+              background-image: url('/wp-content/themes/looptheme/assets/images/RedStoneArea.png');
+              background-size: 50%;
               background-position: top left;
-              background-attachment: fixed;
+              background-attachment: scroll;
               padding: 10px 15px !important;
               border: 1px solid $border-color !important;
 -webkit-border-radius: 12px !important;
@@ -82,10 +95,10 @@ border-radius: 12px !important;
             display: block;
             text-shadow: 0 0 1px $fifth-color !important;
             background-color: none;//$answer-field-color !important;
-            background-image: url('/wp-content/themes/looptheme/assets/images/GreenColorArea.jpg');
+            background-image: url('/wp-content/themes/looptheme/assets/images/MetalPanel.png');
             background-size: 100%;
             background-position: top left;
-            background-attachment: fixed;
+            background-attachment: scroll;
             padding: 15px 30px 0 !important;
             border: 1px solid transparent !important;
 -webkit-border-radius: 12px !important;
@@ -107,6 +120,7 @@ border-radius: 12px !important;
 
                   &, * {
                     color: $green-color !important;
+                    text-shadow: 1px 2px 3px 1px $black-color !important;
                   }
 
                   &:hover {
@@ -130,16 +144,21 @@ border-radius: 12px !important;
               position: relative;
               display: inherit;
               background-color: none;//$answer-field-color !important;
-              background-image: url('/wp-content/themes/looptheme/assets/images/TopicTextArea.jpg');
-              background-size: 100%;
+              background-image: url('/wp-content/themes/looptheme/assets/images/BlueStoneArea.png');
+              background-size: 50% !important;
               background-position: top left;
-              background-attachment: fixed;
+              background-attachment: scroll;
               padding: 30px 30px 15px !important;
               border: 1px solid $border-color !important;
 -webkit-border-radius: 12px !important;
 border-radius: 12px !important;
               overflow: hidden !important;
               margin-bottom: 0 !important;
+
+              &, * {
+                color: $white-color !important;
+                text-shadow: 0 0 2px $black-color !important;
+              }
             }
 
             footer {
@@ -252,7 +271,11 @@ border-radius: 6px !important;
           border: 1px solid $border-color !important;
 -webkit-border-radius: 10px !important;
 border-radius: 10px !important;
-          background-color: $action-field-color !important;
+          background-color: none;//$action-field-color !important;
+          background-image: url('/wp-content/themes/looptheme/assets/images/RespondTextArea.png');
+          background-size: 100%;
+          background-position: top left;
+          background-attachment: fixed;
         }
 
         padding-bottom: 90px !important;
@@ -272,25 +295,6 @@ html body * {
   color: #ccc;
   font-family: sans-serif;
   text-shadow: none !important;
-
-  h1 {
-    opacity: 0.85 !important;
-  }
-
-  h2 {
-    opacity: 0.8 !important;
-  }
-
-  h3,
-  h4,
-  h5,
-  h6 {
-    opacity: 1 !important;
-  }
-
-  p {
-    opacity: 0.95 !important;
-  }
 
   #comments h2 {
     color: #ccc;

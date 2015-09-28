@@ -20,10 +20,6 @@ html {
       opacity: 1 !important;
     }
 
-    h4.slogan {
-      opacity: 0.5;
-    }
-
     > header > div > nav {
       * {
         background-color: transparent !important;
@@ -152,8 +148,7 @@ html body .container {
       caption {
         font-size: 1.5em;
         font-weight: bold;
-        color: $green-color !important;
-        opacity: 0.75 !important;
+        color: $green-font-color !important;
       }
 
       thead,
@@ -174,14 +169,15 @@ html body .container {
           }
 
           td {
-            color: $green-color !important;
+            color: $tertiary-font-color !important;
 
             > * {
               opacity: 0.75 !important;
             }
 
             a {
-              color: $tertiary-color !important;
+              font-weight: bold !important;
+              color: $green-font-color !important;
               padding: 0 !important;
 
               &:hover {
@@ -195,8 +191,8 @@ html body .container {
       tbody {
         display: inline-block;
         background-color: none !important;//rgba(8,18,28,1);
-        background: url('/wp-content/themes/looptheme/assets/images/GreenColorArea.jpg') !important;
-        background-size: 100%;
+        background-image: url('/wp-content/themes/looptheme/assets/images/MetalPanel.png') !important;
+        background-size: 50%;
         background-position: top left;
         background-attachment: fixed;
         border: 1px solid transparent !important;
@@ -221,7 +217,7 @@ border-radius: 12px !important;
         display: inline-block;
         color: $tertiary-color !important;
         background-color: none !important;//rgba(8,18,28,1);
-        background: url('/wp-content/themes/looptheme/assets/images/RedColorArea.jpg') repeat !important;
+        background: url('/wp-content/themes/looptheme/assets/images/RedStoneArea.png') repeat !important;
         background-size: 100%;
         background-position: top left;
         background-attachment: fixed;
@@ -235,7 +231,7 @@ border-radius: 7px !important;
         overflow: hidden !important;
 
         &:hover {
-          background: url('/wp-content/themes/looptheme/assets/images/GreenColorArea.jpg') repeat !important;
+          background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png') !important;
         }
       }
     }
@@ -254,6 +250,6 @@ html > body .container > footer a {
     color: $secondary-color !important;
   }
   &:hover, &:hover * {
-      color: $green-color !important;
+      color: $green-font-color !important;
   }
 }

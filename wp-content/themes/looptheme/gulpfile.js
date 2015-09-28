@@ -221,6 +221,7 @@ gulp.task('images', function() {
       interlaced: true,
       svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
     }))
+    .on("error", console.log)
     .pipe(gulp.dest(path.dist + 'images'))
     .pipe(browserSync.stream());
 });
