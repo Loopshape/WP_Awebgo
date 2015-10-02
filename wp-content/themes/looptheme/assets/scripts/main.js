@@ -55,7 +55,7 @@
                     'TECHJOURNAL: <br />Ein Blogsystem mit Themen rund um die Webentwicklung',
                     'PRODUCTION: <br />Scripts, Themes und anderes befindet sich hier zum download',
                     'ÜBER MICH: <br />Eine Zusammenfassung über den Webmaster von Awebgo',
-                    'KONTAKT: <br />Kontaktiere den Webmaster über einen E-Mail-Klienten',
+                    'KONTAKT: <br />Kontaktiere den Webmaster <br />über einen E-Mail-Klienten',
                     'IMPRESSUM: <br />Pflichtangaben zur Awebgo-Website'
                 ];
                 var navCount = 0;
