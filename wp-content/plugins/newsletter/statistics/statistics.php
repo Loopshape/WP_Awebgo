@@ -25,11 +25,19 @@ class NewsletterStatistics extends NewsletterModule {
     }
 
     function hook_wp_loaded() {
+        global $wpdb;
+        
         if (isset($_GET['nltr'])) {
             $_GET['r'] = $_GET['nltr'];
             include dirname(__FILE__) . '/link.php';
             die();
         }
+        
+        if (isset($_GET['noti'])) {
+            $_GET['r'] = $_GET['noti'];
+            include dirname(__FILE__) . '/open.php';
+            die();
+        }        
     }
 
     function upgrade() {

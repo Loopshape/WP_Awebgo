@@ -64,7 +64,18 @@ You can use the following helper functions:
 == Hooks & Filters ==
 You can use the following action and filter hooks with this plugin:
 Remember to change funciton names to your own custom unique names if using the examples.
-
+*******************
+* filter: 	appip_metabox_context_filter
+* related:	Individual Redirects
+* desc: 	Adjust the context for the individual redirect metabox.
+* arg1: 	string for context. 
+* return: 	should be 'normal', 'advanced', or 'side' (plugin default is 'normal')
+*******************
+* filter: 	appip_metabox_priority_filter
+* related:	Individual Redirects
+* desc: 	Adjust the context for the individual redirect metabox.
+* arg1: 	string for priority.
+* return: 	should be 'high', 'core', 'default' or 'low' (plugin default is 'high')
 *******************
 * filter: 	qppr_allowed_protocols
 * related:	Quick Redirects and Individual Redirects

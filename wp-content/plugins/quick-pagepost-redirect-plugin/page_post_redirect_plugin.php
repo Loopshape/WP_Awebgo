@@ -6,7 +6,7 @@ Description: Redirect Pages, Posts or Custom Post Types to another location quic
 Author: Don Fischer
 Author URI: http://www.fischercreativemedia.com/
 Donate link: http://www.fischercreativemedia.com/donations/
-Version: 5.1.3
+Version: 5.1.4
 Text Domain: quick-pagepost-redirect-plugin
 Domain Path: /lang
 License: GPLv2 or later
@@ -71,7 +71,7 @@ class quick_page_post_reds {
 	public $pprptypes_ok;
 	
 	function __construct() {
-		$this->ppr_curr_version 		= '5.1.3';
+		$this->ppr_curr_version 		= '5.1.4';
 		$this->ppr_nofollow 			= array();
 		$this->ppr_newindow 			= array();
 		$this->ppr_url 					= array();
@@ -284,8 +284,8 @@ class quick_page_post_reds {
 			'options' => array(
 				'content' => sprintf( '<h3>%s</h3><p>%s</p><p>%s</p>',
 					__( 'New Layout of Existing Redirects' ,'quick-pagepost-redirect-plugin'),
-					__( 'The existing <strong>Quick Redirects</strong> are now laid out in a list format instead of form fields. When you have a lot of Redirects, this helps elminiate the "max_input_vars" configuration issue where redirects were not saving correctly.','quick-pagepost-redirect-plugin'),
-					__( 'To edit an exisitng redirect, click the pencil icon','quick-pagepost-redirect-plugin'). ' (<span class="dashicons dashicons-edit"></span>) ' .__( 'and the row will become editable. Click the trash can icon','quick-pagepost-redirect-plugin').' (<span class="dashicons dashicons-trash"></span>) '.__( 'and the redirect will be deleted. Click the trash can icon','quick-pagepost-redirect-plugin')
+					__( 'The existing <strong>Quick Redirects</strong> are now laid out in a list format instead of form fields. When you have a lot of Redirects, this helps eliminate the "max_input_vars" configuration issue where redirects were not saving correctly.','quick-pagepost-redirect-plugin'),
+					__( 'To edit an existing redirect, click the pencil icon','quick-pagepost-redirect-plugin'). ' (<span class="dashicons dashicons-edit"></span>) ' .__( 'and the row will become editable. Click the trash can icon','quick-pagepost-redirect-plugin').' (<span class="dashicons dashicons-trash"></span>) '.__( 'and the redirect will be deleted. Click the trash can icon','quick-pagepost-redirect-plugin')
 				),
 				'position' => array( 'edge' => 'bottom', 'align' => 'left' )
 			)
@@ -578,10 +578,14 @@ class quick_page_post_reds {
 				'post' => 'post'
 			);
 		}
+		
 		$ptypesNOTok = is_array( $this->pprptypes_ok ) ? $this->pprptypes_ok : array();
+		
 		foreach( $post_types_temp as $type ){
 			if( !in_array( $type, $ptypesNOTok ) ){
-				add_meta_box( 'edit-box-ppr', __( 'Quick Page/Post Redirect', 'quick-pagepost-redirect-plugin' ) , array( $this, 'edit_box_ppr_1' ), $type, 'normal', 'high' ); 
+				$context 	= apply_filters('appip_metabox_context_filter','normal');
+				$priority 	= apply_filters('appip_metabox_priority_filter','high');
+				add_meta_box( 'edit-box-ppr', __( 'Quick Page/Post Redirect', 'quick-pagepost-redirect-plugin' ) , array( $this, 'edit_box_ppr_1' ), $type, $context, $priority ); 
 			}
 		}
 	}
@@ -626,21 +630,30 @@ class quick_page_post_reds {
 			};
 		}
 		$joinSQL	= ((int) $allNewWin == 1 || (int) $allNoFoll == 1 || $rewrite ) ? "" : " INNER JOIN {$wpdb->prefix}postmeta AS mt3 ON ( {$wpdb->prefix}posts.ID = mt3.post_id ) ";
-		$whereSQL 	= ((int) $allNewWin == 1 || (int) $allNoFoll == 1 || $rewrite ) ? "" : " AND ( ( {$wpdb->prefix}postmeta.meta_key = '_pprredirect_active' AND CAST( {$wpdb->prefix}postmeta.meta_value AS CHAR ) = '1') AND ( mt1.meta_key = '_pprredirect_type' AND CAST( mt1.meta_value AS CHAR ) != '' ) AND ( mt2.meta_key = '_pprredirect_url' AND CAST( mt2.meta_value AS CHAR ) != '' )) AND (( mt3.meta_key = '_pprredirect_newwindow' AND CAST( mt3.meta_value AS CHAR ) = '1' ) OR ( mt3.meta_key = '_pprredirect_relnofollow' AND CAST( mt3.meta_value AS CHAR ) = '1' ) OR ( mt3.meta_key = '_pprredirect_rewritelink' AND CAST( mt3.meta_value AS CHAR ) = '1' )) ";
-		$finalSQL 	= "SELECT {$wpdb->prefix}posts.ID FROM {$wpdb->prefix}posts INNER JOIN {$wpdb->prefix}postmeta ON ( {$wpdb->prefix}posts.ID = {$wpdb->prefix}postmeta.post_id ) INNER JOIN {$wpdb->prefix}postmeta AS mt1 ON ( {$wpdb->prefix}posts.ID = mt1.post_id ) INNER JOIN {$wpdb->prefix}postmeta AS mt2 ON ( {$wpdb->prefix}posts.ID = mt2.post_id ) {$joinSQL} WHERE 1=1 {$whereSQL}	AND {$wpdb->prefix}posts.post_type NOT IN ('attachment', 'nav_menu_item', 'revision' ) AND {$wpdb->prefix}posts.post_status = 'publish' GROUP BY {$wpdb->prefix}posts.ID ORDER BY {$wpdb->prefix}posts.post_date DESC ";
+		$whereSQL 	= ((int) $allNewWin == 1 || (int) $allNoFoll == 1 || $rewrite ) ? "" : " ( m1.meta_key IN ( '_pprredirect_newwindow' ,'_pprredirect_relnofollow', '_pprredirect_rewritelink', '_pprredirect_url' ) AND m1.meta_value !='0' AND  m1.meta_value !='' ) AND ";
+		$finalSQL 	= "SELECT * FROM {$wpdb->prefix}postmeta as `m1` WHERE {$whereSQL} m1.post_id IN ( SELECT post_id FROM {$wpdb->prefix}postmeta as `m` WHERE 1 = 1 AND m.meta_key ='_pprredirect_active' AND m.meta_value = '1');";
 		$indReds 	= $wpdb->get_results($finalSQL);
+		$parray = array();
 		if( is_array($indReds) && !empty($indReds) ){
 			foreach( $indReds as $key => $qpost ){
-				$destURL 	= get_post_meta( $qpost->ID, '_pprredirect_url', true );
-				$rwMeta 	= (int) get_post_meta( $qpost->ID, '_pprredirect_rewritelink', true ) == 1 ? true : false;
-				$noFoll 	= (int) $allNoFoll == 1 ? 1 : ( (int) get_post_meta( $qpost->ID, '_pprredirect_relnofollow', true ) );
-				$newWin 	= (int) $allNewWin == 1 ? 1 : ( get_post_meta( $qpost->ID, '_pprredirect_newwindow', true ) != '' ? 1 : 0 );
-				$rewriteval = $rewrite || $rwMeta ? $destURL : '';
-				$redURL 	= get_permalink( $qpost->ID );
-				$redURL1 	= post_permalink( $qpost->ID );
+				$postid = $qpost->post_id;
+				$postky = $qpost->meta_key;
+				$postvl = $qpost->meta_value;
+				$parray[ $postid ][ $postky ] = $postvl;
+			}
+		}
+		if( is_array($parray) && !empty($parray) ){
+			foreach( $parray as $key => $val ){
+				$destURL 	= isset($val['_pprredirect_url']) && $val['_pprredirect_url'] != '' ? $val['_pprredirect_url'] : ''; //get_post_meta( $qpost->ID, '_pprredirect_url', true );
+				$rwMeta 	= isset($val['_pprredirect_rewritelink']) && (int)$val['_pprredirect_rewritelink'] == 1 ? true : false; //(int) get_post_meta( $qpost->ID, '_pprredirect_rewritelink', true ) == 1 ? true : false;
+				$noFoll 	= (int) $allNoFoll == 1 ? 1 : ( isset($val['_pprredirect_relnofollow']) && (int)$val['_pprredirect_relnofollow'] == 1 ? 1 : 0);//(int) $allNoFoll == 1 ? 1 : ( (int) get_post_meta( $qpost->ID, '_pprredirect_relnofollow', true ) );
+				$newWin 	= (int) $allNewWin == 1 ? 1 : ( isset($val['_pprredirect_newwindow']) && $val['_pprredirect_newwindow'] != '' ? 1 : 0);//( get_post_meta( $qpost->ID, '_pprredirect_newwindow', true ) != '' ? 1 : 0 );
+				$rewriteval = ($rewrite || $rwMeta) && $destURL != '' ? $destURL : '';
+				$redURL 	= get_permalink( $key );
 				$linkData[$redURL] = array( $newWin, $noFoll, $rewriteval );
 			}
 		}
+		
 		$qppr_setting_links = false;
 		//wp_enqueue_script( 'qppr_frontend_scripts', plugins_url( '/js/qppr_frontend_script.js', __FILE__ ) , array('jquery'), $this->ppr_curr_version, true );
 		wp_enqueue_script( 'qppr_frontend_scripts', plugins_url( '/js/qppr_frontend_script.min.js', __FILE__ ) , array('jquery'), $this->ppr_curr_version, true );
@@ -1028,6 +1041,7 @@ class quick_page_post_reds {
 					<td><input type="checkbox" id ="ppr_show-columns" name="ppr_show-columns" value="1"<?php if(get_option('ppr_show-columns')=='1'){echo ' checked="checked" ';} ?>/> <span><?php echo __( 'Show Columns on list pages for set up redirects.', 'quick-pagepost-redirect-plugin' );?></span></td>
 				</tr>
 				<tr>
+
 					<th scope="row"><label><?php echo __( 'Use jQuery?', 'quick-pagepost-redirect-plugin' );?></label></th>
 					<td><input type="checkbox" id ="ppr_use-jquery" name="ppr_use-jquery" value="1"<?php if(get_option('ppr_use-jquery')=='1'){echo ' checked="checked" ';} ?>/> <span><?php echo __( 'Increases effectiveness of plugin. If you have a jQuery conflict, try turning this off.', 'quick-pagepost-redirect-plugin' );?></span><br /><span style="margin:0;"><?php echo __( 'Uses jQuery to add the "New Window" and "No Follow" attributes to links.', 'quick-pagepost-redirect-plugin' );?></span></td>
 				</tr>
@@ -1132,6 +1146,7 @@ class quick_page_post_reds {
 					<td><code>'.$this->homelink.'/contact-us-new/</code></td>
 				</tr>
 			</table>
+
 			</div>
 			';
 			$screen->add_help_tab( array( 
@@ -1525,8 +1540,10 @@ class quick_page_post_reds {
 						$delim = false;
 					}
 					if($delim != false){
-						$text		= explode( "\r\n", $config_file );
-						$newfile1 	= array();
+						$config_file = str_replace("\r\n", "\n", $config_file);  
+        				$config_file = str_replace("\r", "\n", $config_file);
+						$text		 = explode( "\n", $config_file );
+						$newfile1 	 = array();
 						if( is_array( $text ) && !empty( $text ) ){
 							foreach( $text as $nl ){
 								if( $nl != '' ){
@@ -1591,10 +1608,12 @@ class quick_page_post_reds {
 					wp_die( __( 'This does not look like the file is in the correct format - it is possibly damaged or corrupt.<br/>Be sure the redirects are 1 per line and the redirect and destination are seperated by a PIPE (|), COMMA (,) or a TAB.', 'quick-pagepost-redirect-plugin' ) . '<br/>Example:<br/><br/><code>redirect|destination</code>', __( 'ERROR - Not a valid File', 'quick-pagepost-redirect-plugin' ), array( 'response' => '200', 'back_link' => '1' ) );
 					exit;
 				} else {
-					$tempArr	= array();
-					$tempMArr	= array();
-					$QR_Array 	= explode( "\n", $config_file );
-					$newfile1 	= array();
+					$tempArr	 = array();
+					$tempMArr	 = array();
+					$config_file = str_replace("\r\n", "\n", $config_file);  
+        			$config_file = str_replace("\r", "\n", $config_file);
+					$QR_Array 	 = explode( "\n", $config_file );
+					$newfile1 	 = array();
 					if( !empty( $QR_Array ) && is_array( $QR_Array )):
 						foreach( $QR_Array as $qrtoadd ):
 							if( $qrtoadd != '' && $delim != false && strpos( $qrtoadd, $delim ) !== false ){
@@ -1878,6 +1897,7 @@ class quick_page_post_reds {
 					foreach($pprd as $ppkey => $pprs){
 						$thefirstppr[$key][$ppkey] = $pprs;
 						$thefirstppr[$key]['post_id'] = $key;
+
 					}
 				}
 			}
@@ -2001,8 +2021,18 @@ class quick_page_post_reds {
 		}
 		return $newmenu;
 	}
-	
+	function my_appip_filter_testing_finalQS($finalQS, $needle, $haystack){
+		$finalQS = str_replace( '&amp;','&', $finalQS);
+		if( (strpos( $finalQS, 'name=' ) !== false && strpos( $finalQS, 'id=' ) !== false)){
+			if( strpos( $finalQS, '.asp' ) === false)
+				return $finalQS.'.asp';
+		}
+		return $finalQS;
+	}
 	function redirect(){
+		//bypass for testing.
+		if(isset($_GET['action']) && $_GET['action'] == 'no-redirect' )
+			return;
 		// Quick Redirects Redirect.
 		// Read the list of redirects and if the current page is found in the list, send the visitor on her way
 		if (!empty($this->quickppr_redirects) && !is_admin()) {
@@ -2022,18 +2052,30 @@ class quick_page_post_reds {
 				$userrequest = preg_replace('/\?.*/', '', $userrequest);
 				// end patch				
 			//end QS preservation
+			add_filter('appip_filter_testing_finalQS',array($this,'my_appip_filter_testing_finalQS'),10,3);
 			
 			$needle 		= $this->pproverride_casesensitive ? $userrequest : strtolower($userrequest);
 			$haystack 		= $this->pproverride_casesensitive ? $this->quickppr_redirects : array_change_key_case($this->quickppr_redirects);
 			$getAddrNeedle 	= $this->pproverride_casesensitive ? $getAddress : strtolower($getAddress);
 			$getQAddrNeedle = $this->pproverride_casesensitive ? str_replace( $getQAddress, '', $getAddrNeedle ) : strtolower(str_replace( $getQAddress, '', $getAddrNeedle ));
+			$finalQS		= $this->pproverride_casesensitive ? $finalQS : strtolower( $finalQS ); //added 5.1.4 to fix URL needle being converted to lower, but not Query (as it never matches unless user enters lower)
+			$finalQS 		= apply_filters( 'appip_filter_testing_finalQS', $finalQS, $needle, $haystack); // added 5.1.4 to allow filtering of QS data prior to matching.
 			$index 			= false;
 			
 			/* These are the URL matching checks to see if the request should be redirected.
 			 * They trickle down to the less likely scenarios last - tries to recover a redirect if the 
 			 * user just forgot things like ending slash or used wrong protocol, etc.
 			 */
-			if(array_key_exists( $needle, $haystack)){
+
+			if( array_key_exists( ($needle . $finalQS), $haystack ) ){ 
+				//check if QS data might be part of the redirect URL and not supposed to be added back.
+				$index = $needle . $finalQS;
+				$finalQS = ''; //remove it
+			}elseif( array_key_exists( urldecode($needle . $finalQS), $haystack ) ){ 
+				//check if QS data might be part of the encoded redirect URL and not supposed to be added back.
+				$index = $needle . $finalQS;
+				$finalQS = ''; //remove it
+			}elseif(array_key_exists( $needle, $haystack)){
 				//standard straight forward check for needle (request URL)
 				$index = $needle;
 			}elseif(array_key_exists(urldecode($needle), $haystack)){
@@ -2064,10 +2106,6 @@ class quick_page_post_reds {
 			}elseif( array_key_exists( $needle . '/', $haystack ) ){
 				//checks if needle (request URL) just is missing the ending / but the redirect is set up with it.
 				$index = $needle . '/';
-			}elseif( array_key_exists( $needle . $finalQS, $haystack ) ){ 
-				//check if QS data might be part of the redirect URL and not supposed to be added back.
-				$index = $needle . $finalQS;
-				$finalQS = ''; //remove it
 			}
 			
 			if($index != false && $index != ''){
@@ -2078,6 +2116,7 @@ class quick_page_post_reds {
 					$useURL 	 = $this->pproverride_URL != '' ? $this->pproverride_URL : $val;
 					$useURL 	.= apply_filters( 'qppr_filter_quickredirect_append_QS_data', $finalQS ); //add QS back or use filter to set to blank.
 					$useURL 	 = apply_filters( 'qppr_filter_quickredirect_url', $useURL, $index ); // final URL filter
+					
 					$qpprRedType = apply_filters( 'qppr_filter_quickredirect_type', 301 ) ; // filter for redirect type (301 is default here).
 					$qpprMetaSec = apply_filters( 'qppr_filter_quickredirect_secs', $this->pprmeta_seconds ) ; // filter for redirect seconds if type is changed to meta).
 					if( strpos( $useURL, '/' ) !== false && strpos( $useURL, '/' ) === 0 ){
@@ -2104,6 +2143,9 @@ class quick_page_post_reds {
 	}
 	
 	function ppr_do_redirect( $var1='var1', $var2 = 'var2'){
+		//bypass for testing.
+		if(isset($_GET['action']) && $_GET['action'] == 'no-redirect' )
+			return;
 		// Individual Redirects Redirect.
 		// Read the list of redirects and if the current page is found in the list, send the visitor on her way
 		

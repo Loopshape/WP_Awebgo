@@ -6,12 +6,12 @@ Requires at least: 4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tested up to: 4.3.1
-Stable tag: 5.1.3
+Stable tag: 5.1.4
 
 Easily redirect pages/posts or custom post types to another page/post or external URL by specifying the redirect URL and type (301, 302, 307, meta).
 
 == Description ==
-**Current Version 5.1.3**
+**Current Version 5.1.4**
 
 This plugin has two redirect functionalities - **"Quick Redirects"** and **"Individual Redirects"**:
 
@@ -160,6 +160,11 @@ Easiest way to decide is this: If you want the page to permanently change to a n
 
 Still not sure? Try 302 for now - at least until you have a little time to read up on the subject.
 
+= If I have a redirect in place, can I view the original page during testing? =
+Yes, use the URL as normal, and add `?action=no-redirect` to the query data (or `&action=no-redirect` if there is already query data present).
+
+For example. If you set up a redirect for the page `http://mysite.com/old-page/` and you want to see the page (and not have it redirect on you so you can look at it), type the URL as `http://mysite.com/old-page/?action=no-redirect` and it will load like there is no redirect present.
+
 = That's all the FAQs you have? =
 NO it isn't! Check the plugin FAQs/Help page for a more up to date list of Frequently Asked Questions. The plugin now has a live feed of FAQs that can be updated regularly. If you have something you think we should add, please let us know.
 
@@ -173,6 +178,19 @@ NO it isn't! Check the plugin FAQs/Help page for a more up to date list of Frequ
 7. Meta Redirect Options Page.
 
 == Changelog ==
+= TODO =
+* THIS SECTION IS JUST TO KEEP TRACK OF TODO ITEMS FOR FUTURE UPDATES.
+* Add New Window and No Follow to links where the URL has been rewritten. Currently if you rewrite the URL neither will work as they are referenced with the original URL, not the rewrite.
+* Add Canonical Redirect filter to fix potential www/non-www redirect match problems.
+
+= 5.1.4 =
+* **Feature Addition:** Added filter to Meta Box call to allow people to adjust context and priority if they choose. See filters-hooks-helper_funcitons.txt in plugin folder for usage. Thanks [mdmoreau](https://wordpress.org/support/profile/mdmoreau) for the suggestion!
+* **Feature Addition:** Added 'action=no-redirect' to be able to view a redirect page without the redirect triggering. Thanks [One Eye Pied](https://wordpress.org/support/profile/one-eye-pied) for the suggestion!
+* **Bug Fix:** Adjusted line ending characters for Import/Export to try to allow both Unix and Dos line break characters (LF and CRLF) on Import. Thanks [Jose Luis Cruz](https://wordpress.org/support/profile/joseluiscruz) for pointing this out!
+* **Bug Fix:** Fixed database query for jQuery localization funciton. Was a major resource hog on sites with a lot of posts and would crash MySQL on some sites.
+* **Update:** Fixed some spelling errors (thanks to those of you who pointed them out).
+* **Update:** Updated English Translations.
+
 = 5.1.3 =
 * **Update:** Updated English Translations.
 * **Bug Fix:** Fixed Meta redirect functions so browsers that no longer allow refresh redirects can still use Meta redirects (i.e., Firefox, Edge, some IE).
@@ -346,5 +364,5 @@ NO it isn't! Check the plugin FAQs/Help page for a more up to date list of Frequ
 * Initial Plugin creation (7/1/2009)
 
 == Upgrade Notice ==
-= 5.1.3 =
-* Bug Fixes to Meta Redirect and New Window functionality.
+= 5.1.4 =
+* Fixes MySQL load issues. Added features. 

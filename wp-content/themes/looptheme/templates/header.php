@@ -4,6 +4,7 @@
   <div class="container">
     <?php /* <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a> */ ?>
     <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img class="mainLogo" src="/wp-content/themes/looptheme/assets/images/AwebgoLogo.png" alt=""></a>
+    <img class="secLogo" src="/wp-content/themes/looptheme/assets/images/Awebgo_SpaceShip.png" alt="">
     <nav role="navigation">
       <?php
       if (has_nav_menu('primary_navigation')) :

@@ -1,9 +1,10 @@
 html {
   background-color: black !important;
   background-image: url('/wp-content/themes/looptheme/assets/images/ViewportBackground_Planet.jpg') !important;
-  background-size: 100%;
+  background-size: cover;
   background-position: top left;
   background-attachment: fixed;
+  min-width: 1024px;
 
   body {
     //background-color: $brand-primary !important;
@@ -14,11 +15,13 @@ html {
     background-attachment: fixed;
 
     img.backgroundTop {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: auto !important;
+      min-width: 1300px;
+      z-index: -1;
     }
 
     div.container.wrap {
@@ -33,6 +36,15 @@ html {
 
     a.brand {
       font-family: 'IM Fell Great Primer', serif !important;
+    }
+
+    .secLogo {
+      display: block;
+      position: absolute;
+      right: 0%;
+      top: -180px;
+      width: 70%;
+      height: auto !important;
     }
 
     * {

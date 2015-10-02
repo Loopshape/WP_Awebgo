@@ -329,6 +329,34 @@ class NewsletterControls {
     function button_save($function = null) {
         $this->button('save', __('Save', 'newsletter'), $function);
     }
+    
+    /**
+     * Creates a button with "copy" action.
+     * @param type $data
+     */
+    function button_copy($data = '')
+    {
+        echo '<button class="button-secondary" onclick="this.form.btn.value=\'' . esc_attr($data) . '\';this.form.act.value=\'copy\';if (!confirm(\'';
+        echo esc_attr(__('Proceed', 'newsletter'));
+        echo '\')) return false;">';
+        echo '<i class="fa fa-copy"></i> ';
+        echo esc_html(__('Copy', 'newsletter'));
+        echo '</button>';
+    }
+    
+    /**
+     * Creates a button wirh "delete" action.
+     * @param type $data
+     */
+    function button_delete($data = '')
+    {
+        echo '<button class="button-secondary" onclick="this.form.btn.value=\'' . esc_attr($data) . '\';this.form.act.value=\'delete\';if (!confirm(\'';
+        echo esc_attr(__('Proceed', 'newsletter'));
+        echo '\')) return false;">';
+        echo '<i class="fa fa-times"></i> ';
+        echo esc_html(__('Delete', 'newsletter'));
+        echo '</button>';
+    }    
 
     function button_primary($action, $label, $function = null) {
         if ($function != null) {

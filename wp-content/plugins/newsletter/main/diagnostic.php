@@ -460,6 +460,12 @@ if (count($calls) > 1) {
                             </td>
                         </tr>
                         <tr>
+                            <td>Blog Charset</td>
+                            <td>
+                                <?php echo get_option('blog_charset'); ?>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>WordPress Memory limit</td>
                             <td>
                                 <?php echo WP_MEMORY_LIMIT; ?>
