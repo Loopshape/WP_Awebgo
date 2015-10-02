@@ -1,0 +1,35 @@
+{
+  "name": "tooltipsy",
+  "license": "GPL2",
+  "dependencies": {
+    "jquery": ">=1.8.1"
+  },
+  "main": "tooltipsy.min.js",
+  "homepage": "https://github.com/briancray/tooltipsy",
+  "authors": [
+    "Brian Cray"
+  ],
+  "description": "tooltipsy by Brian Cray",
+  "keywords": [
+    "jQuery",
+    "tooltip",
+    "tooltipsy"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "d62c8a8983",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d62c8a8983efcee5c54fcdbe71f64478fdf42261"
+  },
+  "_source": "git://github.com/jsbuzz/tooltipsy.git",
+  "_target": "*",
+  "_originalSource": "tooltipsy",
+  "_direct": true
+}
