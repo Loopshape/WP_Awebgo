@@ -54,7 +54,7 @@
                 $('button,input[type="submit"]').attr('title', '[Klick] interaktive Funktion ausführen');
 
                 var navMainMenu = $('nav #menu-mainmenu a');
-                var navItems = ['TECHJOURNAL: <br />Ein Blogsystem mit Themen rund um die Webentwicklung', 'PRODUCTION: <br />Scripts, Themes und anderes befindet sich hier zum download', 'ÜBER MICH: <br />Eine Zusammenfassung über den Webmaster von Awebgo', 'KONTAKT: <br />Kontaktiere den Webmaster <br />über einen E-Mail-Klienten', 'IMPRESSUM: <br />Pflichtangaben zur Awebgo-Website'];
+                var navItems = ['TECHJOURNAL: <br />Ein Blogsystem mit Themen rund um die Webentwicklung', 'PRODUCTION: <br />Scripts, Themes und Weiteres befindet sich hier zum Download', 'ÜBER MICH: <br />Eine Zusammenfassung über den Webmaster von Awebgo', 'KONTAKT: <br />Kontaktiere den Webmaster <br />über einen E-Mail-Klienten', 'IMPRESSUM: <br />Pflichtangaben zur Awebgo-Website'];
                 var navCount = 0;
                 navMainMenu.each(function() {
                     $(this).attr('title', navItems[navCount]);
