@@ -1,0 +1,111 @@
+/* **************************************** Base ****************************************** */
+
+.pb-float-left{float:left;}
+.pb-float-right{float:right;}
+.pb-inline{display:inline-block;vertical-align:top;}
+.pb-hidden{display:none !important;}
+.pb-overflow{overflow:hidden;}
+.pb-relative{position:relative;}
+.pb-absolute{position:absolute;}
+.pb-clr{zoom:1;}
+.pb-clr:after{clear:both;display:block;content:'';}
+
+#pb-un-wrapper, #pb-un-wrapper *, #pb-un-editor, #pb-un-editor *{
+	box-sizing:border-box;
+}
+
+#pb-un-wrapper{width:100%;}
+
+.diselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;          
+}
+/* ************************************************************************************** */
+
+.pb-un-item{
+	cursor:pointer;
+	margin-bottom:.25em;
+	width:25em;
+}
+
+.pb-un-item span{display:block; width:70%; line-height:3em; font-size:1.25em;padding:0 .25em; font-weight:bold;}
+
+.pb-un-item > div{
+	width:30%;
+	height:3.7em;
+}
+
+.pb-un-item.pb-un-enabled{border:1px solid rgb(153, 216, 153);}
+.pb-un-item.pb-un-enabled > div{
+	background:rgb(153, 216, 153);
+}
+
+.pb-un-item.pb-un-disabled{border:1px solid rgb(226, 89, 89);}
+.pb-un-item.pb-un-disabled > div{
+	background:rgb(226, 89, 89);
+}
+
+.pb-un-form{
+}
+
+.pb-un-form legend{
+	font-size:1.5em;
+}
+
+.pb-un-form > .pb-inline{}
+
+.pb-un-form-section{
+	border:1px solid #ccc;
+	padding:.25em 1em 1em 1em;
+	margin:10px 10px 10px 0px;
+}
+
+.pb-un-notice{
+	padding:.5em;
+	border:1px solid #000;
+	margin:10px 10px 10px 0px;
+}
+
+.pb-un-field-row{
+	margin-bottom:5px;
+}
+
+.pb-un-label, .pb-un-input-wrapper{
+	display:block;
+	float:left;
+}
+
+.pb-un-label{
+	width:15em;
+	font-weight:bold;
+}
+
+.pb-un-input-wrapper input{
+	display:block;
+}
+
+.pb-un-input-wrapper span{
+	font-style:italic;
+}
+
+.pb-un-input-wrapper input[type=checkbox]{
+	margin-bottom:-5px !important;
+}
+
+.pb-un-loader-img{
+	display:inline-block;
+	max-width:30px;
+	max-height:30px;
+}
+
+.pb-un-chosen-type{
+	margin-left:1em;
+}
+
+.pb-un-types label{display:block;}
+.pb-un-wrapper label h4{display:inline-block;}
+
+#pbc-feedback{margin-top:1em;}

@@ -1,0 +1,213 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Unlmited 0.4.1\n"
+"POT-Creation-Date: 2015-05-23 10:02+0545\n"
+"PO-Revision-Date: 2015-06-04 13:08+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: templates/templates.php:6 templates/templates.php:7
+msgid "Theme"
+msgstr "Tema"
+
+#: templates/templates.php:11
+msgid "Theme match found"
+msgstr "Se encontró el tema"
+
+#: templates/templates.php:11
+msgid "Please only change the css selectors if you've altered this theme"
+msgstr "Por favor solo cambie los selectores css si ha alterado este tema"
+
+#: templates/templates.php:15
+msgid "Type"
+msgstr "Tipo"
+
+#: templates/templates.php:17
+msgid "On scroll"
+msgstr "En desplazamiento"
+
+#: templates/templates.php:20
+msgid "Threshold"
+msgstr "Umbral"
+
+#: templates/templates.php:23
+msgid "Distance to bottom"
+msgstr "Distancia al fondo"
+
+#: templates/templates.php:27
+msgid "Load more button"
+msgstr "Cargar más botones"
+
+#: templates/templates.php:30
+msgid "Button Text"
+msgstr "Texto del Botón"
+
+#: templates/templates.php:36 templates/templates.php:190
+msgid "Loading"
+msgstr "Cargando"
+
+#: templates/templates.php:42
+msgid "Ajax Pagination"
+msgstr "Paginación de Ajax"
+
+#: templates/templates.php:47
+msgid "Selectors"
+msgstr "Selectores"
+
+#: templates/templates.php:49
+msgid "Content"
+msgstr "Contenido"
+
+#: templates/templates.php:52
+msgid "Element containing posts"
+msgstr "Elemento que contiene posts"
+
+#: templates/templates.php:56
+msgid "Post"
+msgstr "Post"
+
+#: templates/templates.php:59
+msgid "Single post"
+msgstr "Post simple"
+
+#: templates/templates.php:63
+msgid "Navigation"
+msgstr "Navegación"
+
+#: templates/templates.php:66
+msgid "Element containing post-navigation"
+msgstr "Elemento que contiene la navegación de post"
+
+#: templates/templates.php:70
+msgid "Next"
+msgstr "Siguiente"
+
+#: templates/templates.php:73
+msgid "Post-navigation 'Next' button"
+msgstr "Botón ‘Siguiente’ de navegación de post"
+
+#: templates/templates.php:81
+msgid "Messages"
+msgstr "Mensajes"
+
+#: templates/templates.php:84
+msgid "Loader Image"
+msgstr "Imagen de Cargando"
+
+#: templates/templates.php:91
+msgid "Change"
+msgstr "Cambiar"
+
+#: templates/templates.php:95
+msgid "Posts finished"
+msgstr "Posts terminados"
+
+#: templates/templates.php:104
+msgid "History"
+msgstr "Historia"
+
+#: templates/templates.php:107 templates/templates.php:139
+#: templates/templates.php:170 templates/templates.php:192
+msgid "Enable"
+msgstr "Habilitar"
+
+#: templates/templates.php:116
+msgid "Scroll"
+msgstr "Desplazar"
+
+#: templates/templates.php:119
+msgid "To"
+msgstr "A"
+
+#: templates/templates.php:122
+msgid "'html, body' scrolls to top"
+msgstr "'html, body' desplaza hacia arriba"
+
+#: templates/templates.php:129
+msgid "Meta"
+msgstr "Meta"
+
+#: templates/templates.php:132
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/templates.php:135
+msgid "Form Identifier"
+msgstr "Identificador de Forma"
+
+#: templates/templates.php:146
+msgid "Scroll to Top"
+msgstr "Desplazar hacia Arriba"
+
+#: templates/templates.php:155 templates/templates.php:194
+msgid "Auto-load"
+msgstr "Auto-cargar"
+
+#: templates/templates.php:158
+msgid "Can opt-out"
+msgstr "Puede opt-out"
+
+#: templates/templates.php:164 templates/templates.php:193
+msgid "Disable"
+msgstr "Deshabilitar"
+
+#: templates/templates.php:164 templates/templates.php:170
+msgid "auto-load text"
+msgstr "texto de auto carga"
+
+#: templates/templates.php:180
+msgid "Save"
+msgstr "Salvar"
+
+#: templates/templates.php:181
+msgid "Delete"
+msgstr "Eliminar"
+
+#: templates/templates.php:189
+msgid "Load more"
+msgstr "Cargar más"
+
+#: templates/templates.php:191
+msgid "No more posts to show"
+msgstr "No hay más posts a mostrar"
+
+#: templates/templates.php:195
+msgid "Saving"
+msgstr "Salvando"
+
+#: templates/templates.php:196
+msgid "Deleting"
+msgstr "Eliminando"
+
+#: templates/templates.php:197
+msgid "Settings"
+msgstr "Ajustes"
+
+#: templates/templates.php:198
+msgid "Something's wrong, please try again or reload the page"
+msgstr "Algo fue mal, por favor trate nuevamente o recargue la página"
+
+#: unlimited.php:51
+msgid "Add New"
+msgstr "Adicionar Nuevo"
+
+#: unlimited.php:55
+msgid "Suggest Feature"
+msgstr "Sugerir Característica"
+
+#: unlimited.php:56
+msgid "Report Issue"
+msgstr "Tema de Informe"
+
+#: unlimited.php:57
+msgid "Write a review"
+msgstr "Escribir una reseña"

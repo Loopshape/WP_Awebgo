@@ -41,6 +41,45 @@ box-shadow: 0 0 6px 0 $shadow-color;
         color: $secondary-color !important;
         text-decoration: none !important;
       }
+
+      .widget {
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 100% !important;
+        max-width: 48%;
+        padding: 0 15px 15px 15px;
+        background-color: $primary-color !important;
+-webkit-border-radius: 12px !important;
+border-radius: 12px !important;
+          border: 1px solid $border-color !important;
+-webkit-box-shadow: 0 0 6px 0 $shadow-color;
+box-shadow: 0 0 6px 0 $shadow-color;
+        overflow: hidden !important;
+
+        > ul {
+          li {
+            a {
+              font-size: 1em;
+              font-weight: normal !important;
+
+              &:hover {
+                color: #def !important;
+              }
+            }
+          }
+        }
+
+        &.widget_tag_cloud {
+          max-width: 100%;//73%;
+        }
+
+        &.widget_calendar,
+        &.widget_newsletterwidget {
+          max-width: 23%;
+        }
+      }
+
     }
   }
 }

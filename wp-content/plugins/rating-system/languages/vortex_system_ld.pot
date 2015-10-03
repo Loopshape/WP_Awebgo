@@ -1,0 +1,411 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-17 15:55+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: comments.php:555 posts-pages.php:534
+msgid "Likes"
+msgstr ""
+
+#: comments.php:558 posts-pages.php:537
+msgid "Dislikes"
+msgstr ""
+
+#: admin/vortexlikedislike.php:11
+msgid "Style"
+msgstr ""
+
+#: admin/vortexlikedislike.php:25 admin/vortexlikedislike.php:26
+msgid "Rating System"
+msgstr ""
+
+#: admin/vortexlikedislike.php:162
+msgid "Settings for posts and pages"
+msgstr ""
+
+#: admin/vortexlikedislike.php:164
+msgid ""
+"Here you can customize the settings only for posts and pages.For comments go "
+"to Settings for Comments."
+msgstr ""
+
+#: admin/vortexlikedislike.php:169
+msgid "Turn on like or dislike for posts or pages"
+msgstr ""
+
+#: admin/vortexlikedislike.php:175 admin/vortexlikedislike.php:481
+msgid "Buttons position"
+msgstr ""
+
+#: admin/vortexlikedislike.php:176 admin/vortexlikedislike.php:482
+msgid "Where should the buttons appear?"
+msgstr ""
+
+#: admin/vortexlikedislike.php:177 admin/vortexlikedislike.php:483
+#: admin/vortexlikedislike.php:750
+msgid "You can check them both if you want."
+msgstr ""
+
+#: admin/vortexlikedislike.php:181
+msgid "Before content"
+msgstr ""
+
+#: admin/vortexlikedislike.php:182
+msgid "After content"
+msgstr ""
+
+#: admin/vortexlikedislike.php:194 admin/vortexlikedislike.php:500
+msgid "Buttons alignment"
+msgstr ""
+
+#: admin/vortexlikedislike.php:196 admin/vortexlikedislike.php:502
+msgid "Left"
+msgstr ""
+
+#: admin/vortexlikedislike.php:197 admin/vortexlikedislike.php:503
+msgid "Center"
+msgstr ""
+
+#: admin/vortexlikedislike.php:198 admin/vortexlikedislike.php:504
+msgid "Right"
+msgstr ""
+
+#: admin/vortexlikedislike.php:205
+msgid "Display buttons on:"
+msgstr ""
+
+#: admin/vortexlikedislike.php:206
+msgid "Select where the buttons should be displayed."
+msgstr ""
+
+#: admin/vortexlikedislike.php:207
+msgid ""
+"Posts Index refers to that page where your post(s) show up with an excerpt "
+"and a read more button."
+msgstr ""
+
+#: admin/vortexlikedislike.php:211
+msgid "Pages"
+msgstr ""
+
+#: admin/vortexlikedislike.php:212
+msgid "Posts Index"
+msgstr ""
+
+#: admin/vortexlikedislike.php:213
+msgid "Single post"
+msgstr ""
+
+#: admin/vortexlikedislike.php:214
+msgid "Custom post type Index"
+msgstr ""
+
+#: admin/vortexlikedislike.php:215
+msgid "Custom post type single"
+msgstr ""
+
+#: admin/vortexlikedislike.php:230 admin/vortexlikedislike.php:511
+msgid "Buttons style"
+msgstr ""
+
+#: admin/vortexlikedislike.php:231 admin/vortexlikedislike.php:512
+msgid "Here you can change the icons of the buttons."
+msgstr ""
+
+#: admin/vortexlikedislike.php:295 admin/vortexlikedislike.php:576
+msgid "Likes & Dislikes in columns"
+msgstr ""
+
+#: admin/vortexlikedislike.php:296
+msgid ""
+"Show the number of likes and dislikes at \"All Posts\" in custom columns."
+msgstr ""
+
+#: admin/vortexlikedislike.php:302 admin/vortexlikedislike.php:590
+msgid "Disable dislike"
+msgstr ""
+
+#: admin/vortexlikedislike.php:303 admin/vortexlikedislike.php:591
+msgid "Turn on this if you want like button only."
+msgstr ""
+
+#: admin/vortexlikedislike.php:315 admin/vortexlikedislike.php:597
+msgid "Anonymous users"
+msgstr ""
+
+#: admin/vortexlikedislike.php:316 admin/vortexlikedislike.php:598
+msgid "If you want to allow anonymous users to vote turn this on."
+msgstr ""
+
+#: admin/vortexlikedislike.php:317 admin/vortexlikedislike.php:599
+msgid ""
+"If you allow anonymous users to like or dislike , results may not be 100% "
+"accurate meaning that a person could like or dislike twice or more because "
+"it's impossible for this plugin to track anonymous users over the internet."
+"The IP of the user is stored so if he changes the IP he can vote again."
+msgstr ""
+
+#: admin/vortexlikedislike.php:323 admin/vortexlikedislike.php:605
+msgid "Anonymous counter"
+msgstr ""
+
+#: admin/vortexlikedislike.php:324 admin/vortexlikedislike.php:606
+msgid "Hide the counter(number of likes or dislikes) for anonymous users."
+msgstr ""
+
+#: admin/vortexlikedislike.php:330 admin/vortexlikedislike.php:612
+msgid "Buttons size"
+msgstr ""
+
+#: admin/vortexlikedislike.php:342 admin/vortexlikedislike.php:624
+msgid "Here you can change the buttons size with a preview."
+msgstr ""
+
+#: admin/vortexlikedislike.php:347 admin/vortexlikedislike.php:629
+msgid ""
+"The buttons will have the same size as this text.You can use this as a "
+"preview for the size."
+msgstr ""
+
+#: admin/vortexlikedislike.php:354 admin/vortexlikedislike.php:636
+msgid "Default color"
+msgstr ""
+
+#: admin/vortexlikedislike.php:355 admin/vortexlikedislike.php:637
+msgid "Default color of buttons"
+msgstr ""
+
+#: admin/vortexlikedislike.php:362 admin/vortexlikedislike.php:372
+#: admin/vortexlikedislike.php:644 admin/vortexlikedislike.php:654
+msgid "Like button "
+msgstr ""
+
+#: admin/vortexlikedislike.php:364 admin/vortexlikedislike.php:646
+msgid "Like button mouse over color"
+msgstr ""
+
+#: admin/vortexlikedislike.php:373 admin/vortexlikedislike.php:655
+msgid "Like button active color"
+msgstr ""
+
+#: admin/vortexlikedislike.php:381 admin/vortexlikedislike.php:390
+#: admin/vortexlikedislike.php:663 admin/vortexlikedislike.php:672
+msgid "Dislike button "
+msgstr ""
+
+#: admin/vortexlikedislike.php:382 admin/vortexlikedislike.php:664
+msgid "Dislike button mouse over color"
+msgstr ""
+
+#: admin/vortexlikedislike.php:391 admin/vortexlikedislike.php:673
+msgid "Dislike button active color"
+msgstr ""
+
+#: admin/vortexlikedislike.php:399 admin/vortexlikedislike.php:681
+msgid "Exclude categories"
+msgstr ""
+
+#: admin/vortexlikedislike.php:400 admin/vortexlikedislike.php:682
+msgid ""
+"Here you can exclude categories where you DON'T want the buttons to show. "
+msgstr ""
+
+#: admin/vortexlikedislike.php:401 admin/vortexlikedislike.php:683
+msgid "Only categories that have at least 1 post will be shown."
+msgstr ""
+
+#: admin/vortexlikedislike.php:408 admin/vortexlikedislike.php:690
+msgid "Exclude post types"
+msgstr ""
+
+#: admin/vortexlikedislike.php:409 admin/vortexlikedislike.php:691
+msgid ""
+"Here you can exclude post types where you DON'T want the buttons to show. "
+msgstr ""
+
+#: admin/vortexlikedislike.php:415 admin/vortexlikedislike.php:697
+msgid "Number of likes by default"
+msgstr ""
+
+#: admin/vortexlikedislike.php:416
+msgid "Number of likes by default to new post."
+msgstr ""
+
+#: admin/vortexlikedislike.php:423 admin/vortexlikedislike.php:705
+msgid "Number of dislikes by default"
+msgstr ""
+
+#: admin/vortexlikedislike.php:424
+msgid "Number of dislikes by default to new post."
+msgstr ""
+
+#: admin/vortexlikedislike.php:431 admin/vortexlikedislike.php:713
+msgid "Custom text"
+msgstr ""
+
+#: admin/vortexlikedislike.php:432 admin/vortexlikedislike.php:714
+msgid "Display custom text when user is voting"
+msgstr ""
+
+#: admin/vortexlikedislike.php:439 admin/vortexlikedislike.php:721
+msgid "Custom text for like"
+msgstr ""
+
+#: admin/vortexlikedislike.php:446 admin/vortexlikedislike.php:728
+msgid "Custom text for dislike"
+msgstr ""
+
+#: admin/vortexlikedislike.php:452 admin/vortexlikedislike.php:734
+msgid "Keep custom text"
+msgstr ""
+
+#: admin/vortexlikedislike.php:453 admin/vortexlikedislike.php:735
+msgid ""
+"When a user voted and refreshes the page keep showing the custom text for "
+"the vote and don't display the counter"
+msgstr ""
+
+#: admin/vortexlikedislike.php:459
+msgid "Enable bbPress support"
+msgstr ""
+
+#: admin/vortexlikedislike.php:468
+msgid "Settings for comments"
+msgstr ""
+
+#: admin/vortexlikedislike.php:470
+msgid ""
+"Here you can customize the settings only for comments.For posts and pages go "
+"to Settings for Posts and Pages."
+msgstr ""
+
+#: admin/vortexlikedislike.php:475
+msgid "Turn on like or dislike for comments"
+msgstr ""
+
+#: admin/vortexlikedislike.php:487
+msgid "Before comment"
+msgstr ""
+
+#: admin/vortexlikedislike.php:488
+msgid "After comment"
+msgstr ""
+
+#: admin/vortexlikedislike.php:577
+msgid ""
+"Show the number of likes and dislikes at \"Comments\" in custom columns."
+msgstr ""
+
+#: admin/vortexlikedislike.php:583
+msgid "Order comments"
+msgstr ""
+
+#: admin/vortexlikedislike.php:584
+msgid "Order comments by the number of likes they have."
+msgstr ""
+
+#: admin/vortexlikedislike.php:698
+msgid "Number of likes by default to new comment."
+msgstr ""
+
+#: admin/vortexlikedislike.php:706
+msgid "Number of dislikes by default to new comment."
+msgstr ""
+
+#: admin/vortexlikedislike.php:742
+msgid "Statistic Dashboard"
+msgstr ""
+
+#: admin/vortexlikedislike.php:748
+msgid "Statistics for:"
+msgstr ""
+
+#: admin/vortexlikedislike.php:749
+msgid "The statistics will show up in WordPress Dashboard Widget"
+msgstr ""
+
+#: admin/vortexlikedislike.php:754
+msgid "Posts"
+msgstr ""
+
+#: admin/vortexlikedislike.php:755
+msgid "Comments"
+msgstr ""
+
+#: admin/vortexlikedislike.php:767
+msgid "Translation"
+msgstr ""
+
+#: admin/vortexlikedislike.php:769
+msgid "Here you can translate some basic text."
+msgstr ""
+
+#: admin/vortexlikedislike.php:775
+msgid "Singular like  for widget"
+msgstr ""
+
+#: admin/vortexlikedislike.php:776
+msgid ""
+"This appers next to the number of likes in the widget only when the likes "
+"equals to 1."
+msgstr ""
+
+#: admin/vortexlikedislike.php:782
+msgid "Plural like  for widget"
+msgstr ""
+
+#: admin/vortexlikedislike.php:783
+msgid ""
+"This appers next to the number of likes in the widget only when the likes is "
+"equals to 2 or bigger."
+msgstr ""
+
+#: widget/dashboard-widget.php:92 widget/dashboard-widget.php:99
+msgid "No data for posts."
+msgstr ""
+
+#: widget/dashboard-widget.php:95 widget/dashboard-widget.php:103
+msgid "No data for comments."
+msgstr ""
+
+#: widget/widget.php:12 widget/widget.php:33
+msgid "Most liked posts"
+msgstr ""
+
+#: widget/widget.php:15
+msgid "Displays a list with the most licked posts."
+msgstr ""
+
+#: widget/widget.php:120
+msgid "Title:"
+msgstr ""
+
+#: widget/widget.php:122
+msgid "Number of posts to show:"
+msgstr ""
+
+#: widget/widget.php:125
+msgid "Display the thumbnail for each post?"
+msgstr ""
+
+#: widget/widget.php:127
+msgid "Display the likes(counter) for each post?"
+msgstr ""
+
+#: widget/widget.php:129
+msgid "Display sticky posts?"
+msgstr ""

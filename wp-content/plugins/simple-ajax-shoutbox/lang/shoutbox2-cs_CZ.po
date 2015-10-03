@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ShoutBox 2.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/shoutbox2\n"
+"POT-Creation-Date: 2011-10-10 08:50+0000\n"
+"PO-Revision-Date: 2009-10-10 08:55+0000\n"
+"Last-Translator: Honza Skýpala <honza@honza.info>\n"
+"Language-Team: Honza Skýpala <honza@honza.infom>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-Country: CZECH REPUBLIC\n"
+"Plural-Forms: nplurals=3; plural=n>=2 && n<=4 ? 1 : n==1 ? 0 : 2;\n"
+
+msgid "Message"
+msgstr "Zpráva"
+
+msgid "Only registered user allowed"
+msgstr "Vkládání zpráv je dostupné jen registrovaným uživatelům."
+
+msgid "Smilies"
+msgstr "Smajlíci"
+
+msgid "Shoutbox RSS channel"
+msgstr "RSS kanál"
+
+msgid "Request error"
+msgstr "Chyba načítání"
+
+msgid "Max messages in shoutbox:"
+msgstr "Maximální množství zpráv:"
+
+msgid "Reload time in seconds:"
+msgstr "Interval obnovení (vteřiny):"
+
+msgid "Only registered user allowed."
+msgstr "Jen registrovaní uživatelé mohou posílat zprávy"
+
+msgid "By enabling this submitted URLs will become clickable."
+msgstr "Převést URL adresy na aktivní odkazy"
+
+msgid "Check using Akismet, may degrades process time."
+msgstr "Kontrola proti spamu systémem Akismet"
+
+msgid "Unknown referrer."
+msgstr "Neuvedený referrer."
+
+msgid "Name already exists, please choose another."
+msgstr "Jméno je již zaregistrované, zvolte prosím jiné."
+
+msgid "Name empty."
+msgstr "Nevyplněné jméno."
+
+msgid "Message empty."
+msgstr "Prázdná zpráva."
+
+msgid "Blocked by Akismet."
+msgstr "Označeno jako spam systémem Akismet."
+
+msgid "Please try again after a few seconds."
+msgstr "Prosím zkuste znova za pár vteřin."
+
+msgid "Database insert failure. Try reinstall plugin."
+msgstr "Chyba databáze. Zkuste přeinstalovat plugin."
+
+msgid "IP address"
+msgstr "IP adresa"
+
+msgid "No messages."
+msgstr "Žádné zprávy."
+
+msgid "Comment"
+msgstr "Komentář"
+
+msgid "[delete]"
+msgstr "[smazat]"
+
+msgid "Delete this message?"
+msgstr "Smazat tuto zprávu?"
+
+msgid "%blogname% chat"
+msgstr "Chat na %blogname%"
+
+msgid "Message from %username% | %blogname% chat"
+msgstr "Zpráva od %username% | chat na %blogname%"
+
+msgid "Display link to RSS channel containing shoutbox messages."
+msgstr "Zobrazit odkaz na RSS kanál chatu"
+
+msgid "Max length of message is %maxlength% characters, length of your message is %length% characters. Please shorten it."
+msgstr "Maximální délka zprávy je %maxlength% znaků, vaše zpráva je dlouhá %length% znaků. Prosím, zkraťte ji."
+
+msgid "Publish"
+msgstr "Odeslat"

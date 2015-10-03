@@ -21,6 +21,7 @@
         'common' : {
             init : function() {
                 // JavaScript to be fired on all pages
+                $('.container').hide();
             },
             finalize : function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
@@ -64,7 +65,7 @@
                     navCount++;
                 });
 
-                var $tooltipItem = $('.hastip,.container img,nav #menu-mainmenu a,.content.row a,#wp-calendar th,.tagcloud a,button,input,select,textarea');
+                var $tooltipItem = $('.hastip,.container img,nav #menu-mainmenu a,.content.row a,#wp-calendar th,#wp-calendar td a,.tagcloud a,button,input,select,textarea,.widget_views a');
                 if($tooltipItem.prop('title').length!==0) {
                     $tooltipItem.tooltipsy({
                         alignTo: 'cursor',
@@ -89,6 +90,8 @@
                         }
                     });
                 }
+
+                $('.container').fadeIn('fast');
 
             }
         },

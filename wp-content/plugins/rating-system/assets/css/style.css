@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?63585644');
+  src: url('../font/fontello.eot?63585644#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?63585644') format('woff'),
+       url('../font/fontello.ttf?63585644') format('truetype'),
+       url('../font/fontello.svg?63585644#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?63585644#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-thumbs-up-1:before { content: '\e800'; } /* '' */
+.icon-thumbs-down-1:before { content: '\e801'; } /* '' */
+.icon-thumbs-down-alt:before { content: '\e802'; } /* '' */
+.icon-thumbs-up-alt:before { content: '\e803'; } /* '' */
+.icon-thumbs-down:before { content: '\e804'; } /* '' */
+.icon-thumbs-up:before { content: '\e805'; } /* '' */
+.icon-thumbs-down-3:before { content: '\e806'; } /* '' */
+.icon-thumbs-up-3:before { content: '\e807'; } /* '' */
+.icon-thumbs-down-4:before { content: '\e808'; } /* '' */
+.icon-thumbs-up-4:before { content: '\e809'; } /* '' */
+.icon-thumbs-down-2:before { content: '\e80a'; } /* '' */
+.icon-thumbs-up-2:before { content: '\e80b'; } /* '' */
+.icon-plus-circled:before { content: '\e80c'; } /* '' */
+.icon-plus:before { content: '\e80d'; } /* '' */
+.icon-minus:before { content: '\e80e'; } /* '' */
+.icon-minus-circled:before { content: '\e80f'; } /* '' */
+.icon-down:before { content: '\e810'; } /* '' */
+.icon-down-big:before { content: '\e811'; } /* '' */
+.icon-up:before { content: '\e812'; } /* '' */
+.icon-up-big:before { content: '\e813'; } /* '' */
+.icon-heart:before { content: '\e814'; } /* '' */
+.icon-heart-broken:before { content: '\e815'; } /* '' */
+.icon-star-empty:before { content: '\e816'; } /* '' */
+.icon-star:before { content: '\e817'; } /* '' */
+.icon-cancel-circle:before { content: '\e818'; } /* '' */
+.icon-cancel:before { content: '\e819'; } /* '' */
+.icon-ok-circle:before { content: '\e81a'; } /* '' */
+.icon-ok:before { content: '\e81b'; } /* '' */
+
+.vortex-container-like,
+.vortex-container-dislike,
+.vortex-container-like-comment,
+.vortex-container-dislike-comment{
+	display:inline-block;
+	font-size:16px;
+}
+
+.vortex-p-like,
+.vortex-p-dislike,
+.vortex-p-like-comment,
+.vortex-p-dislike-comment{
+	color:#828384;
+}
+
+.vortex-p-like-active,
+.vortex-p-like:hover{
+	color:#4898D6;
+	cursor:pointer;
+}
+
+.vortex-p-dislike-active,
+.vortex-p-dislike:hover{
+	cursor:pointer;
+	color:#1B7FCC;
+}
+
+.vortex-p-like-active-comment,
+.vortex-p-like-comment:hover{
+	color:#4898D6;
+	cursor:pointer;
+}
+
+.vortex-p-dislike-active-comment,
+.vortex-p-dislike-comment:hover{
+	cursor:pointer;
+	color:#1B7FCC;
+}
+
+.vortex-align-left{
+	text-align:left;
+}
+
+.vortex-align-center{
+	text-align:center;
+}
+
+.vortex-align-right{
+	text-align:right;
+}
+
+/* Image Thumbnails */
+.th-vortex {
+  border: solid 4px #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  line-height: 0;
+  margin-left:1px;
+  max-width: 100%;
+  transition: all 200ms ease-out; }
+  .th-vortex:hover, .th-vortex:focus {
+    box-shadow: 0 0 6px 1px rgba(43, 166, 203, 0.5); }
+  .th-vortex.radius {
+    border-radius: 3px; }
+.th-vortex > img{
+	width:50px;
+	height:40px;
+}

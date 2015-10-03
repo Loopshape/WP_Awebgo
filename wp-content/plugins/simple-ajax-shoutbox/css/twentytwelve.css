@@ -1,0 +1,33 @@
+﻿.Ajax_Shoutbox_Widget .icons {
+  top: 4px;
+}
+
+.sb_rss_link,
+.sb_twitter_link {
+  height: 2ex;
+}
+
+.sb_message_header .delmsg {
+	height: 2ex;
+}
+
+.Ajax_Shoutbox_Widget .icons .spinner {
+  background-size: 1.8ex 1.8ex;
+  width: 1.8ex;
+  height: 2.0ex;
+}
+
+.sb_message_header .avatar {
+  margin-top: 0;
+  margin-bottom: 0.5ex;
+}
+
+.sb_message_header .username {
+  display: block;
+  margin-bottom: 0.5ex;
+}
+
+.sb_message {
+  margin-bottom: 1ex;
+  line-height: 120%;
+}

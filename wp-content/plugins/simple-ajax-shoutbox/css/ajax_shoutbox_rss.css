@@ -1,0 +1,47 @@
+* {
+display: block;
+}
+
+:root {
+margin: 50px;
+}
+
+channel > title {
+font-size: x-large;
+}
+
+item {
+margin: 25px 0 20px 0;
+}
+
+item > title {
+font-size: medium;
+margin-bottom: 20px;
+}
+
+item > link {
+font-size: small;
+margin-top: 6px;
+margin-bottom: 6px;
+}
+
+item > description {
+font-size: small;
+}
+
+item > pubDate {
+font-size: small;
+}
+
+channel > link,
+channel > copyright, 
+channel > lastBuildDate, 
+channel > generator, 
+channel > docs,
+language,
+lastBuildDate,
+ttl,
+guid,
+category {
+display: none;
+}

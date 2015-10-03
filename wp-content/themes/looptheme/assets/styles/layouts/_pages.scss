@@ -219,9 +219,6 @@ border-radius: 12px !important;
   }
 
   .widget_tag_cloud {
-    float: right;
-    max-width: 73%;
-
     .tagcloud {
       a {
         position: relative;
@@ -249,9 +246,6 @@ border-radius: 7px !important;
     }
   }
 
-  .widget_newsletterwidget {
-    max-width: 73%;
-  }
 }
 
 html > body .container > header a,
