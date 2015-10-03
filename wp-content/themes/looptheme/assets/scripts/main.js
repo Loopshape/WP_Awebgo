@@ -13,9 +13,9 @@
 (function($) {
 
     // global definitions
-    var tooltipsy = require(['./wp-content/themes/looptheme/bower_components/tooltipsy/tooltipsy.min.js']);
+    //var tooltipsy = require(['./wp-content/themes/looptheme/bower_components/tooltipsy/tooltipsy.min.js']);
     // custom variables
-    var _animDelay = 1;
+    var _animDelay = 1/3;
 
     // Use this variable to set up the common and page specific functions. If you
     // rename this variable, you will also need to rename the namespace below.
