@@ -186,6 +186,8 @@ background: -ms-linear-gradient(top, rgba(30,146,6,1) 0%,rgba(53,189,15,1) 50%,r
 background: linear-gradient(to bottom, rgba(30,146,6,1) 0%,rgba(53,189,15,1) 50%,rgba(40,153,5,1) 51%,rgba(43,153,9,1) 71%,rgba(51,149,15,1) 100%) !important;
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28b006', endColorstr='#33950f',GradientType=0 ) !important;
         border: 2px solid $black-color !important;
+-webkit-box-shadow: 0 0 16px 0 $green-font-color !important;
+box-shadow: 0 0 16px 0 $green-font-color !important;
       }
     }
 
@@ -199,6 +201,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28b006', end
           border: 5px solid $footer-border-color !important;
           -webkit-border-radius: 12px !important;
           border-radius: 12px !important;
+-webkit-box-shadow: 0 0 16px 2px $black-color !important;
+box-shadow: 0 0 16px 2px $black-color !important;
           overflow: hidden !important;
           z-index: 20000 !important;
         }
@@ -218,6 +222,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28b006', end
 
     div.tooltipsy {
       color: #eef !important;
+      opacity: 1 !important;
     }
 
     div.sfsi_Sicons {

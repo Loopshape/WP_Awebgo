@@ -109,6 +109,8 @@ box-shadow: 0 0 6px 0 $shadow-color;
               &:hover {
                 background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png');
                 border-color: $green-border-color !important;
+-webkit-box-shadow: 0 0 16px 0 $green-font-color !important;
+box-shadow: 0 0 16px 0 $green-font-color !important;
               }
 
               &.current-menu-item {

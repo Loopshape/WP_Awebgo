@@ -77,7 +77,7 @@
                             'top' : '30px',
                             'right' : '30px',
                             'font-weight' : 'bold',
-                            'padding' : '0.25em 0.4em',
+                            'padding' : '0.35em 0.5em',
                             'max-width' : '280px',
                             'color' : '#fff',
                             'background-color' : '#203040',
