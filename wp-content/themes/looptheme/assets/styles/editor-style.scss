@@ -1,5 +1,15 @@
 @import "main";
 
-body {
-  margin: 12px !important;
+//body {
+  //margin: 12px !important;
+//}
+
+body#tinymce.mce-content-body {
+    width: 82% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 15px !important;
+    color: #fff !important;
+    background-image: none !important;
+    background-color: #001020 !important;
 }

@@ -252,5 +252,8 @@ border-radius: 12px !important;
       border: 2px solid $border-color !important;
     }
 
+    *[id*="tooltipsy"] {
+      opacity: 0.9;
+    }
   }
 }

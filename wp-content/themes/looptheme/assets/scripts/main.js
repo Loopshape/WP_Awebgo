@@ -12,6 +12,9 @@
 
 (function($) {
 
+    // global definitions
+    var tooltipsy = require(['./wp-content/themes/looptheme/bower_components/tooltipsy/tooltipsy.min.js']);
+    // custom variables
     var _animDelay = 1;
 
     // Use this variable to set up the common and page specific functions. If you
@@ -58,6 +61,12 @@
                     navCount++;
                 });
 
+                // GSAP codeblock for transitions
+                TweenLite.to($('html body > *'), _animDelay, {
+                    opacity : '+=0.99',
+                    ease : Quad.easeInOut
+                });
+
                 var $tooltipItem = $('.hastip,.container img,nav #menu-mainmenu a,.content.row a,#wp-calendar th,#wp-calendar td a,.tagcloud a,button,input,select,textarea,.widget_views a');
                 if ($tooltipItem.prop('title').length !== 0) {
                     $tooltipItem.tooltipsy({
@@ -83,12 +92,6 @@
                         }
                     });
                 }
-
-                // GSAP codeblock for transitions
-                TweenLite.to($('html body > *'), _animDelay, {
-                    opacity : '+=0.99',
-                    ease : Quad.easeInOut
-                });
             }
         },
         // Home page

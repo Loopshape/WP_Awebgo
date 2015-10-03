@@ -20,11 +20,6 @@ $sage_includes = [
   'lib/extras.php',                // Custom functions
 ];
 
-function my_theme_add_editor_styles() {
-    add_editor_style( 'custom-editor-style.css' );
-}
-add_action( 'admin_init', 'my_theme_add_editor_styles' );
-
 foreach ($sage_includes as $file) {
   if (!$filepath = locate_template($file)) {
     trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
