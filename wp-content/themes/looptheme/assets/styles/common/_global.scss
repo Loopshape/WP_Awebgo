@@ -252,6 +252,10 @@ border-radius: 12px !important;
       border: 2px solid $border-color !important;
     }
 
+    *[id*="fancybox-"] {
+      opacity: 1 !important;
+    }
+
     *[id*="tooltipsy"] {
       opacity: 0.9;
     }
