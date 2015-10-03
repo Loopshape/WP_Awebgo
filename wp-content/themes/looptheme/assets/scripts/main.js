@@ -12,6 +12,9 @@
 
 (function($) {
 
+    var _animDelay = 1;
+    var $containerArea = $('body>*');
+
     var tooltipsy = require(['/wp-content/themes/looptheme/bower_components/tooltipsy/tooltipsy.min.js']);
 
     // Use this variable to set up the common and page specific functions. If you
@@ -21,7 +24,6 @@
         'common' : {
             init : function() {
                 // JavaScript to be fired on all pages
-                $('.container').hide();
             },
             finalize : function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
@@ -91,12 +93,15 @@
                     });
                 }
 
-                $('.container').fadeIn('fast');
-
+                // GSAP codeblock for transitions
+                TweenLite.to($containerArea, _animDelay, {
+                    opacity: '+=0.99',
+                    ease: Quad.easeInOut
+                });
             }
         },
         // Home page
-        'home' : {
+        'techjournal' : {
             init : function() {
                 // JavaScript to be fired on the home page
             },
@@ -106,7 +111,7 @@
             }
         },
         // About us page, note the change from about-us to about_us.
-        'about_us' : {
+        'production' : {
             init : function() {
                 // JavaScript to be fired on the about us page
             }

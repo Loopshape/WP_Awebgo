@@ -34,26 +34,12 @@ html {
       }
     }
 
-    a.brand {
-      font-family: 'IM Fell Great Primer', serif !important;
-    }
-
-    .secLogo {
-      display: block;
-      position: absolute;
-      right: 0%;
-      top: -180px;
-      width: 70%;
-      height: auto !important;
-    }
-
     * {
-      //font-family: 'IM Fell Great Primer', serif !important;
       font-family: 'Josefin Sans', sans-serif !important;
       line-height: 134% !important;
       color: $main-font-color !important;
       border-collapse: collapse !important;
-      opacity: 1 !important;
+      opacity: 1;//!important;
 
       &:focus,
       &:hover {
@@ -71,7 +57,6 @@ html {
 
     a {
       position: relative;
-      //font-family: 'IM Fell Great Primer', serif !important;
       font-family: 'Josefin Sans', sans-serif !important;
       color: $secondary-font-color !important;
       opacity: 1 !important;
@@ -255,5 +240,17 @@ border-radius: 12px !important;
       display: block;
       margin-top: 30px;
     }
+
+    .alert {
+      color: $tertiary-color !important;
+      background-color: transparent !important;
+      background: url('/wp-content/themes/looptheme/assets/images/RedStoneArea.png') repeat !important;
+      background-size: 100%;
+      background-position: top left;
+      background-attachment: fixed;
+      padding: 0.2em 0.5em !important;
+      border: 2px solid $border-color !important;
+    }
+
   }
 }

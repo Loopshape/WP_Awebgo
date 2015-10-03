@@ -46,7 +46,7 @@ box-shadow: 0 0 6px 0 $shadow-color;
         position: relative;
         display: inline-block;
         float: left;
-        width: 100% !important;
+        width: 98% !important;
         max-width: 48%;
         padding: 0 15px 15px 15px;
         background-color: $primary-color !important;
@@ -71,7 +71,7 @@ box-shadow: 0 0 6px 0 $shadow-color;
         }
 
         &.widget_tag_cloud {
-          max-width: 100%;//73%;
+          max-width: 98%;//73%;
         }
 
         &.widget_calendar,

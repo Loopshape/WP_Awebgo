@@ -10,16 +10,27 @@ body {
     background-color: $primary-color;
     padding-top: 150px;
 
+    .sunStream {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;;
+      width: 100%;
+      height: auto !important;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
     .container {
       position: relative;
 
       a.brand {
         position: relative;
-        display: block;
+        display: block !important;
         float: none;
+        width: 38%;
         font-size: 4.2em !important;
         font-weight: bold !important;
-        font-family: 'IM Fell Great Primer', serif;
+        font-family: 'IM Fell Great Primer', serif !important;
         color: $tertiary-color !important;
         text-decoration: none !important;
         text-shadow: 0px 1px 2px 1px $quarter-color !important;
@@ -28,13 +39,26 @@ body {
 
         img.mainLogo {
           position: relative;
+          top: 0;
           left: -20px;
           display: block;
           width: 100%;
-          max-width: 480px;
+          max-width: 100%;
           height: auto !important;
+          opacity: 0.95 !important;
           z-index: 10000;
         }
+      }
+
+      .secLogo {
+        display: block;
+        position: absolute;
+        right: 4%;
+        top: -190px;
+        width: 70%;
+        height: auto !important;
+        opacity: 0.9;
+        z-index: 0 !important;
       }
 
       .slogan {
@@ -47,6 +71,7 @@ body {
 
       > nav {
         position: relative;
+        top: 0;
         clear: both;
         display: inline-block;
         z-index: 1;
