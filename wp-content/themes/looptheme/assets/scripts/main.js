@@ -13,9 +13,6 @@
 (function($) {
 
     var _animDelay = 1;
-    var $containerArea = $('body>*');
-
-    var tooltipsy = require(['/wp-content/themes/looptheme/bower_components/tooltipsy/tooltipsy.min.js']);
 
     // Use this variable to set up the common and page specific functions. If you
     // rename this variable, you will also need to rename the namespace below.
@@ -27,14 +24,14 @@
             },
             finalize : function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
-                if($('body').hasClass('home')) {
+                if ($('body').hasClass('home')) {
                     $contentCol = $('html body>.container .content .main');
                     $contentCol.css({
-                        'max-width': '100%'
+                        'max-width' : '100%'
                     });
                     $contentCol = $('html body>.container .content .sidebar');
                     $contentCol.css({
-                        'max-width': '0%'
+                        'max-width' : '0%'
                     });
                 }
 
@@ -43,10 +40,10 @@
 
                 $pageLink = $('.content.row a');
                 $pageLink.each(function() {
-                    if($(this).find('*').length===0) {
+                    if ($(this).find('*').length === 0) {
                         $(this).attr('title', '[Klick] Hypertext-Link öffnen');
                     }
-                    if($(this).find('img').length>0) {
+                    if ($(this).find('img').length > 0) {
                         $(this).attr('title', '[Klick] Bild vergrößern');
                     }
                 });
@@ -54,13 +51,7 @@
                 $('button,input[type="submit"]').attr('title', '[Klick] interaktive Funktion ausführen');
 
                 var navMainMenu = $('nav #menu-mainmenu a');
-                var navItems = [
-                    'TECHJOURNAL: <br />Ein Blogsystem mit Themen rund um die Webentwicklung',
-                    'PRODUCTION: <br />Scripts, Themes und anderes befindet sich hier zum download',
-                    'ÜBER MICH: <br />Eine Zusammenfassung über den Webmaster von Awebgo',
-                    'KONTAKT: <br />Kontaktiere den Webmaster <br />über einen E-Mail-Klienten',
-                    'IMPRESSUM: <br />Pflichtangaben zur Awebgo-Website'
-                ];
+                var navItems = ['TECHJOURNAL: <br />Ein Blogsystem mit Themen rund um die Webentwicklung', 'PRODUCTION: <br />Scripts, Themes und anderes befindet sich hier zum download', 'ÜBER MICH: <br />Eine Zusammenfassung über den Webmaster von Awebgo', 'KONTAKT: <br />Kontaktiere den Webmaster <br />über einen E-Mail-Klienten', 'IMPRESSUM: <br />Pflichtangaben zur Awebgo-Website'];
                 var navCount = 0;
                 navMainMenu.each(function() {
                     $(this).attr('title', navItems[navCount]);
@@ -68,35 +59,35 @@
                 });
 
                 var $tooltipItem = $('.hastip,.container img,nav #menu-mainmenu a,.content.row a,#wp-calendar th,#wp-calendar td a,.tagcloud a,button,input,select,textarea,.widget_views a');
-                if($tooltipItem.prop('title').length!==0) {
+                if ($tooltipItem.prop('title').length !== 0) {
                     $tooltipItem.tooltipsy({
-                        alignTo: 'cursor',
-                        offset: [10,-10],
-                        css: {
-                            'position': 'fixed',
-                            'top': '30px',
-                            'right': '30px',
-                            'font-weight': 'bold',
-                            'padding': '0.25em 0.4em',
-                            'max-width': '280px',
-                            'color': '#fff',
-                            'background-color': '#203040',
-                            'border': '3px solid #102030',
-                            '-moz-box-shadow': '0 0 10px rgba(0,0,0,0.75)',
-                            '-webkit-box-shadow': '0 0 10px rgba(0,0,0,0.75)',
-                            'box-shadow': '0 0 10px rgba(0,0,0,0.75)',
-                            'text-shadow': 'none',
-                            '-webkit-border-radius': '7px',
-                            'border-radius': '7px',
-                            'overflow': 'hidden'
+                        alignTo : 'cursor',
+                        offset : [10, -10],
+                        css : {
+                            'position' : 'fixed',
+                            'top' : '30px',
+                            'right' : '30px',
+                            'font-weight' : 'bold',
+                            'padding' : '0.25em 0.4em',
+                            'max-width' : '280px',
+                            'color' : '#fff',
+                            'background-color' : '#203040',
+                            'border' : '3px solid #102030',
+                            '-moz-box-shadow' : '0 0 10px rgba(0,0,0,0.75)',
+                            '-webkit-box-shadow' : '0 0 10px rgba(0,0,0,0.75)',
+                            'box-shadow' : '0 0 10px rgba(0,0,0,0.75)',
+                            'text-shadow' : 'none',
+                            '-webkit-border-radius' : '7px',
+                            'border-radius' : '7px',
+                            'overflow' : 'hidden'
                         }
                     });
                 }
 
                 // GSAP codeblock for transitions
-                TweenLite.to($containerArea, _animDelay, {
-                    opacity: '+=0.99',
-                    ease: Quad.easeInOut
+                TweenLite.to($('html body > *'), _animDelay, {
+                    opacity : '+=0.99',
+                    ease : Quad.easeInOut
                 });
             }
         },
