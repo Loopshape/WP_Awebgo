@@ -154,12 +154,12 @@
                                 }
                             });
                         } else {
+                            if ($(this).hasClass('internal') === true) {
+                                return true;
+                            }
                             TweenMax.to($('html body > * > *'), 1, {
                                 autoAlpha : '-=0.99',
                                 onComplete : function() {
-                                    if ($(this).hasClass('internal') === true) {
-                                        return true;
-                                    }
                                     $('html body > * > *').css({
                                         'opacity' : '0',
                                         'visibility' : 'hidden'
