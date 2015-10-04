@@ -128,7 +128,7 @@
                         if ($.browser.webkit) {
                             $.srSmoothscroll({
                                 step : 55,
-                                speed : 400,
+                                speed : 800,
                                 ease : 'swing',
                                 target : $('body'),
                                 container : $(window)
@@ -137,35 +137,49 @@
                     }
 
                     // Click handler for internal and external URLs
+                    // with Screen-Fading functionality via Greensock.
                     // Coded by Arjuna Noorsanto
                     $('a').on('click', function() {
                         var _href = $(this).prop('href');
                         if ($(this).hasClass('external')) {
-
-                            TweenMax.to($('html body > *'), 1.5, {autoAlpha:0});
-
-                            $('html body > * > *').css('visibility', 'hidden');
-                            window.open(_href, '_blank');
-                            return false;
+                            TweenMax.to($('html body > * > *'), 1, {
+                                autoAlpha : '-=0.99',
+                                onComplete : function() {
+                                    $('html body > * > *').css({
+                                        'opacity' : '0',
+                                        'visibility' : 'hidden'
+                                    });
+                                    window.open(_href, '_blank');
+                                    return false;
+                                }
+                            });
                         } else {
-                            if ($(this).hasClass('internal') === true) {
-                                return true;
-                            }
-
-                            TweenMax.to($('html body > *'), 1.5, {autoAlpha:0});
-
-                            $('html body > * > *').css('visibility', 'hidden');
-                            window.location = _href;
-                            return false;
+                            TweenMax.to($('html body > * > *'), 1, {
+                                autoAlpha : '-=0.99',
+                                onComplete : function() {
+                                    if ($(this).hasClass('internal') === true) {
+                                        return true;
+                                    }
+                                    $('html body > * > *').css({
+                                        'opacity' : '0',
+                                        'visibility' : 'hidden'
+                                    });
+                                    window.location = _href;
+                                    return false;
+                                }
+                            });
                         }
                     });
-
                 });
-
-                $('html body > * > *').css('visibility', 'visible');
-
-                TweenMax.to($('html body > *'), 1.5, {autoAlpha:1});
-
+                TweenMax.to($('html body > * > *'), 1, {
+                    autoAlpha : '+=0.99',
+                    onComplete : function() {
+                        $('html body > * > *').css({
+                            'opacity' : '1',
+                            'visibility' : 'visible'
+                        });
+                    }
+                });
             }
         },
         // Home page
