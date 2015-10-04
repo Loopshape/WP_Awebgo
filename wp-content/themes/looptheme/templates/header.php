@@ -1,3 +1,4 @@
+<a name="pageTop" title=""></a>
 <img class="webArea" src="/wp-content/uploads/2015/09/raw_background.jpg" alt="" width="auto" height="100%">
 <div class="spaceScene"></div>
 <img class="sunStream" src="/wp-content/themes/looptheme/assets/images/Website_Header_Sunbeam.png" alt="" width="100%" height="auto">

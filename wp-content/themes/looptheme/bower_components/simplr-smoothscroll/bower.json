@@ -1,0 +1,30 @@
+{
+  "name": "simplr-smoothscroll",
+  "version": "1.0.1",
+  "description": "Smooth scrolling in all browsers",
+
+  "keywords": [
+    "smooth",
+    "scroll",
+    "smoothscroll"
+  ],
+
+  "license": "MIT",
+
+  "authors": [
+    "Simeon Velichkov <simeonvelichkov@gmail.com> (http://simov.github.io)"
+  ],
+
+  "dependencies": {
+    "jquery": ">=1.8.3",
+    "jquery-mousewheel": ">=3.1.0"
+  },
+  
+  "main": [
+    "lib/jquery.simplr.smoothscroll.min.js"
+  ],
+
+  "ignore": [
+    "examples"
+  ]
+}

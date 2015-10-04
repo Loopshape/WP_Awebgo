@@ -8,7 +8,28 @@
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700,600italic,600,400|IM+Fell+Great+Primer:400,400italic' rel='stylesheet'>
   <link href="/wp-content/themes/looptheme/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <title>Awebgo | Server-Administration and WebDevelopment Workflow</title>
-		<script type="text/javascript">
+		<style type="text/css"></style>
+	
+			<style type="text/css">
+						.gpf-simple-fb-wrapper .gpf-jal-single-fb-post,
+			.gpf-simple-fb-wrapper .gpf-jal-fb-description-wrap,
+			.gpf-simple-fb-wrapper .gpf-jal-fb-post-time,
+			.gpf-slicker-facebook-posts .gpf-jal-single-fb-post,
+			.gpf-slicker-facebook-posts .gpf-jal-fb-description-wrap,
+			.gpf-slicker-facebook-posts .gpf-jal-fb-post-time { color:#c9d9e9!important; }
+						.gpf-simple-fb-wrapper .gpf-jal-single-fb-post a,
+			.gpf-fb-load-more-wrapper .gpf-fb-load-more,
+			.gpf-slicker-facebook-posts .gpf-jal-single-fb-post a,
+			.gpf-fb-load-more-wrapper .gpf-fb-load-more { color:#d1e2f2!important; }
+						.gpf-simple-fb-wrapper .gpf-jal-single-fb-post a:hover,
+			.gpf-simple-fb-wrapper .gpf-fb-load-more:hover,
+			.gpf-slicker-facebook-posts .gpf-jal-single-fb-post a:hover,
+			.gpf-slicker-facebook-posts .gpf-fb-load-more:hover { color:#aebcc9!important; }
+						.gpf-simple-fb-wrapper, .gpf-fb-load-more-wrapper .gpf-fb-load-more { background:#506070!important; }
+						.gpf-slicker-facebook-posts .gpf-jal-single-fb-post { background:#617487!important; }
+						.gpf-slicker-facebook-posts .gpf-jal-single-fb-post, .gpf-jal-single-fb-post { border-bottom:1px solid #333d47!important; }
+						</style>
+			<script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/loop.arcturus.uberspace.de\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
 			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
@@ -27,6 +48,7 @@ img.emoji {
 }
 </style>
 <link rel='stylesheet' id='bbp-default-css'  href='http://loop.arcturus.uberspace.de/wp-content/plugins/bbpress/templates/default/css/bbpress.css?ver=2.5.8-5815' type='text/css' media='screen' />
+<link rel='stylesheet' id='gpf-feeds-css'  href='http://loop.arcturus.uberspace.de/wp-content/plugins/custom-google-plus-feed/feeds/css/styles.css?ver=4.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='responsive-lightbox-fancybox-css'  href='http://loop.arcturus.uberspace.de/wp-content/plugins/responsive-lightbox/assets/fancybox/jquery.fancybox-1.3.4.css?ver=1.6.3' type='text/css' media='all' />
 <link rel='stylesheet' id='SFSImainCss-css'  href='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/css/sfsi-style.css?ver=4.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='SFSIJqueryCSS-css'  href='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/css/jquery-ui-1.10.4/jquery-ui-min.css?ver=4.3.1' type='text/css' media='all' />
@@ -38,12 +60,26 @@ img.emoji {
 <link rel='stylesheet' id='sage_css-css'  href='http://loop.arcturus.uberspace.de/wp-content/themes/looptheme/dist/styles/main.css' type='text/css' media='all' />
 <script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
 <script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gpfAjax = {"ajaxurl":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php"};
+var gpfAjax = {"ajaxurl":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/custom-google-plus-feed/admin/js/admin.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/custom-google-plus-feed/feeds/js/powered-by.js?ver=4.3.1'></script>
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://loop.arcturus.uberspace.de/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://loop.arcturus.uberspace.de/wp-includes/wlwmanifest.xml" /> 
 
 <link rel='canonical' href='http://loop.arcturus.uberspace.de/' />
 <link rel='shortlink' href='http://loop.arcturus.uberspace.de/' />
-<meta name="viewport" content="width=device-width, initial-scale=1"><meta property="og:image" content="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/Am_Ball_bleiben.jpg" data-id="sfsi"><meta property="og:image:type" content="" data-id="sfsi" /><meta property="og:image:width" content="1280" data-id="sfsi" /><meta property="og:image:height" content="800" data-id="sfsi" /><meta property="og:url" content="http://loop.arcturus.uberspace.de/" data-id="sfsi" /><meta property="og:description" content="Diese Website beinhaltet Informationen über die Webentwicklung und die technische Anwendung mit diversen Programmierwerkzeugen.
+<script type="text/javascript">
+var myAjaxFTS = 'http://loop.arcturus.uberspace.de/wp-admin/admin-ajax.php';
+</script>
+<script type="text/javascript">
+var myAjaxFTS = 'http://loop.arcturus.uberspace.de/wp-admin/admin-ajax.php';
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta property="og:image" content="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/Am_Ball_bleiben.jpg" data-id="sfsi"><meta property="og:image:type" content="" data-id="sfsi" /><meta property="og:image:width" content="1280" data-id="sfsi" /><meta property="og:image:height" content="800" data-id="sfsi" /><meta property="og:url" content="http://loop.arcturus.uberspace.de/" data-id="sfsi" /><meta property="og:description" content="Diese Website beinhaltet Informationen über die Webentwicklungund die technische Anwendung mit diversen Programmierwerkzeugen.
 &nbsp;
 
 Folgende Anwendungen werden unter anderem beschrieben und genutzt:
@@ -182,13 +218,16 @@ Folge Arjunas Pinnwand „Webdevelopment“ auf Pinterest.
       <div class="alert alert-warning">
         You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.      </div>
     <![endif]-->
-    <img class="webArea" src="/wp-content/uploads/2015/09/raw_background.jpg" alt="" width="auto" height="100%">
+    <a name="pageTop" title=""></a>
+<img class="webArea" src="/wp-content/uploads/2015/09/raw_background.jpg" alt="" width="auto" height="100%">
+<div class="spaceScene"></div>
+<img class="sunStream" src="/wp-content/themes/looptheme/assets/images/Website_Header_Sunbeam.png" alt="" width="100%" height="auto">
+<img class="backgroundTop" src="/wp-content/themes/looptheme/assets/images/BackgroundTop.png" alt="" width="100%" height="auto">
+<img class="secLogo" src="/wp-content/themes/looptheme/assets/images/Awebgo_SpaceShip.png" alt="">
+<div class="dotArea"></div>
 <header class="banner" role="banner">
-  <img class="backgroundTop" src="/wp-content/themes/looptheme/assets/images/BackgroundTop.png" alt="" width="100%" height="auto">
-  <img class="sunStream" src="/wp-content/themes/looptheme/assets/images/Website_Header_Sunbeam.png" alt="" width="100%" height="auto">
   <div class="container">
         <a class="brand" href="http://loop.arcturus.uberspace.de/"><img class="mainLogo hastip" title="[Klick] Gehe zur Startseite" src="/wp-content/themes/looptheme/assets/images/AwebgoLogo.png" alt=""></a>
-    <img class="secLogo" src="/wp-content/themes/looptheme/assets/images/Awebgo_SpaceShip.png" alt="">
     <nav role="navigation">
       <div class="menu-mainmenu-container"><ul id="menu-mainmenu" class="nav"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="/techjournal/">Tech Journal</a></li>
 <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="http://loop.arcturus.uberspace.de/production/">Production</a></li>
@@ -205,20 +244,20 @@ Folge Arjunas Pinnwand „Webdevelopment“ auf Pinterest.
 <div class="page-header">
   <h1>Willkommen BesucherIn!</h1>
 </div>
-  <h4><strong><a href="/wp-content/uploads/2015/09/Loopshape_EarthChronicles.png" data-rel="lightbox-0" title=""><img class="alignleft size-medium wp-image-16" src="/wp-content/uploads/2015/09/Loopshape_EarthChronicles-300x225.png" alt="Loopshape Earth-Chronicles" width="300" height="225" /></a>Diese Website beinhaltet Informationen über die Webentwicklung und die technische Anwendung mit diversen Programmierwerkzeugen.</strong></h4>
+  <h4><strong><a href="/wp-content/uploads/2015/09/Loopshape_EarthChronicles.png" data-rel="lightbox-0" title=""><img class="alignleft size-medium wp-image-16" src="/wp-content/uploads/2015/09/Loopshape_EarthChronicles-300x225.png" alt="Loopshape Earth-Chronicles" width="300" height="225" /></a>Diese Website beinhaltet Informationen über die Webentwicklung<br />und die technische Anwendung mit diversen Programmierwerkzeugen.</strong></h4>
 <p>&nbsp;</p>
 <p><strong>Folgende Anwendungen werden unter anderem beschrieben und genutzt:</strong></p>
-<p><strong>+ HTML5+CSS3+JS<br />
+<div class="fontYellow"><strong>+ HTML5+CSS3+JS<br />
 </strong><strong>+ NodeJS / Gulp / Bower<br />
-</strong><strong>+ TYPO3 WCMS &amp; WordPress, sowie Laravel 5</strong></p>
+</strong><strong>+ TYPO3 WCMS &amp; WordPress, sowie Laravel 5</strong></div>
 <p><strong>&#8230;u.v.m.</strong><br />
 &nbsp;</p>
 <div style="float:left;width:62%">
-<p>Willkommen auf der Website von Arjuna Noorsanto für Webentwicklung und Medienproduktion, genannt &#8222;AWEBGO&#8220;.</p>
+<p>Willkommen auf der Website von Arjuna Noorsanto für Webentwicklung und Medienproduktion, genannt <span class="fontGreen">&#8220;AWEBGO&#8221;</span>.</p>
 <p>Hier finden Sie einige Informationen zum Thema Webdesign und der Tätigkeit als Mediengestalter. Das Hauptaugenmerk gilt der Webentwicklung. Das heißt: Anwendungen programmieren und Content-Management-Systeme erweitern. Dabei werden oftmals Frameworks eingesetzt, um innerhalb kürzester Zeit eine effektive und umfangreiche Website zu erstellen.</p>
 <p>Die Programmierung ist eine Tätigkeit, wo man sich keine Fehler erlauben darf. Jede noch so kleinste Unstimmigkeit kann den kompletten Systemabsturz mit sich bringen. Umso mehr reizt es Einen, durch herausfordernde Projekte an neue Vorgehensweisen herangehen zu können, um die Programmiertechnik stets zu verbessern, weiterzuentwickeln und neue richtungsweisende Erfahrungen für die Zukunft zu sammeln.</p>
-<p>Das Projekt &#8222;AWEBGO&#8220; zielt auf eine gut durchdachte Archivierung aller nutznießerischen Arbeiten von anderen Programmierer/Entwickler und/oder Gestalter/Designer ab, ausgestattet mit einer leicht intuitiv zu bedienenden Oberfläche soll der gesamte Funktionsumfang ein rundum strukturiertes Interface für eine schnelle Suche von projektbezogenen Tätigkeiten bei der Webentwicklung und der Mediengestaltung bieten.</p>
-<p>AWEBGO ist OpenSource und soll allen dienen.<br />
+<p>Das Projekt <span class="fontGreen">&#8220;AWEBGO&#8221;</span> zielt auf eine gut durchdachte Archivierung aller nutznießerischen Arbeiten von anderen Programmierer/Entwickler und/oder Gestalter/Designer ab, ausgestattet mit einer leicht intuitiv zu bedienenden Oberfläche soll der gesamte Funktionsumfang ein rundum strukturiertes Interface für eine schnelle Suche von projektbezogenen Tätigkeiten bei der Webentwicklung und der Mediengestaltung bieten.</p>
+<p><span class="fontGreen">&#8220;AWEBGO&#8221;</span> ist OpenSource und soll allen dienen.<br />
 Schließlich lerne ich auch von anderen, um Eigenes bewerkstelligen zu können&#8230;</p>
 <p>Einen angenehmen Aufenthalt auf dieser Seite wünscht Ihnen,<br />
 <strong><a href="http://loop.arcturus.uberspace.de/start/administration-website/">Arjuna Noorsanto [Webmaster]</a></strong></p>
@@ -230,9 +269,10 @@ Schließlich lerne ich auch von anderen, um Eigenes bewerkstelligen zu können&#
               </div><!-- /.content -->
     </div><!-- /.wrap -->
     <footer class="content-info" role="contentinfo">
-  <div class="container">
-    <section class="widget views-2 widget_views"><h3>Views</h3><ul>
-<li><a href="http://loop.arcturus.uberspace.de/2015/05/28/lamp-server-on-android-via-linux-deploy/"  title="LAMP server on Android via Linux Deploy">LAMP server on Android via Linux Deploy</a> - 2 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/30/linux-ubuntu-lamp-server-on-android-%e2%80%a2-part-1/"  title="Linux &#8222;Ubuntu&#8220; LAMP-Server on Android • Part 1">Linux &#8222;Ubuntu&#8220; LAMP-Server on Android • Part 1</a> - 2 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/31/sailsjs-ein-mvc-framework-basierend-auf-nodejs/"  title="SailsJS • Ein MVC framework basierend auf NodeJS">SailsJS • Ein MVC framework basierend auf NodeJS</a> - 2 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/31/treeline-io-create-a-nodejs-app-with-a-browserinterface/"  title="Treeline.io • Create a NodeJS app with a browserinterface">Treeline.io • Create a NodeJS app with a browserinterface</a> - 2 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/24/aptana3-ssh-kex-chroot-into-ubuntu-lamp-server/"  title="Aptana3 SSH-KEX chroot into Ubuntu-LAMP-Server">Aptana3 SSH-KEX chroot into Ubuntu-LAMP-Server</a> - 3 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/"  title="Koding.com :: An Ubuntu Virtual-Machine with ROOT access">Koding.com :: An Ubuntu Virtual-Machine with ROOT access</a> - 3 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/10/03/ist-ein-technisches-know-how-im-informationszeitalter-foerderlich-fuer-das-individuum/"  title="Ist ein technisches Know-how im Informationszeitalter förderlich für das Individuum?">Ist ein technisches Know-how im Informationszeitalter förderlich für das Individuum?</a> - 4 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/01/18/willkommen-zum-techjournal-von-awebgo/"  title="Willkommen zum TechJournal von Awebgo">Willkommen zum TechJournal von Awebgo</a> - 5 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/08/19/requirejs-scripte-einbinden/"  title="Require.JS :: Scripte einbinden">Require.JS :: Scripte einbinden</a> - 7 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/04/16/php-paypal-rest-api-how-to/"  title="PHP • PayPal REST-API :: How to">PHP • PayPal REST-API :: How to</a> - 8 views</li></ul>
+    <div class="footerArea">
+        <div class="container">
+            <section class="widget views-2 widget_views"><h3>Views</h3><ul>
+<li><a href="http://loop.arcturus.uberspace.de/2015/05/28/lamp-server-on-android-via-linux-deploy/"  title="LAMP server on Android via Linux Deploy">LAMP server on Android via Linux Deploy</a> - 2 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/30/linux-ubuntu-lamp-server-on-android-%e2%80%a2-part-1/"  title="Linux &#8220;Ubuntu&#8221; LAMP-Server on Android • Part 1">Linux &#8220;Ubuntu&#8221; LAMP-Server on Android • Part 1</a> - 2 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/31/sailsjs-ein-mvc-framework-basierend-auf-nodejs/"  title="SailsJS • Ein MVC framework basierend auf NodeJS">SailsJS • Ein MVC framework basierend auf NodeJS</a> - 2 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/31/treeline-io-create-a-nodejs-app-with-a-browserinterface/"  title="Treeline.io • Create a NodeJS app with a browserinterface">Treeline.io • Create a NodeJS app with a browserinterface</a> - 3 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/24/aptana3-ssh-kex-chroot-into-ubuntu-lamp-server/"  title="Aptana3 SSH-KEX chroot into Ubuntu-LAMP-Server">Aptana3 SSH-KEX chroot into Ubuntu-LAMP-Server</a> - 4 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/"  title="Koding.com :: An Ubuntu Virtual-Machine with ROOT access">Koding.com :: An Ubuntu Virtual-Machine with ROOT access</a> - 4 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/01/18/willkommen-zum-techjournal-von-awebgo/"  title="Willkommen zum TechJournal von Awebgo">Willkommen zum TechJournal von Awebgo</a> - 5 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/10/03/ist-technisches-know-how-im-informationszeitalter-foerderlich-fuer-das-individuum/"  title="Ist technisches Know-how im Informationszeitalter förderlich für das Individuum?">Ist technisches Know-how im Informationszeitalter förderlich für das Individuum?</a> - 6 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/04/16/php-paypal-rest-api-how-to/"  title="PHP • PayPal REST-API :: How to">PHP • PayPal REST-API :: How to</a> - 8 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/08/19/requirejs-scripte-einbinden/"  title="Require.JS :: Scripte einbinden">Require.JS :: Scripte einbinden</a> - 9 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/09/11/nodejs-mit-nvm-fuer-die-webentwicklung-verwenden/"  title="NodeJS mit NVM für die Webentwicklung verwenden">NodeJS mit NVM für die Webentwicklung verwenden</a> - 14 views</li></ul>
 </section><section class="widget calendar-2 widget_calendar"><h3>Tech Topics</h3><div id="calendar_wrap"><table id="wp-calendar">
 	<caption>Oktober 2015</caption>
 	<thead>
@@ -257,10 +297,10 @@ Schließlich lerne ich auch von anderen, um Eigenes bewerkstelligen zu können&#
 
 	<tbody>
 	<tr>
-		<td colspan="3" class="pad">&nbsp;</td><td>1</td><td>2</td><td><a href="http://loop.arcturus.uberspace.de/2015/10/03/" title="Ist ein technisches Know-how im Informationszeitalter förderlich für das Individuum?">3</a></td><td id="today">4</td>
+		<td colspan="3" class="pad">&nbsp;</td><td>1</td><td>2</td><td><a href="http://loop.arcturus.uberspace.de/2015/10/03/" title="Ist technisches Know-how im Informationszeitalter förderlich für das Individuum?">3</a></td><td>4</td>
 	</tr>
 	<tr>
-		<td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+		<td id="today">5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
 	</tr>
 	<tr>
 		<td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
@@ -356,7 +396,8 @@ window.newsletter_check = function (f) {
 <a href='http://loop.arcturus.uberspace.de/Web-Development/tutorial/' class='tag-link-56' title='1 Thema' style='font-size: 8pt;'>Tutorial</a>
 <a href='http://loop.arcturus.uberspace.de/Web-Development/virtual-machine/' class='tag-link-73' title='1 Thema' style='font-size: 8pt;'>Virtual Machine</a>
 <a href='http://loop.arcturus.uberspace.de/Web-Development/webentwicklung/' class='tag-link-50' title='1 Thema' style='font-size: 8pt;'>Webentwicklung</a></div>
-</section>  </div>
+</section>        </div>
+    </div>
 </footer>
         <div id="fb-root"></div>
 		<script>(function(d, s, id) {
@@ -444,13 +485,13 @@ var unlimited_server_values = [""];
 <script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/rating-system/assets/js/toucheventsdetect.js?ver=1.0'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var vortex_ajax_var = {"url":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php","nonce":"c00e4059f8"};
+var vortex_ajax_var = {"url":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php","nonce":"887ac2395d"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/rating-system/assets/js/like-or-dislike.js?ver=1.0'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var vortex_ajax_comment = {"url":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php","nonce":"c00e4059f8"};
+var vortex_ajax_comment = {"url":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php","nonce":"887ac2395d"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/rating-system/assets/js/like-or-dislike-comments.js?ver=1.0'></script>
