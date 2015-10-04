@@ -54,6 +54,9 @@ html {
 
             h1 {
               color: $green-font-color !important;
+              text-shadow: 1px 1px 2px black !important;
+              font-weight: bold !important;
+              letter-spacing: 0.05em !important;
             }
           }
 

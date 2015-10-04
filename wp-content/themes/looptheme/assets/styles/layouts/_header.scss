@@ -48,6 +48,10 @@ body {
           opacity: 0.95 !important;
           z-index: 10000;
         }
+
+        &:hover {
+          opacity: 0.75 !important;
+        }
       }
 
       .secLogo {

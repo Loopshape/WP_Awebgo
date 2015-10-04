@@ -170,6 +170,17 @@ box-shadow: 0 0 10px 3px $shadow-color;
             content: " ";
           }
 
+          td#today {
+            font-size: 1.05em !important;
+            font-weight: bold !important;
+            color: $green-font-color + rgba(30,30,30,0.8) !important;
+            text-shadow: 0 0 1px black !important;
+            background-color: $green-font-color - rgba(100,100,100,0.8) !important;
+-webkit-border-radius: 7px !important;
+border-radius: 7px !important;
+            overflow: hidden !important;
+          }
+
           td {
             color: $tertiary-font-color !important;
 
