@@ -81,7 +81,7 @@ html {
               right: 0;
               font-size: 1.175em !important;
               font-weight: bold !important;
-              color: $tertiary-font-color !important;
+              color: $tertiary-font-color - rgba(80,80,80,0.95) !important;
               text-shadow: 0 0 10px $shadow-color !important;
               text-align: center;
               background-color: none;//$answer-field-color !important;
@@ -171,6 +171,16 @@ border-radius: 12px !important;
               &, * {
                 color: $white-color !important;
                 text-shadow: 0 0 2px $black-color !important;
+              }
+
+              div.sf_addthis * {
+                border: none !important;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+              }
+
+              div[class^="sf_"]:hover {
+                cursor: pointer;
               }
             }
 
@@ -289,7 +299,7 @@ box-shadow: 0 0 40px 0px $shadow-color !important;
 border-radius: 10px !important;
           background-color: none;//$action-field-color !important;
           background-image: url('/wp-content/themes/looptheme/assets/images/RespondTextArea.png');
-          background-size: 100%;
+          background-size: 25%;
           background-position: top left;
           background-attachment: fixed;
         }

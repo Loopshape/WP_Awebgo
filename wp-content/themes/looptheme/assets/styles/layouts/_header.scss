@@ -89,9 +89,9 @@ body {
               margin-right: 0.5em !important;
               background-color: none;
               background-image: url('/wp-content/themes/looptheme/assets/images/RedStoneArea.png');
-              background-size: 50%;
+              background-size: 25% !important;
               background-position: top left;
-              background-attachment: fixed;
+              background-attachment: absolute;
 -webkit-border-radius: 7px !important;
 border-radius: 7px !important;
               border: 2px solid $red-border-color !important;
