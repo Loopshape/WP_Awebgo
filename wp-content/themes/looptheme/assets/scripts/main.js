@@ -66,14 +66,6 @@
                     navCount++;
                 });
 
-                // GSAP codeblock for transitions
-                /*
-                TweenLite.to($('html body > *'), _animDelay, {
-                    opacity : '+=0.99',
-                    ease : linear
-                });
-                */
-
                 $('#pinterestBox a').each(function() {
                     var _textBuffer = $(this).children('img').prop('alt');
                     $(this).children('img').attr('alt','').closest('a').attr('title',_textBuffer);
@@ -105,10 +97,39 @@
                             'text-shadow' : 'none',
                             '-webkit-border-radius' : '7px',
                             'border-radius' : '7px',
+                            'opacity' : '0.9',
+                            'visibility' : 'visible',
                             'overflow' : 'hidden'
                         }
                     });
                 }
+
+                // Click handler for internal and external URLs
+                $('a').on('click', function() {
+                    var _href = $(this).prop('href');
+                    if($(this).hasClass('external')) {
+                        TweenLite.to($('html body > *'), _animDelay, {
+                            opacity : '-=0.99',
+                            ease : Quad.easeOut
+                        });
+                        $('html body > * > *').css('visibility','hidden');
+                        setTimeout(function() {
+                            window.open(_href, '_blank');
+                            return false;
+                        }, 'fast');
+                    } else {
+                        $('html body > * > *').css('visibility','hidden');
+                        setTimeout(function() {
+                            window.location = _href;
+                            return false;
+                        }, 'fast');
+                    }
+                });
+                $('html body > * > *').css('visibility','visible');
+                TweenLite.to($('html body > *'), _animDelay, {
+                    opacity : '+=0.99',
+                    ease : Quad.easeIn
+                });
             }
         },
         // Home page

@@ -1,5 +1,14 @@
 html {
   body {
+
+    > * {
+      opacity: 0;
+
+      > * {
+        visibility: hidden;
+      }
+    }
+
     div.container.wrap {
       position: relative;
       display: block;
@@ -127,7 +136,6 @@ box-shadow: 0 0 3px 1px $highblue-color !important;
 
     button,
     input[type="submit"] {
-      //font-family: 'IM Fell Great Primer', serif !important;
       font-family: 'Josefin Sans', sans-serif !important;
       font-weight: bold !important;
       position: relative;
@@ -255,6 +263,7 @@ box-shadow: 0 0 15px 5px $black-color !important;
 
     *[id*="tooltipsy"] {
       opacity: 0.9;
+      visibility: visible;
     }
 
     *#pinterestBox {
