@@ -7,9 +7,10 @@ html body {
     display: block;
     width: 100% !important;
     height: auto !important;
-    background-color: $footer-color !important;
+    background-color: none !important;
     border-top: 5px solid $footer-border-color !important;
     padding: 30px !important;
+    z-index: 1 !important;
 
     > * > * {
       margin: 0 10px 15px !important;
@@ -58,8 +59,8 @@ box-shadow: 0 0 6px 0 $shadow-color;
 -webkit-border-radius: 12px !important;
 border-radius: 12px !important;
           border: 1px solid $border-color !important;
--webkit-box-shadow: 0 0 6px 0 $shadow-color;
-box-shadow: 0 0 6px 0 $shadow-color;
+//-webkit-box-shadow: 0 0 6px 0 $shadow-color;
+//box-shadow: 0 0 6px 0 $shadow-color;
         overflow: hidden !important;
 
         > ul {

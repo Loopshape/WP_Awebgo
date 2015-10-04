@@ -1,33 +1,10 @@
 html {
-  background-color: black !important;
-  background-image: url('/wp-content/themes/looptheme/assets/images/ViewportBackground_Planet.jpg') !important;
-  background-size: cover;
-  background-position: top left;
-  background-attachment: fixed;
-  min-width: 1024px;
-
   body {
-    //background-color: $brand-primary !important;
-    background-color: none !important;//rgba(8,18,28,1);
-    background: url('/wp-content/themes/looptheme/assets/images/DotPattern.png') repeat !important;
-    background-size: 100%;
-    background-position: top left;
-    background-attachment: fixed;
-
-    img.backgroundTop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto !important;
-      min-width: 1300px;
-      z-index: -1;
-    }
-
     div.container.wrap {
       position: relative;
       display: block;
       min-height: 100%;
+      z-index: 2 !important;
 
       div.content.row {
         background: none !important;
@@ -283,9 +260,8 @@ box-shadow: 0 0 15px 5px $black-color !important;
     *#pinterestBox {
       position: relative;
       opacity: 0.95 !important;
-
--webkit-box-shadow: 0 0 35px 5px $black-color !important;
-box-shadow: 0 0 35px 5px $black-color !important;
+//-webkit-box-shadow: 0 0 7px 1px $shadow-color;
+//box-shadow: 0 0 7px 1px $shadow-color;
 
       > * {
         width: 100%;

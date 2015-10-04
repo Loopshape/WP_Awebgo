@@ -13,7 +13,7 @@
 (function($) {
 
     // custom variables
-    var _animDelay = 1/3;
+    var _animDelay = 1;
 
     // Use this variable to set up the common and page specific functions. If you
     // rename this variable, you will also need to rename the namespace below.
@@ -35,6 +35,13 @@
                         'max-width' : '0%'
                     });
                 }
+
+                $('section.widget').matchHeight({
+                    byRow: true,
+                    property: 'height',
+                    target: null,
+                    remove: false
+                });
 
                 $companyTypo = $('a.brand');
                 $companyTypo.after('<h4 class="slogan">WEBSERVER-ADMINISTRATION</h4>');
@@ -60,10 +67,12 @@
                 });
 
                 // GSAP codeblock for transitions
+                /*
                 TweenLite.to($('html body > *'), _animDelay, {
                     opacity : '+=0.99',
-                    ease : Quad.easeInOut
+                    ease : linear
                 });
+                */
 
                 $('#pinterestBox a').each(function() {
                     var _textBuffer = $(this).children('img').prop('alt');
@@ -100,8 +109,6 @@
                         }
                     });
                 }
-
-                $('footer.content-info div.footerArea > section.widget').equalHeights();
             }
         },
         // Home page

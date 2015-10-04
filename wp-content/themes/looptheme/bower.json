@@ -13,7 +13,7 @@
     "gsap": "~1.18.0",
     "tooltipsy": "*",
     "requirejs": "~2.1.20",
-    "jquery.equalheights": "~1.5.2"
+    "matchheight": "~0.6.0"
   },
   "overrides": {
     "modernizr": {

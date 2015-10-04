@@ -24,7 +24,7 @@ $white-color: rgba(255,255,255,0.95);
 
 $main-font-color: $fifth-color;
 $primary-font-color: $fifth-color - rgba(40,40,40,0.95);
-$secondary-font-color: rgba(180,10,20,1);
+$secondary-font-color: rgba(140,20,30,1);
 $tertiary-font-color: $tertiary-color + rgba(64,54,12,0.95);
 $quarter-font-color: $fifth-color;
 
@@ -33,12 +33,12 @@ $blue-font-color: rgba(85,150,230,0.8);
 $green-font-color: rgba(150,230,140,0.8);
 $yellow-font-color: $tertiary-font-color;//-rgba(80,80,80,0.95);
 
-$red-border-color: rgba(80,10,10,1);
+$red-border-color: rgba(50,10,10,1);
 $green-border-color: rgba(20,80,20,1);
 $highblue-border-color: rgba(200,220,255,0.5) - rgba(160,160,160,0.5);
 
 $footer-color: $black-color;
-$footer-border-color: rgba(80,30,40,0.75);
+$footer-border-color: rgba(120,30,40,0.75);
 
 $font-opacity: 1;
 $button-opacity: 0.999;
@@ -100,18 +100,3 @@ html body {
   }
 
 }
-
-/*
-body {
-    /* grayscale *-
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    filter: gray;
-    filter: grayscale(1);
-    filter: url(desaturate.svg#greyscale);
-
-    /* multiply *-
-    background-color: rgba(190, 50, 50, 0.65);
-    background-blend-mode: multiply;
-}
-*/
