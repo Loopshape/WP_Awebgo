@@ -59,12 +59,21 @@ box-shadow: 0 0 6px 0 $shadow-color;
 
         > ul {
           li {
+            * {
+              color: $green-font-color !important;
+            }
+            font-size: 0.88em;
+            font-weight: thin !important;
+
             a {
-              font-size: 1em;
-              font-weight: normal !important;
+              * {
+                color: $tertiary-color !important;
+              }
+              font-size: 1.1em;
+              font-weight: bold !important;
 
               &:hover {
-                color: #def !important;
+                color: #cde !important;
               }
             }
           }

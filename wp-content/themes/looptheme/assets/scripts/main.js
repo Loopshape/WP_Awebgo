@@ -67,7 +67,12 @@
                     ease : Quad.easeInOut
                 });
 
-                var $tooltipItem = $('.hastip,.container img,nav #menu-mainmenu a,.content.row a,#wp-calendar th,#wp-calendar td a,.tagcloud a,button,input,select,textarea,.widget_views a');
+                $('#pinterestBox a').each(function() {
+                    var _textBuffer = $(this).children('img').prop('alt');
+                    $(this).children('img').attr('alt','').closest('a').attr('title',_textBuffer);
+                });
+
+                var $tooltipItem = $('.hastip,.container img,nav #menu-mainmenu a,.content.row a,#wp-calendar th,#wp-calendar td a,.tagcloud a,button,input,select,textarea,.widget_views a,#pinterestBox a');
                 if ($tooltipItem.prop('title').length !== 0) {
                     $tooltipItem.tooltipsy({
                         alignTo : 'cursor',

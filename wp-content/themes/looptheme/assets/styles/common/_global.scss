@@ -39,6 +39,9 @@ html {
       line-height: 134% !important;
       color: $main-font-color !important;
       border-collapse: collapse !important;
+-moz-box-sizing: border-box !important;
+-webkit-box-sizing: border-box !important;
+box-sizing: border-box !important;
       opacity: 1;
 
       &:focus,
@@ -272,6 +275,49 @@ box-shadow: 0 0 15px 5px $black-color !important;
 
     *[id*="tooltipsy"] {
       opacity: 0.9;
+    }
+
+    *#pinterestBox {
+      position: relative;
+      opacity: 0.95 !important;
+
+-webkit-box-shadow: 0 0 35px 5px $black-color !important;
+box-shadow: 0 0 35px 5px $black-color !important;
+
+      > * {
+        width: 100%;
+-webkit-border-radius: 8px !important;
+border-radius: 8px !important;
+      }
+
+      &, * {
+        color: $black-color !important;
+      }
+
+      img {
+-webkit-border-radius: 0 !important;
+border-radius: 0 !important;
+      }
+
+      span[class^="PIN_"] {
+        color: #def !important;
+        background-color: rgba(35,49,66,1) !important;
+        box-shadow: none !important;
+
+        > a[class^="PIN_"] {
+          &, * {
+            color: #def !important;
+          }
+          background: none !important;
+          box-shadow: none !important;
+          border: none !important;
+          outline: none !important;
+        }
+      }
+    }
+
+    div.vortex-container-vote {
+      float: left !important;
     }
   }
 }
