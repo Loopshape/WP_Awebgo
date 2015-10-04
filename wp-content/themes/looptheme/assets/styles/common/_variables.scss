@@ -31,6 +31,7 @@ $quarter-font-color: $fifth-color;
 $red-font-color: rgba(170,65,70,0.8);
 $blue-font-color: rgba(85,150,230,0.8);
 $green-font-color: rgba(150,230,140,0.8);
+$yellow-font-color: $tertiary-font-color;//-rgba(80,80,80,0.95);
 
 $red-border-color: rgba(80,10,10,1);
 $green-border-color: rgba(20,80,20,1);
@@ -50,6 +51,55 @@ $action-field-color: rgba(128,128,128,0.33);
 
 $border-color: transparent;
 $shadow-color: $quarter-color;
+
+// Fontcolors definitions
+
+html body {
+
+  .fontBlack {
+    &, * {
+      color: $black-color !important;
+    }
+  }
+
+  .fontWhite {
+    &, * {
+      color: $white-color !important;
+    }
+  }
+
+  .fontRed {
+    opacity: 1 !important;
+    &, * {
+      color: $red-font-color !important;
+      text-shadow: 0 0 1px $red-font-color !important;
+      font-weight: bold !important;
+    }
+  }
+
+  .fontBlue {
+    &, * {
+      color: $blue-font-color !important;
+    }
+  }
+
+  .fontGreen {
+    opacity: 0.8 !important;
+    &, * {
+      color: $green-font-color !important;
+      text-shadow: 0 0 0.66px $green-font-color !important;
+      font-weight: bold !important;
+    }
+  }
+
+  .fontYellow {
+    opacity: 0.75 !important;
+    &, * {
+      color: $yellow-font-color !important;
+    }
+  }
+
+}
 
 /*
 body {

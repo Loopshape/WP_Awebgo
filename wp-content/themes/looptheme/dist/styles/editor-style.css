@@ -1,4 +1,4 @@
-@charset "UTF-8";/*!
+@charset "UTF-8";html body .fontBlack,html body .fontBlack *{color:rgba(0,0,0,.5)!important}html body .fontWhite,html body .fontWhite *{color:rgba(255,255,255,.95)!important}html body .fontRed{opacity:1!important}html body .fontRed,html body .fontRed *{color:rgba(170,65,70,.8)!important;text-shadow:0 0 1px rgba(170,65,70,.8)!important;font-weight:700!important}html body .fontBlue,html body .fontBlue *{color:rgba(85,150,230,.8)!important}html body .fontGreen{opacity:.8!important}html body .fontGreen,html body .fontGreen *{color:rgba(150,230,140,.8)!important;text-shadow:0 0 .66px rgba(150,230,140,.8)!important;font-weight:700!important}html body .fontYellow{opacity:.75!important}html body .fontYellow,html body .fontYellow *{color:rgba(255,255,27,.95)!important}/*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)

@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery("video").click(function(){jQuery(this).trigger(this.paused?this.paused?"play":"play":"pause")});jQuery(window).load(function(){jQuery(".gpf-slicker-instagram").masonry({itemSelector:".slicker-instagram-placeholder"});var t=jQuery(".gpf-slicker-facebook-posts");t.imagesLoaded(function(){t.masonry()})})});
