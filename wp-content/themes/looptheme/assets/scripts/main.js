@@ -12,8 +12,6 @@
 
 (function($) {
 
-    // global definitions
-    //var tooltipsy = require(['./wp-content/themes/looptheme/bower_components/tooltipsy/tooltipsy.min.js']);
     // custom variables
     var _animDelay = 1/3;
 
@@ -102,6 +100,8 @@
                         }
                     });
                 }
+
+                $('footer.content-info div.footerArea > section.widget').equalHeights();
             }
         },
         // Home page

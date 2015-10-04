@@ -5,7 +5,6 @@ html {
   height: 100% !important;
   color: transparent !important;
   opacity: 1 !important;
-
   body {
     position: relative;
     display: inline-block;
@@ -15,31 +14,25 @@ html {
     opacity: 1 !important;
     color: $primary-font-color;
     margin-bottom: 15px !important;
-
     > * {
       opacity: 0;
     }
-
     > header > div > nav {
       * {
         background-color: transparent !important;
       }
     }
-
     > .container {
       position: relative;
       background: transparent !important;
-
       .content {
         position: relative;
         min-height: 100%;
-
         p.byline.author.vcard {
           &, * {
             color: $green-font-color !important;
           }
         }
-
         .main,
         .sidebar {
           position: relative;
@@ -47,48 +40,43 @@ html {
           width: 100% !important;
           max-width: 70%;
           background-color: $primary-color;
-          background-image: url('/wp-content/themes/looptheme/assets/images/MetalArea.png') !important;
+          background-image: url("/wp-content/themes/looptheme/assets/images/MetalArea.png") !important;
           background-size: 50%;
           background-position: top left;
           background-attachment: scroll;
           padding: 15px !important;
--webkit-border-radius: 7px !important;
-border-radius: 7px !important;
+          -webkit-border-radius: 7px !important;
+          border-radius: 7px !important;
           border: 1px solid $border-color !important;
--webkit-box-shadow: 0 0 10px 3px $shadow-color;
-box-shadow: 0 0 10px 3px $shadow-color;
+          -webkit-box-shadow: 0 0 10px 3px $shadow-color;
+          box-shadow: 0 0 10px 3px $shadow-color;
           overflow: hidden !important;
-
           .page-header {
             border-color: $secondary-color !important;
             border-width: 2px !important;
           }
-
           div {
             h1 {
               span.vcard {
-                font-family: 'IM Fell Great Primer', serif !important;
+                font-family: "IM Fell Great Primer", serif !important;
               }
             }
           }
         }
-
         .sidebar {
           display: inline-block !important;
           max-width: 28% !important;
           padding: 15px !important;
           margin-top: 15px !important;
           margin-left: 2% !important;
-
           > * {
-            background: url('/wp-content/themes/looptheme/assets/images/MetalPanel.png');
+            background: url("/wp-content/themes/looptheme/assets/images/MetalPanel.png");
             background-size: 100%;
             padding: 15px !important;
--webkit-border-radius: 12px !important;
-border-radius: 12px !important;
+            -webkit-border-radius: 12px !important;
+            border-radius: 12px !important;
             overflow: hidden !important;
           }
-
           .input-group {
             position: relative;
             display: inline-block;
@@ -96,13 +84,11 @@ border-radius: 12px !important;
             width: 100%;
             min-height: 45px !important;
             padding-bottom: 45px;
-
             > input {
               float: left;
               min-width: 50%;
               max-width: 64%;
             }
-
             > span {
               float: right;
               width: 100%;
@@ -111,159 +97,164 @@ border-radius: 12px !important;
             }
           }
         }
-
         padding: 0 !important;
         margin-bottom: 0 !important;
       }
-
       padding: 0 !important;
       margin-bottom: 0 !important;
     }
 
     footer.content-info {
--webkit-box-shadow: inset 0 0 50% 0 $shadow-color !important;
-box-shadow: inset 0 0 50% 0 $shadow-color !important;
-    }
+      display: block !important;
+      margin: 0 !important;
+      padding: 2% 4% !important;
+      -webkit-box-shadow: inset 0 0 50% 0 $shadow-color !important;
+      box-shadow: inset 0 0 50% 0 $shadow-color !important;
 
-    //body end
-  }
-}
+      div.footerArea {
+        margin: 15px auto !important;
+        padding: 2% !important;
+        background-color: $primary-color;
+        background-image: url("/wp-content/themes/looptheme/assets/images/MetalArea.png") !important;
+        background-size: 50%;
+        background-position: top left;
+        background-attachment: scroll;
+-webkit-border-radius: 12px !important;
+border-radius: 12px !important;
+        overflow: hidden !important;
 
-html body .container {
-  .widget_calendar,
-  .widget_tag_cloud,
-  .widget_newsletterwidget {
-    position: relative;
-    display: inline-block;
-    float: left;
-    width: 100%;
-    max-width: 23%;
-    height: auto !important;
--webkit-box-shadow: 0 0 10px 3px $shadow-color;
-box-shadow: 0 0 10px 3px $shadow-color;
-  }
-
-  .widget_calendar {
-    table#wp-calendar {
-      clear: both;
-      position: relative;
-      width: 100% !important;
-      max-width: 94%;
-      height: auto !important;
-
-      caption {
-        font-size: 1.5em;
-        font-weight: bold;
-        color: $green-font-color !important;
-      }
-
-      thead,
-      tbody,
-      tfoot {
-        tr {
-          * {
-            font-weight: bold !important;
-            text-align: center;
-            vertical-align: middle;
-            padding: 0.3em 0.45em !important;
+        .container {
+          .widget {
+            display: block !important;
+            margin: 1% !important;
           }
 
-          th {
+          .widget_calendar,
+          .widget_tag_cloud,
+          .widget_newsletterwidget {
+            position: relative;
             display: inline-block;
-            padding: 0.45em 0.65em !important;
-            content: " ";
+            float: left;
+            width: 100%;
+            //max-width: 23%;
+            -webkit-box-shadow: 0 0 10px 3px $shadow-color;
+            box-shadow: 0 0 10px 3px $shadow-color;
           }
-
-          td#today {
-            font-size: 1.05em !important;
-            font-weight: bold !important;
-            color: $green-font-color + rgba(30,30,30,0.8) !important;
-            text-shadow: 0 0 1px black !important;
-            background-color: $green-font-color - rgba(100,100,100,0.8) !important;
--webkit-border-radius: 7px !important;
-border-radius: 7px !important;
-            overflow: hidden !important;
-          }
-
-          td {
-            color: $tertiary-font-color !important;
-
-            > * {
-              opacity: 0.75 !important;
+          .widget_calendar {
+            table#wp-calendar {
+              clear: both;
+              position: relative;
+              width: 100% !important;
+              max-width: 94%;
+              height: auto !important;
+              caption {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: $green-font-color !important;
+              }
+              thead,
+              tbody,
+              tfoot {
+                tr {
+                  * {
+                    font-weight: bold !important;
+                    text-align: center;
+                    vertical-align: middle;
+                    padding: 0.3em 0.45em !important;
+                  }
+                  th {
+                    display: inline-block;
+                    padding: 0.45em 0.65em !important;
+                    content: " ";
+                  }
+                  td#today {
+                    font-size: 1.05em !important;
+                    font-weight: bold !important;
+                    color: ($green-font-color + rgba(30, 30, 30, 0.8)) !important;
+                    text-shadow: 0 0 1px black !important;
+                    background-color: ($green-font-color - rgba(100, 100, 100, 0.8)) !important;
+                    -webkit-border-radius: 7px !important;
+                    border-radius: 7px !important;
+                    overflow: hidden !important;
+                  }
+                  td {
+                    color: $tertiary-font-color !important;
+                    > * {
+                      opacity: 0.75 !important;
+                    }
+                    a {
+                      font-weight: bold !important;
+                      color: $tertiary-font-color !important;
+                      background-color: $secondary-font-color !important;
+                      padding: 0 0.3em !important;
+                      border: 1px solid $red-border-color !important;
+                      -webkit-border-radius: 7px !important;
+                      border-radius: 7px !important;
+                      overflow: hidden !important;
+                      &:hover {
+                        color: $light-color !important;
+                        background-color: $green-font-color !important;
+                        border: 1px solid $green-font-color !important;
+                        -webkit-box-shadow: 0 0 8px 2px $green-font-color !important;
+                        box-shadow: 0 0 8px 2px $green-font-color !important;
+                      }
+                    }
+                  }
+                }
+              }
+              tbody {
+                display: inline-block;
+                background-color: $primary-color;
+                background-image: url("/wp-content/themes/looptheme/assets/images/MetalField.png") !important;
+                background-size: 50%;
+                background-position: top left;
+                background-attachment: scroll;
+                border: 1px solid transparent !important;
+                -webkit-border-radius: 7px !important;
+                border-radius: 7px !important;
+                overflow: hidden !important;
+              }
+              tfoot {
+                display: none;
+              }
             }
-
-            a {
-              font-weight: bold !important;
-              color: $tertiary-font-color !important;
-              background-color: $secondary-font-color !important;
-              padding: 0 0.3em !important;
-              border: 1px solid $red-border-color !important;
--webkit-border-radius: 7px !important;
-border-radius: 7px !important;
-              overflow: hidden !important;
-
-              &:hover {
-                color: $light-color !important;
-                background-color: $green-font-color !important;
-                border: 1px solid $green-font-color !important;
--webkit-box-shadow: 0 0 8px 2px $green-font-color !important;
-box-shadow: 0 0 8px 2px $green-font-color !important;
+          }
+          .widget_tag_cloud {
+            .tagcloud {
+              a {
+                position: relative;
+                display: inline-block;
+                color: $tertiary-color !important;
+                background-color: none !important;
+                //rgba(8,18,28,1);
+                background: url("/wp-content/themes/looptheme/assets/images/RedStoneArea.png") repeat !important;
+                background-size: 50% !important;
+                background-position: top left;
+                background-attachment: fixed;
+                padding: 0.2em 0.5em !important;
+                margin-top: 10px !important;
+                margin-right: 0.5em !important;
+                font-size: 1em !important;
+                -webkit-border-radius: 7px !important;
+                border-radius: 7px !important;
+                border: 2px solid $red-border-color !important;
+                overflow: hidden !important;
+                &:hover {
+                  color: $light-color !important;
+                  background-image: url("/wp-content/themes/looptheme/assets/images/GreenStoneArea.png") !important;
+                  border-color: $green-border-color !important;
+                  -webkit-box-shadow: 0 0 8px 0 $green-font-color !important;
+                  box-shadow: 0 0 8px 0 $green-font-color !important;
+                }
               }
             }
           }
         }
       }
-
-      tbody {
-        display: inline-block;
-        background-color: $primary-color;
-        background-image: url('/wp-content/themes/looptheme/assets/images/MetalField.png') !important;
-        background-size: 50%;
-        background-position: top left;
-        background-attachment: scroll;
-        border: 1px solid transparent !important;
--webkit-border-radius: 7px !important;
-border-radius: 7px !important;
-        overflow: hidden !important;
-      }
-
-      tfoot {
-        display: none;
-      }
     }
+    // body end
+
   }
-
-  .widget_tag_cloud {
-    .tagcloud {
-      a {
-        position: relative;
-        display: inline-block;
-        color: $tertiary-color !important;
-        background-color: none !important;//rgba(8,18,28,1);
-        background: url('/wp-content/themes/looptheme/assets/images/RedStoneArea.png') repeat !important;
-        background-size: 50% !important;
-        background-position: top left;
-        background-attachment: fixed;
-        padding: 0.2em 0.5em !important;
-        margin-top: 10px !important;
-        margin-right: 0.5em !important;
-        font-size: 1em !important;
--webkit-border-radius: 7px !important;
-border-radius: 7px !important;
-        border: 2px solid $red-border-color !important;
-        overflow: hidden !important;
-
-        &:hover {
-          color: $light-color !important;
-          background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png') !important;
-          border-color: $green-border-color !important;
--webkit-box-shadow: 0 0 8px 0 $green-font-color !important;
-box-shadow: 0 0 8px 0 $green-font-color !important;
-        }
-      }
-    }
-  }
-
 }
 
 html > body .container > header a,
@@ -274,6 +265,6 @@ html > body .container > footer a {
     color: $secondary-color !important;
   }
   &:hover, &:hover * {
-      color: $green-font-color !important;
+    color: $green-font-color !important;
   }
 }
