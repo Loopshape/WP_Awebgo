@@ -108,9 +108,9 @@ box-shadow: inset 0 0 20px 2px $shadow-color !important;
             position: relative;
             display: block;
             text-shadow: 0 0 1px $fifth-color !important;
-            background-color: none;//$answer-field-color !important;
-            background-image: url('/wp-content/themes/looptheme/assets/images/MetalPanel.png');
-            background-size: 100%;
+            background-color: $primary-color;
+            background-image: url('/wp-content/themes/looptheme/assets/images/MetalField.png') !important;
+            background-size: 50%;
             background-position: top left;
             background-attachment: scroll;
             padding: 15px 30px 0 !important;
@@ -261,6 +261,11 @@ border-radius: 6px !important;
         .sidebar {
           .shadowBar {
             margin: 0 15px !important;
+            background-color: $primary-color;
+            background-image: url('/wp-content/themes/looptheme/assets/images/MetalField.png') !important;
+            background-size: 50%;
+            background-position: top left;
+            background-attachment: scroll;
 
             &:first-child {
               margin-top: 15px !important;

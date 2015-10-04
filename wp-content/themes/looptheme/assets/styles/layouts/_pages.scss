@@ -47,6 +47,10 @@ html {
           width: 100% !important;
           max-width: 70%;
           background-color: $primary-color;
+          background-image: url('/wp-content/themes/looptheme/assets/images/MetalArea.png') !important;
+          background-size: 50%;
+          background-position: top left;
+          background-attachment: scroll;
           padding: 15px !important;
 -webkit-border-radius: 7px !important;
 border-radius: 7px !important;
@@ -212,14 +216,14 @@ box-shadow: 0 0 8px 2px $green-font-color !important;
 
       tbody {
         display: inline-block;
-        background-color: none !important;//rgba(8,18,28,1);
-        background-image: url('/wp-content/themes/looptheme/assets/images/MetalPanel.png') !important;
+        background-color: $primary-color;
+        background-image: url('/wp-content/themes/looptheme/assets/images/MetalField.png') !important;
         background-size: 50%;
         background-position: top left;
-        background-attachment: fixed;
+        background-attachment: scroll;
         border: 1px solid transparent !important;
--webkit-border-radius: 12px !important;
-border-radius: 12px !important;
+-webkit-border-radius: 7px !important;
+border-radius: 7px !important;
         overflow: hidden !important;
       }
 

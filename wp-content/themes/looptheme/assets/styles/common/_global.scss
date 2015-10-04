@@ -294,7 +294,7 @@ border-radius: 8px !important;
       }
 
       &, * {
-        color: $black-color !important;
+        color: #cde !important;
       }
 
       img {
@@ -303,9 +303,17 @@ border-radius: 0 !important;
       }
 
       span[class^="PIN_"] {
-        color: #def !important;
-        background-color: rgba(35,49,66,1) !important;
+        color: #cde !important;
         box-shadow: none !important;
+      }
+
+      > span[class^="PIN_"] {
+        background-color: rgba(35,49,66,1) !important;
+        //background-color: $primary-color;
+        background-image: url('/wp-content/themes/looptheme/assets/images/MetalField.png') !important;
+        background-size: 50%;
+        background-position: top left;
+        background-attachment: scroll;
 
         > a[class^="PIN_"] {
           &, * {
