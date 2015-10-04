@@ -6,14 +6,6 @@ html {
   color: transparent !important;
   opacity: 1 !important;
 
-  > * > * > * {
--webkit-transition: all 3000ms ease-in-out;
--moz-transition: all 3000ms ease-in-out;
--ms-transition: all 3000ms ease-in-out;
--o-transition: all 3000ms ease-in-out;
-transition: all 3000ms ease-in-out;
-  }
-
   body {
     position: relative;
     display: inline-block;
@@ -88,20 +80,9 @@ box-shadow: 0 0 10px 3px $shadow-color;
             background: url('/wp-content/themes/looptheme/assets/images/MetalPanel.png');
             background-size: 100%;
             padding: 15px !important;
-
-            &:first-child {
--webkit-border-radius: 12px 12px 0 0 !important;
-border-radius: 12px 12px 0 0 !important;
-              border: 1px solid transparent !important;
-              overflow: hidden !important;
-            }
-
-            &:last-child {
--webkit-border-radius: 0 0 12px 12px !important;
-border-radius: 0 0 12px 12px !important;
-              border: 1px solid transparent !important;
-              overflow: hidden !important;
-            }
+-webkit-border-radius: 12px !important;
+border-radius: 12px !important;
+            overflow: hidden !important;
           }
 
           .input-group {
@@ -185,7 +166,7 @@ box-shadow: 0 0 10px 3px $shadow-color;
 
           th {
             display: inline-block;
-            padding: 0.5em 0.8em !important;
+            padding: 0.45em 0.65em !important;
             content: " ";
           }
 

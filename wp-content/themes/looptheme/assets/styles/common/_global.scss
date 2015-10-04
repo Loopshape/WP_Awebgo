@@ -85,6 +85,8 @@ box-sizing: border-box !important;
     }
 
     h2 , h2 > a {
+      color: $green-color !important;
+      text-shadow: 0 0 4px $green-font-color !important;
       font-weight: normal !important;
       color: rgba(200,200,200,1) !important;
     }

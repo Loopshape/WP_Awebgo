@@ -5,7 +5,8 @@ html {
         .sidebar {
 
           h1, h2, h3 {
-            color: $tertiary-color !important;
+            color: $green-color !important;
+            text-shadow: 0 0 4px $green-font-color !important;
           }
 
           .widget {

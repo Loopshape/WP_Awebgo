@@ -23,7 +23,8 @@ box-shadow: 0 0 6px 0 $shadow-color;
     overflow: visible !important;
 
     h1, h2, h3 {
-      color: $tertiary-color !important;
+      color: $green-color !important;
+      text-shadow: 0 0 4px $green-font-color !important;
     }
 
     a {
@@ -58,7 +59,11 @@ box-shadow: 0 0 6px 0 $shadow-color;
         overflow: hidden !important;
 
         > ul {
+          padding-left: 10px !important;
+
           li {
+            letter-spacing: -0.01em !important;
+
             * {
               color: $green-font-color !important;
             }
