@@ -104,6 +104,8 @@
                     });
                 }
 
+                var _fadeDelay = 1;
+
                 $(function($) {
 
                     // Smooth viewport scroll by Chris Coyier
@@ -127,9 +129,9 @@
                     if (platform.indexOf('win') === 0 || platform.indexOf('linux') === 0) {
                         if ($.browser.webkit) {
                             $.srSmoothscroll({
-                                step : 55,
-                                speed : 800,
-                                ease : 'swing',
+                                step : 80,
+                                speed : 1000,
+                                ease : 'easeIn',
                                 target : $('body'),
                                 container : $(window)
                             });
@@ -142,7 +144,7 @@
                     $('a').on('click', function() {
                         var _href = $(this).prop('href');
                         if ($(this).hasClass('external')) {
-                            TweenMax.to($('html body > * > *'), 1, {
+                            TweenMax.to($('html body > * > *'), _fadeDelay*2, {
                                 autoAlpha : '-=0.99',
                                 onComplete : function() {
                                     $('html body > * > *').css({
@@ -157,7 +159,7 @@
                             if ($(this).hasClass('internal') === true) {
                                 return true;
                             }
-                            TweenMax.to($('html body > * > *'), 1, {
+                            TweenMax.to($('html body > * > *'), _fadeDelay*2, {
                                 autoAlpha : '-=0.99',
                                 onComplete : function() {
                                     $('html body > * > *').css({
@@ -171,7 +173,7 @@
                         }
                     });
                 });
-                TweenMax.to($('html body > * > *'), 1, {
+                TweenMax.to($('html body > * > *'), _fadeDelay*0.5, {
                     autoAlpha : '+=0.99',
                     onComplete : function() {
                         $('html body > * > *').css({
