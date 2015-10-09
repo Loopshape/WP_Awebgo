@@ -55,5 +55,11 @@
     "run-sequence": "^1.0.2",
     "traverse": "^0.6.6",
     "wiredep": "^2.2.2"
+  },
+  "dependencies": {
+    "bower": "^1.5.3",
+    "gulp": "^3.9.0",
+    "jpegtran": "^0.2.0",
+    "optipng": "^0.3.1"
   }
 }
