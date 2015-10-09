@@ -127,6 +127,7 @@
                     // https://github.com/simov/simplr-smoothscroll
                     var platform = navigator.platform.toLowerCase();
                     if (platform.indexOf('win') === 0 || platform.indexOf('linux') === 0) {
+                        return;
                         if ($.browser.webkit) {
                             $.srSmoothscroll({
                                 step : 80,
@@ -144,7 +145,7 @@
                     $('a').on('click', function() {
                         var _href = $(this).prop('href');
                         if ($(this).hasClass('external')) {
-                            TweenMax.to($('html body > * > *'), _fadeDelay*2, {
+                            TweenMax.to($('img.secLogo'), _fadeDelay*1, {
                                 autoAlpha : '-=0.99',
                                 onComplete : function() {
                                     $('html body > * > *').css({
@@ -159,13 +160,9 @@
                             if ($(this).hasClass('internal') === true) {
                                 return true;
                             }
-                            TweenMax.to($('html body > * > *'), _fadeDelay*2, {
+                            TweenMax.to($('img.secLogo'), _fadeDelay*1, {
                                 autoAlpha : '-=0.99',
                                 onComplete : function() {
-                                    $('html body > * > *').css({
-                                        'opacity' : '0',
-                                        'visibility' : 'hidden'
-                                    });
                                     window.location = _href;
                                     return false;
                                 }
@@ -173,7 +170,7 @@
                         }
                     });
                 });
-                TweenMax.to($('html body > * > *'), _fadeDelay*0.5, {
+                TweenMax.to($('img.secLogo'), _fadeDelay*1.5, {
                     autoAlpha : '+=0.99',
                     onComplete : function() {
                         $('html body > * > *').css({
