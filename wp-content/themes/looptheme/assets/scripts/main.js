@@ -134,6 +134,17 @@
                     target : $('body'),
                     container : $(window)
                     });
+                        return;
+                        if ($.browser.webkit) {
+                            $.srSmoothscroll({
+                                step : 80,
+                                speed : 1000,
+                                ease : 'easeIn',
+                                target : $('body'),
+                                container : $(window)
+                            });
+                        }
+
                     }
                     }
                     */
@@ -152,6 +163,7 @@
                             }
                             window.location = _href;
                             return false;
+
                         }
                         return true;
                     });

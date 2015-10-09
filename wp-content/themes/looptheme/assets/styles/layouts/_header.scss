@@ -112,6 +112,10 @@ body {
     background-position: top left;
     background-attachment: fixed;
     opacity: 0.2 !important;
+-webkit-filter: blur(1px); /* Chrome, Opera, etc. */
+filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
+filter: blur(1px); /* Firefox 35+, eventually all */
+    opacity: 0.62 !important;
     z-index: 1 !important;
   }
 
