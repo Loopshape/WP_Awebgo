@@ -368,3 +368,26 @@ border-radius: 0 !important;
     }
   }
 }
+
+html body {
+
+   > div.wrap.container > div > .main > div > article > header {
+     float: right;
+     display: inline-block;
+     width: 100%;
+     max-width: 54%;
+     height: auto !important;
+   }
+
+  .indexlist.post.thumbnail {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 7px;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 280px;
+    max-height: auto;
+  }
+
+}
