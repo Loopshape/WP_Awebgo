@@ -104,8 +104,6 @@
                     });
                 }
 
-                var _fadeDelay = 1;
-
                 $(function($) {
 
                     // Smooth viewport scroll by Chris Coyier
@@ -125,18 +123,20 @@
 
                     // Smooth mousewheel scroller
                     // https://github.com/simov/simplr-smoothscroll
+                    /*
                     var platform = navigator.platform.toLowerCase();
                     if (platform.indexOf('win') === 0 || platform.indexOf('linux') === 0) {
-                        if ($.browser.webkit) {
-                            $.srSmoothscroll({
-                                step : 80,
-                                speed : 1000,
-                                ease : 'easeIn',
-                                target : $('body'),
-                                container : $(window)
-                            });
-                        }
+                    if ($.browser.webkit) {
+                    $.srSmoothscroll({
+                    step : 32,
+                    speed : 256,
+                    ease : 'easeIn',
+                    target : $('body'),
+                    container : $(window)
+                    });
                     }
+                    }
+                    */
 
                     // Click handler for internal and external URLs
                     // with Screen-Fading functionality via Greensock.
@@ -144,43 +144,17 @@
                     $('a').on('click', function() {
                         var _href = $(this).prop('href');
                         if ($(this).hasClass('external')) {
-                            TweenMax.to($('html body > * > *'), _fadeDelay*2, {
-                                autoAlpha : '-=0.99',
-                                onComplete : function() {
-                                    $('html body > * > *').css({
-                                        'opacity' : '0',
-                                        'visibility' : 'hidden'
-                                    });
-                                    window.open(_href, '_blank');
-                                    return false;
-                                }
-                            });
+                            window.open(_href, '_blank');
+                            return false;
                         } else {
                             if ($(this).hasClass('internal') === true) {
                                 return true;
                             }
-                            TweenMax.to($('html body > * > *'), _fadeDelay*2, {
-                                autoAlpha : '-=0.99',
-                                onComplete : function() {
-                                    $('html body > * > *').css({
-                                        'opacity' : '0',
-                                        'visibility' : 'hidden'
-                                    });
-                                    window.location = _href;
-                                    return false;
-                                }
-                            });
+                            window.location = _href;
+                            return false;
                         }
+                        return true;
                     });
-                });
-                TweenMax.to($('html body > * > *'), _fadeDelay*0.5, {
-                    autoAlpha : '+=0.99',
-                    onComplete : function() {
-                        $('html body > * > *').css({
-                            'opacity' : '1',
-                            'visibility' : 'visible'
-                        });
-                    }
                 });
             }
         },

@@ -76,6 +76,13 @@ No screenshots are available at this time.
 
 == Changelog ==
 
+= 3.9.5 =
+
+* Corrected the call to maybe_maybe_convert_table_to_utf8mb4
+* Private newsletter check
+* Force UTF-8 on newsletter online view
+* Re-enabled the antibot option for ajax subscriptions
+
 = 3.9.4 =
 
 * CSV export fix

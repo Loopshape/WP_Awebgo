@@ -478,11 +478,11 @@ global $vortex_like_dislike;
 			
 		}
 		
-		function vortex_render_for_posts(){
+		function vortex_render_for_posts($dislike = true){
 			
 			global $vortex_like_dislike;
 			
-			if(!$vortex_like_dislike['v-switch-dislike']){
+			if(!$vortex_like_dislike['v-switch-dislike'] && $dislike){
 				
 			/*
 			this is for dev the same as below

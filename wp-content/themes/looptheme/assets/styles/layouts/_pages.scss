@@ -14,8 +14,9 @@ html {
     opacity: 1 !important;
     color: $primary-font-color;
     margin-bottom: 15px !important;
+
     > header > div > nav {
-      * {
+      > * {
         background-color: transparent !important;
       }
     }

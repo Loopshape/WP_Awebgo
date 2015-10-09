@@ -1,3 +1,7 @@
+## [2.4]
+### Added a way to disable the like button from function.
+## [2.3]
+### Fix fatal error.
 ## [2.2] 
 ### Added the shortcode [rating-system](You must have turned on like or dislike for posts and pages)
 ## [2.1] 

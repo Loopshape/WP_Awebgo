@@ -1,3 +1,30 @@
+@mover {
+  -webkit-transition: all 1000ms ease-out;
+-moz-transition: all 1000ms ease-out;
+-ms-transition: all 1000ms ease-out;
+-o-transition: all 1000ms ease-out;
+transition: all 1000ms ease-out;
+      opacity: 0.01 !important;
+-moz-transform: scale(0.01);
+-webkit-transform: scale(0.01);
+-o-transform: scale(0.01);
+-ms-transform: scale(0.01);
+transform: scale(0.01);
+  &:hover {
+-webkit-transition: all 1000ms ease-out;
+-moz-transition: all 1000ms ease-out;
+-ms-transition: all 1000ms ease-out;
+-o-transition: all 1000ms ease-out;
+transition: all 1000ms ease-out;
+      opacity: 0.99 !important;
+-moz-transform: scale(1.5);
+-webkit-transform: scale(1.5);
+-o-transform: scale(1.5);
+-ms-transform: scale(1.5);
+transform: scale(1.5);
+  }
+}
+
 html, body {
   position: relative;
   display: block;
@@ -14,6 +41,7 @@ body {
   height: 100%;
   background-color: rgb(0,12,24) !important;
   z-index: 2 !important;
+  @mover;
 
   > img.webArea {
     position: fixed;
@@ -62,7 +90,7 @@ body {
   }
 
   > img.secLogo {
-    display: block;
+    display: none !important;
     position: absolute;
     left: 33%;
     top: 50px;
@@ -83,7 +111,7 @@ body {
     background-size: 100%;
     background-position: top left;
     background-attachment: fixed;
-    opacity: 0.5 !important;
+    opacity: 0.2 !important;
     z-index: 1 !important;
   }
 
