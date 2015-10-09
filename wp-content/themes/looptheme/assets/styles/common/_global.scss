@@ -35,13 +35,17 @@ hr {
 }
 
 html body blockquote {
-  background-color: rgba(0,8,10,0.2) !important;
+  background-color: rgba(0,8,10,0.4) + rgba(20,80,20,0.4) !important;
   border: none !important;
   -webkit-border-radius: 15px !important;
   border-radius: 15px !important;
--webkit-box-shadow: 0 0 45px 6px rgba(70,70,70,0.85) !important;
-box-shadow: 0 0 45px 6px rgba(70,70,70,0.85) !important;
+//-webkit-box-shadow: 0 0 45px 16px rgba(0,0,0,0.75) !important;
+//box-shadow: 0 0 45px 16 rgba(0,0,0,0.75) !important;
   overflow: visible !important;
+}
+
+html body .nav > li > a:focus, html body .nav > li > a:hover {
+    background-color: transparent !important;
 }
 
 html {

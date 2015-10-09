@@ -188,8 +188,8 @@ filter: blur(1px); /* Firefox 35+, eventually all */
               display: inline-block;
               padding: 0 !important;
               margin-right: 0.5em !important;
-              background-color: none;
-              background-image: url('/wp-content/themes/looptheme/assets/images/RedStoneArea.png');
+              background-color: none !important;
+              background-image: url('/wp-content/themes/looptheme/assets/images/RedStoneArea.png') !important;
               background-size: 25% !important;
               background-position: top left;
               background-attachment: absolute;
@@ -207,19 +207,22 @@ box-shadow: 0 0 6px 0 $shadow-color;
                 padding: 0.5em 0.75em !important;
               }
 
-              &:hover {
-                background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png');
-                border-color: $green-border-color !important;
--webkit-box-shadow: 0 0 16px 0 $green-font-color !important;
-box-shadow: 0 0 16px 0 $green-font-color !important;
-              }
-
               &.current-menu-item {
+                background-color: none !important;
+                background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png') !important;
+                border-color: $green-border-color !important;
+
                 * {
                   color: $green-font-color !important;
                 }
-                background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png');
+              }
+
+              &:hover {
+                background-color: none !important;
+                background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png') !important;;
                 border-color: $green-border-color !important;
+-webkit-box-shadow: 0 0 16px 0 $green-font-color !important;
+box-shadow: 0 0 16px 0 $green-font-color !important;
               }
             }
           }

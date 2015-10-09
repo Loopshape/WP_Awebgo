@@ -15,7 +15,7 @@ html {
     color: $primary-font-color;
     margin-bottom: 15px !important;
 
-    > header > div > nav {
+    > header > div > nav:not(nav) {
       > * {
         background-color: transparent !important;
       }
