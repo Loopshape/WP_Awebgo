@@ -10,10 +10,6 @@
 <?php while (have_posts()) : the_post();
 ?>
 <div class="messagebody">
-<?php if(has_post_thumbnail()) {
-?>
-<div class="indexlist post thumbnail"><?php the_post_thumbnail(); ?></div>
-<?php } ?>
 <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 </div>
 <?php endwhile; ?>

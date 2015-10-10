@@ -57,16 +57,10 @@
     "wiredep": "^2.2.2"
   },
   "dependencies": {
-<<<<<<< HEAD
     "bower": "^1.5.3",
     "gulp": "^3.9.0",
+    "gulp-watch": "^4.3.5",
     "jpegtran": "^0.2.0",
     "optipng": "^0.3.1"
-=======
-    "gulp": "^3.9.0",
-    "jpegtran": "^0.2.0",
-    "optipng": "^0.3.1",
-    "ucfirst": "^1.0.0"
->>>>>>> 081910081d89f7b482302b4a98ef1180d82bb7df
   }
 }

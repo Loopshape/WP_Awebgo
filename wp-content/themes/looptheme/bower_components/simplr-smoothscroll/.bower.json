@@ -29,7 +29,6 @@
     "commit": "3eba72045e6c57f330c949ccb1a2b70dfa085dcf"
   },
   "_source": "git://github.com/simov/simplr-smoothscroll.git",
-  "_target": "~1.0.1",
-  "_originalSource": "simplr-smoothscroll",
-  "_direct": true
+  "_target": "*",
+  "_originalSource": "simplr-smoothscroll"
 }

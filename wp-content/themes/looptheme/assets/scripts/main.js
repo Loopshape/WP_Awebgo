@@ -121,34 +121,6 @@
                         }
                     });
 
-                    // Smooth mousewheel scroller
-                    // https://github.com/simov/simplr-smoothscroll
-                    /*
-                    var platform = navigator.platform.toLowerCase();
-                    if (platform.indexOf('win') === 0 || platform.indexOf('linux') === 0) {
-                    if ($.browser.webkit) {
-                    $.srSmoothscroll({
-                    step : 32,
-                    speed : 256,
-                    ease : 'easeIn',
-                    target : $('body'),
-                    container : $(window)
-                    });
-                        return;
-                        if ($.browser.webkit) {
-                            $.srSmoothscroll({
-                                step : 80,
-                                speed : 1000,
-                                ease : 'easeIn',
-                                target : $('body'),
-                                container : $(window)
-                            });
-                        }
-
-                    }
-                    }
-                    */
-
                     // Click handler for internal and external URLs
                     // with Screen-Fading functionality via Greensock.
                     // Coded by Arjuna Noorsanto

@@ -140,6 +140,9 @@ var jsTasks = function(filename) {
       }
     })
     .pipe(function() {
+      return gulpif(enabled.stripJSDebug, plumber());
+    })
+    .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
     .pipe(function() {

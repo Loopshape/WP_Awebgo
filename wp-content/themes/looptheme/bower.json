@@ -14,7 +14,8 @@
     "matchheight": "~0.6.0",
     "jquery-mousewheel": "*",
     "simplr-smoothscroll": "*",
-    "font-awesome": "~4.4.0"
+    "font-awesome": "~4.4.0",
+    "isotope": "~2.2.2"
   },
   "overrides": {
     "gsap": {
