@@ -141,6 +141,34 @@ box-sizing: border-box !important;
       font-weight: thin !important;
       color: rgba(200,200,200,1) !important;
       text-shadow: none !important;
+
+      strong {
+        opacity: 0.9 !important;
+      }
+    }
+
+    h4 {
+      strong {
+        opacity: 0.9 !important;
+      }
+    }
+
+    > div.wrap.container > div > .main > div:nth-child(2) > div:nth-child(2) {
+      > strong {
+        opacity: 0.8 !important;
+      }
+    }
+
+    > div.wrap.container > div > .main > article > div > p {
+      > strong {
+        opacity: 0.8 !important;
+      }
+    }
+
+    > div.wrap.container > div > .main > article > div > div.content > p {
+      > strong {
+        opacity: 0.9 !important;
+      }
     }
 
     ul,
@@ -157,8 +185,9 @@ box-sizing: border-box !important;
 
     hr, hr > * {
       position: relative;
-      display: inline-block;
-      width: 96% !important;
+      left: 3.25% !important;
+      display: block !important;
+      width: 90% !important;
       height: 100% !important;
       max-height: 2px !important;
       color: $tertiary-color !important;
@@ -448,4 +477,13 @@ html body {
      z-index: 0;
    }
 
+}
+
+body.single > div.wrap.container > div > .main > article > header > time {
+  top: 25px !important;
+  right: 0 !important;
+}
+
+body.single > div.wrap.container > div > .main > article > header > h1 {
+  max-width: 70% !important;
 }

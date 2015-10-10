@@ -36,20 +36,6 @@
                     });
                 }
 
-                $('div.content > *').matchHeight({
-                    byRow : true,
-                    property : 'height',
-                    target : null,
-                    remove : false
-                });
-
-                $('section.widget').matchHeight({
-                    byRow : true,
-                    property : 'height',
-                    target : null,
-                    remove : false
-                });
-
                 $companyTypo = $('a.brand');
                 $companyTypo.after('<h4 class="slogan">WEBSERVER-ADMINISTRATION</h4>');
 
@@ -178,6 +164,36 @@
                             }
                         });
                     });
+
+                    // Fix Isotope item-sum height for contentareas
+                    var contentHeight = $('div.content').innerHeight();
+                    var lastElemPosY = $('div.content > *:last-of-type').offset().top;
+                    $('div.content').height(lastElemPosY);
+                    $('div.content > *').matchHeight({
+                        byRow : true,
+                        property : 'height',
+                        target : null,
+                        remove : false
+                    });
+                    $('section.widget').matchHeight({
+                        byRow : true,
+                        property : 'height',
+                        target : null,
+                        remove : false
+                    });
+                    var headerHeight = $('body > header').innerHeight() * 2;
+                    var naviHeight = $('.container > nav').innerHeight() * 2;
+                    var footerPosY = $('body > footer').offset().top;
+                    var isSpecialPage = $('body.production').length!==0 ? true : false;
+                    if(isSpecialPage===false) {
+                        $('body > footer').css({
+                            'margin-top' : ((footerPosY - (headerHeight - naviHeight)) + (lastElemPosY - contentHeight) - 30)
+                        });
+                    } else {
+                        $('body > footer').css({
+                            'margin-top' : (((footerPosY - contentHeight) - headerHeight / 2) + 20)
+                        });
+                    }
 
                 });
             }
