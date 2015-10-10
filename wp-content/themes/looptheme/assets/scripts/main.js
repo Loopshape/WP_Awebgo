@@ -134,9 +134,10 @@
                     });
 
                     // ISOTOPE item grid handler
+                    var contentParagraph = 'p:not(.impressum .main > p):not(.privacy-policy .main > p):not(.administration-website .main > p):not(.main div + div p:not(.masonry p)):not(form p):not(header p):not(.main blockquote > p):not(#commentform > p):not(.entry-content > p):not(.entry-summary > p)';
                     if($('.main').length!==0) {
                         var mainColWidth = $('.main p a[data-rel^="lightbox-"] img').innerWidth() + 28;
-                        $('.main > p:not(.impressum .main > p):not(.privacy-policy .main > p):not(.administration-website .main > p):not(header p):not(.main blockquote > p):not(.main > div > p):not(#commentform > p):not(.entry-content > p):not(.entry-summary > p)').isotope({
+                        $(contentParagraph).isotope({
                             itemSelector : 'a[data-rel^="lightbox-"]',
                             percentPosition: true,
                             gutter: 20,
