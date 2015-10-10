@@ -391,8 +391,9 @@ html body {
   }
 
   a.gotoSideRight {
-    float: right;
-    max-width: 54%;
+    float: left !important;
+    max-width: 64% !important;
+    margin: 0 10% !important;
   }
 
 }

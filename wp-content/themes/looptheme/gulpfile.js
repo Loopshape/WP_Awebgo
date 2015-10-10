@@ -29,7 +29,11 @@ var manifest = require('asset-builder')('./assets/manifest.json');
 var path = manifest.paths;
 
 // `config` - Store arbitrary configuration values here.
-var config = manifest.config || {};
+var config = manifest.config || {
+
+    verbose : true
+
+};
 
 // `globs` - These ultimately end up in their respective `gulp.src`.
 // - `globs.js` - Array of asset-builder JS dependency objects. Example:
@@ -140,9 +144,6 @@ var jsTasks = function(filename) {
       }
     })
     .pipe(function() {
-      return gulpif(enabled.stripJSDebug, plumber());
-    })
-    .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
     .pipe(function() {
@@ -209,15 +210,20 @@ gulp.task('scripts', ['jshint'], function() {
 // `gulp fonts` - Grabs all the fonts and outputs them in a flattened directory
 // structure. See: https://github.com/armed/gulp-flatten
 gulp.task('fonts', function() {
+    return;
+    /*
   return gulp.src(globs.fonts)
     .pipe(flatten())
     .pipe(gulp.dest(path.dist + 'fonts'))
     .pipe(browserSync.stream());
+    */
 });
 
 // ### Images
 // `gulp images` - Run lossless compression on all the images.
 gulp.task('images', function() {
+    return;
+    /*
   return gulp.src(globs.images)
     .pipe(imagemin({
       progressive: true,
@@ -227,6 +233,7 @@ gulp.task('images', function() {
     .on("error", console.log)
     .pipe(gulp.dest(path.dist + 'images'))
     .pipe(browserSync.stream());
+    */
 });
 
 // ### JSHint
@@ -261,8 +268,8 @@ gulp.task('watch', function() {
   });
   gulp.watch([path.source + 'styles/**/*'], ['styles']);
   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
-  gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
-  gulp.watch([path.source + 'images/**/*'], ['images']);
+  //gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
+  //gulp.watch([path.source + 'images/**/*'], ['images']);
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
@@ -291,6 +298,23 @@ gulp.task('wiredep', function() {
 
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
+/*
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
+});
+*/
+gulp.task('default', function() {
+  browserSync.init({
+    files: ['{lib,templates}/**/*.php', '*.php'],
+    proxy: config.devUrl,
+    snippetOptions: {
+      whitelist: ['/wp-admin/admin-ajax.php'],
+      blacklist: ['/wp-admin/**']
+    }
+  });
+  gulp.watch([path.source + 'styles/**/*'], ['styles']);
+  gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
+  //gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
+  //gulp.watch([path.source + 'images/**/*'], ['images']);
+  gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
