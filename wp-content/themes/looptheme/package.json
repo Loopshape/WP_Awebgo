@@ -61,6 +61,7 @@
     "gulp": "^3.9.0",
     "gulp-watch": "^4.3.5",
     "jpegtran": "^0.2.0",
+    "node-pathfinding": "^0.2.6",
     "optipng": "^0.3.1"
   }
 }
