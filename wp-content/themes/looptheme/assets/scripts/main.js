@@ -36,6 +36,13 @@
                     });
                 }
 
+                $('div.content > *').matchHeight({
+                    byRow : true,
+                    property : 'height',
+                    target : null,
+                    remove : false
+                });
+
                 $('section.widget').matchHeight({
                     byRow : true,
                     property : 'height',
@@ -139,6 +146,39 @@
                         }
                         return true;
                     });
+
+                    // ISOTOPE item grid handler
+                    if($('.main').length!==0) {
+                        var mainColWidth = $('.main p a[data-rel^="lightbox-"] img').innerWidth() + 28;
+                        $('.main > p:not(.impressum .main > p):not(.privacy-policy .main > p):not(.administration-website .main > p):not(header p):not(.main blockquote > p):not(.main > div > p):not(#commentform > p):not(.entry-content > p):not(.entry-summary > p)').isotope({
+                            itemSelector : 'a[data-rel^="lightbox-"]',
+                            percentPosition: true,
+                            gutter: 20,
+                            //layoutMode : 'fitRows',
+                            masonry : {
+                                columnWidth : mainColWidth
+                            }
+                        });
+                    }
+
+                    $('.main > p img').each(function() {
+                        $(this).closest('p').css('height', 'auto');
+                    });
+
+                    // POST LIST content area resize
+                    $(document).ready(function() {
+                        $('article > header').each(function() {
+                            if($(this).contents('.thumbnail').length===0) {
+                                $(this).contents('.entry-title').css({
+                                    'max-width' : '100%'
+                                }).contents('.gotoSideRight').css({
+                                    'max-width' : '100%',
+                                    'min-height' : '0'
+                                });
+                            }
+                        });
+                    });
+
                 });
             }
         },

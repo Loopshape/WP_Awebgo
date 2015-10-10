@@ -6,6 +6,9 @@
 <img class="secLogo" src="/wp-content/themes/looptheme/assets/images/Awebgo_SpaceShip.png" alt="">
 <div class="dotArea"></div>
 <header class="banner" role="banner">
+	<div class="modal-dialog">
+		<!-- -->
+	</div>
     <div class="container">
         <?php /* <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a> */ ?>
         <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img class="mainLogo hastip" title="[Klick] Gehe zur Startseite" src="/wp-content/themes/looptheme/assets/images/AwebgoLogo.png" alt=""></a>

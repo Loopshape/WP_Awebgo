@@ -68,11 +68,21 @@ html {
           margin-top: 15px !important;
           margin-left: 2% !important;
           > * {
+            /*
             background: url("/wp-content/themes/looptheme/assets/images/MetalPanel.png");
             background-size: 100%;
             padding: 15px !important;
             -webkit-border-radius: 12px !important;
             border-radius: 12px !important;
+            overflow: hidden !important;
+            */
+            background-color: rgba(0,8,10,0.79) + rgba(20,80,20,0.79) !important;
+            padding: 15px !important;
+            border: none !important;
+-webkit-border-radius: 15px !important;
+border-radius: 15px !important;
+//-webkit-box-shadow: 0 0 45px 16px rgba(0,0,0,0.75) !important;
+//box-shadow: 0 0 45px 16 rgba(0,0,0,0.75) !important;
             overflow: hidden !important;
           }
           .input-group {

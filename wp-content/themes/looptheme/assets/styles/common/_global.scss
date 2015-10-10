@@ -87,6 +87,10 @@ box-sizing: border-box !important;
       }
     }
 
+    p {
+      //clear: both !important;
+    }
+
     p, button, input[type="submit"], sup, sub, select, option {
       position: relative;
       font-family: 'Josefin Sans', sans-serif !important;
@@ -96,11 +100,17 @@ box-sizing: border-box !important;
 
     a {
       position: relative;
+      //display: inherit;
       font-family: 'Josefin Sans', sans-serif !important;
       color: $secondary-font-color !important;
       opacity: 1 !important;
       font-weight: bold !important;
       z-index: 1 !important;
+    }
+
+    .main a[data^="lightbox"] {
+      margin-right: 20px !important;
+      margin-bottom: 5px !important;
     }
 
     h1,
@@ -154,7 +164,7 @@ box-sizing: border-box !important;
       color: $tertiary-color !important;
       background-color: $fifth-color !important;
       border-color: $fifth-color !important;
-      opacity: $font-opacity !important;
+      opacity: 0.17 !important;
     }
 
     input,
@@ -371,29 +381,71 @@ border-radius: 0 !important;
 
 html body {
 
-   > div.wrap.container > div > .main > div > article > header {
-     float: right;
-     display: inline-block;
-     width: 100%;
-     max-width: 54%;
-     height: auto !important;
+  article {
+    padding-bottom: 0 !important;
+  }
+
+  > div.wrap.container > div > .main > div > article {
+    padding-bottom: 15px !important;
+  }
+
+  > div.wrap.container > div > .main > div > article > header {
+    float: left;
+    display: inline-block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+
+    .indexlist.post.thumbnail {
+       position: absolute;
+       top: 0;
+       right: -15px;
+       display: inline-block;
+       clear: both;
+       float: right !important;
+       margin: 15px !important;
+       width: 100% !important;
+       height: auto !important;
+       max-width: 54% !important;
+       max-height: auto;
+       background: none !important;
+       border: none !important;
+       z-index: 0;
+     }
+
+     a.gotoSideRight {
+       float: left !important;
+       line-height: 100% !important;
+       max-width: 64% !important;
+       min-height: 185px;
+       margin: 20px 10% 0 0 !important;
+     }
+
+     .entry-title {
+       width: 100% !important;
+       max-width: 48%;
+     }
+
    }
 
-  .indexlist.post.thumbnail {
-    position: relative;
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 7px;
-    width: 100% !important;
-    height: auto !important;
-    max-width: 280px;
-    max-height: auto;
-  }
+   .entry-summary {
+      min-width: 100%;
+      margin: 3% 0 !important;
 
-  a.gotoSideRight {
-    float: left !important;
-    max-width: 64% !important;
-    margin: 0 10% !important;
-  }
+      > p {
+        margin: 0 !important;
+      }
+   }
+
+   .main .post.type-post {
+     padding-bottom: 15px !important;
+   }
+
+   .main .single.post.thumbnail {
+     margin-bottom: 0 !important;
+     background: none !important;
+     border: none !important;
+     z-index: 0;
+   }
 
 }
