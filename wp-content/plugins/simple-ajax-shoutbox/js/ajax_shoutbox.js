@@ -18,13 +18,15 @@ jQuery(document).ready(function($) {
 
   /* reload function for chatbox contents */
   function sb_reload(widget_id, force) {
-    if (!active && intervalID) {
+    var widget   = $("#" + widget_id);
+
+    if (!active && !$('.icons .speaker', widget).hasClass('active') && intervalID) {
       clearInterval(intervalID);
       intervalID = 0;
       return;
     }
 
-    var widget = $("#" + widget_id);
+    var messages = $("div#sb_messages", widget);
     if (widget.data("lock") && !force) return;
     var widget_num = widget_id.substring(widget_id.lastIndexOf("-")+1);
 
@@ -41,14 +43,53 @@ jQuery(document).ready(function($) {
         $(".icons .spinner", widget).css("display", "inline-block");
       },
       error: function() {
-        $("div#sb_messages", widget).data("ajaxData", "").html("<div class='error_message' align='center'>"+SimpleAjaxShoutbox.request_error_text+"</div>");
+        messages.data("ajaxData", "").html("<div class='error_message' align='center'>"+SimpleAjaxShoutbox.request_error_text+"</div>");
       },
       success: function(data) {
-        if (data != $("div#sb_messages", widget).data("ajaxData")) {       // we cannot compare to .html(), because that would be modified by the browser, although resulting in same render
-          $("div#sb_messages", widget).data("ajaxData", data).html(data);  // for this reason store data to keep the original value and then update html content as well
-          lightbox_support();
-          split_menu();
+        messages.after('<div style="display:none" id="msgs_placeholder"></div>');
+        var placeholder = $("#msgs_placeholder", widget);
+        placeholder.html(data);
+        var nw = placeholder.children().last(),
+            ex = messages.children().last(), ex1,
+            nw_id, nw_no, ex_id, ex_no,
+            new_stuff = false;
+        while (nw.length > 0) {
+          nw_id = nw.attr('id');
+          nw_no = nw_id.substring(nw_id.lastIndexOf("_")+1);
+          while (ex.length > 0) {
+            ex_id = ex.attr('id');
+            ex_no = ex_id.substring(ex_id.lastIndexOf("_")+1);
+            if (nw_no <= ex_no) break;
+            ex1 = ex;
+            ex = ex.prev();
+            ex1.slideUp(function () { $(this).remove() });
+          }
+          if (nw_no == ex_no) {
+            if (nw.attr("hash") != ex.attr("hash"))
+              ex.html(nw.html());
+            ex = ex.prev();
+          } else {
+            if (ex.length == 0) {
+              messages.prepend(nw.hide()[0].outerHTML).children().first().slideDown();
+              new_stuff = true;
+            } else {
+              ex.after(nw[0].outerHTML);
+            }
+            lightbox_support('div#sb_messages #sb_message_' + nw_no + ' .sb_message_body > a > img');
+            split_menu(nw_no);
+          }
+          nw = nw.prev();
         }
+        while (ex.length > 0) {
+          ex1 = ex;
+          ex = ex.prev();
+          ex1.slideUp(function () { $(this).remove() });
+        }
+        placeholder.remove();
+
+        var speaker = $('.icons .speaker', widget)
+        if (new_stuff && $('.icons .speaker', widget).hasClass('active'))
+          $("audio#notify", widget)[0].play();
       },
       complete: function() {
         $(".icons .spinner", widget).fadeOut("slow");
@@ -81,7 +122,7 @@ jQuery(document).ready(function($) {
       }
     })
   });
-
+  
   function lightbox_support(selector) {
     if (selector === undefined) selector = ".sb_message_body > a > img";
     try {
@@ -213,21 +254,24 @@ jQuery(document).ready(function($) {
           'id'      : widget_num
         },
         success: function (a) {
-          var newMsg = $("div#sb_messages", widget).prepend(a);
-          newMsg.show("slow");
           var match = a.match(/sb_message_(\d+)/);
-          lightbox_support('#sb_message_' + match[1] + ' .sb_message_body > a > img');
-          split_menu(match[1]);
+          if ($("div#sb_messages #sb_message_" + match[1], widget).length == 0) {
+            a = a.replace('id="sb_message_', 'style="display:none" id="sb_message_');
+            $("div#sb_messages", widget).prepend(a);
+            $("div#sb_messages #sb_message_" + match[1], widget).slideDown();
+            lightbox_support('#sb_message_' + match[1] + ' .sb_message_body > a > img');
+            split_menu(match[1]);
+          }
           $("#sb_message", widget).val("");
-          if (!browserSupportsPlaceholder) {
-            $('#sb_form [placeholder]', widget).blur();
-          };
-          $("#sb_addmessage", widget).removeClass("disabled");
-          $("#sb_form .spinner", widget).fadeOut("slow");
+          if (!browserSupportsPlaceholder) $('#sb_form [placeholder]', widget).blur();
         },
         error: function (a) {
 // report error in a new way, this does not work anymore
 //          $("span#sb_status", widget).html(SimpleAjaxShoutbox.request_error_text)
+        },
+        complete: function() {
+          $("#sb_addmessage", widget).removeClass("disabled");
+          $("#sb_form .spinner", widget).fadeOut("slow");
         }
       })
     }
@@ -249,6 +293,11 @@ jQuery(document).ready(function($) {
   /* show smilies on click */
   $("#sb_showsmiles").click(function () {
     $("div#sb_smiles").fadeIn("slow")
+  });
+  
+  $('.Ajax_Shoutbox_Widget .icons .speaker').click(function () {
+    $(this).toggleClass("active");
+    document.cookie = 'shoutbox_speaker=' + ($(this).hasClass("active") ? "true" : "false") + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/"
   });
 
   /* add placeholder support via jQuery to browsers, that don't natively support it through HTML5 */

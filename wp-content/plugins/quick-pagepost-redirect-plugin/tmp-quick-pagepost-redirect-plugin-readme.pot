@@ -1,0 +1,930 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "Quick Page/Post Redirect Plugin"
+msgstr ""
+
+#. Short description.
+msgid "Easily redirect pages/posts or custom post types to another page/post or external URL by specifying the redirect URL and type (301, 302, 307, meta)."
+msgstr ""
+
+#. Screenshot description.
+msgid "Quick Redirects setup page - Now with ajax editing."
+msgstr ""
+
+#. Screenshot description.
+msgid "Import and Export features."
+msgstr ""
+
+#. Screenshot description.
+msgid "Options/Setting Page."
+msgstr ""
+
+#. Screenshot description.
+msgid "Summary of redirects plugin page."
+msgstr ""
+
+#. Screenshot description.
+msgid "FAQs/Help Page. This is updated via an RSS feed so it can be updated regularly with fixes and common questions."
+msgstr ""
+
+#. Screenshot description.
+msgid "New Redirect Column (optional) for pages/posts and custom post types. Easily see if a page has a redirect and where it goes. Turn off in settings."
+msgstr ""
+
+#. Screenshot description.
+msgid "Meta Redirect Options Page."
+msgstr ""
+
+#. Found in description header.
+msgid "QUICK REDIRECTS (301 Redirects)"
+msgstr ""
+
+#. Found in description header.
+msgid "INDIVIDUAL REDIRECTS (for existing pages/posts)"
+msgstr ""
+
+#. Found in description header.
+msgid "What You CAN Do (aka, Features):"
+msgstr ""
+
+#. Found in description header.
+msgid "What You CANNOT Do:"
+msgstr ""
+
+#. Found in description header.
+msgid "TROUBLESHOOTING:"
+msgstr ""
+
+#. Found in description list item.
+msgid "Works with WordPress Nav Menus"
+msgstr ""
+
+#. Found in description list item.
+msgid "Works with WordPress Custom Post Types (select setting on options page)"
+msgstr ""
+
+#. Found in description list item.
+msgid "You can set a redirected page or menu item to open in a new window (Quick Redirects require <strong>Use jQuery?</strong> option to be set)"
+msgstr ""
+
+#. Found in description list item.
+msgid "You can add a <em>rel=\"nofollow\"</em> attribute to the page or menu item link for the redirect (Quick Redirects require <strong>Use jQuery?</strong> option to be set)"
+msgstr ""
+
+#. Found in description list item.
+msgid "You can completely re-write the URL for the redirect so it takes the place of the original URL (rewrite the href link)"
+msgstr ""
+
+#. Found in description list item.
+msgid "You can redirect without needing to create a Page or Post using Quick Redirects. This is useful for sites that were converted to WordPress and have old links that create 404 errors (see FAQs for more information)."
+msgstr ""
+
+#. Found in description list item.
+msgid "Destination URL can be to another WordPress page/post or any other website with an external URL. "
+msgstr ""
+
+#. Found in description list item.
+msgid "Request URL can be a full URL path, the post or page ID, permalink or page slug."
+msgstr ""
+
+#. Found in description list item.
+msgid "Option Screen to set global overrides like turning off all redirects at once, setting a global destination link, make all redirects open in a new window, etc."
+msgstr ""
+
+#. Found in description list item.
+msgid "View a summary of all redirected pages/posts, custom post types and Quick Redirects that are currently set up."
+msgstr ""
+
+#. Found in description list item.
+msgid "Plugin Clean up functions for those who decide they may want to remove all plugin data on uninstall."
+msgstr ""
+
+#. Found in description list item.
+msgid "Import/Export of redirects for backup, or to add bulk Quick Redirects."
+msgstr ""
+
+#. Found in description list item.
+msgid "Built-in FAQs/Help feed that can be updated daily with relevant questions."
+msgstr ""
+
+#. Found in description list item.
+msgid "Optional column for list pages to easily show if a page/post has a redirect set up and where it will redirect to."
+msgstr ""
+
+#. Found in description list item.
+msgid "Helper functions for adding or deleting redirects programmatically (see 'filters-hooks-helper_functions.txt' file in plugin folder for help and usage)."
+msgstr ""
+
+#. Found in description list item.
+msgid "This plugin does not have wild-card redirect features."
+msgstr ""
+
+#. Found in description list item.
+msgid "This plugin DOES NOT modify the .htaccess file. It works using the WordPress function wp_redirect(), which is a form of PHP header location redirect."
+msgstr ""
+
+#. Found in description list item.
+msgid "You cannot redirect the Home (Posts) page - unless you set a page as the home page and redirect that."
+msgstr ""
+
+#. Found in description list item.
+msgid "If your theme uses some form of custom layout or functionality, some features may not work like open on a new window or no follow functionality UNLESS you have the <strong>Use jQuery?</strong> option to set."
+msgstr ""
+
+#. Found in description list item.
+msgid "To include custom post types, check the setting on the plugin option page - and you also can hide it from post types you don't want it on."
+msgstr ""
+
+#. Found in description list item.
+msgid "If you experience jQuery conflicts with the plugin, try turning off the <strong>Use jQuery?</strong> setting in the options page. BUT, please note that if this option if off, the new window and no follow functionality may be inconsistent (this mainly depends on how your theme is set up)"
+msgstr ""
+
+#. Found in description list item.
+msgid "If you check the box for \"Show Redirect URL below\" on the edit page, please note that you MUST use the full URL in the Redirect URL box. If you do not, you may experience some odd links and 404 pages, as this option changes the link for the page/post to the EXACT URL you enter in that field. (i.e., if you enter '2' in the field, it will redirect to 'http://2' which is not the same as 'http://yoursite.com/?p=2')."
+msgstr ""
+
+#. Found in description list item.
+msgid "If your browser tells you that your are in an infinite loop, check to make sure you do not have pages redirecting to another page that redirects back to the initial page. That WILL cause an infinite loop."
+msgstr ""
+
+#. Found in description list item.
+msgid "If you are using the Quick Redirects method to do your redirects, try to use Request URLs that start with a '/' and are relative to the root (i.e., 'http://mysite.com/test/' should be set to '/test/' for the request field)."
+msgstr ""
+
+#. Found in description list item.
+msgid "If your site uses mixes SSL, use relative links whenever possible (i.e., '/my-page/'). The plugin is designed to detect the incoming protocol and try to apply the appropriate protocol to the destination URL."
+msgstr ""
+
+#. Found in description list item.
+msgid "Links in page/post content and links that are created using get_permalink() or the_permalink() will not open in a new window or add the rel=nofollow UNLESS you have the <strong>Use jQuery?</strong> option set."
+msgstr ""
+
+#. Found in description list item.
+msgid "If your page or post is not redirecting, this is most likely because something else like the theme functions file or another plugin is outputting the header BEFORE the plugin can perform the redirect. This can be tested by turning off all plugins except the Quick Page/Post Redirect Plugin and testing if the redirect works. Many times a plugin or bad code is the culprit."
+msgstr ""
+
+#. Found in description list item.
+msgid "We try to test the plugin in many popular themes and alongside popular plugins. In our experience, (with exception to a few bugs from time to time) many times another plugin is the cause of the issues - or a customized theme. If you do notice a problem, please let us know at plugins@fischercreativemedia.com - along with the WP version, theme you are using and plugins you have installed - and we will try to troubleshoot the problem. "
+msgstr ""
+
+#. Found in description list item.
+msgid "Check the FAQs/Help located in the Plugin menu for more up to date issues and fixes."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "<strong>Current Version 5.1.5</strong>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "This plugin has two redirect functionalities - <strong>\"Quick Redirects\"</strong> and <strong>\"Individual Redirects\"</strong>:"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Quick Redirects are designed to be quick and simple to add. You do not need to have an existing page or post set up to add one. You just put the Request URL and the Destination URL and the plugin will redirect it. This type of redirect is great for fixing typos when a page was created, redirecting old URLs to a new URL so there is no 404, and to redirect links from an old site that has been converted to WordPress."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "For pages/posts that already exist, the plugin adds an option meta box to the edit screen where you can specify the redirect location and type (301, 302 or meta). This type of redirect is useful for many things, including menu items, duplicate posts, or just redirecting a page to a different URL or location on your existing site."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "For best results use some form of WordPress Permalink structure. If you have other Redirect plugins installed, it is recommended that you use only one redirect plugin or they may conflict with each other or one may take over before the other can do its job."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "This plugin is not compatible with WordPress versions less than 4.0. Requires PHP 5.2+."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "<strong>PLEASE NOTE:</strong> A new page or post needs to be Published in order for Page/Post redirect to happen for Individual Redirects (existing page is not necessary for Quick Redirects). It WILL work on a DRAFT Status Post/Page ONLY, and I mean ONLY, if the Post/Page has FIRST been Published and the re-saved as a Draft. This does not apply to Quick Redirects."
+msgstr ""
+
+#. Found in installation header.
+msgid "If you downloaded this plugin:"
+msgstr ""
+
+#. Found in installation header.
+msgid "If you install this plugin through WordPress 2.8+ plugin search interface:"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Upload <code>quick_page_post_redirect</code> folder to the <code>/wp-content/plugins/</code> directory"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin through the 'Plugins' menu in WordPress"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Once Activated, you can add a redirect by entering the correct information in the <code>Quick Page/Post Redirect</code> box in the edit section of a page or post"
+msgstr ""
+
+#. Found in installation list item.
+msgid "You can create a redirect with the 'Quick Redirects' option located in the Quick Redirects admin menu."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Click Install <code>Quick Page/Post Redirect Plugin</code>"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin through the 'Plugins' menu."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "THIS SECTION IS JUST TO KEEP TRACK OF TODO ITEMS FOR FUTURE UPDATES."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add New Window and No Follow to links where the URL has been rewritten. Currently if you rewrite the URL neither will work as they are referenced with the original URL, not the rewrite."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Feature Addition:</strong> Add Canonical Redirect detection to fix potential www/non-www redirect match problems. Removed from TODO!"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Deletion:</strong> Took out testing code that was accidentally left in the previous version."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Filter Addition:</strong> Added 'qppr_filter_quickredirect_index' filter to allow changing the the index just before the redirect. See filters-hooks-helper_funcitons.txt in plugin folder for usage."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Feature Addition:</strong> Added filter to Meta Box call to allow people to adjust context and priority if they choose. See filters-hooks-helper_funcitons.txt in plugin folder for usage. Thanks <a href=\"https://wordpress.org/support/profile/mdmoreau\">mdmoreau</a> for the suggestion!"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Feature Addition:</strong> Added 'action=no-redirect' to be able to view a redirect page without the redirect triggering. Thanks <a href=\"https://wordpress.org/support/profile/one-eye-pied\">One Eye Pied</a> for the suggestion!"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Bug Fix:</strong> Adjusted line ending characters for Import/Export to try to allow both Unix and Dos line break characters (LF and CRLF) on Import. Thanks <a href=\"https://wordpress.org/support/profile/joseluiscruz\">Jose Luis Cruz</a> for pointing this out!"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Bug Fix:</strong> Fixed database query for jQuery localization funciton. Was a major resource hog on sites with a lot of posts and would crash MySQL on some sites."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Update:</strong> Fixed some spelling errors (thanks to those of you who pointed them out)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Update:</strong> Updated English Translations."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Bug Fix:</strong> Fixed Meta redirect functions so browsers that no longer allow refresh redirects can still use Meta redirects (i.e., Firefox, Edge, some IE)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Bug Fix:</strong> Fixed Function for Individual Redirects for New Window functionality. Was not working unless both No Follow and New Window were selected."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>TODO:</strong> Add New Window and No Follow to links where the URL has been rewritten. Currently if you rewrite the URL neither will work as they are referenced with the original URL, not the rewrite."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>TODO (Still):</strong> Add Canonical Redirect filter to fix potential www/non-www redirect match problems."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Update:</strong> Updated license.txt file (had wrong version of license)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Update:</strong> Verified plugin for WordPress 4.3 compatibility."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Update:</strong> Add check if current user can manage_options when deleting All Redirects. Prevents logged in users without permissions from maliciously deleting redirects."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Update:</strong> Minify JavaScript files for front-end and admin (non-minified files still remain in the file structure for reference)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Feature Addition:</strong> Added experimental function to delete cache files (for W3 Total Cache, WP Super Cache and WP Fastest Cache) on functionality saves (add/remove redirects and options updates) to try to help some users resolve caching issues after an update with these plugins installed."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Feature Addition:</strong> Added \"helper\" functions to allow for adding or deleting Quick and Individual Redirects programatically (see filters-hooks-helper_functions.txt in plugin directory for more info)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Bug Fix:</strong> Fix ajax function for Quick Redirect delete and save (if a redirect was deleted, anything below it would not be correctly referenced and deleting or editing would not work)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "<strong>Bug Fix:</strong> Fix to 'rewrite URL' jQuery function that was replacing text instead of HTML - thanks Leo Kerr <a href=\"mailto:&#108;&#101;&#111;&#064;&#109;&#121;&#101;&#108;e&#x63;&#x74;&#x72;&#x69;&#x63;&#x63;&#x61;&#x72;&#046;&#099;&#111;&#109;&#046;&#097;&#117;\">&#108;&#101;&#111;&#064;&#109;&#121;&#101;&#108;e&#x63;&#x74;&#x72;&#x69;&#x63;&#x63;&#x61;&#x72;&#046;&#099;&#111;&#109;&#046;&#097;&#117;</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix 'array to string' error message on Quick Redirect save - thanks Simon Codrington <a href=\"mailto:&#x73;&#105;&#109;&#x6f;&#x6e;&#064;&#119;&#x65;&#x62;&#098;&#105;&#x72;&#x64;&#046;&#099;&#x6f;&#x6d;&#046;&#097;&#x75;\">&#x73;&#105;&#109;&#x6f;&#x6e;&#064;&#119;&#x65;&#x62;&#098;&#105;&#x72;&#x64;&#046;&#099;&#x6f;&#x6d;&#046;&#097;&#x75;</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "TODO: Add Canonical Redirect filter to fix potential www/non-www redirect match problems."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Meta Redirect Options Page - this splits out Meta Options from the main options page."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added more enhanced meta redirect scripting to allow for tracking or other page content (including countdown if desired)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed Layout issues on Quick Redirect Page making it impossible to edit redirects in some cases."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed a few spelling errors. "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Help Content to Meta Options page."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added metabox setting for meta redirect seconds for individual redirects so you can set different time for each meta redirect."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update POT and English Translation file - added limited Spanish translations."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix security issue for deleting ALL Quick and Individual Redirects."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update POT and English Translation file."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added 'No Quick Redirects' message when there are no Quick Redirects."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added textdomain for future translations. English Complete."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Change Quick Redirects page to use ajax to save and edit existing redirects, instead of all redirects in post fields. This is to eliminate the 'max_input_vars' setting in php from stopping large numbers of redirects from saving."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Metabox loading issues for custom post types."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added 'redirect' column for post, page and custom post type listing pages."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed sanitizing URL on saving of redirects (now will not strip encoded characters and spaces)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Optimized CSS styles and JavaScript files for admin."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Admin Pointers for new features."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added jQuery script to front end pages to better handle New Window/No Follow Functionality."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Split out Import / Export feature to make it easier to find."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update Query String add back function - patch submitted for version 5.0.7 by Romulo De Lazzari <a href=\"mailto:&#x72;o&#109;&#117;&#x6c;&#x6f;&#100;&#101;&#x6c;&#x61;&#122;&#122;&#x61;&#x72;i&#064;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#109;\">&#x72;o&#109;&#117;&#x6c;&#x6f;&#100;&#101;&#x6c;&#x61;&#122;&#122;&#x61;&#x72;i&#064;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a> (thanks!)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix to some users getting Warning messages for parse_url function."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added nonce field checking for Quick Redirects form to help eliminate the possibility of form takeover on submission of quick redirect saves."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix to security flaw for logged in admin users."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix to extra spaces that broke some callback functions in the redirect class in 5.0.4."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Minor bug cleanup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Security fixes: fixed possible cross-scripting vulnerability in saving of data to options."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Changed the hook call level for the redirects hook on normal redirects so it will not interfere with some other plugins."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Minor bug cleanup update - (no new features added)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug fixes: JavaScript ghost js file call fixed. Actions hooks not applying issue fixed. Querystring redirect issue addressed. Unset index errors addressed. Some Network/MU problems fixed."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Modified Import and Export scripts to export a more editable export file. Import can be either old encoded version or new readable PIPE version."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Typos and minor layout issues addressed."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug fixes and jQuery now set to off until issues are resolved."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Set Case Sensitive to on by default - Some people having issues with infinite loops."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix to jQuery conflict issue."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added jQuery version check to ensure no problems with themes forcing older versions of jQuery"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added a few warning /info messages to Quick Redirects page."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Redirect summary was updated to display Quick Redirects as well as individual redirects. Now it is easier to see at a glance what redirects you have set up."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Rewrite of Quick Redirects functions to allow selecting Open in New Window (NW) and rel=nofollow (NF) as long as <strong>use jQuery?</strong> is selected. "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added \"use jQuery\" option on settings page - on by default after upgrade"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added jQuery redirect replace, target=\"_blank\", and rel=\"nofollow\" to increase success for additional options (mainly Quick redirects)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Changed out WP_PLUGIN_URL for plugins_url() to help resolve errors in redirects for SSL/https"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Changed the way custom post types are handled.These are now on by default for new users - or users who have not specifically set to off."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "The ability to turn off the Plugin Meta Box for any post type was added (admin permissions required)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Import and Export features were added to allow for backup of existing Quick Redirects, Restoring a backup or adding bulk redirects."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Plugin clean-up features were added to completely remove either Page/Post meta data (for regular redirects), Quick Redirects, or both."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Several filter and action hooks were added to help users better integrate the plugin into their theme, should they need additional functionality."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New FAQs/Help page with items provided by an RSS feed, so we can easily update FAQs when common questions/issues arise."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Query String data is now preserved for Quick Redirects (thanks to Jon Wilson for the contribution)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Case insensitivity option was added for Quick Redirects (thanks to Brian DiChiara for the contribution)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix some embarrassing spelling errors.(07/14/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Quick Redirects links from inside the redirect edit box and plugin page - they would give a \"not authorized\" warning because the page location changed in version 4.0 (07/14/11)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix to trailing slash non-redirect for quick redirects.(06/28/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Note - this was not a public version fix, but a dev testing version - this fix is publicly included in 4.2.2."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix to menus pages always opening in New Window even when not selected.(05/08/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Categories/Archives automatically redirecting to the first post with redirect set if any post on the page had a redirect set.(05/08/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Homepage redirecting to first post with redirect set if using posts as home and any post had a redirect.(05/08/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix misrepresentation of new window global setting on options page. Should read that \"all redirects WILL open in a new window\" not \"will NOT open in a new window\". (05/08/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update description to note that the plugin requires PHP 5+ because some of the class calls will not work in php4 (plugin will not activate). (05/08/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Minor spelling issues and code typos.(05/05/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Rewrite of all functions for better optimization.(05/01/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added consolidated DB call at class setup to reduce DB calls to one call per page load.(05/01/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Moved entire plugin into a class for easier updates.(05/01/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added new Options page with Global Overrides.(05/02/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Integrated Custom Post Types functionality.(05/02/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Created a Summary Page for a quick glace of set up redirects.(05/04/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Moved Quick Redirects menu from settings to a new Redirects Menu.(05/03/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added additional checks and validations when adding Quick Redirects.(05/03/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added a way to delete Quick Redirects easier.(03/01/2011)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix New Window and No Follow attributes in themes with older menu calls. (12/29/10)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix meta tag redirect method. Was broken because of new method of checking redirects with less query calls. (12/16/10)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix php code errors - still had some debugging code live that will cause some users to have problems.(12/16/10)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "limited test release - testing for some of 3.2.2 release fixes. (12/14/10)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "remove functions ppr_linktotarget, ppr_linktonorel, ppr_redirectto and ppr_linktometa.(12/10/2010) "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "re-write functions to consolidate queries. (12/10/2010) "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added new filters for New menu structure to filter wp_nav_menu menus as well as old wp_page_menus functions. (12/10/2010) "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "cleaned up new window and nofollow code to work more consistently. (12/10/2010) "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Re-issue of 2.1 for immediate fix of issue with the 3.0 version.(6/21/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Enhance filter function in main class to reduce Database calls. (06/20/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Bug - Open in New Window would not work unless Show Link URL was also selected. (3/12/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Bug - Add rel=nofollow would not work if Open in a New Window was not selected. (3/13/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Bug - Show Link, Add nofollow and Open in New Window would still work when redirect not active. (3/13/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added new preg_match_all and preg_replace calls to add target and nofollow links - more efficient and accurate - noticed some cases where old function would add the items if a redirect link had the same URL. (3/13/2010) "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Cosmetic code cleanup. (2/28/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Remove warning and error messages created in 1.9 (2/28/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added 'Open in New Window' Feature. (2/20/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added 'rel=\"nofollow\"' attribute option for links that will redirect. (2/20/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added 'rewrite url/permalink' option to hide the regular link and replace it with the new re-write link anywhere the link is displayed on the site. (2/20/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Hid the Custom Field Meta Data that the plugin uses - this is just to clean up the custom fields box. (2/20/2010)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added a new Quick 301 Redirects Page to allow adding of additional redirects that do not have Pages or Posts created for them. Based on Scott Nelle's Simple 301 Redirects plugin.(12/28/2009)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix to correct meta redirect - moved \"exit\" command to \"addtoheader_theme\" function. Also fixed the problem with some pages not redirecting. Made the plugin WordPress MU compatible. (9/8/2009)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Small fix to correct the same problem as 1.6 for Category and Archive pages (9/1/2009) "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed wrongful redirect when the first blog post on home page (main blog page) has a redirect set up - this was redirecting the entire page incorrectly. This was only an issue with the first post on a page. (9/1/2009)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Major re-Write of the plugin core function to hook WP at a later time to take advantage of the POST function - no sense re-creating the wheel. "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed the 'no code' redirect, as it turns out, many browsers will not redirect properly without a code - sorry guys."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Can have page/post as draft and still redirect - but ONLY after the post/page has first been published and then re-saved as draft (this will hopefully be a fix for a later version). (8/31/2009)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add exit script command after header redirect function - needed on some servers and browsers. (8/19/2009)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add Meta Re-fresh option (7/26/2009)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add easy Post/Page Edit Box (7/25/2009)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix redirect for off site links (7/7/2009)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Initial Plugin creation (7/1/2009)"
+msgstr ""
+
+#. Found in faq header.
+msgid "Why is my Page/Post not redirecting?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Should I use a full URL with http:// or https:// ?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Can I do a permanent 301 Redirect?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Is the plugin SEO friendly?"
+msgstr ""
+
+#. Found in faq header.
+msgid "If I redirect a page that has a good Ranking in Google, will I lose that Ranking?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Do I need to have a Page or Post Created to redirect?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Does the Page/Post need to be Published to redirect?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Can I add 'rel=\"nofollow\" attribute to the redirect link?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Can I make the redirect open in a new window?"
+msgstr ""
+
+#. Found in faq header.
+msgid "I still can't get the OPEN IN NEW WINDOW option to work... why?"
+msgstr ""
+
+#. Found in faq header.
+msgid "I want to just have the link for the redirecting page/post show the new redirect link in the link, not the old one, can I do that?"
+msgstr ""
+
+#. Found in faq header.
+msgid "I have Business Cards/Postcards/Ads that say my website is http://something.com/my-name/ or http://something.com/my-product/, but it should be a different page, can I set that up with this?"
+msgstr ""
+
+#. Found in faq header.
+msgid "What the heck is a 301 or 302 redirect anyway?"
+msgstr ""
+
+#. Found in faq header.
+msgid "So, which one do I use?"
+msgstr ""
+
+#. Found in faq header.
+msgid "If I have a redirect in place, can I view the original page during testing?"
+msgstr ""
+
+#. Found in faq header.
+msgid "That's all the FAQs you have?"
+msgstr ""
+
+#. Found in faq list item.
+msgid "What type of redirect it is"
+msgstr ""
+
+#. Found in faq list item.
+msgid "What content is on the redirected page."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "** SEE A LIST OF MORE UP TO DATE FAQS IN THE PLUGIN MENU ITSELF **"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "FIRST - make sure it is active if using Individual Redirects (set up on the edit page for a post or page). Then, check to make sure the global option to turn off all redirects is not checked (in the plugin options)."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "SECOND - if you are using Quick Redirects, try using links relative to the root (so 'http://mysite.com/contact/' would be '/contact/' if using the root path). If your site is in a sub-folder (set in Settings/General), do not use the sub-folder in the root path as it is already taken into consideration by WordPress."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "NEXT - clear your site's cache files if you are using a caching plugin/theme. You may also need to clear your browser cache and internet files if you use caching - the browser WILL hold cached versions of a page and not redirect if there was no redirect in the cached version."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "FINALLY - if you are not using a permalink structure of some sort, it is recommended that you set up at least a basic one. Redirects without a permalink structure can be inconsistant."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "If your page or post is still not redirecting, then it is most likely because something else like the theme functions file or another plugin is outputting the header BEFORE the plugin can perform the redirect. This can be tested by turning off all plugins except the Quick Page/Post Redirect Plugin and testing if the redirect works. many time a plugin or bad code is the culprit - or the redirect is just simply turned off."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "We have tested the plugin in dozens of themes and a whole lot more plugins. In our experience, (with exception to a few bugs) many times another plugin or the theme scripting is the problem. If you do notice a problem, please let us know at plugins@fischercreativemedia.com - along with the WP version, theme you are using and plugins you have installed - and we will try to troubleshoot the problem."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Yes, you can, but you do not always need to. If you are redirecting to an external URL, then yes. If you are just redirecting to another page or post on your site, then no, it is not needed. When in doubt, use the entire URL. For Quick Redirects, it is recommended that you use relative URLs whenever possible."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Yes. You can perform a 301 Permanent Redirect. Additionally, you can select a 302 Temporary or a 307 Temporary redirect or a Meta redirect. Quick Redirects are always 301 unless you override them with a filter."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "If you do not want a search engine to follow a Redirect URL, use the No Follow option to add 'rel=\"nofollow\"' to the link."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "The answer is dependent on two things:"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "If you use a redirect of 301 AND the content on the destination URL is the same as the original page (just a different URL), then allof the ranking and 'link juice', as they say, will stay with the page."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "If you use a redirect of 301 and the content is different, then it will be indexed and ranked accordingly, as any other page would."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "If you use a 302 redirect, the search engines will not change anything, but also index the destination page as it would any other page."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "The functionality is located in the QUICK REDIRECTS menu. The old URL goes in the Request field and the to new URL goes in the Destination field. Simple and Quick!"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "YES... and NO... The redirect will always work on a Published Post/Page. For it to work correctly on a Post/Page in DRAFT status, you need to fist publish the page, then re-save it as a draft. If you don't follow that step, you will get a 404 error."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "YES, you can add a ' rel=\"nofollow\" ' attribute for the redirect link. Simply check the \"add rel=nofollow\" box when setting up the redirect on the page/post edit page. Note - this option is only available for the Quick Redirects method when the 'Use jQuery?' functionality is enabled in the settings and you select the 'NF' box for the corresponding redirect."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "YES, you can make the redirect link open in a new window. Simply check the \"Open in a new window\" box when setting up the individual redirect on the page/post edit page. Note - this option is only available for the Quick Redirects method when the 'Use jQuery?' functionality is enabled in the settings and you select the 'NW' box for the corresponding redirect."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "First, make sure you have the 'Use jQuery?' option set in the options page. This funcitonality drastically increases the plugin's ability to add the correct properties and attributes to the links to make them work as desired."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "YES, you can hide the original page link and have it replaced with the redirect link. Any place the theme calls either \"wp_page_links\", \"post_links\" or \"page_links\" functions, the plugin can replace the original link with the new one. Simply check the \"Show Redirect URL\" box when setting up the redirect on the page/post edit page."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Note - This option is available for the Quick Redirects only with the 'Use jQuery?' option enabled."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "YES! Just set up a Quick Redirect (see above) and set the Request URL to <code>/my-name/</code> or <code>/my-product/</code> and the Destination URL to the place you want it to go. The destination doesn't even need to be on the same site - it can go anywhere you want it to go!"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Good question! The number corresponds with the header code that is returned to the browser when the page is first accessed. A good page, meaning something was found, returns a 200 status code and that tells the browser to go ahead and keep loading the content for the page. If nothing is found a 404 error is returned (and we have ALL seen these - usually it is a bad link or a page was moved). There are many other types of codes, but those are the most common."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "The 300+ range of codes in the header tells the browser (and search engine spider) that the original page has moved to a new location - this can be just a new file name a new folder or a completely different site."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "A 301 code means that you want to tell the browser (or Google, bing, etc.) that your new page has permanently moved to a new location. This is great for search engines because it lets them know that there was a page there once, but now go to the new place to get it - and they update there old link to is so future visitors will not have to go through the same process."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "A 302 or 307 code tell the browser that the file was there but TEMPORARILY it can be found at a new location. This will tell the search engines to KEEP the old link in place because SOME day it will be back at the same old link. There is only a slight difference between a 302 and a 307 status. Truth is, 302 is more widely used, so unless you know why you need a 307, stick with a 302."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Easiest way to decide is this: If you want the page to permanently change to a new spot, use 301. If you are editing the page or post and only want it to be down for a few hours, minutes, days or weeks and plan on putting it back with the same link as before, then us 302. If you are having trouble with the redirects, use a <code>meta</code> redirect. The meta redirect actually starts to load the page as a 200 good status, then redirects using a meta redirect tag."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Still not sure? Try 302 for now - at least until you have a little time to read up on the subject."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Yes, use the URL as normal, and add <code>?action=no-redirect</code> to the query data (or <code>&amp;action=no-redirect</code> if there is already query data present)."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "For example. If you set up a redirect for the page <code>http://mysite.com/old-page/</code> and you want to see the page (and not have it redirect on you so you can look at it), type the URL as <code>http://mysite.com/old-page/?action=no-redirect</code> and it will load like there is no redirect present."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "NO it isn't! Check the plugin FAQs/Help page for a more up to date list of Frequently Asked Questions. The plugin now has a live feed of FAQs that can be updated regularly. If you have something you think we should add, please let us know."
+msgstr ""

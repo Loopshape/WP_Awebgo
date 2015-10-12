@@ -76,6 +76,10 @@ No screenshots are available at this time.
 
 == Changelog ==
 
+= 3.9.6 =
+
+* Fixed the online view
+
 = 3.9.5 =
 
 * Corrected the call to maybe_maybe_convert_table_to_utf8mb4

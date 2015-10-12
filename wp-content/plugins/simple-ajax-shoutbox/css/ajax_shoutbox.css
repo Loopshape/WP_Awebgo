@@ -96,6 +96,23 @@
 	margin-left: 0;
 }
 
+.Ajax_Shoutbox_Widget .icons .speaker {
+  float: left;
+}
+
+.Ajax_Shoutbox_Widget .icons .active.speaker:before {
+  content: "\f521";
+  color: #727272;
+}
+
+.Ajax_Shoutbox_Widget .icons .speaker:before {
+  cursor: pointer;
+  font-family: "dashicons";
+  margin-left: 0.1em;
+	content: "\f520";
+	color: #a6a6a6;
+}
+
 .Ajax_Shoutbox_Widget .icons .lock {
   float: left;
   display: none;

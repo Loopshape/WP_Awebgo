@@ -33,7 +33,7 @@ class NewsletterEmails extends NewsletterModule {
                     die('Email not found');
                 }
 
-                if ($email['private'] == 1) {
+                if ($email->private == 1) {
                     die('Email not found');
                 }
 

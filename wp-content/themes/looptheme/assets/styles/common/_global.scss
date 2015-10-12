@@ -446,7 +446,7 @@ html body {
        float: left !important;
        line-height: 100% !important;
        max-width: 64% !important;
-       min-height: 185px;
+       min-height: 200px;
        margin: 20px 10% 0 0 !important;
      }
 
@@ -486,4 +486,13 @@ body.single > div.wrap.container > div > .main > article > header > time {
 
 body.single > div.wrap.container > div > .main > article > header > h1 {
   max-width: 70% !important;
+}
+
+html body {
+
+  .main *:not(p):not(div) {
+    position: relative;
+    z-index: 1 !important;
+  }
+
 }

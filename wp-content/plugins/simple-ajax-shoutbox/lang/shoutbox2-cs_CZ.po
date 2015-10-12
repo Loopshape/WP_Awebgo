@@ -93,3 +93,6 @@ msgstr "Maximální délka zprávy je %maxlength% znaků, vaše zpráva je dlouh
 
 msgid "Publish"
 msgstr "Odeslat"
+
+msgid "Sound on new message"
+msgstr "Zvukové upozornění při nové zprávě"
