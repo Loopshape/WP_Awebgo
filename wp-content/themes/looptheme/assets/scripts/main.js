@@ -155,12 +155,19 @@
                     // POST LIST content area resize
                     $(document).ready(function() {
                         $('article > header').each(function() {
-                            if($(this).contents('.thumbnail').length===0) {
-                                $(this).contents('.entry-title').css({
-                                    'max-width' : '100%'
-                                }).contents('.gotoSideRight').css({
+                            if($(this).find('.thumbnail').length===0) {
+                                $(this).find('.entry-title').css({
+                                    'max-width' : '100%',
+                                    'margin-bottom' : -($('article > header').find('.entry-title a').innerHeight())
+                                }).find('.gotoSideRight').css({
                                     'max-width' : '100%',
                                     'min-height' : '0'
+                                });
+                            } else {
+                                $(this).find('.entry-title').css({
+                                    'margin-bottom' : -($('article > header').find('.entry-title a').innerHeight())
+                                }).find('.gotoSideRight').css({
+                                    'min-height' : ($('article > header').find('.thumbnail img').innerHeight() - 10)
                                 });
                             }
                         });
