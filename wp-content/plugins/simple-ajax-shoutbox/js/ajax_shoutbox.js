@@ -29,6 +29,7 @@ jQuery(document).ready(function($) {
     var messages = $("div#sb_messages", widget);
     if (widget.data("lock") && !force) return;
     var widget_num = widget_id.substring(widget_id.lastIndexOf("-")+1);
+    $(".icons .warning", widget).hide();
 
     $.ajax({
       url: SimpleAjaxShoutbox.ajaxurl,
@@ -43,7 +44,8 @@ jQuery(document).ready(function($) {
         $(".icons .spinner", widget).css("display", "inline-block");
       },
       error: function() {
-        messages.data("ajaxData", "").html("<div class='error_message' align='center'>"+SimpleAjaxShoutbox.request_error_text+"</div>");
+        $(".icons .spinner", widget).hide();
+        $(".icons .warning", widget).show();
       },
       success: function(data) {
         messages.after('<div style="display:none" id="msgs_placeholder"></div>');
@@ -90,9 +92,9 @@ jQuery(document).ready(function($) {
         var speaker = $('.icons .speaker', widget)
         if (new_stuff && $('.icons .speaker', widget).hasClass('active'))
           $("audio#notify", widget)[0].play();
+        $(".icons .spinner", widget).fadeOut("slow");
       },
       complete: function() {
-        $(".icons .spinner", widget).fadeOut("slow");
         $(widget).data("msgAddLock", 0);
       }
     });
@@ -296,8 +298,7 @@ jQuery(document).ready(function($) {
   });
   
   $('.Ajax_Shoutbox_Widget .icons .speaker').click(function () {
-    $(this).toggleClass("active");
-    document.cookie = 'shoutbox_speaker=' + ($(this).hasClass("active") ? "true" : "false") + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/"
+    document.cookie = 'shoutbox_speaker=' + ($(this).toggleClass("active").hasClass("active") ? "true" : "false") + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/"
   });
 
   /* add placeholder support via jQuery to browsers, that don't natively support it through HTML5 */

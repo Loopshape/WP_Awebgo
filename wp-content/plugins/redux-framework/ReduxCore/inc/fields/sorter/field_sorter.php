@@ -1,24 +1,5 @@
 <?php
 
-    /**
-     * Options Sorter Field for Redux Options
-     *
-     * @author                      Yannis - Pastis Glaros <mrpc@pramnoshosting.gr>
-     * @url                         http://www.pramhost.com
-     * @license                     [http://www.gnu.org/copyleft/gpl.html GPLv3
-     *                              This is actually based on:   [SMOF - Slightly Modded Options Framework](http://aquagraphite.com/2011/09/slightly-modded-options-framework/)
-     *                              Original Credits:
-     *                              Author:                      Syamil MJ
-     *                              Author URI:                  http://aquagraphite.com
-     *                              License:                     GPLv3 - http://www.gnu.org/copyleft/gpl.html
-     *                              Credits:                     Thematic Options Panel - http://wptheming.com/2010/11/thematic-options-panel-v2/
-     *                              KIA Thematic Options Panel:   https://github.com/helgatheviking/thematic-options-KIA
-     *                              Woo Themes:                   http://woothemes.com/
-     *                              Option Tree:                  http://wordpress.org/extend/plugins/option-tree/
-     *                              Twitter:                     http://twitter.com/syamilmj
-     *                              Website:                     http://aquagraphite.com
-     */
-
 // Exit if accessed directly
     if ( ! defined( 'ABSPATH' ) ) {
         exit;
@@ -125,7 +106,11 @@
 
                         if ( ! empty( $temp2 ) ) {
                             if ( ! array_key_exists( $k, $temp2 ) ) {
-                                $sortlists['Disabled'][ $k ] = $v;
+                                if (isset($sortlists['Disabled'])) {
+                                    $sortlists['Disabled'][ $k ] = $v;
+                                } else {
+                                    $sortlists['disabled'][ $k ] = $v;
+                                }
                             }
                         }
                     }
@@ -154,7 +139,7 @@
                     }
 
                     if ( $sortlists ) {
-                        echo '<fieldset id="' . $this->field['id'] . '" class="redux-sorter-container redux-sorter">';
+                        echo '<fieldset id="' . esc_attr($this->field['id']) . '" class="redux-sorter-container redux-sorter">';
 
                         foreach ( $sortlists as $group => $sortlist ) {
                             $filled = "";
@@ -163,8 +148,8 @@
                                 $filled = " filled";
                             }
 
-                            echo '<ul id="' . $this->field['id'] . '_' . $group . '" class="sortlist_' . $this->field['id'] . $filled . '" data-id="' . $this->field['id'] . '" data-group-id="' . $group . '">';
-                            echo '<h3>' . $group . '</h3>';
+                            echo '<ul id="' . esc_attr($this->field['id'] . '_' . $group) . '" class="sortlist_' . esc_attr($this->field['id'] . $filled) . '" data-id="' . esc_attr($this->field['id']) . '" data-group-id="' . esc_attr($group) . '">';
+                            echo '<h3>' . esc_html($group) . '</h3>';
 
                             if ( ! isset( $sortlist['placebo'] ) ) {
                                 array_unshift( $sortlist, array( "placebo" => "placebo" ) );
@@ -172,14 +157,14 @@
 
                             foreach ( $sortlist as $key => $list ) {
 
-                                echo '<input class="sorter-placebo" type="hidden" name="' . $this->field['name'] . '[' . $group . '][placebo]' . $this->field['name_suffix'] . '" value="placebo">';
+                                echo '<input class="sorter-placebo" type="hidden" name="' . esc_attr($this->field['name']) . '[' . $group . '][placebo]' . esc_attr($this->field['name_suffix']) . '" value="placebo">';
 
                                 if ( $key != "placebo" ) {
 
                                     //echo '<li id="' . $key . '" class="sortee">';
-                                    echo '<li id="sortee-' . $key . '" class="sortee" data-id="' . $key . '">';
-                                    echo '<input class="position ' . $this->field['class'] . '" type="hidden" name="' . $this->field['name'] . '[' . $group . '][' . $key . ']' . $this->field['name_suffix'] . '" value="' . $list . '">';
-                                    echo $list;
+                                    echo '<li id="sortee-' . esc_attr($key) . '" class="sortee" data-id="' . esc_attr($key) . '">';
+                                    echo '<input class="position ' . esc_attr($this->field['class']) . '" type="hidden" name="' . esc_attr($this->field['name'] . '[' . $group . '][' . $key . ']' . $this->field['name_suffix']) . '" value="' . esc_attr($list) . '">';
+                                    echo esc_html($list);
                                     echo '</li>';
                                 }
                             }

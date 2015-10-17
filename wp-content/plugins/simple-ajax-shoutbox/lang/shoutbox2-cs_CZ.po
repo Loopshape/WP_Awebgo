@@ -25,8 +25,8 @@ msgstr "Smajlíci"
 msgid "Shoutbox RSS channel"
 msgstr "RSS kanál"
 
-msgid "Request error"
-msgstr "Chyba načítání"
+msgid "Update of chat failer; will try again shortly"
+msgstr "Nepodařilo se obnovit chat; za chvilku to zkusím znova"
 
 msgid "Max messages in shoutbox:"
 msgstr "Maximální množství zpráv:"

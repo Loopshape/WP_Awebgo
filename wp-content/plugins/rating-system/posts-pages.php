@@ -54,16 +54,31 @@ global $vortex_like_dislike;
 				$current_user = get_post_meta($post_id,$user_key,true);
 				$disliked_value = $current_user['disliked'];
 				$current_user_liked = $current_user['liked'];
-				
+				//custom
+				$login_initial = 1;
+				$login_number = apply_filters('login_number',$login_initial);
+				$logout_initial = 1;
+				$logout_number = apply_filters('logout_number',$logout_initial);
+				//END custom
 				if($current_user_liked == 'liked' && $disliked_value == 'nodisliked'){
 					$current_likes = get_post_meta($post_id,$likes,true);
-					$current_likes++;
+					if(!is_user_logged_in()){
+					$current_likes += $logout_number;
+					}else{
+						$current_likes += $login_number;
+					}
 					update_post_meta($post_id,$likes,$current_likes);
 					
+					
 					$current_dislikes = get_post_meta($post_id,$dislikes,true);
-					$current_dislikes--;
+					if(!is_user_logged_in()){
+					$current_dislikes -= $logout_number;
+					}else{
+						$current_dislikes -= $login_number;
+					}
 					update_post_meta($post_id,$dislikes,$current_dislikes);
 					update_post_meta($post_id,$user_key,$user_data_new);
+					
 					/*
 					global $vortex_like_dislike;
 					if($vortex_like_dislike['v-switch-tooltip']){
@@ -102,7 +117,11 @@ global $vortex_like_dislike;
 					//he likes the post add +1 to likes
 					//change the liked value so when he clicks again we can undo his vote
 					$current_likes = get_post_meta($post_id,$likes,true);
-					$current_likes++;
+					if(!is_user_logged_in()){
+					$current_likes += $logout_number;
+					}else{
+						$current_likes += $login_number;
+					}
 					update_post_meta($post_id,$likes,$current_likes);
 					update_post_meta($post_id,$user_key,$user_data_new);
 					
@@ -110,12 +129,17 @@ global $vortex_like_dislike;
 					//he doesn't like the post anymore let's undo his vote and change his meta so we can add his vote back 
 					//if he changes his mind
 					$current_likes = get_post_meta($post_id,$likes,true);
-					$current_likes--;
+					if(!is_user_logged_in()){
+					$current_likes -= $logout_number;
+					}else{
+						$current_likes -= $login_number;
+					}
 					update_post_meta($post_id,$likes,$current_likes);
 					update_post_meta($post_id,$user_key,$user_data);
 					global $vortex_like_dislike;
 					if ($vortex_like_dislike['v_custom_text']){
-
+							$current_likes = $vortex_like_dislike['v_custom_text_post_like'];
+					};
 						$response = array(
 							'likes' => $current_likes,
 							'both'   => 'no',
@@ -128,7 +152,6 @@ global $vortex_like_dislike;
 						echo json_encode($response);
 					
 						wp_die();
-					}
 				}
 				
 				if ($vortex_like_dislike['v_custom_text']){
@@ -200,15 +223,29 @@ global $vortex_like_dislike;
 				$current_user = get_post_meta($post_id,$user_key,true);
 				$current_user_disliked = $current_user['disliked'];
 				$liked_value = $current_user['liked'];
+				//custom
+				$login_initial = 1;
+				$login_number = apply_filters('login_number',$login_initial);
+				$logout_initial = 1;
+				$logout_number = apply_filters('logout_number',$logout_initial);
+				//END custom
 				
 				if($current_user_disliked == 'disliked' && $liked_value == 'noliked'){
 					
 					$current_likes = get_post_meta($post_id,$likes,true);
-					$current_likes--;
+					if(!is_user_logged_in()){
+					$current_likes -= $logout_number;
+					}else{
+						$current_likes -= $login_number;
+					}
 					update_post_meta($post_id,$likes,$current_likes);
 					
 					$current_dislikes = get_post_meta($post_id,$dislikes,true);
-					$current_dislikes++;
+					if(!is_user_logged_in()){
+					$current_dislikes += $logout_number;
+					}else{
+						$current_dislikes += $login_number;
+					}
 					update_post_meta($post_id,$dislikes,$current_dislikes);
 					
 					update_post_meta($post_id,$user_key,$user_data_new);
@@ -216,6 +253,11 @@ global $vortex_like_dislike;
 					if ($vortex_like_dislike['v_custom_text']){
 						$current_dislikes = $vortex_like_dislike['v_custom_text_post_dislike'];
 					}
+					
+					if($vortex_like_dislike['v_enable_delete'] && ($current_dislikes >= $vortex_like_dislike['v_delete_number'])){
+						wp_delete_post($post_id,true);
+					}
+					
 					
 					$response = array(
 						'dislikes' => $current_dislikes,
@@ -235,21 +277,35 @@ global $vortex_like_dislike;
 					//he likes the post add +1 to likes
 					//change the liked value so when he clicks again we can undo his vote
 					$current_dislikes = get_post_meta($post_id,$dislikes,true);
-					$current_dislikes++;
+					if(!is_user_logged_in()){
+					$current_dislikes += $logout_number;
+					}else{
+						$current_dislikes += $login_number;
+					}
 					update_post_meta($post_id,$dislikes,$current_dislikes);
 					
 					update_post_meta($post_id,$user_key,$user_data_new);
+					
+					if($vortex_like_dislike['v_enable_delete'] && ($current_dislikes >= $vortex_like_dislike['v_delete_number'])){
+						wp_delete_post($post_id,true);
+					}
 					
 				}elseif($current_user_disliked == 'nodisliked'){
 					//he doesn't like the post anymore let's undo his vote and change his meta so we can add his vote back 
 					//if he changes his mind
 					$current_dislikes = get_post_meta($post_id,$dislikes,true);
-					$current_dislikes--;
+					if(!is_user_logged_in()){
+					$current_dislikes -= $logout_number;
+					}else{
+						$current_dislikes -= $login_number;
+					}
 					update_post_meta($post_id,$dislikes,$current_dislikes);
 					
 					update_post_meta($post_id,$user_key,$user_data);
 					
 					if ($vortex_like_dislike['v_custom_text']){
+						$current_dislikes = $vortex_like_dislike['v_custom_text_post_dislike'];
+					}
 
 						$response = array(
 							'dislikes' => $current_dislikes,
@@ -263,7 +319,6 @@ global $vortex_like_dislike;
 						echo json_encode($response);
 						
 						wp_die();
-					}
 				}
 				
 				if ($vortex_like_dislike['v_custom_text']){
@@ -594,6 +649,13 @@ global $vortex_like_dislike;
 			}
 		}
 		
+	//buddypress support
+	if($vortex_like_dislike['v_enable_buddybpress']){
+		include(plugin_dir_path( __FILE__ ).'buddypress.php');
+	}
+	//end buddypress support 
+		
+		
 	function vortex_system_insert(){
 		
 		function vortex_system_before_post($content){
@@ -656,7 +718,6 @@ global $vortex_like_dislike;
 				return $content.vortex_render_for_posts();
 			}else return $content;
 		}
-
 		global $vortex_like_dislike;
 		if(!post_password_required()){
 			if($vortex_like_dislike['v_button_visibility'][1] && $vortex_like_dislike['v_button_visibility'][2] ){

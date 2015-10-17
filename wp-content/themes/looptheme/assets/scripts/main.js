@@ -158,16 +158,16 @@
                             if($(this).find('.thumbnail').length===0) {
                                 $(this).find('.entry-title').css({
                                     'max-width' : '100%',
-                                    'margin-bottom' : -($('article > header').find('.entry-title a').innerHeight())
+                                    'margin-bottom' : -($(this).find('.entry-title a').innerHeight())
                                 }).find('.gotoSideRight').css({
                                     'max-width' : '100%',
                                     'min-height' : '0'
                                 });
                             } else {
                                 $(this).find('.entry-title').css({
-                                    'margin-bottom' : -($('article > header').find('.entry-title a').innerHeight())
+                                    'margin-bottom' : -($(this).find('.entry-title a').innerHeight())
                                 }).find('.gotoSideRight').css({
-                                    'min-height' : ($('article > header').find('.thumbnail img').innerHeight() - 10)
+                                    'min-height' : ($(this).find('.thumbnail img').innerHeight() - 10)
                                 });
                             }
                         });

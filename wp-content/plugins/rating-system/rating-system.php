@@ -3,7 +3,7 @@
 * Plugin Name: Rating System
 * Plugin URI: http://github.com/VortexThemes/rating-system
 * Description: The simple way to add like or dislike buttons.
-* Version: 2.4
+* Version: 2.6
 * Author: VortexThemes
 * Author URI: https://github.com/VortexThemes
 * License: GPL2
@@ -15,7 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;//exit if accessed directly
 
 //activation hook
 include(plugin_dir_path( __FILE__ ).'activation.php');
-
 function vortex_rating_require_tgmpa(){
 	//tgmpa
 include(plugin_dir_path( __FILE__).'tgmpa/class-tgm-plugin-activation.php');
@@ -199,7 +198,7 @@ function vortex_systen_main_function(){
 	}	
 }
 
-add_action('wp_loaded','vortex_systen_main_function');
+add_action('plugins_loaded','vortex_systen_main_function');
 
 function rating_system_load_widgets(){
 	$widget = plugin_dir_path( __FILE__ ).'widget/widget.php';

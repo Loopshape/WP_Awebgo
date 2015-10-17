@@ -3,7 +3,7 @@ Contributors: social_enemy, honza.skypala
 Tags: chat, comments, widget, ajax
 Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 
 Simple AJAX shoutbox, add shoutbox on your sidebar.
 
@@ -49,6 +49,9 @@ You can either put this to your theme CSS, or if you are using a standard theme,
 2. Widget configuration
 
 == Changelog ==
+
+= 2.1.2 =
+* new: if refreshing chat contents fails, then this is indicated only by a warning icon; messages are not erased
 
 = 2.1.1 =
 * new: tooltip for speaker icon

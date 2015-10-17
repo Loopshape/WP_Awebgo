@@ -96,6 +96,18 @@
 	margin-left: 0;
 }
 
+.Ajax_Shoutbox_Widget .icons .warning {
+  float: left;
+  display: none;
+}
+
+.Ajax_Shoutbox_Widget .icons .warning:before {
+  cursor: pointer;
+  font-family: "dashicons";
+  margin-right: 0.1em;
+	content: "\f534";
+}
+
 .Ajax_Shoutbox_Widget .icons .speaker {
   float: left;
 }
