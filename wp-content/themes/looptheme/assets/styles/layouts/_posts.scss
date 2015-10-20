@@ -173,7 +173,7 @@ border-radius: 12px !important;
               overflow: hidden !important;
               margin-bottom: 0 !important;
 
-              &, * {
+              &:not(&[id^="crayon-"]), *:not(div[id^="crayon-"] *) {
                 color: $white-color !important;
                 text-shadow: 0 0 2px $black-color !important;
               }

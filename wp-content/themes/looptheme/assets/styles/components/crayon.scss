@@ -1,0 +1,901 @@
+.entry-content > div[id^="crayon"] {
+
+    #colorbox.crayon-colorbox, #cboxOverlay.crayon-colorbox, .crayon-colorbox #cboxWrapper {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 9999 !important;
+        overflow: hidden !important;
+    }
+    #cboxOverlay.crayon-colorbox {
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .crayon-colorbox #cboxMiddleLeft, .crayon-colorbox #cboxBottomLeft {
+        clear: left !important;
+    }
+    .crayon-colorbox #cboxContent {
+        position: relative !important;
+    }
+    .crayon-colorbox #cboxLoadedContent {
+        overflow: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    .crayon-colorbox #cboxTitle {
+        display: none !important !important;
+    }
+    .crayon-colorbox #cboxLoadingOverlay, .crayon-colorbox #cboxLoadingGraphic {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .crayon-colorbox #cboxPrevious, .crayon-colorbox #cboxNext, .crayon-colorbox #cboxClose, .crayon-colorbox #cboxSlideshow {
+        cursor: pointer !important;
+    }
+    .crayon-colorbox .cboxPhoto {
+        float: left !important;
+        margin: auto !important;
+        border: 0 !important;
+        display: block !important;
+        max-width: none !important;
+        -ms-interpolation-mode: bicubic !important;
+    }
+    .crayon-colorbox .cboxIframe {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        border: 0 !important;
+    }
+    #colorbox.crayon-colorbox, .crayon-colorbox #cboxContent, .crayon-colorbox #cboxLoadedContent {
+        box-sizing: content-box !important;
+        -moz-box-sizing: content-box !important;
+        -webkit-box-sizing: content-box !important;
+    }
+    #cboxOverlay.crayon-colorbox {
+        background: #000 !important;
+    }
+    #colorbox.crayon-colorbox {
+        outline: 0 !important;
+    }
+    .crayon-colorbox #cboxContent {
+        margin-top: 20px !important;
+        background: #000 !important;
+    }
+    .crayon-colorbox .cboxIframe {
+        background: #fff !important;
+    }
+    .crayon-colorbox #cboxError {
+        padding: 50px !important;
+        border: 1px solid #ccc !important;
+    }
+    .crayon-colorbox #cboxLoadedContent {
+        border: 5px solid #000 !important;
+        background: #fff !important;
+    }
+    .crayon-colorbox #cboxTitle {
+        position: absolute !important;
+        top: -20px !important;
+        left: 0 !important;
+        color: #ccc !important;
+    }
+    .crayon-colorbox #cboxCurrent {
+        position: absolute !important;
+        top: -20px !important;
+        right: 0 !important;
+        color: #ccc !important;
+    }
+    .crayon-colorbox #cboxPrevious, .crayon-colorbox #cboxNext, .crayon-colorbox #cboxSlideshow, .crayon-colorbox #cboxClose {
+        border: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: visible !important;
+        width: auto !important;
+        background: 0 !important;
+    }
+    .crayon-colorbox #cboxPrevious:active, .crayon-colorbox #cboxNext:active, .crayon-colorbox #cboxSlideshow:active, .crayon-colorbox #cboxClose:active {
+        outline: 0 !important;
+    }
+    .crayon-colorbox #cboxSlideshow {
+        position: absolute !important;
+        top: -20px !important;
+        right: 90px !important;
+        color: #fff !important;
+    }
+    .crayon-colorbox #cboxContent {
+        margin-top: 0 !important;
+    }
+    .crayon-colorbox #cboxLoadedContent {
+        border: 0 !important;
+    }
+    #crayon-main-wrap .form-table th {
+        width: 100px !important;
+    }
+    #crayon-log {
+        display: none !important;
+        max-height: 200px !important;
+        border-color: #dfdfdf !important;
+        background-color: white !important;
+        border-width: 1px !important;
+        border-style: solid !important;
+        border-radius: 4px !important;
+        -moz-border-radius: 4px !important;
+        -webkit-border-radius: 4px !important;
+        margin: 1px !important;
+        padding: 3px !important;
+        overflow: auto !important;
+        white-space: pre !important;
+        margin-bottom: 5px !important;
+    }
+    .crayon-span, .crayon-span-5, .crayon-span-10, .crayon-span-50, .crayon-span-100, .crayon-span-110 {
+        line-height: 24px !important;
+        display: inline-block !important;
+    }
+    .crayon-span-5 {
+        min-width: 5px !important;
+    }
+    .crayon-span-10 {
+        min-width: 10px !important;
+    }
+    .crayon-span-50 {
+        min-width: 50px !important;
+    }
+    .crayon-span-100 {
+        min-width: 100px !important;
+    }
+    .crayon-span-110 {
+        min-width: 117px !important;
+    }
+    .crayon-span-margin {
+        margin-left: 5px !important;
+    }
+    #height_mode, #width_mode {
+        min-width: 65px !important;
+    }
+    .crayon-error {
+        color: #F00 !important;
+    }
+    .crayon-success {
+        color: #00F !important;
+    }
+    .crayon-warning {
+        color: #ff8000 !important;
+    }
+    .crayon-help {
+        min-height: 30px !important;
+        padding: 5px 10px !important;
+    }
+    .crayon-help .crayon-help-close, .crayon-help .crayon-help-close:active, .crayon-help .crayon-help-close:hover {
+        text-decoration: none !important;
+        float: right !important;
+        color: #000 !important;
+    }
+    .crayon-help span, .crayon-help a {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+    }
+    #crayon-log-text {
+        font: 11px/13px Monaco, 'MonacoRegular', 'Courier New', monospace !important;
+    }
+    #crayon-log-controls {
+        float: left !important;
+        margin-right: 5px !important;
+    }
+    .crayon-table {
+        font-size: 12px !important;
+        border: 1px solid #999 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 12px !important;
+    }
+    .crayon-table td {
+        vertical-align: top !important;
+        border-bottom: 1px solid #AAA !important;
+        padding: 0 6px !important;
+        margin: 0 !important;
+        background: #EEE !important;
+    }
+    .crayon-table-light td {
+        background: #f8f8f8 !important;
+    }
+    .crayon-table-header td {
+        font-weight: bold !important;
+        background: #CCC !important;
+    }
+    .crayon-table-last td, .crayon-table tr:last-child td {
+        border: 0 !important;
+    }
+    #lang-info div {
+        padding: 5px 0 !important;
+    }
+    .crayon-table .not-parsed {
+        color: #F00 !important;
+    }
+    .crayon-table .parsed-with-errors {
+        color: #f90 !important;
+    }
+    .crayon-table .successfully-parsed {
+        color: #77a000 !important;
+    }
+    #crayon-live-preview, #crayon-log-wrapper {
+        padding: 0 !important;
+        width: 100% !important;
+        float: left !important;
+        clear: both !important;
+    }
+    #crayon-live-preview {
+        float: none !important;
+        padding: 0 !important;
+    }
+    #crayon-logo {
+        text-align: center !important;
+    }
+    #crayon-info, #crayon-info td {
+        border: 0 !important;
+        padding: 0 5px !important;
+        margin: 0 !important;
+    }
+    .crayon-admin-button {
+        display: inline-block !important;
+        text-align: center !important;
+    }
+    #crayon-subsection-langs-info {
+        margin-top: 5px !important;
+    }
+    #crayon-theme-editor-admin-buttons {
+        display: inline !important;
+    }
+    #crayon-theme-editor-admin-buttons .crayon-admin-button {
+        margin-left: 5px !important;
+    }
+    #crayon-theme-info {
+        display: table !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 5px !important;
+    }
+    #crayon-theme-info > div {
+        display: table-cell !important;
+        vertical-align: middle !important;
+    }
+    #crayon-theme-info .content * {
+        float: left !important;
+    }
+    #crayon-theme-info .field {
+        font-weight: bold !important;
+    }
+    #crayon-theme-info .field, #crayon-theme-info .value {
+        margin-left: 5px !important;
+    }
+    #crayon-theme-info .description.value {
+        font-style: italic !important;
+        color: #999 !important;
+    }
+    #crayon-theme-info .type {
+        text-align: center !important;
+        min-width: 120px !important;
+        font-weight: bold !important;
+        border-right: 1px solid #ccc !important;
+        padding-right: 5px !important;
+    }
+    #crayon-theme-info .type.stock {
+        color: #666 !important;
+    }
+    #crayon-theme-info .type.user {
+        color: #5b9a00 !important;
+    }
+    #crayon-editor-table td {
+        vertical-align: top !important;
+    }
+    .small-icon {
+        width: 24px !important;
+        height: 24px !important;
+        display: inline-block !important;
+        margin: 5px 5px 0 0 !important;
+    }
+    #twitter-icon {
+        background: url(../images/twitter.png) !important;
+    }
+    #gmail-icon {
+        background: url(../images/google.png) !important;
+    }
+    #docs-icon {
+        background: url(../images/docs.png) !important;
+    }
+    #git-icon {
+        background: url(../images/github.png) !important;
+    }
+    #wp-icon {
+        background: url(../images/wordpress-blue.png) !important;
+    }
+    #donate-icon {
+        background: url(../images/donate.png) !important;
+        width: 75px !important;
+    }
+    #crayon-donate, #crayon-donate input {
+        margin: 0 !important;
+        display: inline !important;
+        padding: 0 !important;
+    }
+    #crayon-theme-editor-info a {
+        text-decoration: none !important;
+        font-style: italic !important;
+        color: #666 !important !important;
+    }
+    #crayon-main-wrap .form-table .note {
+        font-style: italic !important;
+        color: #999 !important;
+    }
+    #crayon-change-code-text {
+        width: 400px !important;
+        height: 300px !important;
+    }
+    .crayon-syntax {
+        overflow: hidden !important;
+        position: relative !important;
+        direction: ltr !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+        direction: ltr !important;
+        -moz-box-sizing: border-box !important;
+        -webkit-box-sizing: border-box !important;
+        -webkit-text-size-adjust: none !important;
+    }
+    .crayon-syntax div {
+        background: 0 !important;
+        border: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+    .crayon-syntax.crayon-loading {
+        visibility: hidden !important;
+    }
+    .crayon-syntax, .crayon-syntax .crayon-main, .crayon-syntax .crayon-toolbar, .crayon-syntax .crayon-info, .crayon-syntax .crayon-plain, .crayon-syntax .crayon-code {
+        width: 100% !important;
+    }
+    .crayon-syntax .crayon-main, .crayon-syntax .crayon-plain {
+        overflow: auto !important;
+    }
+    .crayon-syntax, .crayon-syntax .crayon-main, .crayon-syntax .crayon-plain, .crayon-syntax .crayon-table {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .crayon-syntax-inline {
+        margin: 0 2px !important;
+        padding: 0 2px !important;
+    }
+    .crayon-syntax .crayon-table {
+        border: none !important;
+        background: none !important;
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        width: auto !important;
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: auto !important !important;
+    }
+    .crayon-syntax .crayon-table td, .crayon-syntax .crayon-table tr {
+        padding: 0 !important;
+        border: none !important;
+        background: 0 !important;
+        vertical-align: top !important;
+        margin: 0 !important !important;
+    }
+    .crayon-syntax .crayon-invisible {
+        display: none !important !important;
+    }
+    .crayon-plain-tag {
+        margin-bottom: 12px !important;
+    }
+    .crayon-popup .crayon-plain {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 100 !important;
+        position: relative !important !important;
+    }
+    .crayon-popup-window {
+        background: #fff !important;
+    }
+    .crayon-syntax .crayon-num {
+        text-align: center !important;
+        padding: 0 5px !important;
+        margin: 0 !important;
+    }
+    .crayon-syntax .crayon-toolbar {
+        position: relative !important;
+        overflow: hidden !important;
+        z-index: 4 !important;
+    }
+    .crayon-syntax .crayon-info {
+        position: absolute !important;
+        overflow: hidden !important;
+        display: none !important;
+        z-index: 3 !important;
+        padding: 0 !important;
+        min-height: 18px !important;
+        line-height: 18px !important;
+    }
+    .crayon-syntax .crayon-info div {
+        padding: 2px !important;
+        text-align: center !important;
+    }
+    .crayon-syntax .crayon-toolbar span {
+        padding: 0 4px !important !important;
+    }
+    .crayon-syntax .crayon-toolbar .crayon-button {
+        display: inline !important;
+        float: left !important;
+        position: relative !important;
+        width: 24px !important;
+        background-repeat: no-repeat !important;
+        line-height: 15px !important;
+        border: 0 !important;
+        text-decoration: none !important;
+    }
+    .crayon-toolbar .crayon-button, .crayon-toolbar .crayon-button:hover, .crayon-toolbar .crayon-button.crayon-pressed:hover {
+        background-position: 0 center !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-pressed, .crayon-toolbar .crayon-button:active, .crayon-toolbar .crayon-button.crayon-pressed:active {
+        background-position: -24px 0 !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-popup-button .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-popup-button:hover .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-popup-button.crayon-pressed:hover .crayon-button-icon {
+        background-position: 0 0 !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-copy-button .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-copy-button:hover .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-copy-button.crayon-pressed:hover .crayon-button-icon {
+        background-position: 0 -16px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-nums-button .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-nums-button:hover .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-nums-button.crayon-pressed:hover .crayon-button-icon {
+        background-position: 0 -32px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-plain-button .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-plain-button:hover .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-plain-button.crayon-pressed:hover .crayon-button-icon {
+        background-position: 0 -48px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-mixed-button .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-mixed-button:hover .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-mixed-button.crayon-pressed:hover .crayon-button-icon {
+        background-position: 0 -64px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-minimize .crayon-button-icon {
+        background-position: 0 -80px !important;
+        background-color: transparent !important !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-expand-button .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-expand-button:hover .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-expand-button.crayon-pressed:hover .crayon-button-icon {
+        background-position: 0 -96px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-wrap-button .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-wrap-button:hover .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-wrap-button.crayon-pressed:hover .crayon-button-icon {
+        background-position: 0 -112px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-popup-button.crayon-pressed .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-popup-button:active .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-popup-button.crayon-pressed:active .crayon-button-icon {
+        background-position: -24px 0 !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-copy-button.crayon-pressed .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-copy-button:active .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-copy-button.crayon-pressed:active .crayon-button-icon {
+        background-position: -24px -16px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-nums-button.crayon-pressed .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-nums-button:active .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-nums-button.crayon-pressed:active .crayon-button-icon {
+        background-position: -24px -32px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-plain-button.crayon-pressed .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-plain-button:active .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-plain-button.crayon-pressed:active .crayon-button-icon {
+        background-position: -24px -48px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-mixed-button.crayon-pressed .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-mixed-button:active .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-mixed-button.crayon-pressed:active .crayon-button-icon {
+        background-position: -24px -64px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-minimize .crayon-button-icon {
+        background-position: -24px -80px !important;
+        background-color: transparent !important !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-expand-button.crayon-pressed .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-expand-button:active .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-expand-button.crayon-pressed:active .crayon-button-icon {
+        background-position: -24px -96px !important;
+    }
+    .crayon-toolbar .crayon-button.crayon-wrap-button.crayon-pressed .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-wrap-button:active .crayon-button-icon, .crayon-toolbar .crayon-button.crayon-wrap-button.crayon-pressed:active .crayon-button-icon {
+        background-position: -24px -112px !important;
+    }
+    .crayon-syntax .crayon-toolbar .crayon-language {
+        padding-right: 8px !important !important;
+    }
+    .crayon-syntax .crayon-title, .crayon-syntax .crayon-language {
+        float: left !important;
+    }
+    .crayon-main::-webkit-scrollbar, .crayon-plain::-webkit-scrollbar {
+        height: 6px !important;
+        overflow: visible !important;
+        width: 6px !important;
+        background: #EEE !important;
+    }
+    .crayon-main::-webkit-scrollbar-thumb, .crayon-plain::-webkit-scrollbar-thumb {
+        background-color: #CCC !important;
+        background-clip: padding-box !important;
+        border: 1px solid #AAA !important;
+        box-shadow: inset 0 0 2px #999 !important;
+        min-height: 8px !important;
+        padding: 0 !important;
+        border-width: 1px !important;
+    }
+    .crayon-main::-webkit-scrollbar-button, .crayon-plain::-webkit-scrollbar-button {
+        height: 0 !important;
+        width: 0 !important;
+        padding: 0 !important;
+    }
+    .crayon-main::-webkit-scrollbar-track, .crayon-plain::-webkit-scrollbar-track {
+        background-clip: padding-box !important;
+        border: solid transparent !important;
+        border-width: 0 0 0 4px !important;
+        border: 1px solid #BBB !important;
+        border-right: 0 !important;
+        border-bottom: 0 !important;
+    }
+    .crayon-main::-webkit-scrollbar-corner, .crayon-plain::-webkit-scrollbar-corner {
+        background: #EEE !important;
+    }
+    .crayon-main::-webkit-scrollbar-thumb:hover, .crayon-plain::-webkit-scrollbar-thumb:hover {
+        background: #AAA !important;
+        border: 1px solid #777 !important;
+        box-shadow: inset 0 0 2px #777 !important;
+    }
+    .crayon-syntax .crayon-pre, .crayon-syntax pre {
+        color: #000 !important;
+        white-space: pre !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        background: none !important;
+        border: none !important;
+        tab-size: 4 !important;
+    }
+    .crayon-syntax .crayon-line {
+        padding: 0 5px !important;
+    }
+    .crayon-syntax.crayon-wrapped .crayon-line {
+        white-space: pre-wrap !important;
+        height: auto !important;
+        word-break: break-all !important;
+    }
+    .crayon-syntax-inline .crayon-pre, .crayon-syntax-inline pre {
+        white-space: normal !important;
+    }
+    .crayon-syntax-inline-nowrap .crayon-pre, .crayon-syntax-inline-nowrap pre {
+        white-space: pre !important;
+    }
+    .crayon-syntax {
+        font-family: Monaco, 'MonacoRegular', 'Courier New', monospace !important;
+        font-weight: 500 !important;
+    }
+    .crayon-syntax .crayon-toolbar *::selection, .crayon-syntax .crayon-nums *::selection {
+        background: transparent !important;
+    }
+    .crayon-table .crayon-nums-content {
+        white-space: nowrap !important;
+    }
+    .crayon-syntax .crayon-num, .crayon-syntax .crayon-pre .crayon-line, .crayon-syntax .crayon-toolbar *, .crayon-syntax .crayon-pre * {
+        font-family: inherit !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+        font-weight: inherit !important;
+        height: inherit !important;
+    }
+    .crayon-syntax .crayon-toolbar .crayon-button .crayon-button-icon {
+        background-image: url('../images/toolbar/buttons.png') !important;
+        height: 16px !important;
+        width: 100% !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 50% !important;
+        margin-top: -8px !important;
+    }
+    .crayon-syntax .crayon-toolbar .crayon-tools {
+        position: absolute !important;
+        right: 0 !important;
+    }
+    .crayon-syntax.crayon-expanded {
+        position: absolute !important;
+        margin: 0 !important !important;
+    }
+    .crayon-syntax.crayon-expanded .crayon-main {
+        overflow: hidden !important !important;
+    }
+    .crayon-placeholder {
+        width: 100% !important !important;
+    }
+    .crayon-toolbar-visible .crayon-toolbar {
+        position: relative !important;
+        margin-top: 0 !important;
+        display: block !important !important;
+    }
+    .crayon-syntax.crayon-expanded .crayon-toolbar .crayon-tools {
+        position: relative !important;
+        right: auto !important;
+        float: left !important !important;
+    }
+    .crayon-syntax .crayon-plain-wrap {
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important !important;
+    }
+    .crayon-syntax .crayon-plain {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute !important;
+        opacity: 0 !important;
+        padding: 0 5px !important;
+        margin: 0 !important;
+        border: 0 !important;
+        box-sizing: border-box !important;
+        -webkit-box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        white-space: pre !important;
+        word-wrap: normal !important;
+        overflow: auto !important;
+        resize: none !important;
+        color: #000 !important;
+        background: #FFF !important;
+    }
+    .crayon-wrapped .crayon-plain {
+        white-space: pre-wrap !important;
+    }
+    .bbp-body .crayon-syntax {
+        clear: none !important !important;
+    }
+    .crayon-minimized .crayon-toolbar {
+        cursor: pointer !important;
+    }
+    .crayon-minimized .crayon-plain-wrap, .crayon-minimized .crayon-main, .crayon-minimized .crayon-toolbar .crayon-tools * {
+        display: none !important !important;
+    }
+    .crayon-minimized .crayon-toolbar .crayon-tools .crayon-minimize {
+        display: block !important !important;
+    }
+    .crayon-minimized .crayon-toolbar {
+        position: relative !important !important;
+    }
+    .crayon-syntax.crayon-minimized .crayon-toolbar {
+        border-bottom: none !important !important;
+    }
+    .crayon-te *, #crayon-te-bar-content {
+        font-family: "Lucida Grande", Arial, sans-serif !important;
+        font-size: 12px !important;
+    }
+    .crayon-te input[type="text"], .crayon-te textarea {
+        background: #f9f9f9 !important;
+        border: 1px solid #CCC !important;
+        box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1) !important;
+        -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1) !important;
+        -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1) !important;
+        padding: 2px 4px !important;
+        -webkit-border-radius: 3px !important;
+        border-radius: 3px !important;
+        border-width: 1px !important;
+        border-style: solid !important;
+    }
+    .crayon-te #crayon-code {
+        font-family: monospace !important !important;
+    }
+    #crayon-te-content, #crayon-te-table {
+        width: 100% !important;
+        height: auto !important !important;
+    }
+    #crayon-range, #crayon-mark {
+        width: 100px !important;
+    }
+    #crayon-te-table th, #crayon-te-table td {
+        vertical-align: top !important;
+        text-align: left !important;
+    }
+    .rtl #crayon-te-table th, .rtl #crayon-te-table td {
+        text-align: right !important;
+    }
+    #crayon-te-table .crayon-tr-center td, #crayon-te-table .crayon-tr-center th {
+        vertical-align: middle !important;
+    }
+    #crayon-te-table .crayon-nowrap {
+        white-space: nowrap !important;
+    }
+    #crayon-te-bar {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+    }
+    #crayon-te-bar-content {
+        border: 1px solid #666 !important;
+        border-bottom: 0 !important;
+        height: 26px !important;
+        line-height: 25px !important;
+        padding: 0 8px !important;
+        padding-right: 0 !important;
+        background-color: #222 !important;
+        color: #cfcfcf !important;
+    }
+    #crayon-te-bar-content a {
+        line-height: 25px !important;
+        padding: 5px 10px !important;
+        color: #DDD !important;
+        font-weight: bold !important;
+        text-decoration: none !important !important;
+    }
+    #crayon-te-bar-content a:hover {
+        color: #FFF !important;
+    }
+    .crayon-te-seperator {
+        color: #666 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    #crayon-te-bar-block {
+        height: 34px !important;
+        width: 100% !important;
+    }
+    #crayon-te-title {
+        float: left !important;
+    }
+    #crayon-te-controls {
+        float: right !important;
+    }
+    #crayon-url-th {
+        vertical-align: top !important;
+        padding-top: 5px !important;
+    }
+    .crayon-te-heading {
+        font-size: 14px !important;
+        font-weight: bold !important;
+    }
+    #crayon-te-settings-info {
+        text-align: center !important;
+    }
+    .crayon-te-section {
+        font-weight: bold !important;
+        padding: 0 10px !important;
+    }
+    #crayon-te-sub-section {
+        margin-left: 10px !important;
+    }
+    #crayon-te-sub-section .crayon-te-section {
+        font-weight: normal !important;
+        padding: 0 !important;
+    }
+    #crayon-code {
+        height: 200px !important;
+        white-space: pre !important;
+    }
+    #crayon-code, #crayon-url {
+        width: 555px !important;
+    }
+    .crayon-disabled {
+        background: #EEE !important;
+    }
+    .qt_crayon_highlight {
+        background-image: -ms-linear-gradient(bottom,#daf2ff,white) !important;
+        background-image: -moz-linear-gradient(bottom,#daf2ff,white) !important;
+        background-image: -o-linear-gradient(bottom,#daf2ff,white) !important;
+        background-image: -webkit-linear-gradient(bottom,#daf2ff,white) !important;
+        background-image: linear-gradient(bottom,#daf2ff,white) !important;
+    }
+    .qt_crayon_highlight:hover {
+        background: #ddebf2 !important !important;
+    }
+    .crayon-tag-editor-button-wrapper {
+        display: inline-block !important;
+    }
+    .mce_crayon_tinymce {
+        padding: 0 !important;
+        margin: 2px 3px !important;
+    }
+    .mce-i-crayon_tinymce, .mce_crayon_tinymce {
+        background: url(../images/crayon_tinymce.png) 0 0 !important;
+    }
+    a.mce_crayon_tinymce {
+        background-position: 2px 0 !important !important;
+    }
+    .wp_themeSkin .mceButtonEnabled:hover span.mce_crayon_tinymce, .wp_themeSkin .mceButtonActive span.mce_crayon_tinymce {
+        background-position: -20px 0 !important;
+    }
+    .wp_themeSkin span.mce_crayon_tinymce {
+        background: none !important !important;
+    }
+    #crayon-te-table {
+        margin-top: 26px !important;
+        padding: 10px !important;
+        border-collapse: separate !important;
+        border-spacing: 2px !important !important;
+    }
+    #crayon-te-table th {
+        width: 100px !important;
+    }
+    #crayon-te-clear {
+        margin-left: 10px !important;
+        color: #666 !important;
+        background-color: #f4f4f4 !important;
+        border: 1px solid #CCC !important;
+        border-radius: 3px !important;
+        margin-left: 8px !important;
+    }
+    #crayon-title {
+        width: 360px !important;
+    }
+    #TB_window.crayon-te-ajax {
+        overflow: auto !important;
+    }
+    #TB_window.crayon-te-ajax, #TB_window.crayon-te-ajax #TB_ajaxContent, #TB_window.crayon-te-ajax #TB_title {
+        width: 680px !important;
+    }
+    #TB_window.crayon-te-ajax #TB_ajaxContent {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 28px !important;
+    }
+    #TB_window.crayon-te-ajax #TB_title {
+        position: fixed !important;
+    }
+    #TB_window.crayon-te-ajax #TB_title .crayon-te-submit {
+        margin-top: 3px !important;
+        float: right !important;
+    }
+    #TB_window.crayon-te-ajax a {
+        color: #2587e2 !important;
+        text-decoration: none !important;
+    }
+    #TB_window.crayon-te-ajax a:hover {
+        color: #499ce9 !important;
+    }
+    .crayon-te-quote {
+        background: #DDD !important;
+        padding: 0 2px !important;
+    }
+    #crayon-te-submit-wrapper {
+        display: none !important;
+    }
+    #crayon-te-clear {
+        display: none !important;
+        margin: 0 !important;
+        margin-top: 10px !important;
+    }
+    .crayon-syntax-pre {
+        background: red !important;
+        white-space: pre !important;
+        overflow: auto !important;
+        display: block !important;
+        word-wrap: break-word !important;
+    }
+    .crayon-question {
+        padding: 1px 4px !important;
+        text-decoration: none !important;
+        color: #83b3cb !important;
+        border-radius: 10px !important;
+        height: 15px !important;
+        width: 15px !important;
+    }
+    .crayon-question:hover {
+        background: #83b3cb !important;
+        color: white !important;
+        height: 15px !important;
+        width: 15px !important;
+    }
+    .crayon-setting-changed, .crayon-setting-selected {
+        background: #fffaad !important !important;
+    }
+    .crayon-question:hover {
+        color: white !important;
+        background: #a6d6ef !important;
+    }
+    #crayon-te-warning {
+        display: none !important;
+    }
+    .crayon-te-info {
+        padding: 5px !important;
+        margin: 2px 0 !important;
+    }
+    #crayon-te-submit {
+        margin-bottom: 5px !important;
+    }
+
+}
