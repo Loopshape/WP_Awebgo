@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=seb.r
 Tags: social media, social media icons, social media buttons, social media sharing, floating social media, social media icon, social media button, sharing icons, sharing, sharing buttons, social media widget, socialmedia, social media pop-up, social, social icons, icon, icons, buttons, facebook icon, twitter icon, instagram, instagram icon, counter, facebook, facebook like, like, tweet, tweet button, buttons, tweet icon, youtube, youtube icon, linkedin, linkedin icon, logos, follow, social profiles, social media accounts, social share, social media plugin
 Requires at least: 2.8
 Tested up to: 4.4
-Stable tag: 1.2.8
+Stable tag: 1.3.0
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,6 +76,15 @@ Please check out the FAQ on http://ultimatelysocial.com
 
 
 == Changelog ==
+
+= 1.3.0 =
+* Feed claiming bug fixed 
+
+= 1.2.9 =
+* New G+ button updated
+* Quicker claiming of feed possible
+* Comments to share-button added
+* Credit to shortpixel added
 
 = 1.2.8 =
 * New feature: Users can now decide where exactly the floating icons will display
@@ -291,5 +300,5 @@ Please check out the FAQ on http://ultimatelysocial.com
 
 == Upgrade Notice ==
 
-= 1.2.8 =
+= 1.3.0 =
 Several enhancements and fixes - please upgrade!

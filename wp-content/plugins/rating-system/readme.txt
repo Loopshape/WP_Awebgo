@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: like, dislike, voting, rating, upvote, downvote, ajax, interactive, widget, comments, post, posts, page, widgets, jquery, custom post type, dashbord, bbpress
 Requires at least: 4.1
 Tested up to: 4.3.1
-Stable tag: 2.6
+Stable tag: 2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ The simple way to add like and dislike buttons for your posts, pages, comments a
 * Support for custom post type(WooCommerce etc). &#10004;
 * Support for bbPress. &#10004;
 * Support for Epoch. &#10004;
+* Support for buddyPress. &#10004;
+* Integration with MyCred. &#10004;
 * Support for posts, pages, comments. &#10004;
 * No backlink. &#10004;
 * No ads. &#10004;
@@ -78,6 +80,9 @@ notices
 >
 
 == Changelog ==
+= 2.7 = 
+* Added MyCred integration.
+* Improved bbPress support.
 = 2.6 = 
 * Added buddyPress activity support.
 * Improved Epoch support.

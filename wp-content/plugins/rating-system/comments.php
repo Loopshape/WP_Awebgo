@@ -62,6 +62,7 @@ if($vortex_like_dislike['v-switch-comments']){
 					update_comment_meta($post_id,$dislikes,$current_dislikes);
 					
 					update_comment_meta($post_id,$user_key,$user_data_new);
+					do_action("vortex_com_dislike",'+likes','-dislikes',$current_user_id,$post_id);
 					if ($vortex_like_dislike['v_custom_text_com']){
 						$current_likes = $vortex_like_dislike['v_custom_text_com_like'];
 					};
@@ -81,6 +82,7 @@ if($vortex_like_dislike['v-switch-comments']){
 					$current_likes++;
 					update_comment_meta($post_id,$likes,$current_likes);
 					update_comment_meta($post_id,$user_key,$user_data_new);
+					do_action("vortex_com_dislike",'+likes','nothing',$current_user_id,$post_id);
 					
 				}elseif($current_user_liked == 'noliked'){
 					//he doesn't like the post anymore let's undo his vote and change his meta so we can add his vote back 
@@ -89,7 +91,7 @@ if($vortex_like_dislike['v-switch-comments']){
 					$current_likes--;
 					update_comment_meta($post_id,$likes,$current_likes);
 					update_comment_meta($post_id,$user_key,$user_data);
-					
+					do_action("vortex_com_dislike",'-likes','nothing',$current_user_id,$post_id);
 					if ($vortex_like_dislike['v_custom_text_com']){
 						$current_likes = $vortex_like_dislike['v_custom_text_com_like'];
 					};
@@ -178,7 +180,7 @@ if($vortex_like_dislike['v-switch-comments']){
 					update_comment_meta($post_id,$dislikes,$current_dislikes);
 					
 					update_comment_meta($post_id,$user_key,$user_data_new);
-				
+					do_action("vortex_com_dislike",'-likes','+dislikes',$current_user_id,$post_id);
 					if ($vortex_like_dislike['v_custom_text_com']){
 						$current_dislikes = $vortex_like_dislike['v_custom_text_com_dislike'];
 					}
@@ -199,7 +201,7 @@ if($vortex_like_dislike['v-switch-comments']){
 					update_comment_meta($post_id,$dislikes,$current_dislikes);
 					
 					update_comment_meta($post_id,$user_key,$user_data_new);
-					
+					do_action("vortex_com_dislike",'nothing','+dislikes',$current_user_id,$post_id);
 				}elseif($current_user_disliked == 'nodisliked'){
 					//he doesn't like the post anymore let's undo his vote and change his meta so we can add his vote back 
 					//if he changes his mind
@@ -208,7 +210,7 @@ if($vortex_like_dislike['v-switch-comments']){
 					update_comment_meta($post_id,$dislikes,$current_dislikes);
 					
 					update_comment_meta($post_id,$user_key,$user_data);
-					
+					do_action("vortex_com_dislike",'nothing','-dislikes',$current_user_id,$post_id);
 					if ($vortex_like_dislike['v_custom_text_com']){
 						$current_dislikes = $vortex_like_dislike['v_custom_text_com_dislike'];
 					}

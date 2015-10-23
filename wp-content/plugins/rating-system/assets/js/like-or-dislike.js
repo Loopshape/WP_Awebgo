@@ -17,6 +17,8 @@
 				nonce: vortex_ajax_var.nonce
 			},
 			success: function(response){
+			if(response.likes != "exit"){
+			
 				function rating_system_add_new(){
 					if(jQuery('#rating-system-limit').length){
 						var limit = jQuery('#rating-system-limit').val();
@@ -49,25 +51,26 @@
 					jQuery('.widget_vortex_top_likes > ul').append('<li class="'+response.id+'"><a href="'+response.url+'" title="'+response.title+'">'+response.title+'</a></li>');
 				}
 				
-				if(response.both == 'no'){
-				var like = jQuery('.vortex-p-like-counter.'+id);
-				like.text(response.likes);
-				var like_toggle = jQuery('.vortex-p-like.'+id);
-				like_toggle.toggleClass('vortex-p-like-active');
-				}else{
+					if(response.both == 'no'){
+					var like = jQuery('.vortex-p-like-counter.'+id);
+					like.text(response.likes);
+					var like_toggle = jQuery('.vortex-p-like.'+id);
+					like_toggle.toggleClass('vortex-p-like-active');
+					}else{
+						
+					var dislike = jQuery('.vortex-p-dislike-counter.'+id);
+					dislike.text(response.dislikes);
 					
-				var dislike = jQuery('.vortex-p-dislike-counter.'+id);
-				dislike.text(response.dislikes);
-				
-				var dislike_toggle = jQuery('.vortex-p-dislike.'+id);
-				dislike_toggle.toggleClass('vortex-p-dislike-active');
-				
-				var like = jQuery('.vortex-p-like-counter.'+id);
-				like.text(response.likes);
-				
-				var like_toggle = jQuery('.vortex-p-like.'+id);
-				like_toggle.toggleClass('vortex-p-like-active');
-				
+					var dislike_toggle = jQuery('.vortex-p-dislike.'+id);
+					dislike_toggle.toggleClass('vortex-p-dislike-active');
+					
+					var like = jQuery('.vortex-p-like-counter.'+id);
+					like.text(response.likes);
+					
+					var like_toggle = jQuery('.vortex-p-like.'+id);
+					like_toggle.toggleClass('vortex-p-like-active');
+					
+					}
 				}
 			},
 			complete:function(){
@@ -95,27 +98,30 @@
 				nonce: vortex_ajax_var.nonce
 			},
 			success: function(response){
-				if(response.likes == '0' && jQuery('li.'+id).length){
-					jQuery('li.'+id).remove();
-				}
-				
-				if(response.both == 'no'){
-				var dislike = jQuery('.vortex-p-dislike-counter.'+id);
-				dislike.text(response.dislikes);
-				var dislike_toggle = jQuery('.vortex-p-dislike.'+id);
-				dislike_toggle.toggleClass('vortex-p-dislike-active');
-				}else{
+				if(response.dislikes != "exit"){
+			
+					if(response.likes == '0' && jQuery('li.'+id).length){
+						jQuery('li.'+id).remove();
+					}
 					
-				var dislike = jQuery('.vortex-p-dislike-counter.'+id);
-				dislike.text(response.dislikes);
-				var dislike_toggle = jQuery('.vortex-p-dislike.'+id);
-				dislike_toggle.toggleClass('vortex-p-dislike-active');
-				
-				var like = jQuery('.vortex-p-like-counter.'+id);
-				like.text(response.likes);	
-				var like_toggle = jQuery('.vortex-p-like.'+id);
-				like_toggle.toggleClass('vortex-p-like-active');
-				
+					if(response.both == 'no'){
+					var dislike = jQuery('.vortex-p-dislike-counter.'+id);
+					dislike.text(response.dislikes);
+					var dislike_toggle = jQuery('.vortex-p-dislike.'+id);
+					dislike_toggle.toggleClass('vortex-p-dislike-active');
+					}else{
+						
+					var dislike = jQuery('.vortex-p-dislike-counter.'+id);
+					dislike.text(response.dislikes);
+					var dislike_toggle = jQuery('.vortex-p-dislike.'+id);
+					dislike_toggle.toggleClass('vortex-p-dislike-active');
+					
+					var like = jQuery('.vortex-p-like-counter.'+id);
+					like.text(response.likes);	
+					var like_toggle = jQuery('.vortex-p-like.'+id);
+					like_toggle.toggleClass('vortex-p-like-active');
+					
+					}
 				}
 			},
 			complete:function(){

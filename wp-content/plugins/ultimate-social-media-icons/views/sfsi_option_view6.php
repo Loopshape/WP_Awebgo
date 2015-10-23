@@ -61,6 +61,7 @@
         	<a href="#" title="Share">
             	<img src="<?php echo SFSI_PLUGURL; ?>images/share1.jpg" alt="Share" />
             </a>
+            <p style="width:auto;float:left;padding: 0px!important;">(may impact loading speed)</p>
         </li>
 		
 	</ul>	

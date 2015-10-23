@@ -203,6 +203,10 @@
                         });
                     }
 
+                    // Set BODY width to screen-width for better viewport resizing
+                    var $window = $(window).innerWidth();
+                    $('body').css('min-width', $window).css('max-width', $window);
+
                 });
             }
         },
