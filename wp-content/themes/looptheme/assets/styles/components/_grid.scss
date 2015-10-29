@@ -1,4 +1,4 @@
-// Grid system
+// Grid system by Sage.IO
 .main {
   @include make-sm-column($main-sm-columns);
   .sidebar-primary & {
@@ -7,4 +7,95 @@
 }
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
+}
+
+// ***********************************************************************
+// https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+// ***********************************************************************
+
+// MEDIA QUERIES :: DESKTOPS
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  //and (-webkit-min-device-pixel-ratio: 1)
+  {
+    //nop
+}
+
+// MEDIA QUERIES :: LAPTOPS
+
+@media screen
+  and (min-device-width: 1280px)
+  and (max-device-width: 1366px)
+  //and (-webkit-min-device-pixel-ratio: 2)
+  //and (min-resolution: 192dpi)
+  {
+    //nop
+}
+
+// MEDIA QUERIES :: TABLETS
+
+@media screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1280px)
+  //and (-webkit-min-device-pixel-ratio: 2)
+  //and (min-resolution: 192dpi)
+  {
+    //nop
+}
+
+@media screen
+  and (min-device-width: 720px)
+  and (max-device-width: 1024px)
+  //and (-webkit-min-device-pixel-ratio: 2)
+  //and (min-resolution: 192dpi)
+  {
+    //nop
+}
+
+// MEDIA QUERIES :: MOBILES
+
+@media screen
+  and (min-device-width: 600px)
+  and (max-device-width: 720px)
+  //and (-webkit-min-device-pixel-ratio: 2)
+  //and (min-resolution: 192dpi)
+  {
+    //nop
+}
+
+@media screen
+  and (min-device-width: 480px)
+  and (max-device-width: 600px)
+  //and (-webkit-min-device-pixel-ratio: 2)
+  //and (min-resolution: 192dpi)
+  {
+    //nop
+}
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  //and (-webkit-min-device-pixel-ratio: 2)
+  {
+    //nop
+}
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  //and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    //nop
+}
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  //and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    //nop
 }

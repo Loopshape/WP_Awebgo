@@ -83,7 +83,15 @@ var revManifest = path.dist + 'assets.json';
 //   .pipe(gulp.dest(path.dist + 'styles'))
 // ```
 var cssTasks = function(filename) {
-  return lazypipe()
+  return lazypipe(plumber({
+        errorHandler: function (err) {
+            console.log(err);
+            this.emit('end');
+        }
+    }))
+    .on('error', function (err) {
+      console.log(err);
+    })
     .pipe(function() {
       return gulpif(!enabled.failStyleTask, plumber());
     })
@@ -134,7 +142,15 @@ var cssTasks = function(filename) {
 //   .pipe(gulp.dest(path.dist + 'scripts'))
 // ```
 var jsTasks = function(filename) {
-  return lazypipe()
+  return lazypipe(plumber({
+        errorHandler: function (err) {
+            console.log(err);
+            this.emit('end');
+        }
+    }))
+    .on('error', function (err) {
+      console.log(err);
+    })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
     })
@@ -158,7 +174,15 @@ var jsTasks = function(filename) {
 // If there are any revved files then write them to the rev manifest.
 // See https://github.com/sindresorhus/gulp-rev
 var writeToManifest = function(directory) {
-  return lazypipe()
+  return lazypipe(plumber({
+        errorHandler: function (err) {
+            console.log(err);
+            this.emit('end');
+        }
+    }))
+    .on('error', function (err) {
+      console.log(err);
+    })
     .pipe(gulp.dest, path.dist + directory)
     .pipe(browserSync.stream, {match: '**/*.{js,css}'})
     .pipe(rev.manifest, revManifest, {

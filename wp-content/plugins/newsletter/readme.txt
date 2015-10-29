@@ -76,6 +76,10 @@ No screenshots are available at this time.
 
 == Changelog ==
 
+= 3.9.7 =
+
+* Fixed the traking link for test email so logged in user can test them
+
 = 3.9.6 =
 
 * Fixed the online view

@@ -496,6 +496,10 @@ if($vortex_like_dislike['v-switch-comments']){
 
 	}
 	add_action('wp','vortex_system_insert_comments');
+	
+	$epoch = get_option('epoch');
+	$epoch_var = $epoch['options']['theme'];
+	
 	if(!$vortex_like_dislike['v_enable_epoch']){	
 		
 	function vortex_print_styles_comments(){
@@ -556,7 +560,7 @@ if($vortex_like_dislike['v-switch-comments']){
 			}
 	}
 	add_action('wp_enqueue_scripts','vortex_system_styles_scripts_comments');
-	}elseif(get_option('epoch')['options']['theme'] == 'iframe' && $vortex_like_dislike['v_enable_epoch']){
+	}elseif($epoch_var == 'iframe' && $vortex_like_dislike['v_enable_epoch']){
 		
 		function vortex_epoch_css(){
 			global $vortex_like_dislike;
