@@ -1,29 +1,3 @@
-# BEGIN WpFastestCache
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-AddDefaultCharset UTF-8
-RewriteCond %{HTTP_HOST} ^www.loop.arcturus.uberspace.de [NC]
-RewriteRule ^(.*)$ http\:\/\/loop\.arcturus\.uberspace\.de\/$1 [R=301,L]
-RewriteCond %{REQUEST_METHOD} !POST
-RewriteCond %{QUERY_STRING} !.+
-RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTP_USER_AGENT} !^.*(iphone|midp|sony|symbos|nokia|samsung|mobile|epoc|ericsson|panasonic|philips|sanyo|sharp|sie-|portalmmm|blazer|avantgo|danger|palm|series60|palmsource|pocketpc|android|blackberry|playbook|ipad|ipod|iemobile|palmos|webos|googlebot-mobile|bb10|xoom|p160u|nexus|touch|SCH-I800|opera\smini|SM-G900R4|LG-|HTC).*$ [NC]
-RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/all/$1/index.html -f [or]
-RewriteCond /var/www/virtual/loop/html/powerweb/wp-content/cache/all/$1/index.html -f
-RewriteRule ^(.*) "/wp-content/cache/all/$1/index.html" [L]
-</IfModule>
-<FilesMatch "\.(html|htm)$">
-FileETag None
-<ifModule mod_headers.c>
-Header unset ETag
-Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
-Header set Pragma "no-cache"
-Header set Expires "Mon, 29 Oct 1923 20:30:00 GMT"
-</ifModule>
-</FilesMatch>
-# END WpFastestCache
 # BEGIN GzipWpFastestCache
 <IfModule mod_deflate.c>
 AddType x-font/woff .woff

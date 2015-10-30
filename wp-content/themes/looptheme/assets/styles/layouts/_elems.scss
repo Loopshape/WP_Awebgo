@@ -1,0 +1,31 @@
+html body {
+
+  > div.wrap.container > div > .main > div.page-header > h1 > i {
+    opacity: 0.9 !important;
+    &, * {
+      color: $green-font-color !important;
+      text-shadow: 0 0 2px $shadow-color !important;
+    }
+  }
+
+  div > div > section.widget > h3 > i {
+    display: inline-block;
+    margin-right: 0.125em !important;
+    opacity: 0.9 !important;
+    &, * {
+      color: $tertiary-font-color !important;
+      text-shadow: 0 0 2px $tertiary-color !important;
+    }
+  }
+
+  time.updated i {
+    display: inline-block;
+    margin-right: 0.125em !important;
+    opacity: 0.75 !important;
+    &, * {
+      color: $tertiary-font-color !important;
+      text-shadow: 0 0 2px $tertiary-color !important;
+    }
+  }
+
+}

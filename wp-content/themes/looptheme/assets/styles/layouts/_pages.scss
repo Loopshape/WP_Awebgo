@@ -207,6 +207,11 @@ box-shadow: 0 0 10px 3px $shadow-color !important;
                       -webkit-border-radius: 7px !important;
                       border-radius: 7px !important;
                       overflow: hidden !important;
+
+                      i {
+                        color: $yellow-font-color !important;
+                      }
+
                       &:hover {
                         color: $light-color !important;
                         background-color: $green-font-color !important;

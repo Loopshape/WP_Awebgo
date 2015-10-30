@@ -137,6 +137,15 @@
 
                         }
 
+                        // Add FONT-AWESOME via jQuery
+                        $('section.widget h3').prepend('<i class="fa fa-square yellow"></i>&nbsp;');
+                        $('body div.wrap.container div > * > div.page-header > h1').prepend('<i class="fa fa-edit green"></i>&nbsp;');
+                        if($('article').length!==0) {
+                            $('time.updated').prepend('<i class="fa fa-clock-o yellow"></i>&nbsp;');
+                        }
+
+                        // ************************************************** //
+
                         // Smooth viewport scroll by Chris Coyier
                         // https://css-tricks.com/snippets/jquery/smooth-scrolling/
                         $('a[href*=#]:not([href=#])').on('click touchend', function(event) {
