@@ -89,9 +89,6 @@ var cssTasks = function(filename) {
             this.emit('end');
         }
     }))
-    .on('error', function (err) {
-      console.log(err);
-    })
     .pipe(function() {
       return gulpif(!enabled.failStyleTask, plumber());
     })
@@ -148,9 +145,6 @@ var jsTasks = function(filename) {
             this.emit('end');
         }
     }))
-    .on('error', function (err) {
-      console.log(err);
-    })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
     })
@@ -180,9 +174,6 @@ var writeToManifest = function(directory) {
             this.emit('end');
         }
     }))
-    .on('error', function (err) {
-      console.log(err);
-    })
     .pipe(gulp.dest, path.dist + directory)
     .pipe(browserSync.stream, {match: '**/*.{js,css}'})
     .pipe(rev.manifest, revManifest, {

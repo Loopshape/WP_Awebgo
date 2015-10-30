@@ -9,6 +9,7 @@ RewriteCond %{REQUEST_METHOD} !POST
 RewriteCond %{QUERY_STRING} !.+
 RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
 RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP_USER_AGENT} !^.*(iphone|midp|sony|symbos|nokia|samsung|mobile|epoc|ericsson|panasonic|philips|sanyo|sharp|sie-|portalmmm|blazer|avantgo|danger|palm|series60|palmsource|pocketpc|android|blackberry|playbook|ipad|ipod|iemobile|palmos|webos|googlebot-mobile|bb10|xoom|p160u|nexus|touch|SCH-I800|opera\smini|SM-G900R4|LG-|HTC).*$ [NC]
 RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/all/$1/index.html -f [or]
 RewriteCond /var/www/virtual/loop/html/powerweb/wp-content/cache/all/$1/index.html -f
 RewriteRule ^(.*) "/wp-content/cache/all/$1/index.html" [L]
@@ -23,6 +24,48 @@ Header set Expires "Mon, 29 Oct 1923 20:30:00 GMT"
 </ifModule>
 </FilesMatch>
 # END WpFastestCache
+# BEGIN GzipWpFastestCache
+<IfModule mod_deflate.c>
+AddType x-font/woff .woff
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE font/opentype font/ttf font/eot font/otf
+</IfModule>
+# END GzipWpFastestCache
+# BEGIN LBCWpFastestCache
+<FilesMatch "\.(?:ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|x-html|css|xml|js|woff|ttf|svg|eot)(\.gz)?$">
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault A0
+ExpiresByType image/gif A2592000
+ExpiresByType image/png A2592000
+ExpiresByType image/jpg A2592000
+ExpiresByType image/jpeg A2592000
+ExpiresByType image/ico A2592000
+ExpiresByType image/svg+xml A2592000
+ExpiresByType text/css A2592000
+ExpiresByType text/javascript A2592000
+ExpiresByType application/javascript A2592000
+</IfModule>
+<IfModule mod_headers.c>
+Header set Expires "max-age=2592000, public"
+Header unset ETag
+Header set Connection keep-alive
+</IfModule>
+FileETag None
+</FilesMatch>
+# END LBCWpFastestCache
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -32,5 +75,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
-
 # END WordPress
