@@ -52,6 +52,8 @@ html {
           .page-header {
             border-color: $secondary-color !important;
             border-width: 2px !important;
+            margin-top: -30px !important;
+            margin-bottom: -30px !important;
           }
           div {
             h1 {
@@ -161,10 +163,10 @@ box-shadow: 0 0 10px 3px $shadow-color !important;
               clear: both;
               position: relative;
               width: 100% !important;
-              max-width: 94%;
+              max-width: 95%;
               height: auto !important;
               caption {
-                font-size: 1.5em;
+                font-size: 1.625em;
                 font-weight: bold;
                 color: $green-font-color !important;
               }
@@ -180,7 +182,7 @@ box-shadow: 0 0 10px 3px $shadow-color !important;
                   }
                   th {
                     display: inline-block;
-                    padding: 0.45em 0.65em !important;
+                    padding: 0.45em 0.682em !important;
                     content: " ";
                   }
                   td#today {
@@ -194,6 +196,7 @@ box-shadow: 0 0 10px 3px $shadow-color !important;
                     overflow: hidden !important;
                   }
                   td {
+                    padding: 0.32em 0.46em !important;
                     color: $tertiary-font-color !important;
                     > * {
                       opacity: 0.75 !important;
@@ -202,7 +205,7 @@ box-shadow: 0 0 10px 3px $shadow-color !important;
                       font-weight: bold !important;
                       color: $tertiary-font-color !important;
                       background-color: $secondary-font-color !important;
-                      padding: 0 0.3em !important;
+                      padding: 0 0.2em !important;
                       border: 1px solid $red-border-color !important;
                       -webkit-border-radius: 7px !important;
                       border-radius: 7px !important;
@@ -253,7 +256,7 @@ box-shadow: 0 0 10px 3px $shadow-color !important;
                 background-size: 50% !important;
                 background-position: top left;
                 background-attachment: fixed;
-                padding: 0.2em 0.5em !important;
+                padding: 0.5em 0.725em !important;
                 margin-top: 10px !important;
                 margin-right: 0.5em !important;
                 font-size: 1em !important;

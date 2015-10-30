@@ -8,14 +8,28 @@ html body {
     }
   }
 
-  div > div > section.widget > h3 > i {
-    display: inline-block;
-    margin-right: 0.125em !important;
-    opacity: 0.9 !important;
-    &, * {
-      color: $tertiary-font-color !important;
-      text-shadow: 0 0 2px $tertiary-color !important;
+  div > div > section.widget {
+
+    > h3 > i {
+      display: inline-block;
+      margin-right: 0.125em !important;
+      opacity: 0.9 !important;
+      &, * {
+        color: $tertiary-font-color !important;
+        text-shadow: 0 0 2px $tertiary-color !important;
+      }
     }
+
+    .tagcloud {
+      a {
+        &, * {
+          color: $yellow-font-color !important;
+          text-shadow: 1px 1px 3px $black-color !important;
+          opacity: 0.8 !important;
+        }
+      }
+    }
+
   }
 
   time.updated i {
@@ -25,6 +39,13 @@ html body {
     &, * {
       color: $tertiary-font-color !important;
       text-shadow: 0 0 2px $tertiary-color !important;
+    }
+  }
+
+  input, button {
+    &, * {
+      color: $white-color !important;
+      text-shadow: 0 0 1px $white-color !important;
     }
   }
 

@@ -140,6 +140,7 @@
                         // Add FONT-AWESOME via jQuery
                         $('section.widget h3').prepend('<i class="fa fa-square yellow"></i>&nbsp;');
                         $('body div.wrap.container div > * > div.page-header > h1').prepend('<i class="fa fa-edit green"></i>&nbsp;');
+                        $('.widget .tagcloud a').prepend('<i class="fa fa-asterisk yellow"></i>&nbsp;');
                         if($('article').length!==0) {
                             $('time.updated').prepend('<i class="fa fa-clock-o yellow"></i>&nbsp;');
                         }

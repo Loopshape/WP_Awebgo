@@ -61,8 +61,17 @@ html {
             }
           }
 
-          div.entry-content > * {
-            font-size: 1.125em !important;
+          div.entry-content {
+            > * {
+              font-size: 1.125em !important;
+            }
+
+            p a img {
+              display: inline-block;
+              max-width: 46%;
+              min-height: auto !important;
+              margin-right: 2% !important;
+            }
           }
 
           header {

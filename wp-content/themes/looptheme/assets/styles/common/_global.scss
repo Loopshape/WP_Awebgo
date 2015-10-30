@@ -301,6 +301,7 @@ box-shadow: 0 0 16px 0 $green-font-color !important;
         img {
           position: relative;
           display: inline-block;
+          width: 100% !important;
           margin-right: 2% !important;
           margin-bottom: 15px !important;
           border: 5px solid $footer-border-color !important;
@@ -310,6 +311,20 @@ box-shadow: 0 0 16px 0 $green-font-color !important;
 box-shadow: 0 0 20px 8px $black-color !important;
           overflow: hidden !important;
           z-index: 20000 !important;
+        }
+
+        .single.post.thumbnail {
+          img {
+            max-width: 100%;
+          }
+        }
+
+        strong {
+          a {
+            img {
+              max-width: 25%;
+            }
+          }
         }
       }
     }
@@ -402,8 +417,10 @@ border-radius: 0 !important;
       }
 
       span[class^="PIN_"] {
-        color: #cde !important;
         box-shadow: none !important;
+        &, * {
+          color: #cde !important;
+        }
       }
 
       > span[class^="PIN_"] {
@@ -472,6 +489,12 @@ html body {
        max-width: 64% !important;
        min-height: 200px;
        margin: 20px 10% 0 0 !important;
+
+       &, * {
+        color: $yellow-font-color !important;
+        text-shadow: 0 0 2px $green-font-color !important;
+        opacity: 0.9 !important;
+      }
      }
 
      .entry-title {

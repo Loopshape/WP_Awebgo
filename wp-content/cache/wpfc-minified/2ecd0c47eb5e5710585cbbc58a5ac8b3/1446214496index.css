@@ -1,0 +1,36 @@
+@font-face {
+font-family: 'IM Fell Great Primer';
+font-style: normal;
+font-weight: 400;
+src: local('IM FELL Great Primer Roman'), local('IM_FELL_Great_Primer_Roman'), url(https://fonts.gstatic.com/s/imfellgreatprimer/v6/AL8ALGNthei20f9Cu3e93qZXHtZ0Z62-HtyJa8iUgDI.ttf) format('truetype');
+}
+@font-face {
+font-family: 'IM Fell Great Primer';
+font-style: italic;
+font-weight: 400;
+src: local('IM FELL Great Primer Italic'), local('IM_FELL_Great_Primer_Italic'), url(https://fonts.gstatic.com/s/imfellgreatprimer/v6/1a-artkXMVg682r7TTxVY0kD5NDFBl9UY7HWnTDocLw.ttf) format('truetype');
+}
+@font-face {
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 400;
+src: local('Josefin Sans'), local('JosefinSans'), url(https://fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5onF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+}
+@font-face {
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 600;
+src: local('Josefin Sans SemiBold'), local('JosefinSans-SemiBold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z1FZMcfX2SbzQ69I7OWmkGo.ttf) format('truetype');
+}
+@font-face {
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 700;
+src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+}
+@font-face {
+font-family: 'Josefin Sans';
+font-style: italic;
+font-weight: 600;
+src: local('Josefin Sans SemiBold Italic'), local('JosefinSans-SemiBoldItalic'), url(https://fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33GzolfeppZzFSKvLyJNPKLMk.ttf) format('truetype');
+}
