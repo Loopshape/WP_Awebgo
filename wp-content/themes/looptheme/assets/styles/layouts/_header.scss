@@ -175,7 +175,7 @@ filter: blur(1px); /* Firefox 35+, eventually all */
         clear: both;
         display: inline-block;
         opacity: 1 !important;
-        z-index: 1;
+        z-index: 1000000 !important;
 
         div {
           ul {
@@ -239,7 +239,7 @@ html body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 0;
     opacity: 1 !important;
 
     img {

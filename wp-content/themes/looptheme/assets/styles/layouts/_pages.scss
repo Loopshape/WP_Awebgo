@@ -48,6 +48,7 @@ html {
           border: 1px solid $border-color !important;
           -webkit-box-shadow: 0 0 10px 3px $shadow-color;
           box-shadow: 0 0 10px 3px $shadow-color;
+          z-index: auto !important;
           overflow: hidden !important;
           .page-header {
             border-color: $secondary-color !important;

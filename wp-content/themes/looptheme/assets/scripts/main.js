@@ -103,6 +103,10 @@
 
                     $(function($) {
 
+                        // Set BODY to colorful mode
+                        $('body').addClass('colorful');
+
+                        // Calculate MEDIAQUERY settings for viewport
                         var _mediaQueryFactor = 10 / ($(window).innerWidth() / 256);
 
                         if (_mediaQueryFactor !== 0) {
