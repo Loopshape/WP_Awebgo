@@ -7,3 +7,7 @@
   -webkit-filter: invert(100%);
   filter: invert(100%);
 }
+
+.Ajax_Shoutbox_Widget .icons .speaker:before {
+	color: #3e3e3e;
+}

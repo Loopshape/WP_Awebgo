@@ -1,3 +1,19 @@
+## [2.7.1] 
+### Fixed fatal error on PHP 5.3.
+## [2.7]
+### Added MyCred integration.
+### Improved bbPress support.
+## [2.6] 
+### Added buddyPress activity support.
+### Improved Epoch support.
+## [2.5] 
+### Added auto delete post at a given number of dislikes.
+### Added Epoch Support.(Settings for comments -> Enable Epoch Support).
+### Fix error when voting.
+## [2.4]
+### Added a way to disable the like button from function.
+## [2.3]
+### Fix fatal error.
 ## [2.2] 
 ### Added the shortcode [rating-system](You must have turned on like or dislike for posts and pages)
 ## [2.1] 
@@ -16,7 +32,7 @@
 ### Updated the .pot file.
 ### Changed error handling from fatal error to warning.
 ### Removed .temp file.
-##[1.7]
+## [1.7]
 ### Fix rendering on password protected posts.
 ### Added option to exclude sticky posts from most liked widget.
 ## [1.6]

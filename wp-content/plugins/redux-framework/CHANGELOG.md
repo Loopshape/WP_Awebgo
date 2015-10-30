@@ -1,5 +1,51 @@
 # Redux Framework Changelog
 
+## 3.5.8.1
+* Fixed:    #2652 - load_plugin_textdomain using depreciated argument.
+
+## 3.5.8
+* Fixed:    Customizer preview callback working again.
+
+## 3.5.7.12
+* Fixed:    last_tab argument not working.
+
+## 3.5.7.11
+* Fixed:    #2637 - color picker clear.
+* Fixed:    #2633.
+
+## 3.5.7.10
+* Fixed:    #2624 - Border field saving/output 0px when no default set.  Now accepts no default and outputs no CSS for blank values.
+* Fixed:    color_rgba no long outputs CSS with empty color values.
+
+## 3.5.7.9
+* Fixed:    #2612 - pseudo classes not appending to multiple selectors in link_color output.
+
+## 3.5.7.8  
+* Modified: The mass data escaping of Redux Core output.  Part I.
+
+## 3.5.7.7
+* Fixed:    #2609 - Section not folding correctly with class argument specified.
+
+## 3.5.7.6
+* Fixed:    #2607 - button_set required scalar check for array returned by terms in the data arg.  Thanks @Enchiridion.
+
+## 3.5.7.5
+* Fixed:    Fixing more inconsistencies with wp_filesystem dirlist.  How about some proper documentation, Otto?
+
+## 3.5.7.4
+* Fixed:    #2582: Added extra check for get_terms to avoid error.
+
+## 3.5.7.3
+* Fixed     Filesystem proxy dirlist triggering file permission errors on empty array.
+
+## 3.5.7.2
+* Fixed:    #2571 - Sorter adding extra disable column on new entries if 'disabled' is lowercase.
+* Updated   Fields css for dev_mode off.
+
+## 3.5.7.1
+* Updated:  Updated container.tpl version.
+* Fixed:    #2570 - multi-text field CSS bleeding over into WP.
+
 ## 3.5.7
 * Fixed     Customizer customizer_only and customizer section overrides. Also global customizer => false was not working.
 

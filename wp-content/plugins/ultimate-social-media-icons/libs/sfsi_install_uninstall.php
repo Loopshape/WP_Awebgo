@@ -12,7 +12,7 @@ function sfsi_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_pluginVersion", "1.28");
+	update_option("sfsi_pluginVersion", "1.3");
 	
 	/*show notification*/
 	if(!get_option('show_notification'))
@@ -85,7 +85,7 @@ function sfsi_activate_plugin()
 			'sfsi_facebook_display'=>'yes',
 			'sfsi_twitter_display'=>'yes',
 			'sfsi_google_display'=>'yes',
-			'sfsi_share_display'=>'yes',
+			'sfsi_share_display'=>'no',
 			'sfsi_pinterest_display'=>'no',
 			'sfsi_instagram_display'=>'no',
 			'sfsi_linkedin_display'=>'no',
@@ -251,7 +251,7 @@ function sfsi_activate_plugin()
 		'sfsi_rectsub'=>'yes',
 		'sfsi_rectfb'=>'yes',
 		'sfsi_rectgp'=>'yes',
-		'sfsi_rectshr'=>'yes',
+		'sfsi_rectshr'=>'no',
 		'sfsi_recttwtr'=>'yes'
         );
 	add_option('sfsi_section6_options',  serialize($options6));       

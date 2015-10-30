@@ -16,7 +16,7 @@
         // This is where your data is stored in the database and also becomes your global variable name.
         'display_name'         => 'Rating System',
         // Name that appears at the top of your panel
-        'display_version'      => '2.2',
+        'display_version'      => '2.7.1',
         // Version that appears at the top of your panel
         'menu_type'            => 'menu',
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
@@ -204,7 +204,7 @@
 				'required' => array('v-switch-posts','equals','1'),
 				'title'    => __('Display buttons on:', $domain), 
 				'subtitle' => __('Select where the buttons should be displayed.', $domain),
-				'desc'	   =>__('Posts Index refers to that page where your post(s) show up with an excerpt and a read more button.',$domain),
+				'desc'	   =>__('Custom post type single must be checked for bbPress support.Posts Index refers to that page where your post(s) show up with an excerpt and a read more button.',$domain),
 			 
 				//Must provide key => value pairs for multi checkbox options
 				'options'  => array(
@@ -457,7 +457,29 @@
 				'type'     => 'switch',
 				'required' => array('v-switch-posts','equals','1'),
 				'title'    => __('Enable bbPress support', $domain),
+				'subtitle' => __('Custom post type single must be checked for bbPress support.',$domain),
 				'default'  => false,
+			),array(
+				'id'       => 'v_enable_buddybpress',
+				'type'     => 'switch',
+				'required' => array('v-switch-posts','equals','1'),
+				'title'    => __('Enable buddyPress support', $domain),
+				'subtitle' => __('Enable support for buddyPress activities.',$domain),
+				'default'  => false,
+			),array(
+				'id'       => 'v_enable_delete',
+				'type'     => 'switch',
+				'required' => array('v-switch-posts','equals','1'),
+				'title'    => __('Enable Auto delete post', $domain),
+				'default'  => false,
+			),array(
+				'id'       => 'v_delete_number',
+				'type'     => 'text',
+				'required' => array(array('v-switch-posts','equals','1'),array('v_enable_delete','equals','1')),
+				'title'    => __('Number of dislikes:', $domain),
+				'subtitle' => __('Auto delete post at a given number of dislikes', $domain),
+				'validate' => 'numeric',
+				'default'  => '10'
 			)
 			
 		)
@@ -581,7 +603,7 @@
 			'type'     => 'switch', 
 			'required' => array('v-switch-comments','equals','1'),
 			'title'    => __('Order comments', $domain),
-			'subtitle' => __('Order comments by the number of likes they have.',$domain),
+			'subtitle' => __('Order comments by the number of likes they have.No Epoch support.',$domain),
 			'default'  => false,
 			),array(
 			'id'       => 'v-switch-dislike-comment',
@@ -619,7 +641,6 @@
 				'font-style'  => false,
 				'font-family' => false,
 				'color'		  => false,
-				'output'      => array('.vortex-container-like-comment , .vortex-container-dislike-comment'),
 				'units'       =>'px',
 				'subtitle'    => __('Here you can change the buttons size with a preview.',$domain),
 				'default'     => array(
@@ -632,7 +653,6 @@
 				'id'       => 'v_default_color_comment',
 				'type'     => 'color',
 				'required' => array('v-switch-comments','equals','1'),
-				'output'   => array('.vortex-p-like-comment, .vortex-p-dislike-comment'),
 				'title'    => __('Default color', $domain), 
 				'subtitle' => __('Default color of buttons', $domain),
 				'validate' => 'color',
@@ -642,7 +662,6 @@
 				'type'     => 'color',
 				'required' => array('v-switch-comments','equals','1'),
 				'title'    => __('Like button ', $domain),
-				'output'   => array('.vortex-p-like-comment:hover'),
 				'subtitle' => __('Like button mouse over color',$domain),
 				'validate' => 'color',
 				'default'  => '#4898D6',
@@ -650,7 +669,6 @@
 				'id'       => 'v_like_active_color_comment',
 				'type'     => 'color',
 				'required' => array('v-switch-comments','equals','1'),
-				'output'   => array('.vortex-p-like-active-comment'),
 				'title'    => __('Like button ', $domain), 
 				'subtitle' => __('Like button active color', $domain),
 				'validate' => 'color',
@@ -659,7 +677,6 @@
 				'id'       => 'v_dislike_color_comment',
 				'type'     => 'color',
 				'required' => array('v-switch-comments','equals','1'),
-				'output'   => array('.vortex-p-dislike-comment:hover'),
 				'title'    => __('Dislike button ', $domain), 
 				'subtitle' => __('Dislike button mouse over color', $domain),
 				'validate' => 'color',
@@ -668,7 +685,6 @@
 				'id'       => 'v_dislike_active_color_comment',
 				'type'     => 'color',
 				'required' => array('v-switch-comments','equals','1'),
-				'output'   => array('.vortex-p-dislike-active-comment'),
 				'title'    => __('Dislike button ', $domain), 
 				'subtitle' => __('Dislike button active color',$domain),
 				'validate' => 'color',
@@ -733,6 +749,12 @@
 				'required' => array(array('v-switch-comments','equals','1'),array('v_custom_text_com','equals','1')),
 				'title'    => __('Keep custom text', $domain),
 				'subtitle' => __('When a user voted and refreshes the page keep showing the custom text for the vote and don\'t display the counter',$domain),
+				'default'  => false,
+			),array(
+				'id'       => 'v_enable_epoch',
+				'type'     => 'switch',
+				'required' => array('v-switch-comments','equals','1'),
+				'title'    => __('Enable Epoch Support', $domain),
 				'default'  => false,
 			)
 			

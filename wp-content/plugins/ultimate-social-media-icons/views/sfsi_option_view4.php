@@ -295,7 +295,8 @@
     </div>
     <div class="listing">
     	<ul>
-        	<li><input name="sfsi_linkedIn_countsFrom" <?php echo ($option4['sfsi_linkedIn_countsFrom']=='follower') ?  'checked="true"' : '' ;?>  type="radio" value="follower" class="styled"  />Retrieve the number of Linkedin followers</li>
+        
+        	<?php /*?><li><input name="sfsi_linkedIn_countsFrom" <?php echo ($option4['sfsi_linkedIn_countsFrom']=='follower') ?  'checked="true"' : '' ;?>  type="radio" value="follower" class="styled"  />Retrieve the number of Linkedin followers</li>
             <li class="SFSI_tglli">
                 <ul class="SFSI_lsngfrm">
                     
@@ -312,10 +313,10 @@
 					<li class="linkedIn_options" style="<?php echo ($option4['sfsi_linkedIn_countsFrom']=='manual') ?  'display:none;' : '' ;?>">4: In the next step you will see the required API information</li>
                     <li class="linkedIn_options" style="<?php echo ($option4['sfsi_linkedIn_countsFrom']=='manual') ?  'display:none;' : '' ;?>">When you enter this key into the plugin for the first time, it may take some time until the correct follower count is displayed on your website.</li>
                 </ul>    
-             </li>   	
+             </li><?php */?>   	
            
            
-           <li><input name="sfsi_linkedIn_countsFrom" <?php echo ($option4['sfsi_linkedIn_countsFrom']=='manual') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />Enter the figure manually<input name="sfsi_linkedIn_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_linkedIn_manualCounts']!='') ?  $option4['sfsi_linkedIn_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_linkedIn_countsFrom']=='follower') ?  'display:none;' : '' ;?>" /></li>
+           <li><input name="sfsi_linkedIn_countsFrom" <?php echo ($option4['sfsi_linkedIn_countsFrom']=='manual' || $option4['sfsi_linkedIn_countsFrom']=='follower') ?  'checked="true"' : '' ;?>  type="radio" value="manual" class="styled" />Enter the figure manually<input name="sfsi_linkedIn_manualCounts" type="text" class="input" value="<?php echo ($option4['sfsi_linkedIn_manualCounts']!='') ?  $option4['sfsi_linkedIn_manualCounts'] : '' ;?>" style="<?php echo ($option4['sfsi_linkedIn_countsFrom']=='follower') ?  'display:none;' : '' ;?>" /></li>
         </ul>
     </div>    
   </div> <!-- END LINKEDIN ICON COUNT SECTION-->

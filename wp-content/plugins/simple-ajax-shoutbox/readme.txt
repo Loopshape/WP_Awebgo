@@ -3,7 +3,7 @@ Contributors: social_enemy, honza.skypala
 Tags: chat, comments, widget, ajax
 Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 2.0
+Stable tag: 2.1.2
 
 Simple AJAX shoutbox, add shoutbox on your sidebar.
 
@@ -35,12 +35,32 @@ it's easy to change the widget height via css. Just insert the following (adjust
 }`
 You can either put this to your theme CSS, or if you are using a standard theme, then maybe putting this to Jetpack → Custom CSS is better place (so it is not overwritten once you update the theme).
 
+= How to change the widget height =
+
+it's easy to change the widget height via css. Just insert the following (adjust the height to whatever you like):
+`#sb_messages {
+    height: 600px;
+}`
+You can either put this to your theme CSS, or if you are using a standard theme, then maybe putting this to Jetpack → Custom CSS is better place (so it is not overwritten once you update the theme).
+
 == Screenshots ==
 
 1. Shoutbox widget
 2. Widget configuration
 
 == Changelog ==
+
+= 2.1.2 =
+* new: if refreshing chat contents fails, then this is indicated only by a warning icon; messages are not erased
+
+= 2.1.1 =
+* new: tooltip for speaker icon
+* fix: colors of speaker icon in themes twentythirteen and twentyfourteen
+
+= 2.1 =
+* new: possibility of audio notification on new message in chatbox; each user can enable/disable this notification for himself
+* new: not updating of chatbox on inactive browser tab now only of audio notification disabled; if audio notification enabled, then chatbox continues to update regularly even on inactive tab
+* internal: smarter traversing of fetched messages when updating chatbox content
 
 = 2.0 =
 * overtake of the repository for this plugin by honza.skypala

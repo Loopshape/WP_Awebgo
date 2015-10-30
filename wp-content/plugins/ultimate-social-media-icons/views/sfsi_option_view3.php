@@ -5,14 +5,18 @@
 ?>
 <!-- Section 3 "What design & animation do you want to give your icons?" main div Start -->
 <div class="tab3">
-<p>A good & well-fitting design is not only nice to look at, but it increases chances that people will subscribe and/or share your site with friends:</p>
+	<p>
+    	A good & well-fitting design is not only nice to look at, but it increases chances that people will subscribe and/or share your site with friends:
+    </p>
 
 	<ul class="tab_3_list">
-    <li>It comes across as <span>more professional/</span> gives your site <span>more “credit”</span></li>
-	<li>A smart automatic animation can <span>make your visitors aware of your icons</span> in an unintrusive manner</li> 
-	<!--<li>Animated icons can trigger <span>a positive emotion for </span> the viewer, getting them into a state in which they are more likely 		to subscribe</li> -->
-</ul>
-
+        <li>It comes across as <span>more professional/</span> gives your site <span>more “credit”</span></li>
+        <li>A smart automatic animation can <span>make your visitors aware of your icons</span> in an unintrusive manner</li> 
+	</ul>
+    
+    <p style="padding:0px;">
+    	The icons have been compressed by <a href="https://shortpixel.com" target="_blank">Shortpixel.com</a> for faster loading of your site. Thank you Shortpixel!
+    </p>	
 
     <div class="row">
     <h3>Theme options</h3>

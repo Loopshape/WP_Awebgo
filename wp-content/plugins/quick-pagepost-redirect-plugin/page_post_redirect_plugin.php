@@ -6,7 +6,7 @@ Description: Redirect Pages, Posts or Custom Post Types to another location quic
 Author: Don Fischer
 Author URI: http://www.fischercreativemedia.com/
 Donate link: http://www.fischercreativemedia.com/donations/
-Version: 5.1.4
+Version: 5.1.5
 Text Domain: quick-pagepost-redirect-plugin
 Domain Path: /lang
 License: GPLv2 or later
@@ -71,7 +71,7 @@ class quick_page_post_reds {
 	public $pprptypes_ok;
 	
 	function __construct() {
-		$this->ppr_curr_version 		= '5.1.4';
+		$this->ppr_curr_version 		= '5.1.5';
 		$this->ppr_nofollow 			= array();
 		$this->ppr_newindow 			= array();
 		$this->ppr_url 					= array();
@@ -135,11 +135,28 @@ class quick_page_post_reds {
 			add_filter( 'post_link', array( $this, 'ppr_filter_page_links' ), 20, 2 );			// hook into post_link function
 			add_filter( 'post_type_link', array( $this, 'ppr_filter_page_links' ), 20, 2 );		// hook into custom post type link function
 			add_filter( 'get_permalink', array( $this, 'ppr_filter_links' ), 20, 2 );			// hook into get_permalink function
+			add_filter( 'redirect_canonical', array( $this, 'wordpress_no_guess_canonical' ) );	// stops 404 on canonical redirect as of 5.1.5
 		}
 		
 		if( $this->pprshowcols == '1')
 			add_filter( 'pre_get_posts', array( $this,'add_custom_columns' ) ); 				// add custom columns
 	}
+	/*
+	 * Try to stop canonical redirect on 404 before quick redirect can happen.
+	 * if a redirect is found, returns URL otherwise returns original url.
+	 *
+	 * @since 5.1.5
+	*/
+	function wordpress_no_guess_canonical( $redirect_url ){
+		if ( is_404() ) {
+			$redirects 		= get_option( 'quickppr_redirects', array() );
+			$request_URI  	= isset( $_SERVER['REQUEST_URI'] ) ? rtrim( $_SERVER['REQUEST_URI'], '/' ) . '/' : '';
+			if( isset( $redirects[$request_URI] ) && !empty( $redirects[$request_URI] ) )
+				return  $redirects[$request_URI];
+		}
+		return $redirect_url;
+	}
+	
 	/**
 	 * Load plugin textdomain.
 	 *
@@ -2021,14 +2038,7 @@ class quick_page_post_reds {
 		}
 		return $newmenu;
 	}
-	function my_appip_filter_testing_finalQS($finalQS, $needle, $haystack){
-		$finalQS = str_replace( '&amp;','&', $finalQS);
-		if( (strpos( $finalQS, 'name=' ) !== false && strpos( $finalQS, 'id=' ) !== false)){
-			if( strpos( $finalQS, '.asp' ) === false)
-				return $finalQS.'.asp';
-		}
-		return $finalQS;
-	}
+	
 	function redirect(){
 		//bypass for testing.
 		if(isset($_GET['action']) && $_GET['action'] == 'no-redirect' )
@@ -2052,12 +2062,12 @@ class quick_page_post_reds {
 				$userrequest = preg_replace('/\?.*/', '', $userrequest);
 				// end patch				
 			//end QS preservation
-			add_filter('appip_filter_testing_finalQS',array($this,'my_appip_filter_testing_finalQS'),10,3);
-			
+
 			$needle 		= $this->pproverride_casesensitive ? $userrequest : strtolower($userrequest);
 			$haystack 		= $this->pproverride_casesensitive ? $this->quickppr_redirects : array_change_key_case($this->quickppr_redirects);
 			$getAddrNeedle 	= $this->pproverride_casesensitive ? $getAddress : strtolower($getAddress);
 			$getQAddrNeedle = $this->pproverride_casesensitive ? str_replace( $getQAddress, '', $getAddrNeedle ) : strtolower(str_replace( $getQAddress, '', $getAddrNeedle ));
+			$finalQS 		= str_replace( '&amp;','&', $finalQS);
 			$finalQS		= $this->pproverride_casesensitive ? $finalQS : strtolower( $finalQS ); //added 5.1.4 to fix URL needle being converted to lower, but not Query (as it never matches unless user enters lower)
 			$finalQS 		= apply_filters( 'appip_filter_testing_finalQS', $finalQS, $needle, $haystack); // added 5.1.4 to allow filtering of QS data prior to matching.
 			$index 			= false;
@@ -2107,6 +2117,7 @@ class quick_page_post_reds {
 				//checks if needle (request URL) just is missing the ending / but the redirect is set up with it.
 				$index = $needle . '/';
 			}
+			$index = apply_filters('qppr_filter_quickredirect_index', $index, $finalQS);
 			
 			if($index != false && $index != ''){
 				// Finally, if we have a matched request URL, get ready to redirect.
@@ -2128,14 +2139,16 @@ class quick_page_post_reds {
 					// action to allow take over.
 					do_action( 'qppr_redirect', $useURL, $qpprRedType );
 					
-					// and now the redirect (meta or type set).
-					if( $qpprRedType == 'meta' ){
-						$this->ppr_metaurl = $useURL;
-						$this->ppr_addmetatohead_theme();
-					}else{
-						header('RedirectType: Quick Page Post Redirect - Quick');
-						wp_redirect( $useURL, $qpprRedType );
-						exit();
+					if( $useURL != '' ){
+						// and now the redirect (meta or type set).
+						if( $qpprRedType == 'meta' ){
+							$this->ppr_metaurl = $useURL;
+							$this->ppr_addmetatohead_theme();
+						}else{
+							header('RedirectType: Quick Page Post Redirect - Quick');
+							wp_redirect( $useURL, $qpprRedType );
+							exit();
+						}
 					}
 				}	
 			}

@@ -3,7 +3,7 @@
 Plugin Name: Simple Ajax Shoutbox
 Plugin URI: https://wordpress.org/plugins/simple-ajax-shoutbox/
 Description: This plugin will enable shoutbox into your sidebar widget. Using AJAX technology so visitor doesn't have to refresh each time they post messages into this shoutbox. It also has simple design, so it will definetely fit in your site, does'nt matter what your template is.
-Version: 2.0.0
+Version: 2.1.2
 Author: Indra Prasetya, Honza Skýpala
 Author URI: http://www.honza.info
 
@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 class Ajax_Shoutbox_Widget extends WP_Widget {
-  const version = "2.0.0";
+  const version = "2.1.2";
   const SHOUTBOX_ID_BASE = "ajax_shoutbox";
 
   const tld = "ac|ad|aero|ae|af|ag|ai|al|am|an|ao|aq|arpa|ar|asia|as|at|au|aw|ax|az|ba|bb|bd|be|bf|bg|bh|biz|bi|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cf|cg|ch|ci|ck|cl|cm|cn|com|coop|co|cr|cs|cu|cv|cx|cy|cz|de|dj|dk|dm|do|dz|ec|edu|ee|eg|eh|er|es|et|eu|firm|fi|fj|fk|fm|fo|fr|fx|ga|gb|gd|ge|gf|gh|gi|gl|gm|gn|gov|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|info|int|in|io|iq|ir|is|it|je|jm|jobs|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mg|mh|mil|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|museum|mu|mv|mw|mx|my|mz|name|nato|na|nc|net|ne|nf|ng|ni|nl|nom|no|np|nr|nt|nu|nz|om|org|pa|pe|pf|pg|ph|pk|pl|pm|pn|pro|pr|pt|pw|py|qa|re|ro|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|sk|sl|sm|sn|so|sr|store|st|su|sv|sy|sz|tc|td|tf|tg|th|tj|tk|tm|tn|to|tp|travel|tr|tt|tv|tw|tz|ua|ug|uk|um|us|uy|va|vc|ve|vg|vi|vn|vu|web|wf|ws|xxx|xyz|ye|yt|yu|za|zm|zr|zw";
@@ -119,9 +119,13 @@ class Ajax_Shoutbox_Widget extends WP_Widget {
 
       $output .= "<div class=\"icons\">";
       if ($instance['shoutbox_rss'] == 'true') $output .= "<a href='".get_site_url() . '/' . self::rss_path."' target='_blank' title='". __('Shoutbox RSS channel', 'shoutbox2') ."' class='sb_rss_link'>". __('Shoutbox RSS channel', 'shoutbox2') ."</a>";
+      $output .= "<span class=\"warning\" title=\"" . __('Update of chat failer; will try again shortly', 'shoutbox2') . "\"></span>";
       $output .= "<span class=\"spinner\"></span>";
       $output .= "<span class=\"lock\"></span>";
+      $output .= "<span class=\"speaker" . (isset($_COOKIE["shoutbox_speaker"]) && $_COOKIE["shoutbox_speaker"] == "true" ? " active" : "") . "\" title=\"" . __('Sound on new message', 'shoutbox2') . "\"></span>";
       $output .= "</div>";
+
+      $output .= '<audio id="notify"><source src="' . plugins_url("/audio/whistle.mp3", __FILE__) . '" type="audio/mpeg"></audio>';
 
       $output = apply_filters('shoutbox_widget_output', $output, $this, $args, $instance);
 
@@ -339,7 +343,6 @@ class Ajax_Shoutbox_Widget extends WP_Widget {
                            'reload_time'           => $reload_time,
                            'max_messages'          => $max_messages,
                            'max_msglen'            => $max_msglen,
-                           'request_error_text'    => __("Request error", 'shoutbox2'),
                            'max_msglen_error_text' => __("Max length of message is %maxlength% characters, length of your message is %length% characters. Please shorten it.", 'shoutbox2'),
                            'name_empty_error_text' => __("Name empty.", 'shoutbox2'),
                            'msg_empty_error_text'  => __("Message empty.", 'shoutbox2'),
@@ -392,7 +395,7 @@ class Ajax_Shoutbox_Widget extends WP_Widget {
 
     if ($options['allow_html'] != 'true')
       $username = htmlspecialchars(strip_tags($username));
-    $userdisplay = (!empty($userwebsite)) ? "<a href='http://$userwebsite' rel='external nofollow'>$username</a>" : $username;
+    $userdisplay = (!empty($userwebsite)) ? "<a href=\"http://$userwebsite\" rel=\"external nofollow\">$username</a>" : $username;
 
     $message_date = strtotime($message_date);
     if (StrFTime("%Y", $message_date) == StrFTime("%Y", Time())) {
@@ -409,24 +412,25 @@ class Ajax_Shoutbox_Widget extends WP_Widget {
 
     $message_text = apply_filters('shoutbox_message', $message_text, $options);
 
-    $return = "<div id='sb_message_$message_id' class='sb_message" . ($new_message ? " new_message" : "") . "'>\n";
-    $siteurl = get_option('siteurl');
+    $msg_header  = "<div class=\"sb_message_header\">";
+    $msg_header .= self::get_avatar(self::get_user_id($username));
 
-    $return .= "<div class='sb_message_header'>";
-
-    $return .= self::get_avatar(self::get_user_id($username));
-
-    $menu = "Menu";
     $menu = apply_filters('shoutbox_menu', "", $message_text, $username, $options, $ip_address);
     if ($menu != "")
-      $return .= "<span class=\"menu\">$menu</span>";
+      $msg_header .= "<span class=\"menu\">$menu</span>";
 
-    $return .= "<span class=\"username\">$userdisplay</span> <span class='info'>$message_date</span>";
-    $return .= "</div>";
-    $return .= "<div class='sb_message_body'>$message_text</div>\n";
-    $return .= "</div>\n";
+    $msg_header .= "<span class=\"username\">$userdisplay</span> <span class=\"info\">$message_date</span>";
+    $msg_header .= "</div>";
+    
+    $msg_body = "<div class=\"sb_message_body\">$message_text</div>";
 
-    return $return;
+    $msg_inner = $msg_header . $msg_body;
+
+    $msg_outer = "<div id=\"sb_message_$message_id\" class=\"sb_message" . ($new_message ? " new_message" : "") . "\" hash=\"" . hash("md5", $msg_inner) . "\">"
+                 . $msg_inner
+                 . "</div>\n";
+
+    return $msg_outer;
   }
 
   public static function get_user_id($user_display_name) {
