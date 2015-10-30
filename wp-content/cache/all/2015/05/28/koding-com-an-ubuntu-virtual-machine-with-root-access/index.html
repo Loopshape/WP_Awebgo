@@ -1,0 +1,688 @@
+<!doctype html>
+<html class="no-js" lang="de-DE">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/2ecd0c47eb5e5710585cbbc58a5ac8b3/1446220026index.css' rel='stylesheet'>
+<link href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/729e5fc5f90d1e5197231f1b9997aeca/1446220025index.css' rel="stylesheet">
+<title>Koding.com :: An Ubuntu Virtual-Machine with ROOT access | Awebgo</title>
+<style type="text/css"></style>
+<style type="text/css">
+.gpf-simple-fb-wrapper .gpf-jal-single-fb-post,
+.gpf-simple-fb-wrapper .gpf-jal-fb-description-wrap,
+.gpf-simple-fb-wrapper .gpf-jal-fb-post-time,
+.gpf-slicker-facebook-posts .gpf-jal-single-fb-post,
+.gpf-slicker-facebook-posts .gpf-jal-fb-description-wrap,
+.gpf-slicker-facebook-posts .gpf-jal-fb-post-time { color:#c9d9e9!important; }
+.gpf-simple-fb-wrapper .gpf-jal-single-fb-post a,
+.gpf-fb-load-more-wrapper .gpf-fb-load-more,
+.gpf-slicker-facebook-posts .gpf-jal-single-fb-post a,
+.gpf-fb-load-more-wrapper .gpf-fb-load-more { color:#d1e2f2!important; }
+.gpf-simple-fb-wrapper .gpf-jal-single-fb-post a:hover,
+.gpf-simple-fb-wrapper .gpf-fb-load-more:hover,
+.gpf-slicker-facebook-posts .gpf-jal-single-fb-post a:hover,
+.gpf-slicker-facebook-posts .gpf-fb-load-more:hover { color:#aebcc9!important; }
+.gpf-simple-fb-wrapper, .gpf-fb-load-more-wrapper .gpf-fb-load-more { background:#506070!important; }
+.gpf-slicker-facebook-posts .gpf-jal-single-fb-post { background:#617487!important; }
+.gpf-slicker-facebook-posts .gpf-jal-single-fb-post, .gpf-jal-single-fb-post { border-bottom:1px solid #333d47!important; }
+</style>
+<link rel="alternate" type="application/rss+xml" title="Awebgo &raquo; Koding.com :: An Ubuntu Virtual-Machine with ROOT access Kommentar-Feed" href="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/loop.arcturus.uberspace.de\/wp-includes\/js\/wp-emoji-release.min.js?ver=23d40528e7fd245d95b3b7313599e063"}};
+!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/b3c48015469badee9f798e05aa3e12ce/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bbp-default-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/06f2ed5b5475bc5fa190298708193fcd/1446220025index.css' type='text/css' media='screen' />
+<link rel='stylesheet' id='gpf-feeds-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/fca8e3046ff37d298c1ec4a085debfc3/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-lightbox-swipebox-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/e735c74a788166bb12bb9b160cf75c2e/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='SFSImainCss-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/ae49608c2c3b9b77277841fad6c88b0b/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='SFSIJqueryCSS-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/f5c837857126ff7e3f8f240213bc3835/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='disable_sfsi-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/e2e293e428d80d0c7710cde43254a68f/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpb_un_style-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/9f75aae68f5858fbb205df713188f8ba/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='vortex_like_or_dislike-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/777f6f21987196c32fd2c012cc8cb769/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='vortex_like_or_dislike_comment-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/777f6f21987196c32fd2c012cc8cb769/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='ajax_shoutbox-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/b85cdc7931660e0567f757077b972df0/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/05282a718cf3a33f37d2c3fbb8a08282/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='highlight-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/270bee96e74f1e956ba01658aa4e9970/1446220025index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sage_css-css'  href='//loop.arcturus.uberspace.de/wp-content/cache/wpfc-minified/e1e560198c88aca6864b4022b6d4ac17/1446220025index.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-includes/js/jquery/jquery.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gpfAjax = {"ajaxurl":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php"};
+var gpfAjax = {"ajaxurl":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/custom-google-plus-feed/admin/js/admin.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/custom-google-plus-feed/feeds/js/powered-by.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/responsive-lightbox/assets/swipebox/js/jquery.swipebox.min.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activeGalleries":"1","animation":"1","hideCloseButtonOnMobile":"0","removeBarsOnMobile":"0","hideBars":"1","hideBarsDelay":"5000","videoMaxWidth":"1080","useSVG":"1","loopAtEnd":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/responsive-lightbox/js/front.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/markdown-shortcode/highlight/highlight.min.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/markdown-shortcode/init_highlight.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://loop.arcturus.uberspace.de/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://loop.arcturus.uberspace.de/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Aptana3 SSH-KEX chroot into Ubuntu-LAMP-Server' href='http://loop.arcturus.uberspace.de/2015/05/24/aptana3-ssh-kex-chroot-into-ubuntu-lamp-server/' />
+<link rel='next' title='Linux &#8220;Ubuntu&#8221; LAMP-Server on Android • Part 1' href='http://loop.arcturus.uberspace.de/2015/05/30/linux-ubuntu-lamp-server-on-android-%e2%80%a2-part-1/' />
+<link rel='canonical' href='http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/' />
+<link rel='shortlink' href='http://loop.arcturus.uberspace.de/?p=62' />
+<script type="text/javascript">
+var myAjaxFTS = 'http://loop.arcturus.uberspace.de/wp-admin/admin-ajax.php';
+</script>
+<script type="text/javascript">
+var myAjaxFTS = 'http://loop.arcturus.uberspace.de/wp-admin/admin-ajax.php';
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta property="og:image" content="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/05/Koding-Say-goodbye-to-your-localhost-and-code-in-the-cloud..jpeg" data-id="sfsi"><meta property="og:image:type" content="" data-id="sfsi" /><meta property="og:image:width" content="1200" data-id="sfsi" /><meta property="og:image:height" content="596" data-id="sfsi" /><meta property="og:url" content="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/" data-id="sfsi" /><meta property="og:description" content="Free 3GB-VM with ROOT access:
+Koding | Say goodbye to your localhost
+Website: Koding.com
+&nbsp;
+&nbsp;" data-id="sfsi" /><meta property="og:title" content="Koding.com :: An Ubuntu Virtual-Machine with ROOT access" data-id="sfsi" />    	<script>
+function sfsi_processfurther(ref) {
+var feed_id = 'Tmg0QllaY0pCbllYS2xrN3I0RFBzcittOFBmcDU2YndhR1lxVEhhR0w1aW9XUFQxbG03djl4V1JjQzQvTGdZY015TWRNTHRycjlkWmwxZm5wSXFwa0RWMXI5ekVXNy9MQ3d2U0VRR1dPb2s2d1I3OTFoNm9NWEptQStZc29RTVB8ZGIrMGdMMlFVZjFOQVpPa2VSUkVyd0dxdWlUc1ExUlArRW8zVXZDdklaMD0=';
+var feedtype = 8;
+var email = jQuery(ref).find('input[name="data[Widget][email]"]').val();
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+if ((email != "Enter your email") && (filter.test(email))) {
+if (feedtype == "8") {
+var url = "'.$url.'"+feed_id+"/"+feedtype;
+window.open(url, "popupwindow", "scrollbars=yes,width=1080,height=760");
+return true;
+}
+} else {
+alert("Please enter email address");
+jQuery(ref).find('input[name="data[Widget][email]"]').focus();
+return false;
+}
+}
+</script>
+<style type="text/css" aria-selected="true">
+.sfsi_subscribe_Popinner
+{
+width: 100% !important;
+height: auto !important;
+border: 1px solid #b5b5b5 !important;
+padding: 18px 0px !important;
+background-color: #ffffff !important;
+}
+.sfsi_subscribe_Popinner form
+{
+margin: 0 20px !important;
+}
+.sfsi_subscribe_Popinner h5
+{
+font-family: Helvetica,Arial,sans-serif !important;
+font-weight: bold !important;
+color: #000000 !important;
+font-size: 16px !important;
+text-align: center !important;
+margin: 0 0 10px !important;
+padding: 0 !important;
+}
+.sfsi_subscription_form_field {
+margin: 5px 0 !important;
+width: 100% !important;
+display: inline-flex;
+display: -webkit-inline-flex;
+}
+.sfsi_subscription_form_field input {
+width: 100% !important;
+padding: 10px 0px !important;
+}
+.sfsi_subscribe_Popinner input[type=email]
+{
+font-family: Helvetica,Arial,sans-serif !important;
+font-style: normal !important;
+color:  !important;
+font-size: 14px !important;
+text-align: center !important;
+}
+.sfsi_subscribe_Popinner input[type=email]::-webkit-input-placeholder {
+font-family: Helvetica,Arial,sans-serif !important;
+font-style: normal !important;
+color:  !important;
+font-size: 14px !important;
+text-align: center !important;
+}
+.sfsi_subscribe_Popinner input[type=email]:-moz-placeholder { /* Firefox 18- */
+font-family: Helvetica,Arial,sans-serif !important;
+font-style: normal !important;
+color:  !important;
+font-size: 14px !important;
+text-align: center !important;
+}
+.sfsi_subscribe_Popinner input[type=email]::-moz-placeholder {  /* Firefox 19+ */
+font-family: Helvetica,Arial,sans-serif !important;
+font-style: normal !important;
+color:  !important;
+font-size: 14px !important;
+text-align: center !important;
+}
+.sfsi_subscribe_Popinner input[type=email]:-ms-input-placeholder {  
+font-family: Helvetica,Arial,sans-serif !important;
+font-style: normal !important;
+color:  !important;
+font-size: 14px !important;
+text-align: center !important;
+}
+.sfsi_subscribe_Popinner input[type=submit]
+{
+font-family: Helvetica,Arial,sans-serif !important;
+font-weight: bold !important;
+color: #000000 !important;
+font-size: 16px !important;
+text-align: center !important;
+background-color: #dedede !important;
+}
+</style>
+<style>.vortex-container-like-comment,.vortex-container-dislike-comment{font-size:16px}.vortex-p-like-comment, .vortex-p-dislike-comment{color:#828384;}.vortex-p-like-comment:hover{color:#506070;}.vortex-p-like-active-comment{color: #8090a0;}.vortex-p-dislike-comment:hover{color: #0a0101;}.vortex-p-dislike-active-comment{color: #0a0101;}</style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript">
+(function(url){
+if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+var addEvent = function(evt, handler) {
+if (window.addEventListener) {
+document.addEventListener(evt, handler, false);
+} else if (window.attachEvent) {
+document.attachEvent('on' + evt, handler);
+}
+};
+var removeEvent = function(evt, handler) {
+if (window.removeEventListener) {
+document.removeEventListener(evt, handler, false);
+} else if (window.detachEvent) {
+document.detachEvent('on' + evt, handler);
+}
+};
+var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+var logHuman = function() {
+var wfscr = document.createElement('script');
+wfscr.type = 'text/javascript';
+wfscr.async = true;
+wfscr.src = url + '&r=' + Math.random();
+(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+for (var i = 0; i < evts.length; i++) {
+removeEvent(evts[i], logHuman);
+}
+};
+for (var i = 0; i < evts.length; i++) {
+addEvent(evts[i], logHuman);
+}
+})('//loop.arcturus.uberspace.de/?wordfence_logHuman=1&hid=FECC9FB79119B8BE1B0DFC808C082EA1');
+</script><style type="text/css" title="dynamic-css" class="options-output">.vortex-container-like , .vortex-container-dislike{font-size:16px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading .vortex-container-like , .vortex-container-dislike,{opacity: 0;}.ie.wf-loading .vortex-container-like , .vortex-container-dislike,{visibility: hidden;}.vortex-p-like, .vortex-p-dislike{color:#828384;}.vortex-p-like:hover{color:#708090;}.vortex-p-like-active{color:#8090a0;}.vortex-p-dislike:hover{color:#405060;}.vortex-p-dislike-active{color:#304050;}</style>  <!--[if gte IE 9]>
+<style type="text/css">
+.gradient {
+filter: none;
+}
+</style>
+<![endif]-->
+</head>
+<body class="single single-post postid-62 single-format-standard koding-com-an-ubuntu-virtual-machine-with-root-access sidebar-primary">
+<!--[if lt IE 9]>
+<div class="alert alert-warning">
+You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.        </div>
+<![endif]-->
+<a name="pageTop" title=""></a>
+<img class="webArea" src="/wp-content/uploads/2015/09/raw_background.jpg" alt="" width="auto" height="100%">
+<div class="spaceScene"></div>
+<img class="sunStream" src="/wp-content/themes/looptheme/assets/images/Website_Header_Sunbeam.png" alt="" width="100%" height="auto">
+<img class="backgroundTop" src="/wp-content/themes/looptheme/assets/images/BackgroundTop.png" alt="" width="100%" height="auto">
+<img class="secLogo" src="/wp-content/themes/looptheme/assets/images/Awebgo_SpaceShip.png" alt="">
+<div class="laptopArea">
+<img src="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/10/3D_Laptop.png" alt="" width="50%" height="auto">
+</div>
+<div class="dotArea"></div>
+<header class="banner" role="banner">
+<div class="modal-dialog">
+<!-- -->
+</div>
+<div class="container">
+<a class="brand" href="http://loop.arcturus.uberspace.de/"><img class="mainLogo hastip" title="[Klick] Gehe zur Startseite" src="/wp-content/themes/looptheme/assets/images/AwebgoLogo.png" alt=""></a>
+<nav role="navigation">
+<div class="menu-mainmenu-container"><ul id="menu-mainmenu" class="nav"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="/techjournal/">Tech Journal</a></li>
+<li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="http://loop.arcturus.uberspace.de/production/">Production</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="http://loop.arcturus.uberspace.de/start/administration-website/">Über mich</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="mailto:webdevelopment@kabelmail.de">Kontakt</a></li>
+</ul></div>        </nav>
+</div>
+</header>
+<div class="wrap container" role="document">
+<div class="content row">
+<main class="main" role="main">
+<div class="single post thumbnail"><img width="1200" height="596" src="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/05/Koding-Say-goodbye-to-your-localhost-and-code-in-the-cloud..jpeg" class="attachment-post-thumbnail wp-post-image" alt="Koding   Say goodbye to your localhost and code in the cloud." /></div>
+<article class="post-62 post type-post status-publish format-standard has-post-thumbnail hentry category-back-end category-ide category-mediaproduction category-networkintranet category-ssh category-web-development tag-koding-com tag-localhost tag-root-access tag-ssh-commandline tag-virtual-machine">
+<header>
+<h1 class="entry-title">Koding.com :: An Ubuntu Virtual-Machine with ROOT access</h1>
+<time class="updated" datetime="2015-05-28T16:00:01+00:00">28. Mai 2015</time>
+<p class="byline author vcard">By <a href="http://loop.arcturus.uberspace.de/author/administrator/" rel="author" class="fn">Awebgo</a></p>
+</header>
+<div class="entry-content">
+<h4>Free 3GB-VM with ROOT access:</h4>
+<p><a href="https://koding.com/R/loopshape" target="_blank">Koding | Say goodbye to your localhost</a></p>
+<p><strong>Website:</strong> <a href="https://koding.com/R/loopshape" target="_blank">Koding.com</a></p>
+<p><a href="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/556a2aa71e518273221939.png" data-rel="lightbox-0" title=""><img class="alignleft size-medium wp-image-65" src="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/556a2aa71e518273221939-300x219.png" alt="556a2aa71e518273221939" width="300" height="219" /></a></p>
+<p><a href="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/556a2d220a2ca351665346.png" data-rel="lightbox-1" title=""><img class="alignleft size-medium wp-image-66" src="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/556a2d220a2ca351665346-300x219.png" alt="556a2d220a2ca351665346" width="300" height="219" /></a></p>
+<p>&nbsp;</p>
+<p><a href="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/556a2d842ba38722759334.png" data-rel="lightbox-2" title=""><img class="alignleft size-medium wp-image-67" src="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/556a2d842ba38722759334-300x219.png" alt="556a2d842ba38722759334" width="300" height="219" /></a></p>
+<p><a href="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/556a2eba3fedf354722405.png" data-rel="lightbox-3" title=""><img class="alignleft size-medium wp-image-68" src="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/09/556a2eba3fedf354722405-300x219.png" alt="556a2eba3fedf354722405" width="300" height="219" /></a></p>
+<p>&nbsp;
+<div class='sfsi_Sicons right' style='float:right'>
+<div style='float:left;margin:0px 8px 0px 0px; line-height: 24px'><span>Share &#038; Like </span></div>
+<div class='sfsi_socialwpr'>
+<div class='sf_fb' style='width:49px'>
+<div class="fb-like" data-href="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/" width="180" send="false"  data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+</div>
+<div class='sf_google' style='float:left;max-width:62px;min-width:35px;'>
+<div class="g-plusone" data-href="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/" data-size="large" data-annotation="none" ></div>
+</div>
+<div class='sf_twiter' style='float:left;width:58px'><a href="http://twitter.com/share" data-count="none" class="sr-twitter-button twitter-share-button" lang="en" data-url="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/" data-text="Koding.com :: An Ubuntu Virtual-Machine with ROOT access" ></a></div>
+<div class='sf_addthis'> <script type="text/javascript">
+var addthis_config = {
+url: "http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/",
+title: "Koding.com :: An Ubuntu Virtual-Machine with ROOT access"
+}
+</script>
+<div class="addthis_toolbox addthis_default_style addthis_20x20_style" addthis:url="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/" addthis:title="Koding.com :: An Ubuntu Virtual-Machine with ROOT access"><a class="addthis_button_compact " href="#">  <img src="http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/images/sharebtn.png"  border="0" alt="Share" /></a></div>
+</div>
+</div>
+</div>
+<div class="vortex-container-vote vortex-align-left">
+<div class="vortex-container-like"><input type="hidden" value="62" ></input>
+<div class="vortex-p-like 62  icon-thumbs-up"></div>
+</div>
+<div class="vortex-container-dislike"><input type="hidden" value="62" ></input>
+<div class="vortex-p-dislike 62  icon-thumbs-down"></div>
+</div>
+</div>
+</div>
+<footer>
+</footer>
+<section id="comments" class="comments">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Schreib einen Kommentar <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/#respond" style="display:none;">Antworten abbrechen</a></small></h3>
+<form action="http://loop.arcturus.uberspace.de/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Deine E-Mail-Adresse wird nicht veröffentlicht.</span> Erforderliche Felder sind markiert <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">E-Mail-Adresse <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" /></p>
+<p class="comment-form-comment"><label for="comment">Kommentar</label> <textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required"></textarea></p>						
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Kommentar abschicken" /> <input type='hidden' name='comment_post_ID' value='62' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>					</form>
+</div><!-- #respond -->
+</section>
+</article>
+</main><!-- /.main -->
+<aside class="sidebar" role="complementary">
+<div class="shadowBar">
+<section class="widget bcn_widget-2 widget_breadcrumb_navxt"><h3>MainBreadCrumb</h3><div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#"><!-- Breadcrumb NavXT 5.2.2 -->
+<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Gehe zu Awebgo." href="http://loop.arcturus.uberspace.de" class="home">Awebgo</a></span> &gt; <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Gehe zu den Web Development Kategorie Archiven." href="http://loop.arcturus.uberspace.de/Webdesign/web-development/" class="taxonomy category">Web Development</a></span> &gt; <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Gehe zu den Back-end Kategorie Archiven." href="http://loop.arcturus.uberspace.de/Webdesign/web-development/back-end/" class="taxonomy category">Back-end</a></span> &gt; <span typeof="v:Breadcrumb"><span property="v:title">Koding.com :: An Ubuntu Virtual-Machine with ROOT access</span></span></div></section><section class="widget search-2 widget_search"><form role="search" method="get" class="search-form form-inline" action="http://loop.arcturus.uberspace.de/">
+<label class="sr-only">Search for:</label>
+<div class="input-group">
+<input type="search" value="" name="s" class="search-field form-control" placeholder="Search Awebgo" required>
+<span class="input-group-btn">
+<button type="submit" class="search-submit btn btn-default">Search</button>
+</span>
+</div>
+</form>
+</section>		<section class="widget recent-posts-2 widget_recent_entries">		<h3>Letzte Beiträge</h3>		<ul>
+<li>
+<a href="http://loop.arcturus.uberspace.de/2015/10/30/octobercms-the-php-platform-that-gets-back-to-basics-laravel5/">OctoberCMS :: The PHP platform that gets back to basics [Laravel5]</a>
+</li>
+<li>
+<a href="http://loop.arcturus.uberspace.de/2015/10/30/gulpfile-tips-hints-for-successfull-stream-pipelining/">Gulpfile :: Tips &#038; Hints for successfull stream-pipelining</a>
+</li>
+<li>
+<a href="http://loop.arcturus.uberspace.de/2015/09/11/nodejs-mit-nvm-fuer-die-webentwicklung-verwenden/">NodeJS mit NVM für die Webentwicklung verwenden</a>
+</li>
+<li>
+<a href="http://loop.arcturus.uberspace.de/2015/08/19/requirejs-scripte-einbinden/">Require.JS :: Scripte einbinden</a>
+</li>
+<li>
+<a href="http://loop.arcturus.uberspace.de/2015/05/31/treeline-io-create-a-nodejs-app-with-a-browserinterface/">Treeline.io • Create a NodeJS app with a browserinterface</a>
+</li>
+</ul>
+</section><section class="widget recent-comments-2 widget_recent_comments"><h3>Letzte Kommentare</h3><ul id="recentcomments"></ul></section><section class="widget archives-2 widget_archive"><h3>Archive</h3>		<ul>
+<li><a href='http://loop.arcturus.uberspace.de/2015/10/'>Oktober 2015</a></li>
+<li><a href='http://loop.arcturus.uberspace.de/2015/09/'>September 2015</a></li>
+<li><a href='http://loop.arcturus.uberspace.de/2015/08/'>August 2015</a></li>
+<li><a href='http://loop.arcturus.uberspace.de/2015/05/'>Mai 2015</a></li>
+<li><a href='http://loop.arcturus.uberspace.de/2015/04/'>April 2015</a></li>
+<li><a href='http://loop.arcturus.uberspace.de/2015/01/'>Januar 2015</a></li>
+</ul>
+</section><section class="widget categories-2 widget_categories"><h3>Kategorien</h3>		<ul>
+<li class="cat-item cat-item-82"><a href="http://loop.arcturus.uberspace.de/Webdesign/technology/android/" >Android</a>
+</li>
+<li class="cat-item cat-item-9"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/back-end/" >Back-end</a>
+</li>
+<li class="cat-item cat-item-13"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/cms/" >CMS</a>
+</li>
+<li class="cat-item cat-item-77"><a href="http://loop.arcturus.uberspace.de/Webdesign/technology/device/" >Device</a>
+</li>
+<li class="cat-item cat-item-16"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/framework/" >Framework</a>
+</li>
+<li class="cat-item cat-item-65"><a href="http://loop.arcturus.uberspace.de/Webdesign/networkintranet/handshake/" >Handshake</a>
+</li>
+<li class="cat-item cat-item-10"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/front-end/html5css3js/" >HTML5+CSS3+JS</a>
+</li>
+<li class="cat-item cat-item-61"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/ide/" >IDE</a>
+</li>
+<li class="cat-item cat-item-57"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/front-end/javascript/" >Javascript</a>
+</li>
+<li class="cat-item cat-item-17"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/framework/laravel-5/" >Laravel 5</a>
+</li>
+<li class="cat-item cat-item-18"><a href="http://loop.arcturus.uberspace.de/Webdesign/layoutdesign/" >Layout+Design</a>
+</li>
+<li class="cat-item cat-item-79"><a href="http://loop.arcturus.uberspace.de/Webdesign/technology/linux/" >Linux</a>
+</li>
+<li class="cat-item cat-item-21"><a href="http://loop.arcturus.uberspace.de/Webdesign/mediaproduction/" >Mediaproduction</a>
+</li>
+<li class="cat-item cat-item-64"><a href="http://loop.arcturus.uberspace.de/Webdesign/networkintranet/" >Network/Intranet</a>
+</li>
+<li class="cat-item cat-item-12"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/back-end/nodejs/" >NodeJS</a>
+</li>
+<li class="cat-item cat-item-63"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/security/" >Security</a>
+</li>
+<li class="cat-item cat-item-78"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/server/" >Server</a>
+</li>
+<li class="cat-item cat-item-62"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/ssh/" >SSH</a>
+</li>
+<li class="cat-item cat-item-76"><a href="http://loop.arcturus.uberspace.de/Webdesign/technology/" >Technology</a>
+</li>
+<li class="cat-item cat-item-20"><a href="http://loop.arcturus.uberspace.de/Webdesign/layoutdesign/themetemplate/" >Theme/Template</a>
+</li>
+<li class="cat-item cat-item-1"><a href="http://loop.arcturus.uberspace.de/Webdesign/web-development/" >Web Development</a>
+</li>
+</ul>
+</section><section class="widget meta-2 widget_meta"><h3>Meta</h3>			<ul>
+<li><a href="http://loop.arcturus.uberspace.de/wp-login.php">Anmelden</a></li>
+<li><a href="http://loop.arcturus.uberspace.de/feed/">Beitrags-Feed (<abbr title="Really Simple Syndication">RSS</abbr>)</a></li>
+<li><a href="http://loop.arcturus.uberspace.de/comments/feed/">Kommentare als <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</section><section class="widget sfsi-widget-2 sfsi"><h3>Share &#038; Like :)</h3>            <div class="sfsi_widget" data-position="widget">   
+<div id='sfsi_wDiv'></div>
+<div class="norm_row sfsi_wDiv"  style="width:240px;text-align:center;position:absolute;"><div style='width:30px; height:30px;margin-left:10px;margin-bottom:5px;' class='sfsi_wicons shuffeldiv '><div class='inerCnt'><a class=' sficn' effect=''   href='javascript:void(0)' id='sfsiid_google' alt='Google+' style='opacity:1' ><img alt='Google+' title='Google+' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/default/default_google.png' width='30' style='' class='sfcm sfsi_wicon' effect=''   /></a><div class="sfsi_tool_tip_2 gpls_tool_bdr sfsiTlleft" style="width:76px ;opacity:0;z-index:-1;margin-left:-57px;" id="sfsiid_google"><span class="bot_arow bot_gpls_arow"></span><div class="sfsi_inside"><div  class='icon2'><div class="g-plusone" data-href="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/" data-size="large" data-annotation="none" ></div></div></div></div></div></div><div style='width:30px; height:30px;margin-left:10px;margin-bottom:5px;' class='sfsi_wicons shuffeldiv '><div class='inerCnt'><a class=' sficn' effect=''   href='javascript:void(0)' id='sfsiid_facebook' alt='Facebook' style='opacity:1' ><img alt='Facebook' title='Facebook' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/default/default_facebook.png' width='30' style='' class='sfcm sfsi_wicon' effect=''   /></a><div class="sfsi_tool_tip_2 fb_tool_bdr sfsiTlleft" style="width:62px ;opacity:0;z-index:-1;margin-left:-50px;" id="sfsiid_facebook"><span class="bot_arow bot_fb_arow"></span><div class="sfsi_inside"><div  class='icon2'><div class="fb-like" data-href="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div></div></div></div></div></div><div style='width:30px; height:30px;margin-left:10px;margin-bottom:5px;' class='sfsi_wicons shuffeldiv '><div class='inerCnt'><a class=' sficn' effect=''   href='javascript:void(0)' id='sfsiid_twitter' alt='Twitter' style='opacity:1' ><img alt='Twitter' title='Twitter' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/default/default_twitter.png' width='30' style='' class='sfcm sfsi_wicon' effect=''   /></a><div class="sfsi_tool_tip_2 twt_tool_bdr sfsiTlleft" style="width:59px ;opacity:0;z-index:-1;margin-left:-48.5px;" id="sfsiid_twitter"><span class="bot_arow bot_twt_arow"></span><div class="sfsi_inside"><div  class='icon1'><a href="https://twitter.com/Loopshape" class="twitter-follow-button"  data-show-count="false" data-show-screen-name="false">Follow </a></div></div></div></div></div><div style='width:30px; height:30px;margin-left:10px;margin-bottom:5px;' class='sfsi_wicons shuffeldiv '><div class='inerCnt'><a class=' sficn' effect='' target='_blank'  href='http://www.specificfeeds.com/widgets/emailSubscribeEncFeed/Tmg0QllaY0pCbllYS2xrN3I0RFBzcittOFBmcDU2YndhR1lxVEhhR0w1aW9XUFQxbG03djl4V1JjQzQvTGdZY015TWRNTHRycjlkWmwxZm5wSXFwa0RWMXI5ekVXNy9MQ3d2U0VRR1dPb2s2d1I3OTFoNm9NWEptQStZc29RTVB8ZGIrMGdMMlFVZjFOQVpPa2VSUkVyd0dxdWlUc1ExUlArRW8zVXZDdklaMD0=/OA==/' id='sfsiid_email' alt='Follow by Email' style='opacity:1' ><img alt='Follow by Email' title='Follow by Email' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/default/default_email.png' width='30' style='' class='sfcm sfsi_wicon' effect=''   /></a></div></div><div style='width:30px; height:30px;margin-left:10px;margin-bottom:5px;' class='sfsi_wicons shuffeldiv '><div class='inerCnt'><a class=' sficn' effect='' target='_blank'  href='http://loop.arcturus.uberspace.de/feed/' id='sfsiid_rss' alt='RSS' style='opacity:1' ><img alt='RSS' title='RSS' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/default/default_rss.png' width='30' style='' class='sfcm sfsi_wicon' effect=''   /></a></div></div><div style='width:30px; height:30px;margin-left:10px;margin-bottom:5px;' class='sfsi_wicons shuffeldiv '><div class='inerCnt'><a class='addthis_button sficn' effect='' target='_blank'  href='http://www.addthis.com/bookmark.php?v=250' id='sfsiid_share' alt='SHARE' style='opacity:1' ><img alt='SHARE' title='SHARE' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/default/default_share.png' width='30' style='' class='sfcm sfsi_wicon' effect=''   /></a></div></div></div ><div id="sfsi_holder" class="sfsi_holders" style="position: relative; float: left;width:100%;z-index:-1;"></div ><script>jQuery(".sfsi_widget").each(function( index ) {
+if(jQuery(this).attr("data-position") == "widget")
+{
+var wdgt_hght = jQuery(this).children(".norm_row.sfsi_wDiv").height();
+var title_hght = jQuery(this).parent(".widget.sfsi").children(".widget-title").height();
+var totl_hght = parseInt( title_hght ) + parseInt( wdgt_hght );
+jQuery(this).parent(".widget.sfsi").css("min-height", totl_hght+"px");
+}
+});</script>	      		<div style="clear: both;"></div>
+</div>
+</section></div>
+</aside><!-- /.sidebar -->
+</div><!-- /.content -->
+</div><!-- /.wrap -->
+<footer class="content-info" role="contentinfo">
+<div class="footerArea">
+<div class="container">
+<section class="widget views-2 widget_views"><h3>Views</h3><ul>
+<li><a href="http://loop.arcturus.uberspace.de/2015/05/30/linux-ubuntu-lamp-server-on-android-%e2%80%a2-part-1/"  title="Linux &#8220;Ubuntu&#8221; LAMP-Server on Android • Part 1">Linux &#8220;Ubuntu&#8221; LAMP-Server on Android • Part 1</a> - 9 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/31/sailsjs-ein-mvc-framework-basierend-auf-nodejs/"  title="SailsJS • Ein MVC framework basierend auf NodeJS">SailsJS • Ein MVC framework basierend auf NodeJS</a> - 10 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/31/treeline-io-create-a-nodejs-app-with-a-browserinterface/"  title="Treeline.io • Create a NodeJS app with a browserinterface">Treeline.io • Create a NodeJS app with a browserinterface</a> - 11 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/10/30/gulpfile-tips-hints-for-successfull-stream-pipelining/"  title="Gulpfile :: Tips &#038; Hints for successfull stream-pipelining">Gulpfile :: Tips &#038; Hints for successfull stream-pipelining</a> - 13 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/24/aptana3-ssh-kex-chroot-into-ubuntu-lamp-server/"  title="Aptana3 SSH-KEX chroot into Ubuntu-LAMP-Server">Aptana3 SSH-KEX chroot into Ubuntu-LAMP-Server</a> - 14 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/10/30/octobercms-the-php-platform-that-gets-back-to-basics-laravel5/"  title="OctoberCMS :: The PHP platform that gets back to basics [Laravel5]">OctoberCMS :: The PHP platform that gets back to basics [Laravel5]</a> - 14 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/01/18/willkommen-zum-techjournal-von-awebgo/"  title="Willkommen zum TechJournal von Awebgo">Willkommen zum TechJournal von Awebgo</a> - 17 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/04/16/php-paypal-rest-api-how-to/"  title="PHP • PayPal REST-API :: How to">PHP • PayPal REST-API :: How to</a> - 20 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/05/28/koding-com-an-ubuntu-virtual-machine-with-root-access/"  title="Koding.com :: An Ubuntu Virtual-Machine with ROOT access">Koding.com :: An Ubuntu Virtual-Machine with ROOT access</a> - 22 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/08/19/requirejs-scripte-einbinden/"  title="Require.JS :: Scripte einbinden">Require.JS :: Scripte einbinden</a> - 26 views</li><li><a href="http://loop.arcturus.uberspace.de/2015/09/11/nodejs-mit-nvm-fuer-die-webentwicklung-verwenden/"  title="NodeJS mit NVM für die Webentwicklung verwenden">NodeJS mit NVM für die Webentwicklung verwenden</a> - 48 views</li></ul>
+</section><section class="widget calendar-2 widget_calendar"><h3>Tech Topics</h3><div id="calendar_wrap"><table id="wp-calendar">
+<caption>Mai 2015</caption>
+<thead>
+<tr>
+<th scope="col" title="Montag">M</th>
+<th scope="col" title="Dienstag">D</th>
+<th scope="col" title="Mittwoch">M</th>
+<th scope="col" title="Donnerstag">D</th>
+<th scope="col" title="Freitag">F</th>
+<th scope="col" title="Samstag">S</th>
+<th scope="col" title="Sonntag">S</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td colspan="3" id="prev"><a href="http://loop.arcturus.uberspace.de/2015/04/">&laquo; Apr</a></td>
+<td class="pad">&nbsp;</td>
+<td colspan="3" id="next"><a href="http://loop.arcturus.uberspace.de/2015/08/">Aug &raquo;</a></td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td colspan="4" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td>
+</tr>
+<tr>
+<td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+</tr>
+<tr>
+<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td>
+</tr>
+<tr>
+<td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td><a href="http://loop.arcturus.uberspace.de/2015/05/24/" title="Aptana3 SSH-KEX chroot into Ubuntu-LAMP-Server">24</a></td>
+</tr>
+<tr>
+<td>25</td><td>26</td><td>27</td><td><a href="http://loop.arcturus.uberspace.de/2015/05/28/" title="Koding.com :: An Ubuntu Virtual-Machine with ROOT access">28</a></td><td>29</td><td><a href="http://loop.arcturus.uberspace.de/2015/05/30/" title="Linux &#8220;Ubuntu&#8221; LAMP-Server on Android • Part 1">30</a></td><td><a href="http://loop.arcturus.uberspace.de/2015/05/31/" title="SailsJS • Ein MVC framework basierend auf NodeJS, Treeline.io • Create a NodeJS app with a browserinterface">31</a></td>
+</tr>
+</tbody>
+</table></div></section><section class="widget newsletterwidget-2 widget_newsletterwidget"><h3>Awebgo Newsletter</h3>Für aktuelle Beiträge, Meldungen und weiteres kann ein Newsletter von Awebgo empfangen werden.
+<script type="text/javascript">
+//<![CDATA[
+if (typeof newsletter_check !== "function") {
+window.newsletter_check = function (f) {
+var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+if (!re.test(f.elements["ne"].value)) {
+alert("Die E-Mail ist nicht valide // The email is not correct");
+return false;
+}
+if (f.elements["nn"] && (f.elements["nn"].value == "" || f.elements["nn"].value == f.elements["nn"].defaultValue)) {
+alert("Der eingetragene Vorname ist nicht gültig // The entered first name isn\'t correct");
+return false;
+}
+for (var i=1; i<20; i++) {
+if (f.elements["np" + i] && f.elements["np" + i].required && f.elements["np" + i].value == "") {
+alert("");
+return false;
+}
+}
+if (f.elements["ny"] && !f.elements["ny"].checked) {
+alert("Du must die Datenschutzbestimmungen akzeptieren // You must accept the privacy statement");
+return false;
+}
+return true;
+}
+}
+//]]>
+</script>
+<div class="newsletter newsletter-widget">
+<script type="text/javascript">
+//<![CDATA[
+if (typeof newsletter_check !== "function") {
+window.newsletter_check = function (f) {
+var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+if (!re.test(f.elements["ne"].value)) {
+alert("Die E-Mail ist nicht valide // The email is not correct");
+return false;
+}
+if (f.elements["nn"] && (f.elements["nn"].value == "" || f.elements["nn"].value == f.elements["nn"].defaultValue)) {
+alert("Der eingetragene Vorname ist nicht gültig // The entered first name isn\'t correct");
+return false;
+}
+for (var i=1; i<20; i++) {
+if (f.elements["np" + i] && f.elements["np" + i].required && f.elements["np" + i].value == "") {
+alert("");
+return false;
+}
+}
+if (f.elements["ny"] && !f.elements["ny"].checked) {
+alert("Du must die Datenschutzbestimmungen akzeptieren // You must accept the privacy statement");
+return false;
+}
+return true;
+}
+}
+//]]>
+</script>
+<form action="http://loop.arcturus.uberspace.de/?na=s" onsubmit="return newsletter_check(this)" method="post"><input type="hidden" name="nr" value="widget"/><p><input class="newsletter-firstname" type="text" name="nn" value="Vorname // First name" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue"/></p><p><input class="newsletter-lastname" type="text" name="ns" value="Nachname // Last name" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue"/></p><p><input class="newsletter-email" type="email" required name="ne" value="E-Mail" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue"/></p><p><select name="nx" class="newsletter-sex"><option value="m">Mann // Mr</option><option value="f">Frau // Mrs</option></select></p><p><input class="newsletter-submit" type="submit" value="Bestätigen // Subscribe"/></p></form></div></section><section class="widget tag_cloud-2 widget_tag_cloud"><h3>Tag-Cloud</h3><div class="tagcloud"><a href='http://loop.arcturus.uberspace.de/Web-Development/aptana/' class='tag-link-66' title='1 Thema' style='font-size: 8pt;'>Aptana</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/assets-pipeline/' class='tag-link-118' title='1 Thema' style='font-size: 8pt;'>Assets-Pipeline</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/automation/' class='tag-link-59' title='2 Themen' style='font-size: 22pt;'>Automation</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/browser-gui/' class='tag-link-89' title='1 Thema' style='font-size: 8pt;'>Browser GUI</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/data/' class='tag-link-120' title='1 Thema' style='font-size: 8pt;'>Data</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/error/' class='tag-link-69' title='1 Thema' style='font-size: 8pt;'>Error</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/failure/' class='tag-link-68' title='1 Thema' style='font-size: 8pt;'>Failure</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/gulp/' class='tag-link-116' title='1 Thema' style='font-size: 8pt;'>Gulp</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/gulpfile-js/' class='tag-link-117' title='1 Thema' style='font-size: 8pt;'>Gulpfile.js</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/koding-com/' class='tag-link-71' title='1 Thema' style='font-size: 8pt;'>Koding.com</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/localhost/' class='tag-link-72' title='2 Themen' style='font-size: 22pt;'>Localhost</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/login/' class='tag-link-67' title='1 Thema' style='font-size: 8pt;'>Login</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/mediengestaltung/' class='tag-link-52' title='1 Thema' style='font-size: 8pt;'>Mediengestaltung</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/mvc-framework/' class='tag-link-86' title='1 Thema' style='font-size: 8pt;'>MVC Framework</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/nodejs/' class='tag-link-58' title='1 Thema' style='font-size: 8pt;'>NodeJS</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/nvm/' class='tag-link-91' title='1 Thema' style='font-size: 8pt;'>NVM</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/october-cms/' class='tag-link-121' title='1 Thema' style='font-size: 8pt;'>October CMS</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/onlinepayment/' class='tag-link-54' title='1 Thema' style='font-size: 8pt;'>OnlinePayment</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/package-manager/' class='tag-link-90' title='1 Thema' style='font-size: 8pt;'>Package Manager</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/paypal/' class='tag-link-53' title='1 Thema' style='font-size: 8pt;'>Paypal</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/php/' class='tag-link-31' title='1 Thema' style='font-size: 8pt;'>PHP</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/portable-webserver/' class='tag-link-85' title='1 Thema' style='font-size: 8pt;'>Portable Webserver</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/rest-api/' class='tag-link-55' title='1 Thema' style='font-size: 8pt;'>REST-API</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/root-access/' class='tag-link-74' title='1 Thema' style='font-size: 8pt;'>ROOT access</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/sails-js/' class='tag-link-87' title='1 Thema' style='font-size: 8pt;'>Sails.js</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/script/' class='tag-link-60' title='1 Thema' style='font-size: 8pt;'>Script</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/ssh-commandline/' class='tag-link-75' title='1 Thema' style='font-size: 8pt;'>SSH Commandline</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/streaming/' class='tag-link-119' title='1 Thema' style='font-size: 8pt;'>Streaming</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/tcpudp-protocol/' class='tag-link-70' title='1 Thema' style='font-size: 8pt;'>TCP/UDP Protocol</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/treeline-io/' class='tag-link-88' title='1 Thema' style='font-size: 8pt;'>Treeline.IO</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/tutorial/' class='tag-link-56' title='1 Thema' style='font-size: 8pt;'>Tutorial</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/virtual-machine/' class='tag-link-73' title='1 Thema' style='font-size: 8pt;'>Virtual Machine</a>
+<a href='http://loop.arcturus.uberspace.de/Web-Development/webentwicklung/' class='tag-link-50' title='1 Thema' style='font-size: 8pt;'>Webentwicklung</a></div>
+</section>        </div>
+</div>
+<div class="footerInfo">
+<p>
+<br />
+Theme created by Arjuna Noorsanto in 10/2015 // Web Development + MediaProduction<br />
+<a href="/impressum/">Site impressum</a> :: <a href="/privacy-policy/">Privacy policy</a>
+</p>
+</div>
+</footer>
+<div class="gotoTop">
+<a href="#pageTop"><i class="fa fa-level-up"></i></a>
+</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--facebook like and share js -->                   
+<!--<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1425108201100352&version=v2.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>-->
+<!--google share and  like and e js -->
+<script type="text/javascript">
+window.___gcfg = {
+lang: 'en-US'
+};
+(function() {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script>
+<script type='text/javascript' src='https://apis.google.com/js/platform.js'></script>
+<!-- google share -->
+<script type="text/javascript">
+(function() {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/platform.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<!-- Addthis js -->
+<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-558ac14e7f79bff7"></script>
+<script type="text/javascript">
+var addthis_config = {  ui_click: true  };
+</script>
+<!-- twitter JS End -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+<script>
+jQuery( document ).ready(function( $ )
+{
+setTimeout(function()
+{
+jQuery('.sfsi_outr_div').css({'z-index':'1000000',opacity:1});
+jQuery('.sfsi_outr_div').fadeIn(200);
+jQuery('.sfsi_FrntInner_chg').fadeIn(200);
+}
+,45000);
+});
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.7.1","is_admin":"0","ajaxurl":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Dr\u00fccken Sie %s zum Kopieren, %s zum Einf\u00fcgen","minimize":"Klicken um Code aufzuklappen"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/bbpress/templates/default/js/editor.js?ver=23d40528e7fd245d95b3b7313599e063-5815'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/js/jquery-ui-min.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/js/shuffle/modernizr.custom.min.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/js/shuffle/jquery.shuffle.min.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/js/shuffle/random-shuffle-min.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_object = {"ajax_url":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php"};
+var ajax_object = {"ajax_url":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php","plugin_url":"http:\/\/loop.arcturus.uberspace.de\/wp-content\/plugins\/ultimate-social-media-icons\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/ultimate-social-media-icons/js/custom.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var unlimited_server_values = [];
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/unlimited/js/un.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var viewsCacheL10n = {"admin_ajax_url":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php","post_id":"62"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/wp-postviews/postviews-cache.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/rating-system/assets/js/toucheventsdetect.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var vortex_ajax_var = {"url":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php","nonce":"2529bb0d8d"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/rating-system/assets/js/like-or-dislike.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var vortex_ajax_comment = {"url":"http:\/\/loop.arcturus.uberspace.de\/wp-admin\/admin-ajax.php","nonce":"2529bb0d8d"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/plugins/rating-system/assets/js/like-or-dislike-comments.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-includes/js/comment-reply.min.js?ver=23d40528e7fd245d95b3b7313599e063'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/themes/looptheme/dist/scripts/modernizr.js'></script>
+<script type='text/javascript' src='http://loop.arcturus.uberspace.de/wp-content/themes/looptheme/dist/scripts/main.js'></script>
+</body>
+</html>
+<!-- WP Fastest Cache file was created in 0.66273498535156 seconds, on 30-10-15 18:19:50 AddThis.com (http://support.addthis.com/)-->

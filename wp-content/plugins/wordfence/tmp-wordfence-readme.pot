@@ -282,6 +282,10 @@ msgid "To install the Wordfence WordPress security plugin on WordPress Multi-Sit
 msgstr ""
 
 #. Found in changelog list item.
+msgid "Fix: Fixed bug with options that are enabled by default but disabled by the user are reset to defaults."
+msgstr ""
+
+#. Found in changelog list item.
 msgid "Fix: Added check to verify pluggable.php is included before calling wp_hash."
 msgstr ""
 

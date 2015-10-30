@@ -1,0 +1,35 @@
+html body {
+
+  .gotoTop {
+    position: fixed;
+    display: none;
+    opacity: 0;
+    top: 100%;
+    left: 100%;
+    display: block;
+    margin-top: -75px;
+    margin-left: -75px;
+    background-color: $primary-color;
+    background-image: url('/wp-content/themes/looptheme/assets/images/MetalField.png') !important;
+    background-size: 50%;
+    background-position: top left;
+    background-attachment: fixed;
+border: 4px solid $red-border-color !important;
+-webkit-border-radius: 10px !important;
+border-radius: 10px !important;
+    z-index: 2 !important;
+
+    a {
+      position: relative;
+      display: inline-block;
+      font-size: 2em;
+      font-weight: bold !important;
+      text-align: center;
+      vertical-align: middle;
+      color: $tertiary-font-color !important;
+      padding: 10px 15px 0 !important;
+      z-index: 100000 !important;
+    }
+  }
+
+}

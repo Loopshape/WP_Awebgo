@@ -3,7 +3,7 @@ html {
     overflow-y: scroll !important;
 
     * {
-      color: $primary-font-color !important;
+      color: $primary-font-color;
     }
 
     p {
@@ -43,6 +43,7 @@ html {
         .main {
           display: inherit;
           width: 100%;
+          padding-top: 40px !important;
           margin-top: 15px !important;
 
           > * {
@@ -54,14 +55,23 @@ html {
 
             h1 {
               color: $green-font-color !important;
-              text-shadow: 1px 1px 2px black !important;
+              text-shadow: 1px 1px 1px black !important;
               font-weight: bold !important;
               letter-spacing: 0.05em !important;
             }
           }
 
-          div.entry-content > * {
-            font-size: 1.125em !important;
+          div.entry-content {
+            > * {
+              font-size: 1.125em !important;
+            }
+
+            p a img {
+              display: inline-block;
+              max-width: 46%;
+              min-height: auto !important;
+              margin-right: 2% !important;
+            }
           }
 
           header {
@@ -80,8 +90,8 @@ html {
 
             time {
               position: absolute;
-              top: 20px;
-              right: 0;
+              top: 50px;
+              right: 30px;
               font-size: 1.175em !important;
               font-weight: bold !important;
               color: $tertiary-font-color - rgba(80,80,80,0.95) !important;
@@ -120,7 +130,7 @@ border-radius: 12px !important;
 //-webkit-box-shadow: 0 0 40px 0px $shadow-color !important;
 //box-shadow: 0 0 40px 0px $shadow-color !important;
             overflow: hidden !important;
-            margin-bottom: 15px;
+            //margin-bottom: 15px;
 
             header {
               display: block;
@@ -130,13 +140,15 @@ border-radius: 12px !important;
                 display: inline-block;
                 width: 100%;
                 max-width: 72%;
+                margin: 0 0 30px 0 !important;
+                line-height: 0 !important;
 
                 a {
                   font-family: 'IM Fell Great Primer', serif !important;
 
                   &, * {
                     color: $green-color !important;
-                    text-shadow: 1px 2px 3px 1px $black-color !important;
+                    text-shadow: 1px 2px 2px 1px $green-font-color !important;
                   }
 
                   &:hover {
@@ -171,7 +183,7 @@ border-radius: 12px !important;
               overflow: hidden !important;
               margin-bottom: 0 !important;
 
-              &, * {
+              &:not(&[id^="crayon-"]), *:not(div[id^="crayon-"] *) {
                 color: $white-color !important;
                 text-shadow: 0 0 2px $black-color !important;
               }
@@ -255,6 +267,10 @@ border-radius: 6px !important;
             padding-bottom: 15px !important;
           }
 
+          .masonry {
+            max-width: 98% !important;
+          }
+
           padding-bottom: 15px !important;
         }
 
@@ -305,8 +321,8 @@ border-radius: 6px !important;
           border: 1px solid $border-color !important;
 -webkit-border-radius: 10px !important;
 border-radius: 10px !important;
-          background-color: none;//$action-field-color !important;
-          background-image: url('/wp-content/themes/looptheme/assets/images/RespondTextArea.png');
+          background-color: rgba(0,8,10,0.4) + rgba(20,80,20,0.4) !important;//$action-field-color !important;
+          background-image: none !important;//url('/wp-content/themes/looptheme/assets/images/RespondTextArea.png');
           background-size: 25%;
           background-position: top left;
           background-attachment: fixed;

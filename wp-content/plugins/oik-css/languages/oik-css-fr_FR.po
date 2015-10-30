@@ -1,0 +1,191 @@
+# Copyright (C) 2015 oik-css
+# This file is distributed under the same license as the oik-css package.
+msgid ""
+msgstr ""
+"Project-Id-Version: oik-css 0.8.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-css\n"
+"POT-Creation-Date: 2015-08-28 18:14:36+00:00\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+"Language: fr_FR\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+#: admin/oik-css.php:4
+msgid "oik-CSS options"
+msgstr ""
+
+#: admin/oik-css.php:15
+msgid "Save changes"
+msgstr "Enregistrer les changements"
+
+#: admin/oik-css.php:19
+msgid "To enable automatic paragraph creation use the [bw_autop] shortcode."
+msgstr ""
+
+#: admin/oik-css.php:21
+msgid "To disable automatic paragraph creation use [bw_autop off]."
+msgstr ""
+
+#. translators: opening curly double quote
+#: includes/formatting-later.php:115
+msgctxt "opening curly double quote"
+msgid "&#8220;"
+msgstr ""
+
+#. translators: closing curly double quote
+#: includes/formatting-later.php:117
+msgctxt "closing curly double quote"
+msgid "&#8221;"
+msgstr ""
+
+#. translators: apostrophe, for example in 'cause or can't
+#: includes/formatting-later.php:120
+msgctxt "apostrophe"
+msgid "&#8217;"
+msgstr ""
+
+#. translators: prime, for example in 9' (nine feet)
+#: includes/formatting-later.php:123
+msgctxt "prime"
+msgid "&#8242;"
+msgstr ""
+
+#. translators: double prime, for example in 9" (nine inches)
+#: includes/formatting-later.php:125
+msgctxt "double prime"
+msgid "&#8243;"
+msgstr ""
+
+#. translators: opening curly single quote
+#: includes/formatting-later.php:128
+msgctxt "opening curly single quote"
+msgid "&#8216;"
+msgstr ""
+
+#. translators: closing curly single quote
+#: includes/formatting-later.php:130
+msgctxt "closing curly single quote"
+msgid "&#8217;"
+msgstr ""
+
+#. translators: en dash
+#: includes/formatting-later.php:133
+msgctxt "en dash"
+msgid "&#8211;"
+msgstr ""
+
+#. translators: em dash
+#: includes/formatting-later.php:135
+msgctxt "em dash"
+msgid "&#8212;"
+msgstr ""
+
+#: shortcodes/oik-autop.php:31
+msgid "false"
+msgstr ""
+
+#: shortcodes/oik-autop.php:31
+msgid "Re-enable/disable automatic paragraph generation"
+msgstr ""
+
+#: shortcodes/oik-background.php:83
+msgid "No thumbnail"
+msgstr ""
+
+#: shortcodes/oik-background.php:100
+msgid "<i>ID</i>"
+msgstr ""
+
+#: shortcodes/oik-background.php:100
+msgid "Post ID to find image to display"
+msgstr ""
+
+#: shortcodes/oik-background.php:101
+msgid "<i>CSS selector</i>"
+msgstr ""
+
+#: shortcodes/oik-background.php:101
+msgid "CSS selector for the background image"
+msgstr ""
+
+#: shortcodes/oik-background.php:102
+msgid "thumbnail|medium|large"
+msgstr ""
+
+#: shortcodes/oik-background.php:102
+msgid "Image size to use"
+msgstr ""
+
+#: shortcodes/oik-background.php:103
+msgid "<i>post type</i>"
+msgstr ""
+
+#: shortcodes/oik-background.php:103
+msgid "Post type"
+msgstr ""
+
+#: shortcodes/oik-background.php:104
+msgid "<i>post mime type</i>"
+msgstr ""
+
+#: shortcodes/oik-background.php:104
+msgid "Post mime type"
+msgstr ""
+
+#: shortcodes/oik-css.php:107
+msgid "Add internal CSS styling"
+msgstr ""
+
+#: shortcodes/oik-css.php:121 shortcodes/oik-css.php:122
+msgid "<i>any</i>"
+msgstr ""
+
+#: shortcodes/oik-css.php:121
+msgid "Display the CSS"
+msgstr ""
+
+#: shortcodes/oik-css.php:122
+msgid "Display the CSS with this annotation"
+msgstr ""
+
+#: shortcodes/oik-geshi.php:93
+msgid "html|css|javascript|jquery|php|none"
+msgstr ""
+
+#: shortcodes/oik-geshi.php:93
+msgid "Programming language"
+msgstr ""
+
+#: shortcodes/oik-geshi.php:94
+msgid "<i>text</i>"
+msgstr ""
+
+#: shortcodes/oik-geshi.php:94
+msgid "Descriptive text to display"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "oik-css"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/oik-css"
+msgstr "http://wordpress.org/extend/plugins/oik-css"
+
+#. Description of the plugin/theme
+msgid ""
+"Implements [bw_css] shortcode for internal CSS styling and to help document "
+"CSS examples and [bw_geshi] for other languages"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "bobbingwide"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.oik-plugins.com/author/bobbingwide"
+msgstr "http://www.oik-plugins.com/author/bobbingwide"
+

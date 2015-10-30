@@ -1,3 +1,30 @@
+@mover {
+  -webkit-transition: all 1000ms ease-out;
+-moz-transition: all 1000ms ease-out;
+-ms-transition: all 1000ms ease-out;
+-o-transition: all 1000ms ease-out;
+transition: all 1000ms ease-out;
+      opacity: 0.01 !important;
+-moz-transform: scale(0.01);
+-webkit-transform: scale(0.01);
+-o-transform: scale(0.01);
+-ms-transform: scale(0.01);
+transform: scale(0.01);
+  &:hover {
+-webkit-transition: all 1000ms ease-out;
+-moz-transition: all 1000ms ease-out;
+-ms-transition: all 1000ms ease-out;
+-o-transition: all 1000ms ease-out;
+transition: all 1000ms ease-out;
+      opacity: 0.99 !important;
+-moz-transform: scale(1.5);
+-webkit-transform: scale(1.5);
+-o-transform: scale(1.5);
+-ms-transform: scale(1.5);
+transform: scale(1.5);
+  }
+}
+
 html, body {
   position: relative;
   display: block;
@@ -14,6 +41,7 @@ body {
   height: 100%;
   background-color: rgb(0,12,24) !important;
   z-index: 2 !important;
+  @mover;
 
   > img.webArea {
     position: fixed;
@@ -62,7 +90,7 @@ body {
   }
 
   > img.secLogo {
-    display: block;
+    display: none !important;
     position: absolute;
     left: 33%;
     top: 50px;
@@ -83,6 +111,7 @@ body {
     background-size: 100%;
     background-position: top left;
     background-attachment: fixed;
+    opacity: 0.2 !important;
 -webkit-filter: blur(1px); /* Chrome, Opera, etc. */
 filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
 filter: blur(1px); /* Firefox 35+, eventually all */
@@ -94,7 +123,7 @@ filter: blur(1px); /* Firefox 35+, eventually all */
     position: relative;
     background-color: $primary-color;
     padding-top: 150px;
-    opacity: 0.75;
+    opacity: 0.82;
     z-index: 1;
 
     &:hover {
@@ -146,7 +175,7 @@ filter: blur(1px); /* Firefox 35+, eventually all */
         clear: both;
         display: inline-block;
         opacity: 1 !important;
-        z-index: 1;
+        z-index: 1000000 !important;
 
         div {
           ul {
@@ -159,8 +188,8 @@ filter: blur(1px); /* Firefox 35+, eventually all */
               display: inline-block;
               padding: 0 !important;
               margin-right: 0.5em !important;
-              background-color: none;
-              background-image: url('/wp-content/themes/looptheme/assets/images/RedStoneArea.png');
+              background-color: none !important;
+              background-image: url('/wp-content/themes/looptheme/assets/images/RedStoneArea.png') !important;
               background-size: 25% !important;
               background-position: top left;
               background-attachment: absolute;
@@ -178,24 +207,49 @@ box-shadow: 0 0 6px 0 $shadow-color;
                 padding: 0.5em 0.75em !important;
               }
 
-              &:hover {
-                background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png');
-                border-color: $green-border-color !important;
--webkit-box-shadow: 0 0 16px 0 $green-font-color !important;
-box-shadow: 0 0 16px 0 $green-font-color !important;
-              }
-
               &.current-menu-item {
+                background-color: none !important;
+                background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png') !important;
+                border-color: $green-border-color !important;
+
                 * {
                   color: $green-font-color !important;
                 }
-                background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png');
+              }
+
+              &:hover {
+                background-color: none !important;
+                background-image: url('/wp-content/themes/looptheme/assets/images/GreenStoneArea.png') !important;;
                 border-color: $green-border-color !important;
+-webkit-box-shadow: 0 0 16px 0 $green-font-color !important;
+box-shadow: 0 0 16px 0 $green-font-color !important;
               }
             }
           }
         }
       }
+    }
+  }
+}
+
+html body {
+  .laptopArea {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 1 !important;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 52%;
+      width: 100%;
+      max-width: 46%;
+      opacity: 1 !important;
+      z-index: 1000000 !important;
     }
   }
 }

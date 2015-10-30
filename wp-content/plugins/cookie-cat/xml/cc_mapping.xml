@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed><title type="text">Cookie-cat for plugins: 2012/06/09 11:59:21</title>
+<cc_mapping><plugin-name>oik-bwtrace</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>cookie-cat</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>cookie-category</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>effort</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>gravityforms</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>nggallery</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-nivo-slider</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-privacy-policy</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-testimonials</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-video</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-bbpress</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-bob-bing-wide</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-email-signature</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-fields</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-header</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik-sc-help</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>oik</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>premium-plugins</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>uk-tides</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>us-tides</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>wp-syntax</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>wp-table-reloaded</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>wordpress</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4123">wordpress_</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4120">wordpress_logged_in_</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4121">wordpress_test_</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4122">wordpress_test_cookie</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4139">wp-settings-</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4124">wp-settings-time-</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>PHP</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4125">PHPSESSID</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4126">SESS</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>wp-slimstat</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4487">slimstat_tracking_code</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>qtranslate</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4456">qtrans_admin_language</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4455">qtrans_cookie_test</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4442">TinyMCE_content_size</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>bp-loader</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4346">bb-user-settings</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4345">bb_install_language</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4336">bp-activity-oldestpage</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4343">bp-message</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4344">bp-wizard-step</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4349">bp_completed_create_steps</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4350">bp_messages_</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4348">bp_new_group_id</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>jetpack</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4179">__qca</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>si-contact-form</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4125">PHPSESSID</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4237">vc_widget_generic-expert</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>sharebar</plugin-name>
+</cc_mapping><cc_mapping><plugin-name>sexybookmarks</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4212">c_id</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4213">lps</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4225">no_cp</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4214">pss</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4228">SnapABugHistory</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4227">SnapABugRef</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4240">SnapABugVisit</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>add-to-any</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4205">uvc</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4106">__utma</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4107">__utmb</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4108">__utmc</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>bbpress</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4188">comment_author_</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4189">comment_author_email</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4190">comment_author_url</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>cookiecontrol</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4143">civicAllowCookies</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4142">civicShowCookieIcon</cookie-name>
+</cookies></cc_mapping><cc_mapping><plugin-name>googleanalytics</plugin-name>
+<cookies><cookie-name _cc_mapping_cookie="4106">__utma</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4107">__utmb</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4108">__utmc</cookie-name>
+</cookies><cookies><cookie-name _cc_mapping_cookie="4109">__utmz</cookie-name>
+</cookies></cc_mapping><cookies><cookie><name id="4123">wordpress_</name>
+<description type="html">WordPress cookie for a logged in user.</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4120">wordpress_logged_in_</name>
+<description type="html">WordPress cookie for a logged in user</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4121">wordpress_test_</name>
+<description type="html">WordPress cookie for a logged in user</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4122">wordpress_test_cookie</name>
+<description type="html">WordPress test cookie</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4139">wp-settings-</name>
+<description type="html">Wordpress also sets a few wp-settings-[UID] cookies.
+The number on the end is your individual user ID from the users database table. 
+This is used to customize your view of admin interface, and possibly also the main site interface. 
+</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess>0</_cookie_category_sess>
+<_cookie_category_duration>1 year</_cookie_category_duration>
+</cookie><cookie><name id="4124">wp-settings-time-</name>
+<description type="html">Wordpress also sets a few wp-settings-{time}-[UID] cookies. The number on the end is your individual user ID from the users database table. This is used to customize your view of admin interface, and possibly also the main site interface.
+</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>0</_cookie_category_sess>
+<_cookie_category_duration>1 year</_cookie_category_duration>
+</cookie><cookie><name id="4125">PHPSESSID</name>
+<description type="html">To identify your unique session on the website</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4126">SESS</name>
+<description type="html">To ensure that you are recognised when you move from page to page within the site and that any information you have entered is remembered.</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4487">slimstat_tracking_code</name>
+<description type="html">This cookie tracks anonymous visitor website activity statistics.
+
+</description>
+<_cookie_category>3</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>30 mins</_cookie_category_duration>
+</cookie><cookie><name id="4456">qtrans_admin_language</name>
+<description type="html">Contains the primary language of the website administrator.</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>30 days</_cookie_category_duration>
+</cookie><cookie><name id="4455">qtrans_cookie_test</name>
+<description type="html">A cookie to test if cookies are enabled.</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4442">TinyMCE_content_size</name>
+<description type="html">Cookie set by the TinyMCE editor indicating the size of the content being edited.</description>
+<_cookie_category>3</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4346">bb-user-settings</name>
+<description type="html">bb-user-settings-$UID and bb-user-settings-time-$UID are bbPress/Buddypress cookies that store the user's settings</description>
+<_cookie_category>3</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 year</_cookie_category_duration>
+</cookie><cookie><name id="4345">bb_install_language</name>
+<description type="html">BuddyPress/bbPress installation language</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 year</_cookie_category_duration>
+</cookie><cookie><name id="4336">bp-activity-oldestpage</name>
+<description type="html">On the default’s theme Activity page, rather than the list of activity being paginated, it has a “load more” button. The “bp-activity-oldestpage” cookie remembers what page of activity the “load more” is on.</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4343">bp-message</name>
+<description type="html">bp-message and bp-message-type are BuddyPress cookies. They contain a feedback (error/success) message to be displayed after the page reloads.</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 day</_cookie_category_duration>
+</cookie><cookie><name id="4344">bp-wizard-step</name>
+<description type="html">Stores the step of the BuddyPress wizard
+</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 day</_cookie_category_duration>
+</cookie><cookie><name id="4349">bp_completed_create_steps</name>
+<description type="html">Working in harmony with bp_new_group_id this records the completed steps for creation of a new buddyPress group</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 day</_cookie_category_duration>
+</cookie><cookie><name id="4350">bp_messages_</name>
+<description type="html">bp_messages_send_to, bp_messages_subject and bp_messages_content are BuddyPress cookies for messages</description>
+<_cookie_category>3</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 day</_cookie_category_duration>
+</cookie><cookie><name id="4348">bp_new_group_id</name>
+<description type="html">Contains the ID of a buddyPress group</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 day</_cookie_category_duration>
+</cookie><cookie><name id="4179">__qca</name>
+<description type="html">The _qca cookie may use your "computer’s IP address, pixel code, referring HTTP location, current HTTP location, search string, time of the access, browser’s time, any searches made on the applicable website, and other statistics" in order to "analyze Log Data from different websites and combine it with other non Personally Identifiable Information to produce the Reports that are made available on the Quantcast.com Site, to enable web publishers and advertisers to deliver audience segments that are appropriate for their products or services."
+
+</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>5 years</_cookie_category_duration>
+</cookie><cookie><name id="4237">vc_widget_generic-expert</name>
+<description type="html">Cookie created by vCita - part of Fast Secure Contact form admin page</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 year</_cookie_category_duration>
+</cookie><cookie><name id="4212">c_id</name>
+<description type="html">c_id is a Shareaholic cookie for social media sharing analytics and reporting
+</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>25 years</_cookie_category_duration>
+</cookie><cookie><name id="4213">lps</name>
+<description type="html">Shareaholic cookie for social media sharing, analytics and reporting
+</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>25 years</_cookie_category_duration>
+</cookie><cookie><name id="4225">no_cp</name>
+<description type="html">Set by shareaholic - sexybookmarks - this cookie is associated with the message "Get the shareaholic chrome extension - It is the best way to share your content, discover, and connect with the Best of the Web!"</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>60 days</_cookie_category_duration>
+</cookie><cookie><name id="4214">pss</name>
+<description type="html">Shareaholic cookie for social media sharing, analytics and reporting
+</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>25 years</_cookie_category_duration>
+</cookie><cookie><name id="4228">SnapABugHistory</name>
+<description type="html">unique identifiers given to each computer and some important session information to allow us to provide online help
+</description>
+<_cookie_category>3</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 year</_cookie_category_duration>
+</cookie><cookie><name id="4227">SnapABugRef</name>
+<description type="html"/>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>2 hours</_cookie_category_duration>
+</cookie><cookie><name id="4240">SnapABugVisit</name>
+<description type="html">set when visiting Shareaholic Analytics Settings</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4205">uvc</name>
+<description type="html">The uvc cookie is one of the cookies used to track usage of the Addthis.com service. It allows a user to share a webpage with many social sites.
+
+</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>1 day</_cookie_category_duration>
+</cookie><cookie><name id="4106">__utma</name>
+<description type="html">This cookie keeps track of the number of times a visitor has been to the site pertaining to the cookie, when their first visit was, and when their last visit occurred. Google Analytics uses the information from this cookie to calculate things like Days and Visits to purchase.</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>0</_cookie_category_sess>
+<_cookie_category_duration>permanent</_cookie_category_duration>
+</cookie><cookie><name id="4107">__utmb</name>
+<description type="html">__utmb is a Google Analytics cookie. It takes a timestamp of the exact moment in time when a visitor enters a site.</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>on</_cookie_category_sess>
+<_cookie_category_duration/>
+</cookie><cookie><name id="4108">__utmc</name>
+<description type="html">__utmc takes a timestamp of the exact moment in time when a visitor leaves a site.</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>0</_cookie_category_sess>
+<_cookie_category_duration>30 mins</_cookie_category_duration>
+</cookie><cookie><name id="4188">comment_author_</name>
+<description type="html">WordPress comment cookie. </description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>347 days</_cookie_category_duration>
+</cookie><cookie><name id="4189">comment_author_email</name>
+<description type="html">Similar to comment_author_</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>347 days</_cookie_category_duration>
+</cookie><cookie><name id="4190">comment_author_url</name>
+<description type="html">Similar to comment_author_</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess/>
+<_cookie_category_duration>347 days</_cookie_category_duration>
+</cookie><cookie><name id="4143">civicAllowCookies</name>
+<description type="html">Cookie Control user interface to remember your preference</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess>0</_cookie_category_sess>
+<_cookie_category_duration>90 days</_cookie_category_duration>
+</cookie><cookie><name id="4142">civicShowCookieIcon</name>
+<description type="html">Cookie Control user interface to remember your preference</description>
+<_cookie_category>1</_cookie_category>
+<_cookie_category_sess>0</_cookie_category_sess>
+<_cookie_category_duration>90 days</_cookie_category_duration>
+</cookie><cookie><name id="4109">__utmz</name>
+<description type="html">Keeps track of where the visitor came from, what search engine you used, what link you clicked on, what keyword you used, and where they were in the world when you accessed a website. This cookie is how Google Analytics knows to whom and to what source / medium / keyword to assign the credit for a Goal Conversion or an Ecommerce Transaction. 
+</description>
+<_cookie_category>2</_cookie_category>
+<_cookie_category_sess>0</_cookie_category_sess>
+<_cookie_category_duration>6 months</_cookie_category_duration>
+</cookie></cookies></feed>

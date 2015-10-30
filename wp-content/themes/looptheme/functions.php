@@ -9,6 +9,9 @@
  *
  * @link https://github.com/roots/sage/pull/1042
  */
+
+add_theme_support('post-thumbnails');
+
 $sage_includes = [
   'lib/utils.php',                 // Utility functions
   'lib/init.php',                  // Initial theme setup and constants

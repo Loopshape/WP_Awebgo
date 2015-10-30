@@ -21,7 +21,6 @@
     "commit": "1db940c2bb90fe93a9211c9c9c0654d761656aa7"
   },
   "_source": "git://github.com/greensock/GreenSock-JS.git",
-  "_target": "~1.18.0",
-  "_originalSource": "gsap",
-  "_direct": true
+  "_target": "*",
+  "_originalSource": "gsap"
 }

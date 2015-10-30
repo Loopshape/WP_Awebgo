@@ -1,0 +1,13 @@
+@font-face {
+font-family: 'MonacoRegular';
+src: url(//loop.arcturus.uberspace.de/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco/monaco-webfont.eot);
+src: url(//loop.arcturus.uberspace.de/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco/monaco-webfont.eot?#iefix) format('embedded-opentype'),
+url(//loop.arcturus.uberspace.de/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco/monaco-webfont.woff) format('woff'),
+url(//loop.arcturus.uberspace.de/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco/monaco-webfont.ttf) format('truetype'),
+url(//loop.arcturus.uberspace.de/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco/monaco-webfont.svg#MonacoRegular) format('svg');
+font-weight: normal;
+font-style: normal;
+}
+.crayon-font-monaco * {
+font-family: Monaco, 'MonacoRegular', 'Courier New', monospace !important;
+}
