@@ -110,21 +110,34 @@
                         $('body > div.laptopArea > img').on('click touchend', function(event) {
                             event.preventDefault();
                             if ($('body').hasClass('static')) {
-                                $('body').removeClass('static').removeClass('mover');
-                                $('*').css({
-                                    '-webkit-transition' : 'all 0ms ease-out',
-                                    '-moz-transition' : 'all 0ms ease-out',
-                                    '-ms-transition' : 'all 0ms ease-out',
-                                    '-o-transition' : 'all 0ms ease-out',
-                                    'transition' : 'all 0ms ease-out',
-'-moz-transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
-'-webkit-transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
-'-o-transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
-'-ms-transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
-'transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)'
-                                });
+                                $('body').removeClass('static');
                             }
-                            return false;
+                            if ($('body').hasClass('mover')) {
+                                $('body').removeClass('mover');
+                            }
+                            $laptopArea = $('.laptopArea img');
+                            $laptopArea.animate({
+                                'opacity' : '-=0.999'
+                            }).hide();
+                            $('html *:not(*.wrap.container)').css({
+                                '-webkit-transition' : 'all 2000ms ease-in-out',
+                                '-moz-transition' : 'all 2000ms ease-in-out',
+                                '-ms-transition' : 'all 2000ms ease-in-out',
+                                '-o-transition' : 'all 2000ms ease-in-out',
+                                'transition' : 'all 2000ms ease-in-out',
+                                '-moz-transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
+                                '-webkit-transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
+                                '-o-transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
+                                '-ms-transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
+                                'transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
+                                'top' : '0',
+                                'left' : '0',
+                                'right' : 'auto',
+                                'bottom' : 'auto',
+                                'margin' : '0',
+                                'padding' : '0',
+                                'opacity' : '0.999'
+                            });
                         });
 
                         // Set BODY to colorful mode

@@ -85,11 +85,13 @@ var revManifest = path.dist + 'assets.json';
 var cssTasks = function(filename) {
     return lazypipe()
     .pipe(function() {
-    return gulpif(!enabled.failStyleTask, plumber());
+    return gulpif(enabled.failStyleTask, plumber());
     })
+    /*
     .pipe(function() {
     return gulpif(!enabled.maps, sourcemaps.init());
     })
+    */
     .pipe(function() {
     return gulpif('*.less', less());
     })
@@ -98,7 +100,7 @@ var cssTasks = function(filename) {
     outputStyle: 'nested', // libsass doesn't support expanded yet
     precision: 10,
     includePaths: ['.'],
-    errLogToConsole: !enabled.failStyleTask
+    errLogToConsole: enabled.failStyleTask
     }));
     })
     .pipe(concat, filename)
@@ -141,7 +143,7 @@ var jsTasks = function(filename) {
     .pipe(concat, filename)
     .pipe(uglify, {
     compress: {
-    'drop_debugger': !enabled.stripJSDebug
+    'drop_debugger': enabled.stripJSDebug
     }
     })
     .pipe(function() {
