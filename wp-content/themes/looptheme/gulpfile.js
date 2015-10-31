@@ -304,7 +304,7 @@ gulp.task('default', function() {
     });
     gulp.watch([path.source + 'styles/**/*'], ['styles']);
     gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
-    //gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
-    //gulp.watch([path.source + 'images/**/*'], ['images']);
+    gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
+    gulp.watch([path.source + 'images/**/*'], ['images']);
     gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });

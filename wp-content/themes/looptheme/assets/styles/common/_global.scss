@@ -167,7 +167,7 @@ box-sizing: border-box !important;
       strong {
         opacity: 0.9 !important;
       }
-      &, * {
+      &, *:not(strong) {
         color: $yellow-font-color !important;
         text-shadow: 0 0 0.66px $green-font-color !important;
         opacity: 0.8;

@@ -13,7 +13,11 @@
 (function($) {
     "use_strict";
 
+    // ********************************************************************************
+
     var scriptdata = function() {
+
+        var _minScreenSize = 800;
 
         var _scrollElem = 'body .wrap.container';
 
@@ -101,44 +105,27 @@
                         });
                     }
 
+                    // ********************************************************************************
+
                     $(function($) {
 
-                        // Init CSS3-TRANSITIONS
-                        if (!$('body').hasClass('mover')) {
-                            $('body').addClass('mover');
-                        }
-                        $('body > div.laptopArea > img').on('click touchend', function(event) {
+                        $('div.laptopArea img').on('click', function(event) {
                             event.preventDefault();
+                            $('.laptopArea img').animate({
+                                'opacity' : '-=0.999'
+                            },1500).hide();
                             if ($('body').hasClass('static')) {
                                 $('body').removeClass('static');
                             }
                             if ($('body').hasClass('mover')) {
                                 $('body').removeClass('mover');
                             }
-                            $laptopArea = $('.laptopArea img');
-                            $laptopArea.animate({
-                                'opacity' : '-=0.999'
-                            }).hide();
-                            $('html *:not(*.wrap.container)').css({
-                                '-webkit-transition' : 'all 2000ms ease-in-out',
-                                '-moz-transition' : 'all 2000ms ease-in-out',
-                                '-ms-transition' : 'all 2000ms ease-in-out',
-                                '-o-transition' : 'all 2000ms ease-in-out',
-                                'transition' : 'all 2000ms ease-in-out',
-                                '-moz-transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
-                                '-webkit-transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
-                                '-o-transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
-                                '-ms-transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
-                                'transform' : 'scale(4) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
-                                'top' : '0',
-                                'left' : '0',
-                                'right' : 'auto',
-                                'bottom' : 'auto',
-                                'margin' : '0',
-                                'padding' : '0',
-                                'opacity' : '0.999'
-                            });
                         });
+
+                        // Init CSS3-TRANSITIONS
+                        if (!$('body').hasClass('mover')) {
+                            $('body').addClass('mover');
+                        }
 
                         // Set BODY to colorful mode
                         $('body').addClass('colorful');
@@ -229,23 +216,28 @@
                         // Click handler for internal and external URLs
                         // with Screen-Fading functionality via Greensock.
                         // Coded by Arjuna Noorsanto
-                        $('a').on('click touchend', function(event) {
-                            event.preventDefault();
+                        $('a:not(a[data-rel^="lightbox"])').on('click', function(event) {
                             var _href = $(this).prop('href');
                             if ($(this).hasClass('external')) {
+                                event.preventDefault();
                                 $('body').addClass('static');
-                                setTimeout(function() {
+                                $('.container.wrap').animate({
+                                    'opacity' : '-=1'
+                                },1000, function() {
                                     window.open(_href, '_blank');
-                                }, 100);
+                                });
                                 return false;
                             } else {
                                 $('body').addClass('static');
-                                setTimeout(function() {
+                                $('.container.wrap').animate({
+                                    'opacity' : '-=1'
+                                },1000, function() {
                                     if ($(this).hasClass('internal') === true) {
                                         return true;
                                     }
+                                    event.preventDefault();
                                     window.location = _href;
-                                }, 100);
+                                });
                                 return false;
 
                             }
@@ -324,8 +316,8 @@
 
                         // Set BODY width to screen-width for better viewport resizing
                         var $window = $(window).innerWidth();
-                        if ($window < 1280) {
-                            $window = 1280;
+                        if ($window < _minScreenSize) {
+                            $window = _minScreenSize;
                             $('body').css('min-width', $window).css('max-width', $window).css('overflow', 'scroll');
                         } else {
                             $('body').css('min-width', $window).css('max-width', $window);
@@ -351,22 +343,6 @@
                         //category-framework category-layoutdesign category-mediaproduction category-nodejs category-ssh category-technology category-themetemplate category-web-development tag-assets-pipeline tag-automation tag-data tag-gulp tag-gulpfile-js tag-streaming
 
                     });
-                }
-            },
-            // Home page
-            'techjournal' : {
-                init : function() {
-                    // JavaScript to be fired on the home page
-                },
-
-                finalize : function() {
-                    // JavaScript to be fired on the home page, after the init JS
-                }
-            },
-            // About us page, note the change from about-us to about_us.
-            'production' : {
-                init : function() {
-                    // JavaScript to be fired on the about us page
                 }
             }
         };

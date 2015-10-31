@@ -5,7 +5,7 @@
 <img class="backgroundTop" src="/wp-content/themes/looptheme/assets/images/BackgroundTop.png" alt="" width="100%" height="auto">
 <img class="secLogo" src="/wp-content/themes/looptheme/assets/images/Awebgo_SpaceShip.png" alt="">
 <div class="laptopArea">
-	<img src="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/10/3D_Laptop.png" alt="" width="50%" height="auto">
+	<img src="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/10/3D_Laptop.png" alt="" width="50%" height="auto" class="hastip" title="[Klick] Static DOM aktivieren">
 </div>
 <div class="dotArea"></div>
 <header class="banner" role="banner">

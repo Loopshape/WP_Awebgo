@@ -1,5 +1,9 @@
 html body {
 
+  button, input[type="submit"] {
+    margin-bottom: 10px !important;
+  }
+
   .gotoTop {
     position: fixed;
     display: none;
