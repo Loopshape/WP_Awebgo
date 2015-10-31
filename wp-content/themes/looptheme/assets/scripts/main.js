@@ -103,6 +103,30 @@
 
                     $(function($) {
 
+                        // Init CSS3-TRANSITIONS
+                        if (!$('body').hasClass('mover')) {
+                            $('body').addClass('mover');
+                        }
+                        $('body > div.laptopArea > img').on('click touchend', function(event) {
+                            event.preventDefault();
+                            if ($('body').hasClass('static')) {
+                                $('body').removeClass('static').removeClass('mover');
+                                $('*').css({
+                                    '-webkit-transition' : 'all 0ms ease-out',
+                                    '-moz-transition' : 'all 0ms ease-out',
+                                    '-ms-transition' : 'all 0ms ease-out',
+                                    '-o-transition' : 'all 0ms ease-out',
+                                    'transition' : 'all 0ms ease-out',
+'-moz-transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
+'-webkit-transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
+'-o-transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
+'-ms-transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)',
+'transform': 'scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)'
+                                });
+                            }
+                            return false;
+                        });
+
                         // Set BODY to colorful mode
                         $('body').addClass('colorful');
 
@@ -145,7 +169,7 @@
                         $('section.widget h3').prepend('<i class="fa fa-square yellow"></i>&nbsp;');
                         $('body div.wrap.container div > * > div.page-header > h1').prepend('<i class="fa fa-edit green"></i>&nbsp;');
                         $('.widget .tagcloud a').prepend('<i class="fa fa-asterisk yellow"></i>&nbsp;');
-                        if($('article').length!==0) {
+                        if ($('article').length !== 0) {
                             $('time.updated').prepend('<i class="fa fa-clock-o yellow"></i>&nbsp;');
                         }
 
@@ -196,13 +220,19 @@
                             event.preventDefault();
                             var _href = $(this).prop('href');
                             if ($(this).hasClass('external')) {
-                                window.open(_href, '_blank');
+                                $('body').addClass('static');
+                                setTimeout(function() {
+                                    window.open(_href, '_blank');
+                                }, 100);
                                 return false;
                             } else {
-                                if ($(this).hasClass('internal') === true) {
-                                    return true;
-                                }
-                                window.location = _href;
+                                $('body').addClass('static');
+                                setTimeout(function() {
+                                    if ($(this).hasClass('internal') === true) {
+                                        return true;
+                                    }
+                                    window.location = _href;
+                                }, 100);
                                 return false;
 
                             }
@@ -287,6 +317,25 @@
                         } else {
                             $('body').css('min-width', $window).css('max-width', $window);
                         }
+
+                        if ($('article.post').length !== 0) {
+
+                            var ci = 0;
+                            var _classes = $(this).attr('class');
+                            var _cname = [];
+
+                            if (_classes.indexOf(ci) >= 0) {
+
+                                _cname[ci] = _classes.indexOf(ci);
+                                var _char = _cname.str.split("-");
+                                var name = _char[1];
+
+                                console.log('cName: ' + name);
+
+                                ci++;
+                            }
+                        }
+                        //category-framework category-layoutdesign category-mediaproduction category-nodejs category-ssh category-technology category-themetemplate category-web-development tag-assets-pipeline tag-automation tag-data tag-gulp tag-gulpfile-js tag-streaming
 
                     });
                 }

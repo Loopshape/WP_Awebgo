@@ -80,7 +80,7 @@ box-sizing: border-box !important;
       opacity: 1;
 
       p, a, sub, sup {
-        color: $main-font-color;
+        //color: $main-font-color;
       }
 
       &:focus,
@@ -98,7 +98,7 @@ box-sizing: border-box !important;
       &:not(i.fa) {
         position: relative;
         font-family: 'Josefin Sans', sans-serif !important;
-        color: $primary-font-color !important;
+        //color: $primary-font-color !important;
         opacity: $font-opacity !important;
       }
     }
@@ -107,7 +107,7 @@ box-sizing: border-box !important;
       color: $green-font-color !important;
     }
 
-    a:not(.fa) {
+    a:not(i.fa) {
       position: relative;
       //display: inherit;
       font-family: 'Josefin Sans', sans-serif !important;
@@ -141,17 +141,22 @@ box-sizing: border-box !important;
       font-weight: normal !important;
       color: $tertiary-color !important;
       opacity: 0.98 !important;
+      &, * {
+        color: $green-font-color !important;
+        text-shadow: 0 0 0.66px $green-font-color !important;
+        opacity: 0.8;
+      }
     }
 
     h2 , h2 > a {
       color: $green-color !important;
       text-shadow: 0 0 4px $green-font-color !important;
       font-weight: normal !important;
-      color: rgba(200,200,200,1) !important;
-
-      > i {
+      //color: rgba(200,200,200,1) !important;
+      &, * {
         color: $green-font-color !important;
-        text-shadow: 0 0 3px $green-font-color !important;
+        text-shadow: 0 0 0.66px $green-font-color !important;
+        opacity: 0.8;
       }
     }
 
@@ -159,15 +164,13 @@ box-sizing: border-box !important;
       font-weight: thin !important;
       color: rgba(200,200,200,1) !important;
       text-shadow: none !important;
-
       strong {
         opacity: 0.9 !important;
       }
-
-      > i {
+      &, * {
         color: $yellow-font-color !important;
-        text-shadow: 0 0 3px $yellow-font-color !important;
-        opacity: 0.9 !important;
+        text-shadow: 0 0 0.66px $green-font-color !important;
+        opacity: 0.8;
       }
     }
 

@@ -136,19 +136,19 @@ var cssTasks = function(filename) {
 var jsTasks = function(filename) {
     return lazypipe()
     .pipe(function() {
-    return gulpif(enabled.maps, sourcemaps.init());
+    return gulpif(!enabled.maps, sourcemaps.init());
     })
     .pipe(concat, filename)
     .pipe(uglify, {
     compress: {
-    'drop_debugger': enabled.stripJSDebug
+    'drop_debugger': !enabled.stripJSDebug
     }
     })
     .pipe(function() {
     return gulpif(enabled.rev, rev());
     })
     .pipe(function() {
-    return gulpif(enabled.maps, sourcemaps.write('.', {
+    return gulpif(!enabled.maps, sourcemaps.write('.', {
     sourceRoot: 'assets/scripts/'
     }));
     })();
