@@ -123,7 +123,7 @@
                         });
 
                         // Init CSS3-TRANSITIONS
-                        if (!$('body').hasClass('mover')) {
+                        if (!$('body').hasClass('mover') && $('body').hasClass('home')) {
                             $('body').addClass('mover');
                         }
 
