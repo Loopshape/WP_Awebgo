@@ -6524,6 +6524,9 @@ function extend( a, b ) {
                                         if ($(this).hasClass('internal') === true) {
                                             return true;
                                         }
+                                        if ($('a:not(a[data-rel^="lightbox"])').length!==0)) {
+                                            return false;
+                                        }
                                         event.preventDefault();
                                         window.location = _href;
                                     });

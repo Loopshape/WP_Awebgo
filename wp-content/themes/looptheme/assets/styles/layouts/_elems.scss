@@ -4,7 +4,7 @@ html body:not(body.static) {
   > div.wrap.container > div > .main {
     p {
       a {
-        img:not(.masonry img) {
+        img:not(.masonry img):not(img.wp-smiley) {
           width: 100% !important;
           height: auto !important;
           max-width: 36% !important;
@@ -566,5 +566,34 @@ html body img#imagelightbox {
   z-index: 80000000 !important;
   &:hover {
     cursor: pointer;
+  }
+}
+
+html body img.wp-smiley {
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+html body div.comment-content,
+html body .vortex-container-vote-comment {
+  clear: both !important;
+  margin-top: -30px !important;
+  line-height: 100% !important;
+
+  > p,
+  > a,
+  > * > strong {
+    clear: both !important;
+    padding: 0.5em 0 !important;
+  }
+
+  > * {
+    margin-top: 30px !important;
+  }
+
+  &, *:not(img) {
+    float: left !important;
+    width: auto !important;
   }
 }
