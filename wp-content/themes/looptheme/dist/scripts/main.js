@@ -6618,11 +6618,13 @@ function extend( a, b ) {
                         }
 
                         // Set FOCUS on BODY when document-load finishes
-                        $(document).on('onload', function() {
+                        if($('html').hasClass('init')) {
+                            $('html').removeClass('init');
                             $('body>header,body>.container,body>footer').animate({
                                 'opacity' : '+=0.999'
                             },2000);
-                        });
+                            $('body').addClass('mover');
+                        }
 
                     });
                 }
