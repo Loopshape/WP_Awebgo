@@ -3,7 +3,7 @@
 * Plugin Name: Rating System
 * Plugin URI: http://github.com/VortexThemes/rating-system
 * Description: The simple way to add like or dislike buttons.
-* Version: 2.7.1
+* Version: 2.7.2
 * Author: VortexThemes
 * Author URI: https://github.com/VortexThemes
 * License: GPL2
@@ -123,9 +123,18 @@ function vortex_systen_main_function(){
 	if(!function_exists('is_plugin_active')){
 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 	}
-
-	include(plugin_dir_path( __FILE__ ).'mycredcomments.php');
-	include(plugin_dir_path( __FILE__ ).'mycredposts.php');
+	if(class_exists('myCRED_Hook')){
+		include(plugin_dir_path( __FILE__ ).'mycredcomments.php');
+		include(plugin_dir_path( __FILE__ ).'mycredposts.php');
+		function vortex_mycred_references_filter($references){
+			$references['vortex_like_posts_mycred_author_content'] = __( 'Receive like for posts(content author)', 'vortex_system_ld' );
+			$references['vortex_like_posts_mycred_author'] = __( 'Receive like for posts(like author)', 'vortex_system_ld' );
+			$references['vortex_like_coms_mycred_author_content'] = __( 'Receive like for comments(content author)', 'vortex_system_ld' );
+			$references['vortex_like_coms_mycred_author'] = __( 'Receive like for comments(like author)', 'vortex_system_ld' );
+			return $references;
+		}
+		add_filter('mycred_all_references','vortex_mycred_references_filter');
+	}
 	
 	if(function_exists('is_plugin_active')){
 		if(is_plugin_active('redux-framework/redux-framework.php')){
@@ -216,6 +225,7 @@ function rating_system_load_widgets(){
 add_action('plugins_loaded','rating_system_load_widgets');
 //add shortcode
 function vortex_rating_system_register_shortcodes(){
-		 add_shortcode('rating-system', 'vortex_render_for_posts');
+		 add_shortcode('rating-system-posts', 'vortex_render_for_posts');
+		 add_shortcode('rating-system-comments', 'vortex_render_for_comments');
 }
 add_action( 'init', 'vortex_rating_system_register_shortcodes');

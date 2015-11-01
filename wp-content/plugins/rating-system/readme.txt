@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: like, dislike, voting, rating, upvote, downvote, ajax, interactive, widget, comments, post, posts, page, widgets, jquery, custom post type, dashbord, bbpress
 Requires at least: 4.1
 Tested up to: 4.3.1
-Stable tag: 2.7.1
+Stable tag: 2.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,8 @@ The simple way to add like and dislike buttons for your posts, pages, comments a
 * Option to disable the dislike button. &#10004;
 * Free Widget to show your most liked posts. &#10004;
 * Free WordPress Dashboard widget. &#10004;
-* Shortcode [rating-system](You must have turned on like or dislike for posts and pages and if you want you can disable display buttons on). &#10004;
+* Shortcode [rating-system-posts](You must have turned on like or dislike for posts and pages and if you want you can disable display buttons on). &#10004;
+* Shortcode [rating-system-comments]. &#10004;
 * Sort comments by likes. &#10004;
 * Check the screenshots tab we have a lot of cool features.
 * If you finds bugs or need support go to the support tab.
@@ -80,6 +81,10 @@ notices
 >
 
 == Changelog ==
+= 2.7.2 = 
+* Fixed fatal error on PHP 5.2.4.
+* Added shortcode for comments.
+* Improved myCred integration.
 = 2.7.1 = 
 * Fixed fatal error on PHP 5.3.
 = 2.7 = 

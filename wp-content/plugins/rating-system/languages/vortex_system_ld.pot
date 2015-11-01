@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-22 18:23+0300\n"
+"POT-Creation-Date: 2015-11-01 14:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,57 +17,73 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: comments.php:746 posts-pages.php:633
+#: comments.php:750 posts-pages.php:633
 msgid "Likes"
 msgstr ""
 
-#: comments.php:749 posts-pages.php:636
+#: comments.php:753 posts-pages.php:636
 msgid "Dislikes"
 msgstr ""
 
-#: mycredcomments.php:122 mycredposts.php:126
+#: mycredcomments.php:158 mycredposts.php:162
 msgid "Like"
 msgstr ""
 
-#: mycredcomments.php:125 mycredposts.php:129
+#: mycredcomments.php:161 mycredposts.php:165
 msgid "Like Author"
 msgstr ""
 
-#: mycredcomments.php:129 mycredcomments.php:146
+#: mycredcomments.php:165 mycredcomments.php:182
 msgid "Comment Author"
 msgstr ""
 
-#: mycredcomments.php:134 mycredcomments.php:151 mycredposts.php:138
-#: mycredposts.php:155
+#: mycredcomments.php:170 mycredcomments.php:187 mycredposts.php:174
+#: mycredposts.php:191
 msgid "Log template"
 msgstr ""
 
-#: mycredcomments.php:139 mycredposts.php:143
+#: mycredcomments.php:175 mycredposts.php:179
 msgid "Dislike"
 msgstr ""
 
-#: mycredcomments.php:142 mycredposts.php:146
+#: mycredcomments.php:178 mycredposts.php:182
 msgid "Dislike Author"
 msgstr ""
 
-#: mycredcomments.php:156 mycredposts.php:160
+#: mycredcomments.php:192 mycredposts.php:196
 msgid "Log for canceled vote"
 msgstr ""
 
-#: mycredcomments.php:188
+#: mycredcomments.php:219
 msgid "Points for like/dislike comments"
 msgstr ""
 
-#: mycredcomments.php:189 mycredposts.php:193
+#: mycredcomments.php:220 mycredposts.php:224
 msgid "Settings"
 msgstr ""
 
-#: mycredposts.php:133 mycredposts.php:150
+#: mycredposts.php:169 mycredposts.php:186
 msgid "Content Author"
 msgstr ""
 
-#: mycredposts.php:192
+#: mycredposts.php:223
 msgid "Points for like/dislike posts"
+msgstr ""
+
+#: rating-system.php:132
+msgid "Receive like for posts(content author)"
+msgstr ""
+
+#: rating-system.php:133
+msgid "Receive like for posts(like author)"
+msgstr ""
+
+#: rating-system.php:134
+msgid "Receive like for comments(content author)"
+msgstr ""
+
+#: rating-system.php:135
+msgid "Receive like for comments(like author)"
 msgstr ""
 
 #: admin/vortexlikedislike.php:11

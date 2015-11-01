@@ -1,3 +1,7 @@
+## [2.7.2]
+### Fixed fatal error on PHP 5.2.4.
+### Added shortcode for comments.
+### Improved myCred integration.
 ## [2.7.1] 
 ### Fixed fatal error on PHP 5.3.
 ## [2.7]

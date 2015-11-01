@@ -1,5 +1,4 @@
 <?php
-if(class_exists('myCRED_Hook')){
 	class vortex_like_posts_mycred extends myCRED_Hook {
 		/**
 		 * Construct
@@ -44,73 +43,110 @@ if(class_exists('myCRED_Hook')){
 				if ( $this->core->exclude_user( $user_id ) ) return;
 				
 				if($like == "-likes" && $dislike == "+dislikes"){
+				
 					$likes = 0 - $this->prefs['like']['creds'];
 					$dislikes = $this->prefs['dislike']['creds'];
 					$text = $this->prefs['dislike']['log'];
 					$points = $likes + $dislikes;
+					$ref = 'vortex_dislike_posts_mycred_author';
+					
 				}elseif($like == "+likes" && $dislike == "-dislikes"){
+					
 					$likes = $this->prefs['like']['creds'];
 					$dislikes = 0 - $this->prefs['dislike']['creds'];
 					$points = $likes + $dislikes;
 					$text = $this->prefs['like']['log'];
+					$ref = 'vortex_like_posts_mycred_author';
+					
 				}elseif($like == "+likes"){
+					
 					$points = $this->prefs['like']['creds'];
 					$text = $this->prefs['like']['log'];
+					$ref = 'vortex_like_posts_mycred_author';
+					
 				}elseif($like == "-likes"){
+					
 					$points = 0 - $this->prefs['like']['creds'];
 					$text = $this->prefs['canceled'];
+					$ref = 'vortex_cancel_like_posts_mycred_author';
+					
 				}elseif($dislike == "+dislikes"){
+					
 					$points = $this->prefs['dislike']['creds'];
 					$text = $this->prefs['dislike']['log'];
+					$ref = 'vortex_dislike_posts_mycred_author';
+					
 				}else{
+					
 					$points = 0 - $this->prefs['dislike']['creds'];
 					$text = $this->prefs['canceled'];
+					$ref = 'vortex_cancel_dislike_posts_mycred_author';
+					
 				}
 				$this->core->add_creds(
-						'vortex_dislike_posts_mycred',
-						$user_id,
-						$points,
-						$text,
-						0,
-						'',
-						$m
-					);
+					$ref,
+					$user_id,
+					$points,
+					$text,
+					0,
+					'',
+					$m
+				);
 				
 				
-				
-					if($like == "-likes" && $dislike == "+dislikes"){
+					
+				if($like == "-likes" && $dislike == "+dislikes"){
+					
 					$likes = 0 - $this->prefs['like']['author'];
 					$dislikes = $this->prefs['dislike']['author'];
 					$points = $likes + $dislikes;
 					$text = $this->prefs['dislike']['log'];
-					}elseif($like == "+likes" && $dislike == "-dislikes"){
+					$ref = 'vortex_dislike_posts_mycred_author_content';
+					
+				}elseif($like == "+likes" && $dislike == "-dislikes"){
+					
 					$likes = $this->prefs['like']['author'];
 					$dislikes = 0 - $this->prefs['dislike']['author'];
 					$points = $likes + $dislikes;
 					$text = $this->prefs['like']['log'];
-					}elseif($like == "+likes"){
+					$ref = 'vortex_like_posts_mycred_author_content';
+					
+				}elseif($like == "+likes"){
+					
 					$points = $this->prefs['like']['author'];
 					$text = $this->prefs['like']['log'];
-					}elseif($like == "-likes"){
+					$ref = 'vortex_like_posts_mycred_author_content';
+					
+					
+				}elseif($like == "-likes"){
+					
 					$points = 0 - $this->prefs['like']['author'];
 					$text = $this->prefs['canceled'];
-					}elseif($dislike == "+dislikes"){
+					$ref = 'vortex_cancel_like_posts_mycred_author_content';
+					
+				}elseif($dislike == "+dislikes"){
+					
 					$points = $this->prefs['dislike']['author'];
 					$text = $this->prefs['dislike']['log'];
-					}else{
+					$ref = 'vortex_dislike_posts_mycred_author_content';
+					
+				}else{
+					
 					$points = 0 - $this->prefs['dislike']['author'];
 					$text = $this->prefs['canceled'];
-					}
-					$this->core->add_creds(
-						'vortex_dislike_posts_mycred',
-						$post_author_id,
-						$points,
-						$text,
-						0,
-						'',
-						$m
-					);
-				
+					$ref = 'vortex_cancel_dislike_posts_mycred_author_content';
+					
+				}
+				$this->core->add_creds(
+					$ref,
+					$post_author_id,
+					$points,
+					$text,
+					0,
+					'',
+					$m
+				);
+					
 			}
 			
 		}
@@ -172,11 +208,6 @@ if(class_exists('myCRED_Hook')){
 		public function sanitise_preferences( $data ) {
 			$new_data = $data;
 
-			
-			$new_data['like']['creds'] = ( !empty( $data['like']['creds'] ) ) ? $data['like']['creds'] : $this->defaults['like']['creds'];
-			$new_data['dislike']['creds'] = ( !empty( $data['dislike']['creds'] ) ) ? $data['dislike']['creds'] : $this->defaults['dislike']['creds'];
-			$new_data['like']['author'] = ( !empty( $data['like']['author'] ) ) ? $data['like']['author'] : $this->defaults['like']['author'];
-			$new_data['dislike']['author'] = ( !empty( $data['dislike']['author'] ) ) ? $data['dislike']['author'] : $this->defaults['dislike']['author'];
 			$new_data['like']['log'] = ( !empty( $data['like']['log'] ) ) ? sanitize_text_field( $data['like']['log'] ) : $this->defaults['like']['log'];
 			$new_data['dislike']['log'] = ( !empty( $data['dislike']['log'] ) ) ? sanitize_text_field( $data['dislike']['log'] ) : $this->defaults['dislike']['log'];
 			$new_data['canceled'] = ( !empty( $data['canceled'] ) ) ? sanitize_text_field( $data['canceled'] ) : $this->defaults['canceled'];
@@ -195,4 +226,3 @@ if(class_exists('myCRED_Hook')){
 		);
 		return $installed;
 	}
-}

@@ -590,17 +590,17 @@ if($vortex_like_dislike['v-switch-comments']){
 						'nonce' => wp_create_nonce( 'ajax-nonce' )
 						)
 					);
-					add_filter( 'epoch_iframe_scripts', function( $handles ) {
-						$my_script_handles  = array( 'vortex_touchevents', 'vortex_like_or_dislike_comment_js' );
-						if ( ! empty( $handles ) && is_array( $handles ) ) {
-							$handles = array_merge( $handles, $my_script_handles );
-						}else{
-							$handles = $my_script_handles;
+					add_filter( 'epoch_iframe_scripts', 'vortex_iframe_scripts_1');
+						function vortex_iframe_scripts_1($handles){
+							$my_script_handles  = array( 'vortex_touchevents', 'vortex_like_or_dislike_comment_js' );
+							if ( ! empty( $handles ) && is_array( $handles ) ) {
+								$handles = array_merge( $handles, $my_script_handles );
+							}else{
+								$handles = $my_script_handles;
+							}
+
+							return $handles;
 						}
-
-						return $handles;
-
-					});
 				}else{
 					wp_register_script( 'vortex_touchevents', plugin_dir_url( __FILE__ ).'assets/js/toucheventsdetect.js', array('jquery'), '1.0',true);
 					wp_register_script( 'vortex_no_dislike_js_comment', plugin_dir_url( __FILE__ ).'assets/js/no-dislike-comments.js', array('jquery'), '1.0',true);
@@ -610,17 +610,17 @@ if($vortex_like_dislike['v-switch-comments']){
 						'color' => esc_js($vortex_like_dislike['v_default_color_comment'])
 						)
 					);
-					add_filter( 'epoch_iframe_scripts', function( $handles ) {
-						$my_script_handles  = array( 'vortex_touchevents', 'vortex_no_dislike_js_comment' );
-						if ( ! empty( $handles ) && is_array( $handles ) ) {
-							$handles = array_merge( $handles, $my_script_handles );
-						}else{
-							$handles = $my_script_handles;
+					add_filter( 'epoch_iframe_scripts', 'vortex_iframe_scripts_2');
+						function vortex_iframe_scripts_2($handles){
+							$my_script_handles  = array( 'vortex_touchevents', 'vortex_no_dislike_js_comment' );
+							if ( ! empty( $handles ) && is_array( $handles ) ) {
+								$handles = array_merge( $handles, $my_script_handles );
+							}else{
+								$handles = $my_script_handles;
+							}
+
+							return $handles;
 						}
-
-						return $handles;
-
-					});
 				}
 			}elseif($vortex_like_dislike['v-switch-anon-comment']){
 				if(!$vortex_like_dislike['v-switch-dislike-comment']){
@@ -631,17 +631,17 @@ if($vortex_like_dislike['v-switch-comments']){
 						'nonce' => wp_create_nonce( 'ajax-nonce' )
 						)
 					);
-					add_filter( 'epoch_iframe_scripts', function( $handles ) {
-						$my_script_handles  = array( 'vortex_touchevents', 'vortex_like_or_dislike_comment_js' );
-						if ( ! empty( $handles ) && is_array( $handles ) ) {
-							$handles = array_merge( $handles, $my_script_handles );
-						}else{
-							$handles = $my_script_handles;
+					add_filter( 'epoch_iframe_scripts','vortex_iframe_scripts_3');
+						function vortex_iframe_scripts_3($handles){
+							$my_script_handles  = array( 'vortex_touchevents', 'vortex_like_or_dislike_comment_js' );
+							if ( ! empty( $handles ) && is_array( $handles ) ) {
+								$handles = array_merge( $handles, $my_script_handles );
+							}else{
+								$handles = $my_script_handles;
+							}
+
+							return $handles;
 						}
-
-						return $handles;
-
-					});
 				}else{
 					wp_register_script( 'vortex_touchevents', plugin_dir_url( __FILE__ ).'assets/js/toucheventsdetect.js', array('jquery'), '1.0',true);
 					wp_register_script( 'vortex_no_dislike_js_comment', plugin_dir_url( __FILE__ ).'assets/js/no-dislike-comments.js', array('jquery'), '1.0',true);
@@ -651,17 +651,17 @@ if($vortex_like_dislike['v-switch-comments']){
 						'color' => esc_js($vortex_like_dislike['v_default_color_comment'])
 						)
 					);
-					add_filter( 'epoch_iframe_scripts', function( $handles ) {
-						$my_script_handles  = array( 'vortex_touchevents', 'vortex_no_dislike_js_comment' );
-						if ( ! empty( $handles ) && is_array( $handles ) ) {
-							$handles = array_merge( $handles, $my_script_handles );
-						}else{
-							$handles = $my_script_handles;
+					add_filter( 'epoch_iframe_scripts', 'vortex_iframe_scripts_4');
+						function vortex_iframe_scripts_4($handles){
+							$my_script_handles  = array( 'vortex_touchevents', 'vortex_no_dislike_js_comment' );
+							if ( ! empty( $handles ) && is_array( $handles ) ) {
+								$handles = array_merge( $handles, $my_script_handles );
+							}else{
+								$handles = $my_script_handles;
+							}
+
+							return $handles;
 						}
-
-						return $handles;
-
-					});
 				}
 			}
 	}elseif($vortex_like_dislike['v_enable_epoch']){
