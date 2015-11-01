@@ -6287,20 +6287,6 @@ function extend( a, b ) {
 (function($) {
     "use_strict";
 
-    var setScreenResize = function() {
-        var _minScreenSize = $(window).innerWidth();
-        var _curScreenSize = $(screen).innerWidth();
-        var screenQuota = _curScreenSize / _minScreenSize;
-        $('html').css({
-            'background-color' : 'black',
-            '-moz-transform' : 'scale(' + screenQuota + ')',
-            '-webkit-transform' : 'scale(' + screenQuota + ')',
-            '-o-transform' : 'scale(' + screenQuota + ')',
-            '-ms-transform' : 'scale(' + screenQuota + ')',
-            'transform' : 'scale(' + screenQuota + ')'
-        });
-    };
-
     var _href = window.location.href;
 
     try {
@@ -6514,7 +6500,6 @@ function extend( a, b ) {
                                         }, 1000);
                                     }
                                 });
-                                setFocus();
                             });
 
                             // Click handler for internal and external URLs
@@ -6620,8 +6605,8 @@ function extend( a, b ) {
 
                             // Set BODY width to screen-width for better viewport resizing
                             var $window = $(window).innerWidth();
-                            if ($window < 1346) {
-                                $window = 1346;
+                            if ($window < 1366) {
+                                $window = 1366;
                                 $('body').css('min-width', $window).css('max-width', $window).css('overflow', 'scroll');
                             } else {
                                 $('body').css('min-width', $window).css('max-width', $window);
@@ -6646,10 +6631,6 @@ function extend( a, b ) {
                             }
 
                             setFocus();
-
-                            $(document).ready(function() {
-                                setScreenResize();
-                            });
 
                         });
                     }
@@ -6702,7 +6683,7 @@ function extend( a, b ) {
 
     $(window).resize(function() {
         //window.open(_href, '_top');
-        setScreenResize();
+        setFocus();
     });
 
 })(jQuery);
