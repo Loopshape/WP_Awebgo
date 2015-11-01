@@ -6293,7 +6293,7 @@ function extend( a, b ) {
 
         var _minScreenSize = 800;
 
-        var _scrollElem = 'body .wrap.container';
+        var _scrollElem = 'body > header';
 
         // Use this variable to set up the common and page specific functions. If you
         // rename this variable, you will also need to rename the namespace below.
@@ -6399,6 +6399,8 @@ function extend( a, b ) {
                         // Init CSS3-TRANSITIONS
                         if (!$('body').hasClass('mover') && $('body').hasClass('home')) {
                             $('body').addClass('mover');
+                        } else {
+                            $('body').hasClass('static');
                         }
 
                         // Set BODY to colorful mode
@@ -6482,7 +6484,7 @@ function extend( a, b ) {
                                 if (bottom_of_window > bottom_of_object) {
                                     $('.gotoTop').show().animate({
                                         'opacity' : '+=0.99'
-                                    }, 2000);
+                                    }, 1000);
                                 }
                             });
                         });
@@ -6614,7 +6616,13 @@ function extend( a, b ) {
                                 ci++;
                             }
                         }
-                        //category-framework category-layoutdesign category-mediaproduction category-nodejs category-ssh category-technology category-themetemplate category-web-development tag-assets-pipeline tag-automation tag-data tag-gulp tag-gulpfile-js tag-streaming
+
+                        // Set FOCUS on BODY when document-load finishes
+                        $(document).on('onload', function() {
+                            $('body>header,body>.container,body>footer').animate({
+                                'opacity' : '+=0.999'
+                            },2000);
+                        });
 
                     });
                 }
