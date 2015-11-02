@@ -12,7 +12,7 @@ function sfsi_update_plugin()
 	}
 	
 	//Install version
-	update_option("sfsi_pluginVersion", "1.3");
+	update_option("sfsi_pluginVersion", "1.32");
 	
 	/*show notification*/
 	if(!get_option('show_notification'))
@@ -338,6 +338,7 @@ function sfsi_Unistall_plugin()
     delete_option('sfsi_footer_sec');
     delete_option('sfsi_activate');
 	delete_option("sfsi_pluginVersion");
+	delete_option('sfsi_verificatiom_code');
 }
 /* end function */
 

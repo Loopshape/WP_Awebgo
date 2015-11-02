@@ -905,7 +905,7 @@ class Responsive_Lightbox_Settings {
 	 */
 	public function admin_menu_options() {
 		add_options_page(
-			__( 'Responsive Lightbox', 'responsive-lightbox' ), __( 'Responsive Lightbox', 'responsive-lightbox' ), 'manage_options', 'responsive-lightbox', array( $this, 'options_page' )
+			__( 'Responsive Lightbox', 'responsive-lightbox' ), __( 'Responsive Lightbox', 'responsive-lightbox' ), apply_filters( 'rl_lightbox_settings_capability', 'manage_options' ), 'responsive-lightbox', array( $this, 'options_page' )
 		);
 	}
 
@@ -1283,7 +1283,7 @@ class Responsive_Lightbox_Settings {
 	 */
 	public function validate_settings( $input ) {
 		// check cap
-		if ( ! current_user_can( 'manage_options') ) {
+		if ( ! current_user_can( apply_filters( 'rl_lightbox_settings_capability', 'manage_options' ) ) ) {
 			return $input;
 		}
 
@@ -1453,7 +1453,7 @@ class Responsive_Lightbox_Settings {
 	public function validate_licenses( $input ) {
 		
 		// check cap
-		if ( ! current_user_can( 'manage_options') ) {
+		if ( ! current_user_can( apply_filters( 'rl_lightbox_settings_capability', 'manage_options' ) ) ) {
 			return $input;
 		}
 

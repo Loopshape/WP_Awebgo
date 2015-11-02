@@ -2,6 +2,8 @@
 /*  instalation of javascript and css  */
 function theme_back_enqueue_script()
 {
+		wp_enqueue_style("SFSImainAdminCss", SFSI_PLUGURL . 'css/sfsi-admin-style.css' );
+		
 		if(isset($_GET['page']))
 		{
 			if($_GET['page'] == 'sfsi-options')

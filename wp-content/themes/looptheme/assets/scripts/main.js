@@ -63,7 +63,7 @@
                         $('button,input[type="submit"]').attr('title', '[Klick] interaktive Funktion ausführen');
 
                         var navMainMenu = $('nav #menu-mainmenu a');
-                        var navItems = ['TECHJOURNAL: <br />Ein Blogsystem mit Themen rund um die Webentwicklung', 'PRODUCTION: <br />Scripts, Themes und Weiteres befindet sich hier zum Download', 'ÜBER MICH: <br />Eine Zusammenfassung über den Webmaster von Awebgo', 'KONTAKT: <br />Kontaktiere den Webmaster <br />über einen E-Mail-Klienten', 'IMPRESSUM: <br />Pflichtangaben zur Awebgo-Website'];
+                        var navItems = ['STARTSEITE: <br />Hauptseite von Awebgo und Ausgangspunkt zu den jeweiligen Themenbereichen', 'TECHJOURNAL: <br />Ein Blogsystem mit Themen rund um die Webentwicklung', 'PRODUCTION: <br />Scripts, Themes und Weiteres befindet sich hier zum Download', 'KONTAKT: <br />Kontaktiere den Webmaster <br />über einen E-Mail-Klienten', 'ÜBER MICH: <br />Eine Zusammenfassung über den Webmaster von Awebgo', 'IMPRESSUM: <br />Pflichtangaben zur Awebgo-Website'];
                         var navCount = 0;
                         navMainMenu.each(function() {
                             $(this).attr('title', navItems[navCount]);
@@ -111,16 +111,14 @@
 
                         $(function($) {
 
-                            var setFocus = function() {
-                                // Set FOCUS on BODY when document-load finishes
-                                if ($('html').hasClass('init')) {
-                                    $('html').removeClass('init');
-                                    $('body>header,body>.container,body>footer').animate({
-                                        'opacity' : '+=0.999'
-                                    }, 2000);
-                                    $('body').addClass('mover').focus();
-                                }
-                            };
+                            // Set FOCUS on BODY when document-load finishes
+                            if ($('html').hasClass('init')) {
+                                $('html').removeClass('init');
+                                $('body>*,body>*>*,body>*>*>*,body>*>*>*>*,body>*>*>*>*>*,body>*>*>*>*>*>*,body>*>*>*>*>*>*+*').animate({
+                                    'opacity' : '+=0.999'
+                                }, 2000);
+                                $('body').addClass('mover').focus();
+                            }
 
                             $('div.laptopArea img').on('click', function(event) {
                                 event.preventDefault();
@@ -362,8 +360,6 @@
                                 }
                             }
 
-                            setFocus();
-
                         });
                     }
                 }
@@ -415,7 +411,6 @@
 
     $(window).resize(function() {
         //window.open(_href, '_top');
-        setFocus();
     });
 
 })(jQuery);

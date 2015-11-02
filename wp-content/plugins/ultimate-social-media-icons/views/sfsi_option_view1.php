@@ -117,14 +117,15 @@
         <!-- END INSTAGRAM ICON -->
         
         <!-- SHARE ICON --> 
-        <li class="gary_bg">
+        <li>
             <div class="radio_section tb_4_ck"><input name="sfsi_share_display" <?php echo ($option1['sfsi_share_display']=='yes') ?  'checked="true"' : '' ;?> id=="sfsi_share_display" type="checkbox" value="yes" class="styled"  /></div>
             <span class="sfsicls_share">Share</span> 
             <div class="right_info">
-            <p><span>It depends:</span> Third-party service AddThis allows your visitors to share via many other social networks, however it may also slow down your site a bit.
-                <label class="expanded-area" >Everybody uses email – that’s why it’s <a href="http://www.entrepreneur.com/article/230949" target="_new">much more effective than social media </a> to make people follow you. Not offering an email subscription option means losing out on future traffic to your site.</label>
-            </p>
-            <a href="javascript:;" class="pop-up" data-id="athis-s1" >See Example</a>
+            	<p><span>It depends:</span>
+            		Third-party service AddThis allows your visitors to share via many other social networks, however it may also slow down your site a bit.
+                	<label class="expanded-area" >Everybody uses email – that’s why it’s <a href="http://www.entrepreneur.com/article/230949" target="_new">much more effective than social media </a> to make people follow you. Not offering an email subscription option means losing out on future traffic to your site.</label>
+            		<a href="javascript:;" class="pop-up" data-id="athis-s1" >See Example</a>
+            	</p>
             </div>
         </li>
         <!-- END SHARE ICON -->

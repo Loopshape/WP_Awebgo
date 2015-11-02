@@ -5,7 +5,7 @@ Plugin URI: http://ultimatelysocial.com
 Description: Easy to use and 100% FREE social media plugin which adds social media icons to your website with tons of customization features!. 
 Author: UltimatelySocial
 Author URI: http://ultimatelysocial.com
-Version: 1.3.0
+Version: 1.3.2
 License: GPLv2 or later
 */
 global $wpdb;
@@ -32,7 +32,7 @@ register_activation_hook(__FILE__, 'sfsi_activate_plugin' );
 register_deactivation_hook(__FILE__, 'sfsi_deactivate_plugin');
 register_uninstall_hook(__FILE__, 'sfsi_Unistall_plugin');
 
-if(!get_option('sfsi_pluginVersion') || get_option('sfsi_pluginVersion') < 1.3)
+if(!get_option('sfsi_pluginVersion') || get_option('sfsi_pluginVersion') < 1.32)
 {
 	add_action("init", "sfsi_update_plugin");
 }
@@ -96,6 +96,14 @@ function ultimatefbmetatags()
 {
 	$metarequest = get_option("adding_tags");
 	$post_id = get_the_ID();
+	
+	$feed_id = get_option('sfsi_feed_id');
+	$verification_code = get_option('sfsi_verificatiom_code');
+	if(!empty($feed_id) && !empty($verification_code) && $verification_code != "no" )
+	{
+	    echo '<meta name="specificfeeds-verification-code-'.$feed_id.'" content="'.$verification_code.'"/>';
+	}
+	
 	if($metarequest == 'yes' && !empty($post_id))
 	{
 		$post = get_post( $post_id );
@@ -160,6 +168,36 @@ function ultimatefbmetatags()
 		   echo '<meta property="og:title" content="'.$title.'" data-id="sfsi" />';
 		}
 	}
+}
+
+//Get verification code
+if(is_admin())
+{	
+	$code = get_option('sfsi_verificatiom_code');
+	$feed_id = get_option('sfsi_feed_id');
+	if(empty($code) && !empty($feed_id))
+	{
+		add_action("init", "sfsi_getverification_code");
+	}
+}
+function sfsi_getverification_code()
+{
+	$feed_id = get_option('sfsi_feed_id');
+	$curl = curl_init();  
+    curl_setopt_array($curl, array(
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_URL => 'http://www.specificfeeds.com/wordpress/getVerifiedCode_plugin',
+        CURLOPT_USERAGENT => 'sf get verification',
+        CURLOPT_POST => 1,
+        CURLOPT_POSTFIELDS => array(
+            'feed_id' => $feed_id
+        )
+    ));
+     // Send the request & save response to $resp
+	$resp = curl_exec($curl);
+	$resp = json_decode($resp);
+	update_option('sfsi_verificatiom_code', $resp->code);
+	curl_close($curl);
 }
 
 //checking for the youtube username and channel id option
