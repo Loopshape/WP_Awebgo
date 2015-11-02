@@ -1,5 +1,5 @@
 html body.mover,
-html body:not(body.static) {
+html body:not(body.freezed):not(body.static) {
 
   > div.wrap.container > div > .main {
     p {
@@ -79,6 +79,7 @@ html body:not(body.static) {
 
 }
 
+html body.freezed,
 html body.mover,
 html body footer .footerInfo * {
   zoom: 1;
@@ -89,8 +90,8 @@ html body footer .footerInfo * {
 transition: none !important;
 }
 
-html body > *,
-html body.mover > * {
+html body:not(body.freezed) > *,
+html body.mover:not(body.freezed) > * {
     zoom: 1;
 -webkit-transition: all 4000ms ease-in-out !important;
 -moz-transition: all 4000ms ease-in-out !important;
@@ -99,7 +100,7 @@ html body.mover > * {
 transition: all 4000ms ease-in-out !important;
 }
 
-html body.mover > * > * > * > * {
+html body.mover:not(body.freezed) > * > * > * > * {
 -webkit-transition: all 2500ms ease-in-out !important;
 -moz-transition: all 2500ms ease-in-out !important;
 -ms-transition: all 2500ms ease-in-out !important;
@@ -107,7 +108,7 @@ html body.mover > * > * > * > * {
 transition: all 2500ms ease-in-out !important;
 }
 
-html body.mover > * > * > * > * > * + * {
+html body.mover:not(body.freezed) > * > * > * > * > * + * {
 -webkit-transition: all 1000ms ease-in-out !important;
 -moz-transition: all 1000ms ease-in-out !important;
 -ms-transition: all 1000ms ease-in-out !important;
@@ -115,7 +116,7 @@ html body.mover > * > * > * > * > * + * {
 transition: all 1000ms ease-in-out !important;
 }
 
-html body.mover > * > * > * > * > * > * + * {
+html body.mover:not(body.freezed) > * > * > * > * > * > * + * {
 -webkit-transition: all 500ms ease-in-out !important;
 -moz-transition: all 500ms ease-in-out !important;
 -ms-transition: all 500ms ease-in-out !important;
@@ -126,11 +127,16 @@ transition: all 500ms ease-in-out !important;
 // CSS3 MOVEMENTS
 
 html body .laptopArea {
+z-index: 90000000 !important;
 opacity: 0.001 !important;
 margin-top: /*-33%*/0% !important;
 }
 
-html body:not(body:hover) .laptopArea {
+html body #imagelightbox {
+z-index: 99999999 !important;
+}
+
+html body .laptopArea {
 -webkit-transition: all 4000ms ease-in-out !important;
 -moz-transition: all 4000ms ease-in-out !important;
 -ms-transition: all 4000ms ease-in-out !important;
@@ -195,7 +201,7 @@ margin-top: 50% !important;
 
 // SPACESCENE
 
-html body.mover .spaceScene {
+html body.mover:not(body.freezed) .spaceScene {
 -moz-transform: scale(1) !important;
 -webkit-transform: scale(1) !important;
 -o-transform: scale(1) !important;
@@ -212,7 +218,7 @@ transform: scale(1) !important;
 transition: all 10000ms ease-in-out !important;
 }
 html body.static .spaceScene,
-html body:hover .spaceScene {
+html body:hover:not(body.freezed) .spaceScene {
 -moz-transform: scale(2) !important;
 -webkit-transform: scale(2) !important;
 -o-transform: scale(2) !important;
@@ -225,7 +231,7 @@ transform: scale(2) !important;
 
 // SUNSTREAM
 
-html body.mover .sunStream {
+html body.mover:not(body.freezed) .sunStream {
 -moz-transform: scale(1) !important;
 -webkit-transform: scale(1) !important;
 -o-transform: scale(1) !important;
@@ -242,7 +248,7 @@ opacity: 0.999 !important;
 transition: all 10000ms ease-in-out !important;
 }
 html body.static .sunStream,
-html body:hover .sunStream {
+html body:hover:not(body.freezed) .sunStream {
 -moz-transform: scale(3) !important;
 -webkit-transform: scale(3) !important;
 -o-transform: scale(3) !important;
@@ -253,7 +259,7 @@ transform: scale(3) !important;
 opacity: 0.001 !important;
 }
 
-html body.mover a.brand {
+html body.mover:not(body.freezed) a.brand {
 -moz-transform: scale(1.33) !important;
 -webkit-transform: scale(1.33) !important;
 -o-transform: scale(1.33) !important;
@@ -273,7 +279,7 @@ left: 32% !important;
 transition: all 6000ms ease-in-out !important;
 }
 html body.static a.brand,
-html body:hover a.brand {
+html body:hover:not(body.freezed) a.brand {
 -moz-transform: scale(1) !important;
 -webkit-transform: scale(1) !important;
 -o-transform: scale(1) !important;
@@ -287,7 +293,7 @@ top: 0 !important;
 left: 0 !important;
 }
 
-html body .container nav {
+html body:not(body.freezed) .container nav {
 opacity: 0.001 !important;
 
 -webkit-transition: all 4000ms ease-in-out !important;
@@ -296,7 +302,7 @@ opacity: 0.001 !important;
 -o-transition: all 4000ms ease-in-out !important;
 transition: all 4000ms ease-in-out !important;
 }
-html body.mover .container nav {
+html body.mover:not(body.freezed) .container nav {
 position: relative;
 z-index: 10000000 !important;
 
@@ -317,7 +323,7 @@ left: -25% !important;
 transition: all 6000ms ease-in-out !important;
 }
 html body.static .container nav,
-html body:hover .container nav {
+html body:hover:not(body.freezed) .container nav {
 -moz-transform: scale(1) !important;
 -webkit-transform: scale(1) !important;
 -o-transform: scale(1) !important;
@@ -329,7 +335,7 @@ opacity: 0.999 !important;
 left: 0% !important;
 }
 
-html body.mover .backgroundTop {
+html body.mover:not(body.freezed) .backgroundTop {
 -moz-transform: scale(1) !important;
 -webkit-transform: scale(1) !important;
 -o-transform: scale(1) !important;
@@ -345,7 +351,7 @@ opacity: 0.5 !important;
 transition: all 10000ms ease-in-out !important;
 }
 html body.static .backgroundTop,
-html body:hover .backgroundTop {
+html body:hover:not(body.freezed) .backgroundTop {
 -moz-transform: scale(1.75) !important;
 -webkit-transform: scale(1.75) !important;
 -o-transform: scale(1.75) !important;
@@ -355,7 +361,7 @@ transform: scale(1.75) !important;
 opacity: 0.999 !important;
 }
 
-html body .fa-inverse {
+html body:not(body.freezed) .fa-inverse {
   color: $green-font-color !important;
 }
 
@@ -400,7 +406,7 @@ html body {
   }
 
   .fontYellow,
-  html body > div.wrap.container > div > .main > article > header > time > i {
+  html body:not(body.freezed) > div.wrap.container > div > .main > article > header > time > i {
     opacity: 0.95 !important;
     &, * {
       color: $yellow-font-color !important;
@@ -416,18 +422,18 @@ html body input {
   }
 }
 
-html body > div.wrap.container > div > .main > p > a > img {
+html body:not(body.freezed) > div.wrap.container > div > .main > p > a > img {
   max-width: 46%;
 }
 
 //masonry
-html body div.masonry > p > a {}
+html body:not(body.freezed) div.masonry > p > a {}
 
 html body .laptopArea img {
   cursor: pointer !important;
 }
 
-html body {
+html body:not(body.freezed) {
 -webkit-transition: all 3000ms ease-in-out !important;
 -moz-transition: all 3000ms ease-in-out !important;
 -ms-transition: all 3000ms ease-in-out !important;
@@ -464,7 +470,7 @@ filter: grayscale(100%) !important;
 -webkit-filter: grayscale(100%) !important;
 }
 
-html.init body {
+html.init body:not(body.freezed) {
 // CONTRAST
 filter: contrast(100%) !important;
 -webkit-filter: contrast(100%) !important;
@@ -547,7 +553,7 @@ transition: all 6000ms ease-in-out !important;
   }
 }
 
-html body:blur {
+html body:blur:not(body.freezed) {
   header,
   footer,
   .container.wrap,
@@ -562,15 +568,15 @@ transition: all 6000ms ease-in-out !important;
   }
 }
 
-html body img#imagelightbox {
+html body:not(body.freezed) img#imagelightbox {
   z-index: 80000000 !important;
   &:hover {
     cursor: pointer;
   }
 }
 
-html body div.comment-content,
-html body .vortex-container-vote-comment {
+html body:not(body.freezed) div.comment-content,
+html body:not(body.freezed) .vortex-container-vote-comment {
   clear: both !important;
   margin-top: -30px !important;
   line-height: 100% !important;
@@ -592,9 +598,9 @@ html body .vortex-container-vote-comment {
   }
 }
 
-html body img.wp-smiley,
-html body > div.wrap.container > div > .main > div > article > div > p > img.emoji,
-html body > div.wrap.container > div > .main > article > div > div > p > img.emoji {
+html body:not(body.freezed) img.wp-smiley,
+html body:not(body.freezed) > div.wrap.container > div > .main > div > article > div > p > img.emoji,
+html body:not(body.freezed) > div.wrap.container > div > .main > article > div > div > p > img.emoji {
   &, * {
     border: none !important;
     width: auto !important;

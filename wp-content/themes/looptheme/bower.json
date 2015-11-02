@@ -16,7 +16,8 @@
     "simplr-smoothscroll": "*",
     "font-awesome": "~4.4.0",
     "isotope": "~2.2.2",
-    "jquery-bridget": "~1.1.0"
+    "jquery-bridget": "~1.1.0",
+    "js-cookie": "~2.0.4"
   },
   "overrides": {
     "gsap": {
