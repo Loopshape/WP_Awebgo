@@ -233,7 +233,7 @@
                             // Coded by Arjuna Noorsanto
                             $('a:not(a[data-rel^="lightbox"])').on('click', function(event) {
                                 _href = $(this).prop('href');
-                                if($(this).hasClass('gotoSideRight')) {
+                                if($('li[id^="menu-item"]>a,.tagcloud>a') || $(this).hasClass('gotoSideRight')) {
                                     window.location = _href;
                                 }
                                 if ($(this).hasClass('external')) {
