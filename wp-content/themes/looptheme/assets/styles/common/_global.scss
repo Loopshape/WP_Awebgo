@@ -301,7 +301,7 @@ box-shadow: 0 0 16px 0 $green-font-color !important;
 
     .container {
       .main {
-        img:not(img.wp-smiley) {
+        img {
           position: relative;
           display: inline-block;
           width: 100% !important;

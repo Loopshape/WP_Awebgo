@@ -233,6 +233,9 @@
                             // Coded by Arjuna Noorsanto
                             $('a:not(a[data-rel^="lightbox"])').on('click', function(event) {
                                 _href = $(this).prop('href');
+                                if($(this).hasClass('gotoSideRight')) {
+                                    window.location = _href;
+                                }
                                 if ($(this).hasClass('external')) {
                                     event.preventDefault();
                                     $('body').addClass('static');
@@ -247,10 +250,10 @@
                                     $('.container.wrap').animate({
                                         'opacity' : '-=1'
                                     }, 1000, function() {
-                                        if ($(this).hasClass('internal') === true) {
+                                        if ($(this).hasClass('internal') === true || $(this).hasClass('gotoSideRight')) {
                                             return true;
                                         }
-                                        if ($('a:not(a[data-rel^="lightbox"])').length!==0)) {
+                                        if ($('a:not(a[data-rel^="lightbox"])').length !== 0) {
                                             return false;
                                         }
                                         event.preventDefault();
@@ -282,25 +285,25 @@
                             });
 
                             // POST LIST content area resize
-                            $(document).ready(function() {
-                                $('article > header').each(function() {
-                                    if ($(this).find('.thumbnail').length === 0) {
-                                        $(this).find('.entry-title').css({
-                                            'max-width' : '100%',
-                                            'margin-bottom' : -($(this).find('.entry-title a').innerHeight())
-                                        }).find('.gotoSideRight').css({
-                                            'max-width' : '100%',
-                                            'min-height' : '0'
-                                        });
-                                    } else {
-                                        $(this).find('.entry-title').css({
-                                            'margin-bottom' : -($(this).find('.entry-title a').innerHeight())
-                                        }).find('.gotoSideRight').css({
-                                            'min-height' : ($(this).find('.thumbnail img').innerHeight() - 10)
-                                        });
-                                    }
-                                });
+                            //$(document).ready(function() {
+                            $('article > header').each(function() {
+                                if ($(this).find('.thumbnail').length === 0) {
+                                    $(this).find('.entry-title').css({
+                                        'max-width' : '100%',
+                                        'margin-bottom' : -($(this).find('.entry-title a').innerHeight())
+                                    }).find('.gotoSideRight').css({
+                                        'max-width' : '100%',
+                                        'min-height' : '0'
+                                    });
+                                } else {
+                                    $(this).find('.entry-title').css({
+                                        'margin-bottom' : -($(this).find('.entry-title a').innerHeight())
+                                    }).find('.gotoSideRight').css({
+                                        'min-height' : ($(this).find('.thumbnail img').innerHeight() - 10)
+                                    });
+                                }
                             });
+                            //});
 
                             // Fix Isotope item-sum height for contentareas
                             var contentHeight = $('div.content').innerHeight();

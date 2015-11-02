@@ -569,12 +569,6 @@ html body img#imagelightbox {
   }
 }
 
-html body img.wp-smiley {
-  border: none !important;
-  width: auto !important;
-  height: auto !important;
-}
-
 html body div.comment-content,
 html body .vortex-container-vote-comment {
   clear: both !important;
@@ -595,5 +589,20 @@ html body .vortex-container-vote-comment {
   &, *:not(img) {
     float: left !important;
     width: auto !important;
+  }
+}
+
+html body img.wp-smiley,
+html body > div.wrap.container > div > .main > div > article > div > p > img.emoji,
+html body > div.wrap.container > div > .main > article > div > div > p > img.emoji {
+  &, * {
+    border: none !important;
+    width: auto !important;
+    max-width: 1em;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
   }
 }
