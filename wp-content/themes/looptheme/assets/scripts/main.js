@@ -56,7 +56,7 @@
                                 $(this).attr('title', '[Klick] Hypertext-Link öffnen');
                             }
                             if ($(this).find('img').length > 0) {
-                                $(this).attr('title', '[Klick] Bild vergrößern').closest('a').addClass('internal');
+                                $(this).attr('title', '[Klick] Bild vergrößern').closest('a');
                             }
                         });
                         $('input,select,textarea').attr('title', 'Eingabefeld bitte ausfüllen');
@@ -228,9 +228,6 @@
                             // Coded by Arjuna Noorsanto
                             $('a:not(a[data-rel^="lightbox"])').on('click', function(event) {
                                 _href = $(this).prop('href');
-                                if($('li[id^="menu-item"]>a,.tagcloud>a') || $(this).hasClass('gotoSideRight')) {
-                                    window.location = _href;
-                                }
                                 if ($(this).hasClass('external')) {
                                     event.preventDefault();
                                     $('body').addClass('static');
@@ -254,10 +251,11 @@
                                         event.preventDefault();
                                         window.location = _href;
                                     });
-                                    return false;
-
                                 }
-                                return true;
+                                if($('li[id^="menu-item"]>a,.tagcloud>a') || $(this).hasClass('gotoSideRight')) {
+                                    window.location = _href;
+                                }
+                                return false;
                             });
 
                             // ISOTOPE item grid handler
