@@ -1,0 +1,1238 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact Bank\n"
+"POT-Creation-Date: 2015-03-03 15:04+0530\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\wordpress4.0.1\\wp-content\\plugins"
+"\\contact-bank\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: contact-bank.php:84 contact-bank.php:101 contact-bank.php:118
+msgid "Contact Bank"
+msgstr "Contact Bank"
+
+#: contact-bank.php:85 contact-bank.php:102 contact-bank.php:119
+#: contact-bank.php:657 contact-bank.php:733 contact-bank.php:810
+#: views/header.php:115 views/header.php:129 views/header.php:143
+msgid "Dashboard"
+msgstr "לוח בקרה"
+
+#: contact-bank.php:87 contact-bank.php:104 contact-bank.php:121
+#: contact-bank.php:663 contact-bank.php:739 contact-bank.php:816
+#: views/automatic-plugin-update.php:28 views/automatic-plugin-update.php:32
+msgid "Plugin Updates"
+msgstr "עדכוני הפלאג"
+
+#: contact-bank.php:88 contact-bank.php:105 contact-bank.php:122
+#: contact-bank.php:669 contact-bank.php:745 contact-bank.php:822
+#: views/header.php:116 views/header.php:130 views/header.php:144
+msgid "Short-Codes"
+msgstr "קצרים קודי"
+
+#: contact-bank.php:89 contact-bank.php:106 contact-bank.php:123
+#: contact-bank.php:675 contact-bank.php:751 contact-bank.php:828
+#: views/contact_frontend_data.php:31 views/dashboard.php:124
+#: views/header.php:117 views/header.php:131 views/header.php:145
+msgid "Form Entries"
+msgstr "ערכי טופס"
+
+#: contact-bank.php:90 contact-bank.php:107 contact-bank.php:124
+#: contact-bank.php:681 contact-bank.php:757 contact-bank.php:834
+#: views/contact_email_settings.php:30 views/dashboard.php:119
+#: views/header.php:118 views/header.php:132 views/header.php:146
+msgid "Email Settings"
+msgstr "הגדרות מייל"
+
+#: contact-bank.php:91 contact-bank.php:108 contact-bank.php:125
+#: contact-bank.php:687 contact-bank.php:763 contact-bank.php:840
+#: views/contact_bank_layout_settings.php:29 views/dashboard.php:114
+#: views/header.php:119 views/header.php:133 views/header.php:147
+msgid "Global Settings"
+msgstr "הגדרות כלליות"
+
+#: contact-bank.php:92 contact-bank.php:109 contact-bank.php:126
+#: contact-bank.php:693 contact-bank.php:769 contact-bank.php:846
+#: views/contact-feedback.php:33
+msgid "Feature Requests"
+msgstr "בקשות תכונה"
+
+#: contact-bank.php:93 contact-bank.php:110 contact-bank.php:127
+#: contact-bank.php:699 contact-bank.php:776
+#: views/contact-bank-system-report.php:31
+msgid "System Status"
+msgstr "מצב המערכת"
+
+#: contact-bank.php:94 contact-bank.php:111 contact-bank.php:128
+#: contact-bank.php:705 contact-bank.php:782 contact-bank.php:852
+#: views/header.php:85 views/header.php:120 views/header.php:134
+#: views/header.php:148
+msgid "Recommendations"
+msgstr " המלצות"
+
+#: contact-bank.php:95 contact-bank.php:112 contact-bank.php:129
+#: contact-bank.php:712 contact-bank.php:789 contact-bank.php:859
+#: views/header.php:121 views/header.php:135 views/header.php:149
+msgid "Premium Editions"
+msgstr "מהדורות פרמיה"
+
+#: contact-bank.php:96 contact-bank.php:113 contact-bank.php:130
+#: contact-bank.php:719 contact-bank.php:796 contact-bank.php:866
+#: views/header.php:90 views/header.php:122 views/header.php:136
+#: views/header.php:150
+msgid "Our Other Services"
+msgstr "השירותים אחרים שלנו"
+
+#: contact-bank.php:874
+msgid "Add Contact Bank Form"
+msgstr "הוספת טופס"
+
+#: contact-bank.php:886
+msgid "Insert Contact Bank Form"
+msgstr "הוסף טופס"
+
+#: contact-bank.php:888
+msgid "Select a form below to add it to your post or page."
+msgstr "בחר טופס להוספה לפוסט או לעמוד שלך."
+
+#: contact-bank.php:893
+msgid "Form Name"
+msgstr "שם הטופס"
+
+#: contact-bank.php:895
+msgid "Select a Form"
+msgstr "בחר טופס"
+
+#: contact-bank.php:912
+msgid "Show Form Title"
+msgstr "הצג את כותרת הטופס"
+
+#: contact-bank.php:916
+msgid "Show Form Description"
+msgstr "הצג טופס תיאור"
+
+#: contact-bank.php:921
+msgid "Insert Form"
+msgstr "הוסף טופס"
+
+#: contact-bank.php:924
+msgid "Cancel"
+msgstr "ביטול"
+
+#: contact-bank.php:937
+msgid "Please choose a Form to insert into Shortcode"
+msgstr "נא לבחור טופס להוספה לקיצור הקוד"
+
+#: contact-bank.php:973
+msgid "View Contact Bank Documentation"
+msgstr "צפה Contact Bank התיעוד"
+
+#: contact-bank.php:973
+msgid "Docs"
+msgstr "המסמכים"
+
+#: contact-bank.php:974
+msgid "View Contact Bank Premium Editions"
+msgstr "הצג Contact Bank את פרמיה המהדורות "
+
+#: contact-bank.php:974
+msgid "Go for Premium!"
+msgstr "לכו על פרמיה! "
+
+#: contact-bank.php:1048
+msgid "Select Form :"
+msgstr "בחר טופס:"
+
+#: contact-bank.php:1050 views/contact_bank_layout_settings.php:45
+#: views/contact_bank_layout_settings.php:55
+#: views/contact_email_settings.php:37 views/contact_email_settings.php:53
+#: views/contact_frontend_data.php:46 views/contact_frontend_data.php:56
+msgid "Select Form"
+msgstr "בחר טופס"
+
+#: frontend_views/contact_bank_forms.php:344
+#: views/contact_bank_form_preview.php:395
+#: views/contact_controls_files.php:89
+msgid "Select Option"
+msgstr "בחר אפשרות"
+
+#: includes/cb_checkbox.php:55
+msgid "Check Boxes"
+msgstr "תיבות סימון"
+
+#: includes/cb_checkbox.php:59 includes/cb_dropdown.php:59
+#: includes/cb_email.php:59 includes/cb_multiple.php:59
+#: includes/cb_text.php:59 includes/cb_textarea.php:59
+msgid "Label"
+msgstr "תווית"
+
+#: includes/cb_checkbox.php:61 includes/cb_checkbox.php:163
+#: includes/cb_dropdown.php:61 includes/cb_dropdown.php:163
+#: includes/cb_email.php:62 includes/cb_email.php:152
+#: includes/cb_multiple.php:63 includes/cb_multiple.php:183
+#: includes/cb_text.php:62 includes/cb_text.php:151
+#: includes/cb_textarea.php:61 includes/cb_textarea.php:149
+#: views/contact_controls_files.php:36 views/contact_controls_files.php:52
+#: views/contact_controls_files.php:85 views/contact_controls_files.php:101
+#: views/contact_controls_files.php:118
+msgid "Untitled"
+msgstr "ללא כותרת"
+
+#: includes/cb_checkbox.php:65 includes/cb_checkbox.php:75
+#: includes/cb_checkbox.php:88 includes/cb_checkbox.php:102
+#: includes/cb_dropdown.php:65 includes/cb_dropdown.php:75
+#: includes/cb_dropdown.php:88 includes/cb_dropdown.php:102
+#: includes/cb_email.php:76 includes/cb_email.php:87
+#: includes/cb_email.php:102 includes/cb_email.php:118
+#: includes/cb_multiple.php:68 includes/cb_multiple.php:79
+#: includes/cb_multiple.php:94 includes/cb_multiple.php:110
+#: includes/cb_text.php:75 includes/cb_text.php:86 includes/cb_text.php:101
+#: includes/cb_text.php:117 includes/cb_textarea.php:75
+#: includes/cb_textarea.php:86 includes/cb_textarea.php:101
+#: includes/cb_textarea.php:117
+msgid "Required"
+msgstr "חובה"
+
+#: includes/cb_checkbox.php:79 includes/cb_checkbox.php:92
+#: includes/cb_checkbox.php:106 includes/cb_dropdown.php:79
+#: includes/cb_dropdown.php:92 includes/cb_dropdown.php:106
+#: includes/cb_email.php:92 includes/cb_email.php:107
+#: includes/cb_email.php:123 includes/cb_multiple.php:84
+#: includes/cb_multiple.php:99 includes/cb_multiple.php:115
+#: includes/cb_text.php:91 includes/cb_text.php:106 includes/cb_text.php:122
+#: includes/cb_textarea.php:91 includes/cb_textarea.php:106
+#: includes/cb_textarea.php:122
+msgid "Not Required"
+msgstr "רשות"
+
+#: includes/cb_checkbox.php:114 includes/cb_dropdown.php:114
+#: includes/cb_email.php:131 includes/cb_multiple.php:123
+#: includes/cb_text.php:130
+msgid "Tooltip Text"
+msgstr "טקסט טולטיפ"
+
+#: includes/cb_checkbox.php:116 includes/cb_dropdown.php:116
+#: includes/cb_email.php:134 includes/cb_multiple.php:127
+#: includes/cb_text.php:133 includes/cb_textarea.php:132
+#: views/contact_bank_layout_settings.php:946
+#: views/contact_frontend_data.php:171 views/dashboard.php:208
+#: views/includes_common_after.php:349 views/includes_common_after.php:352
+#: views/includes_common_after.php:355 views/includes_common_after.php:358
+#: views/includes_common_after.php:361 views/includes_common_after.php:364
+#: views/includes_common_after.php:367 views/includes_common_after.php:370
+#: views/includes_common_after.php:373
+msgid "This Feature is only available in Paid Premium Edition!"
+msgstr "תכונה זו זמינה רק במהדורת פרמיה שולם!"
+
+#: includes/cb_checkbox.php:120 includes/cb_dropdown.php:120
+#: includes/cb_multiple.php:132
+msgid "Options"
+msgstr "אפשרויות"
+
+#: includes/cb_checkbox.php:122
+msgid "Enter Options"
+msgstr "הזן אפשרויות"
+
+#: includes/cb_checkbox.php:123 includes/cb_dropdown.php:123
+#: includes/cb_multiple.php:138
+msgid "Add"
+msgstr "הוספה"
+
+#: includes/cb_checkbox.php:154 includes/cb_dropdown.php:154
+#: includes/cb_multiple.php:172
+msgid "Delete"
+msgstr "מחיקה"
+
+#: includes/cb_checkbox.php:161 includes/cb_dropdown.php:161
+#: includes/cb_email.php:149 includes/cb_multiple.php:179
+#: includes/cb_text.php:148 includes/cb_textarea.php:147
+msgid "Admin Label"
+msgstr "תווית ניהול"
+
+#: includes/cb_checkbox.php:163 includes/cb_dropdown.php:163
+#: includes/cb_email.php:153 includes/cb_multiple.php:182
+#: includes/cb_text.php:150 includes/cb_textarea.php:150
+msgid "Enter Admin Label"
+msgstr "הזן תווית ניהול"
+
+#: includes/cb_checkbox.php:167 includes/cb_dropdown.php:167
+#: includes/cb_email.php:158 includes/cb_multiple.php:187
+#: includes/cb_text.php:156 includes/cb_textarea.php:154
+msgid "Do not show in the email"
+msgstr "אל תציג במייל"
+
+#: includes/cb_checkbox.php:198 includes/cb_dropdown.php:198
+#: includes/cb_email.php:192 includes/cb_multiple.php:221
+#: includes/cb_text.php:219 includes/cb_textarea.php:215
+msgid "Save Settings"
+msgstr "שמור את ההגדרות"
+
+#: includes/cb_checkbox.php:247 includes/cb_dropdown.php:238
+#: includes/cb_multiple.php:271
+msgid "Please Fill an Option."
+msgstr "נא להזין אפשרות"
+
+#: includes/cb_dropdown.php:55 views/contact_view.php:461
+msgid "Select Box"
+msgstr "תיבת בחירה"
+
+#: includes/cb_dropdown.php:61 includes/cb_email.php:63
+#: includes/cb_multiple.php:64 includes/cb_text.php:63
+msgid "Enter Label"
+msgstr "הזן תווית"
+
+#: includes/cb_dropdown.php:122 includes/cb_multiple.php:135
+msgid "Enter Option"
+msgstr "הזן אפשרות"
+
+#: includes/cb_email.php:55 views/contact_view.php:458
+msgid "Email Address"
+msgstr "כתובת מייל"
+
+#: includes/cb_email.php:68 includes/cb_text.php:67
+#: includes/cb_textarea.php:67
+msgid "Description"
+msgstr "תיאור"
+
+#: includes/cb_email.php:71 includes/cb_text.php:70
+msgid "Enter Description"
+msgstr "הזן תיאור"
+
+#: includes/cb_email.php:140 includes/cb_text.php:139
+#: includes/cb_textarea.php:139
+msgid "Place Holder"
+msgstr "ציון מיקום"
+
+#: includes/cb_email.php:143 includes/cb_text.php:142
+#: includes/cb_textarea.php:141
+msgid "Enter Place Holder"
+msgstr "הזן ציון מיקום"
+
+#: includes/cb_multiple.php:55 views/contact_view.php:469
+msgid "Radio Buttons"
+msgstr "כפתורי רדיו"
+
+#: includes/cb_text.php:55 views/contact_view.php:450
+msgid "Single Line Text"
+msgstr "טקסט של שורה אחת"
+
+#: includes/cb_text.php:187 includes/cb_textarea.php:185
+msgid "Add a filter"
+msgstr "הוסף מסנן"
+
+#: includes/cb_text.php:192 includes/cb_textarea.php:189
+msgid "Alpha"
+msgstr "אותיות"
+
+#: includes/cb_text.php:196 includes/cb_textarea.php:193
+msgid "Alpha Numeric"
+msgstr "אותיות וספרות"
+
+#: includes/cb_text.php:200 includes/cb_textarea.php:197
+msgid "Digits"
+msgstr "ספרות"
+
+#: includes/cb_text.php:204 includes/cb_textarea.php:201
+msgid "Strip Tags"
+msgstr "תגיות רצועה"
+
+#: includes/cb_text.php:208 includes/cb_textarea.php:205
+msgid "Trim"
+msgstr "תיאום"
+
+#: includes/cb_text.php:210 includes/cb_textarea.php:207
+#: views/contact_bank_layout_settings.php:83
+#: views/contact_bank_layout_settings.php:271
+#: views/contact_bank_layout_settings.php:481
+#: views/contact_bank_layout_settings.php:674
+#: views/contact_bank_layout_settings.php:802 views/contact_view.php:479
+msgid " (Available in Premium Edition)"
+msgstr "(זמין פרמיה מהדורה)"
+
+#: includes/cb_textarea.php:55 views/contact_view.php:453
+msgid "Paragraph Text"
+msgstr "טקסט של פסקה"
+
+#: includes/cb_textarea.php:62
+msgid "Enter label"
+msgstr "הזן תווית"
+
+#: includes/cb_textarea.php:69
+msgid "Enter  Description"
+msgstr "הזן תיאור"
+
+#: includes/cb_textarea.php:130
+msgid "Tooltip text"
+msgstr "טקסט טולטיפ"
+
+#: lib/contact_bank_email-class.php:47 lib/contact_bank_email-class.php:57
+#: lib/contact_bank_email-class.php:67
+msgid "Edit Email Settings"
+msgstr "ערוך את הגדרות המייל"
+
+#: lib/contact_bank_email-class.php:50 lib/contact_bank_email-class.php:60
+#: lib/contact_bank_email-class.php:70
+msgid "Delete Email Settings"
+msgstr "מחק את הגדרות המייל"
+
+#: lib/contact_frontend_data_class.php:113
+msgid "Delete Form Entry"
+msgstr "מחק מן הערך"
+
+#: lib/install-script.php:238
+msgid "blank_field_message"
+msgstr "בלנק השדה מסר"
+
+#: lib/install-script.php:239 lib/install-script.php:666
+#: views/contact_view.php:305
+msgid "Required field must not be blank"
+msgstr "זהו שדה חובה ולא ניתן להשאיר אותו ריק"
+
+#: lib/install-script.php:248
+msgid "incorrect_email_message"
+msgstr "שגוי דוא\"ל תקשורת"
+
+#: lib/install-script.php:249 lib/install-script.php:676
+#: views/contact_view.php:317
+msgid "Please enter a valid email address"
+msgstr "נא להזין כתובת מייל תקינה"
+
+#: lib/install-script.php:539 lib/install-script.php:918
+msgid "Submit"
+msgstr "להגיש"
+
+#: lib/install-script.php:626
+msgid "Contact Form Demo"
+msgstr "טופס יצירת קשר הדגמה"
+
+#: lib/install-script.php:656
+msgid "Your message was sent successfully. Thanks."
+msgstr "הודעתך נשלחה בהצלחה. תודה."
+
+#: lib/install-script.php:710 lib/install-script.php:714
+#: lib/install-script.php:715
+msgid "Your Name"
+msgstr "השם שלך"
+
+#: lib/install-script.php:761 lib/install-script.php:765
+#: lib/install-script.php:766
+msgid "Your Email"
+msgstr "הדואר האלקטרוני שלך"
+
+#: lib/install-script.php:807 lib/install-script.php:811
+#: lib/install-script.php:812 views/add_contact_email.php:202
+msgid "Subject"
+msgstr "נושא"
+
+#: lib/install-script.php:860 lib/install-script.php:864
+#: lib/install-script.php:865
+msgid "Your Message"
+msgstr "ההודעה שלך"
+
+#: lib/install-script.php:992
+msgid "Admin Notification"
+msgstr "התראות מינהל"
+
+#: lib/install-script.php:995 lib/install-script.php:1022
+msgid "Site Administration"
+msgstr "אתר המינהל"
+
+#: lib/install-script.php:997
+msgid "New Contact recieved from Website"
+msgstr "חדש צור קיבל מ האתר"
+
+#: lib/install-script.php:1020
+msgid "Client Notification"
+msgstr "הלקוח הודעה"
+
+#: lib/install-script.php:1021
+msgid "Thanks for visiting our website"
+msgstr "תודה על הביקור באתר האינטרנט שלנו"
+
+#: views/add_contact_email.php:50 views/contact_email_settings.php:88
+msgid "Email Confirmation"
+msgstr "אישור מייל"
+
+#: views/add_contact_email.php:53
+msgid "Back to Email Settings"
+msgstr "חזרה להגדרות מייל"
+
+#: views/add_contact_email.php:54 views/add_contact_email.php:234
+#: views/contact_bank_layout_settings.php:35
+#: views/contact_bank_layout_settings.php:520
+#: views/contact_bank_layout_settings.php:932
+msgid "Save"
+msgstr "שמור"
+
+#: views/add_contact_email.php:58
+msgid "Email Settings Saved. Kindly wait for the redirect."
+msgstr "הגדרות המייל  נשמרו. נא להמתין להפניה מחדש."
+
+#: views/add_contact_email.php:65 views/add_contact_email.php:122
+#: views/contact_controls_files.php:68
+msgid "Email"
+msgstr "מייל"
+
+#: views/add_contact_email.php:69 views/contact-feedback.php:51
+#: views/contact_view.php:486
+msgid "Name"
+msgstr "שם"
+
+#: views/add_contact_email.php:73
+msgid "Enter Name"
+msgstr "הזן שם"
+
+#: views/add_contact_email.php:79
+msgid "Send To"
+msgstr "שלח אל"
+
+#: views/add_contact_email.php:88 views/add_contact_email.php:99
+#: views/add_contact_email.php:111 views/add_contact_email.php:171
+msgid "Enter Email"
+msgstr "הזן מייל"
+
+#: views/add_contact_email.php:90 views/add_contact_email.php:101
+#: views/add_contact_email.php:113
+msgid "Select a Field"
+msgstr "בחר שדה"
+
+#: views/add_contact_email.php:126
+msgid "Enter Email "
+msgstr "הזן מייל.."
+
+#: views/add_contact_email.php:130
+msgid "Send To Field"
+msgstr "שדה שלח אל"
+
+#: views/add_contact_email.php:134
+msgid "Enter Field "
+msgstr "הזן שדה.."
+
+#: views/add_contact_email.php:136 views/add_contact_email.php:149
+#: views/add_contact_email.php:162 views/add_contact_email.php:173
+#: views/add_contact_email.php:184 views/add_contact_email.php:195
+#: views/add_contact_email.php:208
+msgid "Select a field"
+msgstr "בחר שדה"
+
+#: views/add_contact_email.php:143
+msgid "From Name"
+msgstr "שם מאת"
+
+#: views/add_contact_email.php:147
+msgid "Enter from name "
+msgstr "הזן שם מאת.."
+
+#: views/add_contact_email.php:156
+msgid "From Email"
+msgstr "מייל מאת"
+
+#: views/add_contact_email.php:160
+msgid "Enter from email"
+msgstr "הזן את הכתובת ממנה נשלח המייל"
+
+#: views/add_contact_email.php:169
+msgid "Reply To"
+msgstr "השב ל"
+
+#: views/add_contact_email.php:180
+msgid "CC"
+msgstr "עותק"
+
+#: views/add_contact_email.php:182
+msgid "Enter CC Email "
+msgstr "הזן כתובת מייל לשליחת עותק"
+
+#: views/add_contact_email.php:191
+msgid "BCC"
+msgstr "עותק נסתר"
+
+#: views/add_contact_email.php:193
+msgid "Enter Bcc Email"
+msgstr "הזן כתובת מייל לשליחת עותק נסתר"
+
+#: views/add_contact_email.php:206
+msgid "Enter Subject"
+msgstr "הזן נושא"
+
+#: views/add_contact_email.php:215
+msgid "Message"
+msgstr "הודעה"
+
+#: views/add_contact_email.php:225
+msgid "Insert a Field into Your Form Message"
+msgstr "הזן שדה להודעת הטופס שלך"
+
+#: views/automatic-plugin-update.php:35
+msgid "Enable"
+msgstr "אפשר"
+
+#: views/automatic-plugin-update.php:36
+msgid "Disable"
+msgstr "להשבית"
+
+#: views/contact-bank-system-report.php:34
+msgid "Get System Report"
+msgstr "קבל דיווח מערכת"
+
+#: views/contact-bank-system-report.php:38
+msgid "Close System Report"
+msgstr "סגור את דיווח המערכת"
+
+#: views/contact-bank-system-report.php:125
+msgid "Default"
+msgstr "ברירת מחדל"
+
+#: views/contact-feedback.php:36 views/contact_bank_form_preview.php:297
+#: views/contact_bank_layout_settings.php:32
+#: views/contact_email_settings.php:33 views/contact_frontend_data.php:34
+#: views/contact_view.php:262
+msgid "Back to Dashboard"
+msgstr "חזרה ללוח הבקרה"
+
+#: views/contact-feedback.php:40
+msgid "Email has beens send successfully."
+msgstr "דוא\"ל כבר לשלוח בהצלחה."
+
+#: views/contact-feedback.php:47 views/contact-feedback.php:63
+msgid "Feature Requests / Suggestions"
+msgstr "כוללים בקשות / הצעות"
+
+#: views/contact-feedback.php:53
+msgid "Enter your Name"
+msgstr "נא להזין שם"
+
+#: views/contact-feedback.php:57
+msgid "Email Id"
+msgstr "דוא\"ל זיהוי"
+
+#: views/contact-feedback.php:59
+msgid "Enter your Email Address"
+msgstr "הזן את כתובת הדוא\"ל שלך"
+
+#: views/contact-feedback.php:65
+msgid "Enter your Feature Requests / Suggestions"
+msgstr "הזן שלך בקשות תכונה / הצעות"
+
+#: views/contact-feedback.php:70
+msgid "Send"
+msgstr "שלח"
+
+#: views/contact_bank_form_preview.php:294 views/dashboard.php:129
+msgid "Form Preview"
+msgstr "תצוגה מוקדמת של הטופס"
+
+#: views/contact_bank_layout_settings.php:29
+msgid " (Premium Features available in Paid Edition)"
+msgstr "(פרמיה תכונות זמין ב שולם מהדורה)"
+
+#: views/contact_bank_layout_settings.php:33
+msgid "Restore Global Settings"
+msgstr "שחזר את ההגדרות הכלליות"
+
+#: views/contact_bank_layout_settings.php:39
+msgid "Form Settings Saved. Kindly wait for the redirect."
+msgstr "הגדרות טופס נשמרו. אנא המתן עבור הפניה מחדש."
+
+#: views/contact_bank_layout_settings.php:82
+msgid "Label Settings"
+msgstr "הגדרות תוויות"
+
+#: views/contact_bank_layout_settings.php:94
+#: views/contact_bank_layout_settings.php:281
+#: views/contact_bank_layout_settings.php:491
+#: views/contact_bank_layout_settings.php:684
+#: views/contact_bank_layout_settings.php:812
+msgid "Font Family :"
+msgstr "משפחת גופנים:"
+
+#: views/contact_bank_layout_settings.php:119
+msgid "Font Color :"
+msgstr "צבע גופן:"
+
+#: views/contact_bank_layout_settings.php:130
+#: views/contact_bank_layout_settings.php:317
+msgid "Font Style :"
+msgstr "סגנון גופן:"
+
+#: views/contact_bank_layout_settings.php:144
+#: views/contact_bank_layout_settings.php:331
+#: views/contact_bank_layout_settings.php:540
+#: views/contact_bank_layout_settings.php:709
+#: views/contact_bank_layout_settings.php:837
+msgid "Font Size (px) :"
+msgstr "גודל גופן (px):"
+
+#: views/contact_bank_layout_settings.php:175
+#: views/contact_bank_layout_settings.php:432
+#: views/contact_bank_layout_settings.php:645
+#: views/contact_bank_layout_settings.php:773
+#: views/contact_bank_layout_settings.php:901
+msgid "Text Align :"
+msgstr "יישור טקסט:"
+
+#: views/contact_bank_layout_settings.php:188
+msgid "Label Position :"
+msgstr "מיקום התווית:"
+
+#: views/contact_bank_layout_settings.php:202
+msgid "Field Desc Font Size :"
+msgstr "סדר יורד של גודל גופן בשדה:"
+
+#: views/contact_bank_layout_settings.php:233
+msgid "Field Description Align :"
+msgstr "יישור שדה התיאור"
+
+#: views/contact_bank_layout_settings.php:247
+msgid "Hide Labels :"
+msgstr "הסתר תוויות:"
+
+#: views/contact_bank_layout_settings.php:255
+#: views/contact_bank_layout_settings.php:445
+#: views/contact_bank_layout_settings.php:658
+#: views/contact_bank_layout_settings.php:786
+#: views/contact_bank_layout_settings.php:914
+msgid "Text Direction :"
+msgstr "כיוון טקסט:"
+
+#: views/contact_bank_layout_settings.php:271
+msgid "Input Field Settings"
+msgstr "הגדרות שדה קלט"
+
+#: views/contact_bank_layout_settings.php:306
+#: views/contact_bank_layout_settings.php:603
+#: views/contact_bank_layout_settings.php:762
+#: views/contact_bank_layout_settings.php:890
+msgid "Text Color :"
+msgstr "צבע טקסט:"
+
+#: views/contact_bank_layout_settings.php:362
+#: views/contact_bank_layout_settings.php:635
+msgid "Border Radius (px) :"
+msgstr "רדיוס מסגרת (px):"
+
+#: views/contact_bank_layout_settings.php:372
+#: views/contact_bank_layout_settings.php:614
+#: views/contact_bank_layout_settings.php:751
+#: views/contact_bank_layout_settings.php:879
+msgid "Border Color :"
+msgstr "צבע מסגרת"
+
+#: views/contact_bank_layout_settings.php:383
+#: views/contact_bank_layout_settings.php:625
+msgid "Border Size (px) :"
+msgstr "עובי מסגרת (px):"
+
+#: views/contact_bank_layout_settings.php:393
+msgid "Border Style :"
+msgstr "סגנון מסגרת:"
+
+#: views/contact_bank_layout_settings.php:408
+#: views/contact_bank_layout_settings.php:581
+#: views/contact_bank_layout_settings.php:740
+#: views/contact_bank_layout_settings.php:868
+msgid "Background Color :"
+msgstr "צבע רקע:"
+
+#: views/contact_bank_layout_settings.php:419
+msgid "Radio Buttons :"
+msgstr "כפתורי רדיו:"
+
+#: views/contact_bank_layout_settings.php:424
+msgid "Multiple Rows"
+msgstr "שורות מרובות"
+
+#: views/contact_bank_layout_settings.php:426
+msgid "Single Row"
+msgstr "שורה אחת"
+
+#: views/contact_bank_layout_settings.php:459
+msgid "Input Size :"
+msgstr "גודל קלט:"
+
+#: views/contact_bank_layout_settings.php:481
+msgid "Submit Button Settings"
+msgstr "הגדרות כפתור שליחה"
+
+#: views/contact_bank_layout_settings.php:516
+msgid "Text:"
+msgstr "טקסט:"
+
+#: views/contact_bank_layout_settings.php:526
+msgid "Style :"
+msgstr "סגנון:"
+
+#: views/contact_bank_layout_settings.php:571
+msgid "Button Width (px) :"
+msgstr "רוחב הכפתור (px):"
+
+#: views/contact_bank_layout_settings.php:592
+msgid "Hover Background Color:"
+msgstr "צבע רקע בריחוף עכבר:"
+
+#: views/contact_bank_layout_settings.php:674
+msgid "Success Message Settings"
+msgstr "הגדרות הודעת הצלחה"
+
+#: views/contact_bank_layout_settings.php:802
+msgid "Error Message Settings"
+msgstr "הגדרות הודעת שגיאה"
+
+#: views/contact_bank_pro_version.php:44
+msgid "Contact Bank Pricing"
+msgstr "Contact Bank תמחור"
+
+#: views/contact_bank_pro_version.php:375
+msgid "Need Support Help?"
+msgstr "?זקוקה תמיכה עזרה?"
+
+#: views/contact_bank_pro_version.php:387
+msgid "Lets get in touch!"
+msgstr "בוא ליצור קשר!"
+
+#: views/contact_bank_pro_version.php:391
+msgid "Order Now!"
+msgstr "להזמין עכשיו!"
+
+#: views/contact_controls_files.php:41 views/contact_controls_files.php:57
+#: views/contact_controls_files.php:74 views/contact_controls_files.php:92
+#: views/contact_controls_files.php:108 views/contact_controls_files.php:125
+msgid "Settings"
+msgstr "הגדרות"
+
+#: views/contact_documentation.php:27
+msgid "Documentation - Contact Bank"
+msgstr "תיעוד Contact Bank"
+
+#: views/contact_email_settings.php:78
+msgid "Add New"
+msgstr "הוסף חדש"
+
+#: views/contact_email_settings.php:159
+msgid "Are you sure, you want to delete this Email Setting?"
+msgstr "האם אתה בטוח שאתה רוצה למחוק את הגדרות המייל הזה?"
+
+#: views/contact_email_settings.php:177 views/contact_frontend_data.php:138
+msgid "Please select the Form first."
+msgstr "נא לבחור קודם את הטופס:"
+
+#: views/contact_frontend_data.php:35
+msgid "Export to Excel"
+msgstr "יצוא ל אקסל"
+
+#: views/contact_frontend_data.php:41 views/dashboard.php:64
+#: views/dashboard.php:71
+msgid "Form"
+msgstr "טופס"
+
+#: views/contact_view.php:259 views/dashboard.php:46
+msgid "Add New Form"
+msgstr "הוסף טופס חדש"
+
+#: views/contact_view.php:265 views/contact_view.php:529
+msgid "Save Form"
+msgstr "שמור את הטופס"
+
+#: views/contact_view.php:270
+msgid "Form Submitted. Kindly wait for the redirect."
+msgstr "הטופס נשלח. נא למתין להפניה מחדש."
+
+#: views/contact_view.php:279
+msgid "Form Settings"
+msgstr "הגדרות טופס"
+
+#: views/contact_view.php:283
+msgid "Form Name :"
+msgstr "שם הטופס:"
+
+#: views/contact_view.php:289
+msgid "Enter Form Name"
+msgstr "הזן שם טופס"
+
+#: views/contact_view.php:293
+msgid "Form Description :"
+msgstr "תיאור הטופס"
+
+#: views/contact_view.php:295
+msgid "Enter Form Description"
+msgstr "הזן את תיאור הטופס"
+
+#: views/contact_view.php:299
+msgid "Blank Field Message:"
+msgstr "הודעת שדה ריק:"
+
+#: views/contact_view.php:307
+msgid "Enter Blank Field Message"
+msgstr "הזן הודעת שדה ריק"
+
+#: views/contact_view.php:311
+msgid "Incorrect Email Message:"
+msgstr "הודעת מייל שגוי:"
+
+#: views/contact_view.php:319
+msgid "Enter Incorrect Email Message"
+msgstr "הזן הודעת מייל שגוי"
+
+#: views/contact_view.php:323
+msgid "Success Message :"
+msgstr "הודעת הצלחה:"
+
+#: views/contact_view.php:327
+msgid "Enter Success Message"
+msgstr "הזן הודעת הצלחה"
+
+#: views/contact_view.php:331
+msgid "Redirect :"
+msgstr "הפניה מחדש:"
+
+#: views/contact_view.php:343 views/contact_view.php:354
+#: views/contact_view.php:366
+msgid "Page"
+msgstr "עמוד"
+
+#: views/contact_view.php:346 views/contact_view.php:357
+#: views/contact_view.php:369
+msgid "URL"
+msgstr "כתובת URL"
+
+#: views/contact_view.php:376
+msgid "Page :"
+msgstr "עמוד:"
+
+#: views/contact_view.php:419
+msgid "URL :"
+msgstr "URL:"
+
+#: views/contact_view.php:426
+msgid "Enter Redirect URL"
+msgstr "הזן כתובת URL להפניה מחדש"
+
+#: views/contact_view.php:433
+msgid "Form Layout Preview"
+msgstr "תצוגה מוקדמת של פריסת הטופס"
+
+#: views/contact_view.php:444
+msgid "Standard Fields"
+msgstr "שדות סטנדרטיים"
+
+#: views/contact_view.php:447 views/contact_view.php:483
+msgid "Click on a field to use into your form."
+msgstr "לחץ על שדה לשימוש בטופס שלך"
+
+#: views/contact_view.php:466
+msgid "Checkboxes"
+msgstr "תיבות סימון"
+
+#: views/contact_view.php:478
+msgid "Advanced Fields"
+msgstr "שדות מתקדמים"
+
+#: views/contact_view.php:489
+msgid "Website / URL"
+msgstr "כתובת אתר"
+
+#: views/contact_view.php:494
+msgid "Phone"
+msgstr "טלפון"
+
+#: views/contact_view.php:497
+msgid "Address"
+msgstr "כתובת"
+
+#: views/contact_view.php:502
+msgid "Number"
+msgstr "מספר"
+
+#: views/contact_view.php:505
+msgid "File Upload"
+msgstr "העלאת קובץ"
+
+#: views/contact_view.php:510
+msgid "Date"
+msgstr "תאריך"
+
+#: views/contact_view.php:513
+msgid "Time"
+msgstr "זמן"
+
+#: views/contact_view.php:518
+msgid "Password"
+msgstr "ססמה"
+
+#: views/dashboard.php:34
+msgid "Contact Bank Short-Codes"
+msgstr "Contact Bank קצרים-קודי"
+
+#: views/dashboard.php:52
+msgid "Delete All Forms"
+msgstr "מחק את כל הטפסים"
+
+#: views/dashboard.php:55
+msgid "Restore Factory Settings"
+msgstr "שחזר את הגדרות ברירת המחדל"
+
+#: views/dashboard.php:72
+msgid "Shortcode"
+msgstr "קיצור קוד"
+
+#: views/dashboard.php:73
+msgid "Total Controls"
+msgstr "סך כל הבקרים"
+
+#: views/dashboard.php:109
+msgid "Edit Form"
+msgstr "ערוך את הטופס"
+
+#: views/dashboard.php:134
+msgid "Delete Form"
+msgstr "מחק את הטופס"
+
+#: views/dashboard.php:189
+msgid "Are you sure, you want to delete this Form?"
+msgstr "האם אתה בטוח שאתה רוצה למחוק את הטופס הזה?"
+
+#: views/dashboard.php:199
+msgid "Are you sure, you want to delete all Forms?"
+msgstr "האם אתה בטוח שאתה רוצה למחוק את כל הטפסים?"
+
+#: views/header.php:22
+msgid "Get Started"
+msgstr "התחל לעבוד"
+
+#: views/header.php:25
+msgid "Watch Contact Video!"
+msgstr "לצפות Contact - הוידאו!"
+
+#: views/header.php:29
+msgid "read documentation here"
+msgstr "לקרוא תיעוד כאן"
+
+#: views/header.php:34
+msgid "Go Premium"
+msgstr "ללכת פרמיה"
+
+#: views/header.php:38
+msgid "Feature"
+msgstr "תכונה"
+
+#: views/header.php:43
+msgid "Online Demos"
+msgstr "הדגמות מקוונות"
+
+#: views/header.php:48
+msgid "Premium Pricing Plan ?"
+msgstr "תכנית תמחור פרמיה?"
+
+#: views/header.php:55
+msgid "Knowledge Base"
+msgstr "מאגר ידע"
+
+#: views/header.php:60
+msgid "Support Forum"
+msgstr "תמיכה פורום"
+
+#: views/header.php:65
+msgid "FAQ's"
+msgstr "שאלות נפוצות של"
+
+#: views/header.php:70
+msgid "Detailed Features"
+msgstr "תכונות מפורטות"
+
+#: views/header.php:76
+msgid "More Actions"
+msgstr "פעולות נוספות"
+
+#: views/header.php:80
+msgid "Plugin Customization"
+msgstr "ההתאמה האישית הפלאג"
+
+#: views/shortcode.php:29
+msgid ""
+"How to setup Short-Codes for Contact Bank into your WordPress Page/Post?"
+msgstr ""
+"כיצד התקנה  קצרים-קודים עבור Contact Bank לתוך  לך WordPress הדף / הודעה?"
+
+#~ msgid "Roles & Capabilities"
+#~ msgstr "תפקידים ויכולות"
+
+#~ msgid "Licensing"
+#~ msgstr "רישיון"
+
+#~ msgid "Day"
+#~ msgstr "יום"
+
+#~ msgid "Select Month"
+#~ msgstr "בחר חודש"
+
+#~ msgid "January"
+#~ msgstr "ינואר"
+
+#~ msgid "February"
+#~ msgstr "פבואר"
+
+#~ msgid "March"
+#~ msgstr "מרץ"
+
+#~ msgid "April"
+#~ msgstr "אפריל"
+
+#~ msgid "May"
+#~ msgstr "מאי"
+
+#~ msgid "June"
+#~ msgstr "יוני"
+
+#~ msgid "July"
+#~ msgstr "יולי"
+
+#~ msgid "August"
+#~ msgstr "נִשׂגָב"
+
+#~ msgid "September"
+#~ msgstr "ספטמבר"
+
+#~ msgid "October"
+#~ msgstr "אוקטובר"
+
+#~ msgid "November"
+#~ msgstr "נובמבר"
+
+#~ msgid "December"
+#~ msgstr "דצמבר"
+
+#~ msgid "Year"
+#~ msgstr "שנה"
+
+#~ msgid "Hour"
+#~ msgstr "שעה"
+
+#~ msgid "Minute"
+#~ msgstr "דקה"
+
+#~ msgid "Enter Tooltip Text"
+#~ msgstr "הזן טקסט טולטיפ"
+
+#~ msgid "Enter Tooltip"
+#~ msgstr "הכנס טולטיפ"
+
+#~ msgid "Start Year"
+#~ msgstr "שנת התחלה"
+
+#~ msgid "Enter Start Year"
+#~ msgstr "הזן שנת התחלה"
+
+#~ msgid "End Year"
+#~ msgstr "שנת סיום"
+
+#~ msgid "Enter End Year "
+#~ msgstr "הזן שנת סיום.."
+
+#~ msgid "Default Value"
+#~ msgstr "ערך ברירת מחדל"
+
+#~ msgid "Month"
+#~ msgstr "חודש"
+
+#~ msgid "Date Format"
+#~ msgstr "מבנה תאריך"
+
+#~ msgid "Allow Multiple Uploads"
+#~ msgstr "התר העלאת קבצים מרובים"
+
+#~ msgid "Allowed File Extensions"
+#~ msgstr "סוגי קובץ מותרים"
+
+#~ msgid "Enter File Extensions"
+#~ msgstr "הזן סוגי קובץ"
+
+#~ msgid "The file extensions must be separated with comma(',')"
+#~ msgstr "סוגי הקובץ חייבים להיות מופרדים בפסיק (,)"
+
+#~ msgid "Allowed File Size"
+#~ msgstr "גודל קובץ מותר"
+
+#~ msgid "File Size must be in Mb"
+#~ msgstr "גודל הקובץ חייב להיות ב MB"
+
+#~ msgid "Hour Format"
+#~ msgstr "מבנה שעה"
+
+#~ msgid "Minute Format"
+#~ msgstr "מבנה דקה"
+
+#~ msgid "Roles and Capabilities Saved. Kindly wait for the redirect."
+#~ msgstr "תפקידים ויכולות נשמרו. נא להמתין להפניה מחדש."
+
+#~ msgid "Privileges for Admin"
+#~ msgstr "זכויות מנהל"
+
+#~ msgid "Full Control"
+#~ msgstr "שליטה מלאה"
+
+#~ msgid "Read"
+#~ msgstr "קריאה"
+
+#~ msgid "Write"
+#~ msgstr "כתיבה"
+
+#~ msgid "Privileges for Editor"
+#~ msgstr "זכויות עורך"
+
+#~ msgid "Privileges for Author"
+#~ msgstr "זכויות מחבר"
+
+#~ msgid "Privileges for Contributor"
+#~ msgstr "זכויות תורם"
+
+#~ msgid "Privileges for Subscriber"
+#~ msgstr "זכויות מנוי"
+
+#~ msgid "Global Settings Saved. Kindly wait for the redirect."
+#~ msgstr "ההגדרות הכלליות נשמרו. נא להמתין להפניה מחדש."
+
+#~ msgid "Are you sure, you want to Restore Global Settings?"
+#~ msgstr "האם אתה בטוח שאתה רוצה לשחזר את ההגדרות הכלליות?"
+
+#~ msgid "Check Plugin - Contact Bank"
+#~ msgstr "בדוק את התוסף Contact Bank"
+
+#~ msgid "Captcha"
+#~ msgstr "Captcha"
+
+#~ msgid "Are you sure, you want to delete this Form Entry ?"
+#~ msgstr "האם אתה בטוח שאתה רוצה למחוק את זה מן הערך?"
+
+#~ msgid "Attention! A new version of Contact Bank is available for download."
+#~ msgstr "תשומת לב!גרסה חדשה של Contact Bank זמינה להורדה."
+
+#~ msgid "Click"
+#~ msgstr "לחץ"
+
+#~ msgid "here"
+#~ msgstr "כאן"
+
+#~ msgid "to upgrade your version of Contact Bank."
+#~ msgstr "כדי לשדרג את גרסת תוסף Contact Bank"
+
+#~ msgid "Dashboard - Contact Bank"
+#~ msgstr "לוח הבקרה של Contact Bank"
+
+#~ msgid "Are you sure you want to Restore Factory Settings?"
+#~ msgstr "האם אתה בטוח שאתה רוצה לשחזר את הגדרות ברירת המחדל?"
+
+#~ msgid "Only One File Uploader can be used on a Form."
+#~ msgstr "ניתן להשתמש בטופס רק ב"
+
+#~ msgid "Only One Captcha can be used on a Form."
+#~ msgstr "בלבד האחד Captcha דווחים יכולות לשמש ב טופס."
+
+#~ msgid "Success! Settings have been updated."
+#~ msgstr "ההגדרות עודכנו בהצלחה!"

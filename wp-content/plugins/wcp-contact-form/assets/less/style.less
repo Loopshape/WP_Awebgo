@@ -1,0 +1,83 @@
+@id : '';
+@field_label_text_color : '';
+@field_text_color : '';
+@no_border : '';
+@border_size : '';
+@border_style : '';
+@border_color : '';
+@no_background : '';
+@background_color : '';
+@button_color : '';
+@text_color : '';
+
+#@{id} .scfp-form-row input, #@{id} .scfp-form-row textarea, #@{id} .scfp-form-row .scfp-captcha-image-wrapper { 
+    .no_border (@no_border) when (@no_border=~'') {
+        
+        .border_size (@border_size) when not (@border_size=~'') {
+            border-width: @border_size!important;
+        } .border_size (@border_size);
+
+        .border_style (@border_style) when not (@border_style=~'') {
+            border-style: @border_style!important;
+        } .border_style (@border_style);        
+
+        .border_color (@border_color) when not (@border_color=~'') {
+            border-color: @border_color!important;
+        } .border_color (@border_color);        
+
+    } .no_border (@no_border);
+}
+
+#@{id} .scfp-form-row input, #@{id} .scfp-form-row textarea {    
+    .no_background (@no_background) when (@no_background=~'') {
+    
+        .background_color (@background_color) when not (@background_color=~'') {
+            background-color: @background_color!important;
+        } .background_color (@background_color);        
+        
+    } .no_background (@no_background);
+    
+    .field_text_color (@field_text_color) when not (@field_text_color=~'') {
+        color: @field_text_color!important;
+    } .field_text_color (@field_text_color);        
+}    
+
+#@{id} .scfp-form-row label {
+    .field_label_text_color (@field_label_text_color) when not (@field_label_text_color=~'') {
+        color: @field_label_text_color!important;
+    } .field_label_text_color (@field_label_text_color);        
+}
+#@{id} .scfp-captcha .scfp-captcha-refresh .scfp-captcha-refresh-inner-icon .scfp-icon-refresh {
+    .field_text_color (@field_text_color) when not (@field_text_color=~'') {
+        color: @field_text_color!important;
+    } .field_text_color (@field_text_color);       
+}    
+#@{id} .scfp-form-action .scfp-form-submit {
+    .button_color (@button_color) when not (@button_color=~'') {
+        background-color: @button_color!important;
+    } .button_color (@button_color);        
+    
+    .text_color (@text_color) when not (@text_color=~'') {
+        color: @text_color!important;
+    } .text_color (@text_color);        
+}
+
+#@{id} .scfp-form-row .scfp-form-field:focus:required:valid { 
+    border-color: #388e3c!important; 
+}
+
+#@{id} .scfp-form-row .scfp-form-field:focus:required:invalid,
+#@{id} .scfp-form-row input[type="checkbox"]:focus:required:invalid { 
+    border-color: #d32f2f!important;
+}
+
+#@{id} .scfp-form-action .scfp-form-submit.scfp-form-submit-disabled { 
+    background-color: #cfcfcf!important; 
+    color: #f5f5f5!important; 
+    cursor: not-allowed!important;
+}
+
+#@{id} .scfp-form-action .scfp-form-submit.scfp-form-submit-disabled:hover { 
+    opacity: 1!important;
+}
+

@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------*/
+/*-- SCFP CSS Document --*/
+/*-- Copyright (c) 2015. WebCodin --*/
+/*-- @author WebCodin --*/
+/*--------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*--- SCFP Font Family :: [Refresh Icon Font] :: Icon ---*/
+/*-----------------------------------------------------------------*/
+@font-face {
+	font-family: 'SCFP-Icon';
+	src:url('../fonts/scfp-icon.eot?x4gwim');
+	src:url('../fonts/scfp-icon.eot?#iefixx4gwim') format('embedded-opentype'),
+		url('../fonts/scfp-icon.ttf?x4gwim') format('truetype'),
+		url('../fonts/scfp-icon.woff?x4gwim') format('woff'),
+		url('../fonts/scfp-icon.svg?x4gwim#SCFP-Icon') format('svg');
+	font-weight: normal !important;
+	font-style: normal !important;
+}
+/*-----------------------------------------------------------------*/
+/*--- SCFP Icons Fonts ---*/
+/*-----------------------------------------------------------------*/
+[class^="scfp-icon-"], [class*=" scfp-icon-"] { display: inline-block; font-family: 'SCFP-Icon' !important; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.scfp-icon-refresh:before { content: "\f021"; }
+/*--------------------------------------------------------------*/
+.scfp-form-content { padding-bottom: 15px; }
+.scfp-form-content a, .scfp-form-content a:focus, .scfp-form-content a:hover { outline: none; }
+.scfp-form-content:after, .scfp-form-content:before { clear: both; }
+.scfp-form-content .scfp-form-row { padding-bottom: 10px; text-align: left !important; }
+.scfp-form-content .scfp-form-row .scfp-form-label { display: inline-block; line-height: 1.1em; margin: 0; padding-bottom: 5px; font-weight: normal; float: none !important; text-align: left !important; text-shadow: none !important; }
+.scfp-form-content .scfp-form-row .scfp-form-label .scfp-form-field-required { color: #d32f2f; display: inline !important; }
+.scfp-form-content .scfp-form-row .scfp-form-field { background-image: none; background-color: #fff; font-size: 90%; height: auto; min-height: 32px; width: 100%; margin: 0; padding: 7px 8px; border-width: 1px; border-style: solid; border-color: #cfcfcf; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; -webkit-appearance: none; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-shadow: none !important; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; float: none !important; display: block; letter-spacing: 0; }
+.scfp-form-content .scfp-form-row .scfp-form-field:invalid, .scfp-form-content .scfp-form-row input[type="checkbox"]:invalid { box-shadow: none !important; outline: none !important; }
+.scfp-form-content .scfp-form-row .scfp-form-field:focus:required:valid { border-color: #388e3c; }
+.scfp-form-content .scfp-form-row .scfp-form-field:focus:required:invalid, .scfp-form-content .scfp-form-row input[type="checkbox"]:focus:required:invalid { border-color: #d32f2f; box-shadow: none !important; }
+.scfp-form-content .scfp-form-row .scfp-form-field:focus { border-width: 1px; border-style: solid; border-color: #cfcfcf; box-shadow: none !important; outline: none !important; }
+.scfp-form-content .scfp-form-row .scfp-form-message-field { padding: 5px 8px; min-height: 100px; resize: none; }
+/*-----------------------------------------------------------------*/
+.scfp-form-content .scfp-captcha { width: 100%; overflow: hidden; padding: 2px 2px 0 0; margin-top: -2px; }
+.scfp-form-content .scfp-captcha .scfp-captcha-image, .scfp-form-content .scfp-captcha .scfp-captcha-field { float: left; }
+.scfp-form-content .scfp-captcha .scfp-captcha-image { width: 36%; text-align: center; }
+.scfp-form-content .scfp-captcha .scfp-captcha-image .scfp-captcha-image-wrapper { border-width: 1px; border-style: solid; border-color: #cfcfcf; background-image: none; background-color: #fff !important; }
+.scfp-form-content .scfp-captcha .scfp-captcha-image .scfp-captcha-image-wrapper img { max-width: 100%; height: auto; display: block; width: 200px; margin: 0 auto; padding: 0; border: 0; box-shadow: 0 0 0 !important; border-radius: 0; }
+.scfp-form-content .scfp-captcha .scfp-captcha-field { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width: 64%; padding-left: 10px; position: relative; }
+.scfp-form-content .scfp-captcha .scfp-captcha-field p { margin: 0 !important; padding: 0 !important; }
+.scfp-form-content .scfp-captcha .scfp-captcha-field input { width: 100%; margin: 0; padding-right: 30px !important; }
+.scfp-form-content .scfp-captcha .scfp-captcha-refresh { border: 0 none; bottom: 1px; display: block; margin: 0; position: absolute; right: 1px; text-decoration: none; top: 1px; width: 30px; transition: none !important; }
+.scfp-form-content .scfp-captcha .scfp-captcha-refresh .scfp-captcha-refresh-inner { display: table; width: 100%; height: 100%; text-align: center; }
+.scfp-form-content .scfp-captcha .scfp-captcha-refresh .scfp-captcha-refresh-inner-icon { display: table-cell; vertical-align: middle; }
+.scfp-form-content .scfp-captcha .scfp-captcha-refresh .scfp-captcha-refresh-inner-icon .scfp-icon-refresh { display: block; font-size: 16px; color: #757575; }
+.scfp-form-content .scfp-captcha .scfp-captcha-refresh:hover { opacity: 0.8; }
+/*-----------------------------------------------------------------*/
+.scfp-form-content .scfp-form-row-checkbox { padding: 3px 0 8px; line-height: 1.1em; min-height: 16px; }
+.scfp-form-content .scfp-form-row-checkbox input[type="checkbox"] { float: left !important; height: inherit !important; margin: 3px 0 0 !important; padding: 0 !important; position: static !important; vertical-align: top !important; width: inherit !important; }
+.scfp-form-content .scfp-form-row-checkbox .scfp-form-label { vertical-align: bottom; max-width: 93%; padding: 0 0 0 5px; }
+/*-----------------------------------------------------------------*/
+.scfp-form-content .scfp-form-row .scfp-recaptcha iframe { border: 0 !important; outline: none !important; margin: 0 !important; padding: 0 !important; max-width: 100%; }
+.scfp-form-content .scfp-form-row .scfp-recaptcha.scfp-size-normal .scfp-recaptcha-container { border-radius: 3px; }
+.scfp-form-content .scfp-form-row .scfp-recaptcha.scfp-size-compact .scfp-recaptcha-container { border-radius: 3px; }
+/*-----------------------------------------------------------------*/
+.scfp-form-content .scfp-form-action { padding-top: 10px; text-align: left !important; }
+.scfp-form-content .scfp-form-action.scfp-form-button-position-right { text-align: right !important; }
+.scfp-form-content .scfp-form-action.scfp-form-button-position-center { text-align: center !important; }
+.scfp-form-content .scfp-form-action.scfp-form-button-position-left { text-align: left !important; }
+.scfp-form-content .scfp-form-action .scfp-form-submit { display: inline-block !important; background-image: none; background-color: #404040; border: 0 !important; outline: none !important; min-width: 30%; min-height: 32px; margin: 0; color: #fff; font-size: 90%; line-height: 1em; font-weight: bold; padding: 11px 20px 12px; text-transform: uppercase; vertical-align: bottom; cursor: pointer; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; text-shadow: none; -webkit-text-shadow: none; -moz-text-shadow: none; }
+.scfp-form-content .scfp-form-action .scfp-form-submit:hover { opacity: 0.8; }
+/*-----------------------------------------------------------------*/
+.scfp-form-content.scfp-form-widget { padding-bottom: 0; }
+.scfp-form-content.scfp-form-widget .scfp-form-row .scfp-form-field { padding: 7px; }
+.scfp-form-content.scfp-form-widget .scfp-form-row .scfp-form-message-field { padding: 5px 7px; }
+.scfp-form-content.scfp-form-widget .scfp-captcha .scfp-captcha-image { width: 45%; }
+.scfp-form-content.scfp-form-widget .scfp-captcha .scfp-captcha-field { width: 55%; }
+.scfp-form-content.scfp-form-widget .scfp-captcha .scfp-captcha-image .scfp-captcha-image-wrapper { background-image: none; background-color: #fff !important; }    
+.scfp-form-content.scfp-form-widget .scfp-captcha .scfp-captcha-field input { padding-right: 25px !important; }
+.scfp-form-content.scfp-form-widget .scfp-captcha .scfp-captcha-refresh { width: 25px; background-size: 50px 27px; background-position: 0 center; }
+.scfp-form-content.scfp-form-widget .scfp-captcha .scfp-captcha-refresh:hover { background-size: 50px 27px; background-position: -25px center; }
+.scfp-form-content.scfp-form-widget .scfp-form-row-checkbox .scfp-form-label { max-width: 85%; } 
+/*-----------------------------------------------------------------*/
+.scfp-form-content.scfp-form-widget .scfp-form-row .scfp-recaptcha.scfp-size-normal .scfp-recaptcha-container > div > div:first-child { max-width: 99% !important; }
+.scfp-form-content.scfp-form-widget .scfp-form-row .scfp-recaptcha.scfp-size-normal .scfp-recaptcha-container { transform: scale(0.9); -webkit-transform: scale(0.9); transform-origin: 0 0; -webkit-transform-origin: 0 0; max-width: 107.87%; margin-bottom: -10px; }
+/*-----------------------------------------------------------------*/
+.scfp-form-content.scfp-form-noborder .scfp-form-row input, .scfp-form-content.scfp-form-noborder .scfp-form-row textarea, .scfp-form-content.scfp-form-noborder .scfp-form-row .scfp-captcha-image-wrapper { border-color: transparent !important; }
+.scfp-form-content.scfp-form-nobackground .scfp-form-row input, .scfp-form-content.scfp-form-nobackground .scfp-form-row textarea, .scfp-form-content.scfp-form-nobackground .scfp-form-row .scfp-captcha-image-wrapper { background-color: transparent !important; }
+/*-----------------------------------------------------------------*/
+/*--- Form Error Styles ---*/
+/*-----------------------------------------------------------------*/
+.scfp-notifications { margin-bottom: 10px; overflow: hidden; padding: 12px 0; position: relative; width: 100%; font-size: 12px; line-height: 1.05em; box-sizing: border-box; }
+.scfp-notifications.scfp-form-error { background: #fceded; border: 1px solid #eed3d7; color: #d32f2f;  }
+.scfp-notifications.scfp-form-notification { background: #dff0d8; border: 1px solid #d6e9c6; color: #388e3c; }
+.scfp-notifications .scfp-form-notifications-content { float: left; padding: 0 0 0 13px; max-width: 93%; }
+.scfp-notifications .scfp-form-notifications-close { float: right; font-size: 16px; line-height: 12px; font-weight: bold; opacity: 0.2; position: absolute; right: 12px; top: 11px; text-decoration: none !important; color: #000 !important; font-family: Arial, Helvetica, sans-serif !important; outline: none !important; border: 0 !important; }
+.scfp-notifications .scfp-form-notifications-close:hover { opacity: 0.5; }
+.scfp-form-notification .scfp-notification-item, .scfp-form-error .scfp-error-item { padding-top: 5px; }
+.scfp-form-notification .scfp-notification-item:first-child, .scfp-form-error .scfp-error-item:first-child { padding-top: 0; }
+.scfp-form-error .scfp-error-item span { font-weight: bold; padding-right: 2px; } 
+/*-----------------------------------------------------------------*/
+.widget_scfp_form_widget .scfp-notifications { padding: 8px 0 9px; }
+.widget_scfp_form_widget .scfp-notifications .scfp-form-notifications-content { padding: 0 0 0 10px; max-width: 78%; }
+.widget_scfp_form_widget .scfp-notifications .scfp-form-notifications-close { font-size: 14px; right: 10px; top: 8px; }
+/*-----------------------------------------------------------------*/
+/* WP_AdminTopBar Menu*/
+/*-----------------------------------------------------------------*/
+#wpadminbar #wp-admin-bar-wcp-contactform-menu .ab-icon:before { content: '\f466'; top: 2px; }
+#wpadminbar #wp-admin-bar-wcp-contactform-menu .ab-items { background-color: #d54e21; border-radius: 10px; color: #fff; display: inline-block; font-size: 9px; font-weight: 600; line-height: 17px; margin: 8px 0 0 5px; vertical-align: top; z-index: 26; }
+#wpadminbar #wp-admin-bar-wcp-contactform-menu .ab-items-count { padding: 0 6px; color: #fff; font-size: 10px; font-weight: 600; line-height: 16px; }
+
+/*-----------------------------------------------------------------*/
+/*--- Media Queries Styles ---*/
+/*-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/*---------- Styles for tablet 0 - 375px --------*/
+/*-----------------------------------------------------------------*/  
+@media only screen and (min-width: 0) and (max-width: 375px) {
+    .scfp-form-content .scfp-form-row .scfp-recaptcha.scfp-size-normal .scfp-recaptcha-container { transform: scale(0.9); -webkit-transform: scale(0.9); transform-origin: 0 0; -webkit-transform-origin: 0 0; }     
+    .scfp-form-content.scfp-form-widget .scfp-form-row .scfp-recaptcha.scfp-size-normal .scfp-recaptcha-container { transform: scale(0.9); -webkit-transform: scale(0.9); }
+} 

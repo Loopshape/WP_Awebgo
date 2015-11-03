@@ -1,0 +1,140 @@
+/*--------------------------------------------------------------*/
+/*-- CSS Document --*/
+/*-- Copyright (c) 2015. --*/
+/*--------------------------------------------------------------*/
+.scfp-settings-table { width: 100%; margin-bottom: 5px; border: 1px solid #dfdfdf; }
+.scfp-settings-table .scfp-field { float: left; padding: 10px; width: 13% !important; box-sizing: border-box; }
+.scfp-settings-table .scfp-field:first-child { padding-left: 15px; width: 5% !important; }
+.scfp-settings-table .scfp-field-type, .scfp-settings-table .scfp-field-name { width: 23% !important; }
+.scfp-settings-table .scfp-field-actions { width: 165px !important; float: right; padding-right: 15px; }
+.scfp-settings-table .scfp-field-center { text-align: center; }
+.scfp-settings-table .scfp-settings-table-header { background: #fff; border-bottom: 1px solid #e1e1e1; overflow: hidden; }
+.scfp-settings-table .scfp-settings-table-header .scfp-field { padding-top: 8px; padding-bottom: 8px; color: #222222; font-family: "Open Sans",sans-serif; font-size: 14px; font-weight: bold; line-height: 1.4em; }
+.scfp-settings-table .scfp-settings-table-list { background: #f9f9f9; }
+.scfp-settings-table .scfp-settings-table-list .scfp-field-row { width: 100%; overflow: hidden; background: #fff; border-top: 1px solid #f0f0f0; }
+.scfp-settings-table .scfp-settings-table-list .scfp-field-row:first-child { border-top: 0; }
+.scfp-settings-table .scfp-settings-table-list .scfp-field-row .scfp-field { min-height: 30px; }
+.scfp-settings-table .scfp-settings-table-list .scfp-field-type select, .scfp-settings-table .scfp-settings-table-list .scfp-field-name input { margin-top: 1px !important; }
+.scfp-settings-table .scfp-settings-table-list .scfp-order { display: block; height: 28px; line-height: 27px; width: 29px; border: 1px solid #ddd; border-radius: 15px; font-size: 13px; overflow: hidden; text-align: center; }
+.scfp-settings-table .scfp-settings-table-list .scfp-field-visibility, .scfp-settings-table .scfp-settings-table-list .scfp-field-required, .scfp-settings-table .scfp-settings-table-list .scfp-field-export { text-align: center; }
+.scfp-settings-table .scfp-settings-table-list .scfp-field-visibility input[type="checkbox"], .scfp-settings-table .scfp-settings-table-list .scfp-field-required input[type="checkbox"], .scfp-settings-table .scfp-settings-table-list .scfp-field-export input[type="checkbox"] { margin-top: 8px !important; }
+.scfp-settings-table .scfp-settings-table-list .scfp-field-actions { text-align: right; }
+.scfp-settings-table .scfp-field-actions .button, .wp-list-table .scfp-reply-icon { background: #40b3d9; border: 0; box-shadow: none; padding: 2px 5px; height: 28px; line-height: 26px; color: #fff; margin: 1px 0 0 !important; display: inline-block; box-sizing: border-box; border-radius: 3px; }
+.scfp-settings-table .scfp-field-actions .button:hover, .wp-list-table .scfp-reply-icon:hover { background: #36a8cf; }
+.scfp-settings-table .scfp-field-actions .button.agp-del-row { background: #f04343; }
+.scfp-settings-table .scfp-field-actions .button.agp-del-row:hover { background: #db3e3e; }
+.scfp-settings-table .scfp-field-actions .dashicons, .wp-list-table .scfp-reply-icon .dashicons { font-size: 18px; line-height: 24px; }
+.scfp-settings-table .scfp-field-actions .button.agp-del-row .dashicons { font-size: 17px; }
+/*--------------------------------------------------------------*/
+.wp-admin.post-type-form-entries .wp-list-table th#reply, .wp-admin.post-type-form-entries .wp-list-table td.reply { width: 40px; }
+.wp-admin.post-type-form-entries .wp-list-table td.reply .scfp-reply-icon { padding: 2px 6px 2px 5px; }
+.wp-admin.admin_page_view-entry .scfp-quick-reply-btn .dashicons { float: left; font-size: 18px; padding: 5px 4px 0 0;}
+/*--------------------------------------------------------------*/
+.contact-form_page_scfp_plugin_options .regular-select { width: 25em; }
+/*--------------------------------------------------------------*/
+.scfp-view-table .view-entry-header td { border-top: 1px solid #e5e5e5; }
+.scfp-view-table .view-entry-header:first-child td { border-top: 0; }
+/*--------------------------------------------------------------*/
+#scfp-sortable .ui-sortable .scfp-field-row { cursor: move; }
+#scfp-sortable .ui-sortable-helper { border: 1px solid #f0f0f0; border-width: 1px; box-shadow: 0 0 2px #ddd; }
+#scfp-sortable .ui-sortable-placeholder { background-color: #f9f9f9 !important; border-top: 1px solid #f0f0f0; height: 50px; }
+/*-----------------------------------------------------------------*/
+/* WP_AdminTopBar Menu*/
+/*-----------------------------------------------------------------*/
+#wpadminbar #wp-admin-bar-wcp-contactform-menu .ab-icon:before { content: '\f466'; top: 2px; }
+#wpadminbar #wp-admin-bar-wcp-contactform-menu .ab-items { background-color: #d54e21; border-radius: 10px; color: #fff; display: inline-block; font-size: 9px; font-weight: 600; line-height: 17px; margin: 8px 0 0 5px; vertical-align: top; z-index: 26; }
+#wpadminbar #wp-admin-bar-wcp-contactform-menu .ab-items-count { padding: 0 6px; color: #fff; font-size: 10px; font-weight: 600; line-height: 16px; }
+/*-----------------------------------------------------------------*/
+/* WP_Admin Panel Menu*/
+/*-----------------------------------------------------------------*/
+#adminmenu .wcp-items { background-color: #d54e21; border-radius: 10px; color: #fff; display: inline-block; font-size: 9px; font-weight: 600; line-height: 17px; margin: 1px 0 0 5px; vertical-align: top; z-index: 26; }
+#adminmenu .wcp-items-count { padding: 0 6px; color: #fff; font-size: 9px; font-weight: 600; line-height: 17px; } 
+/*-----------------------------------------------------------------*/
+/* Corrected for IE8 */
+.scfp-settings-table .scfp-field-type, .scfp-settings-table .scfp-field-name { width: 20%\9 !important; }
+
+/*-----------------------------------------------------------------*/
+/*--- Media Queries Styles ---*/
+/*-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/*---------- Styles for tablet 0 - 1852px --------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (min-width: 0) and (max-width: 1852px) {
+    .scfp-settings-table .scfp-field { width: 12% !important; }
+    .scfp-settings-table .scfp-field:first-child { width: 5% !important; }
+    .scfp-settings-table .scfp-field-type, .scfp-settings-table .scfp-field-name { width: 22% !important; }
+    .scfp-settings-table .scfp-field-actions { width: 160px !important; }
+}
+/*-----------------------------------------------------------------*/
+/*---------- Styles for tablet 0 - 1268px --------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (min-width: 0) and (max-width: 1852px) {
+    .scfp-settings-table .scfp-field { width: 13% !important; }
+    .scfp-settings-table .scfp-field:first-child { width: 5% !important; }
+    .scfp-settings-table .scfp-field-type, .scfp-settings-table .scfp-field-name { width: 21% !important; }
+    .scfp-settings-table .scfp-field-actions { width: 123px !important; }
+}
+/*-----------------------------------------------------------------*/
+/*---------- Styles for tablet 0 - 1100px --------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (min-width: 0) and (max-width: 1100px) {
+    .scfp-settings-table { width: 100%; }
+    .scfp-settings-table .scfp-field { width: 13% !important; padding: 10px 5px; }
+    .scfp-settings-table .scfp-field:first-child { width: 48px !important; padding-left: 10px; }
+    .scfp-settings-table .scfp-field-type, .scfp-settings-table .scfp-field-name { width: 20% !important; }
+    .scfp-settings-table .scfp-field-actions { width: 112px !important; padding-right: 10px; }
+}
+/*-----------------------------------------------------------------*/
+/*---------- Styles for tablet 0 - 1000px --------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (min-width: 0) and (max-width: 1000px) {
+    .scfp-settings-table .scfp-field { width: 14% !important; }
+    .scfp-settings-table .scfp-field:first-child { width: 48px !important; }
+    .scfp-settings-table .scfp-field-type, .scfp-settings-table .scfp-field-name { width: 18% !important; }
+    .scfp-settings-table .scfp-field-actions { width: 112px !important; padding-right: 10px; }
+}
+/*-----------------------------------------------------------------*/
+/*---------- Styles for tablet 0 - 804px --------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (min-width: 0) and (max-width: 804px) {
+    .scfp-settings-table .scfp-field { width: 15% !important; }
+    .scfp-settings-table .scfp-field:first-child { width: 48px !important; }
+    .scfp-settings-table .scfp-field-type, .scfp-settings-table .scfp-field-name { width: 16% !important; }
+    .scfp-settings-table .scfp-field-actions { width: 112px !important; padding-right: 10px; }
+}
+/*-----------------------------------------------------------------*/
+/*---------- Styles for tablet 0 - 782px --------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (min-width: 0) and (max-width: 782px) {
+    .scfp-settings-table { min-width: 700px; margin-bottom: 10px; }
+    .scfp-settings-table .scfp-field { width: 14% !important; }
+    .scfp-settings-table .scfp-field:first-child { width: 48px !important; }
+    .scfp-settings-table .scfp-settings-table-header .scfp-field { font-size: 13px; }
+    .scfp-settings-table .scfp-field-type, .scfp-settings-table .scfp-field-name { width: 17% !important; }
+    .scfp-settings-table .scfp-field-type select, .scfp-settings-table .scfp-field-name input { height: 28px !important; font-size: 13px !important; }
+    .scfp-settings-table .scfp-field-actions { width: 112px !important; padding-right: 10px; }
+    .scfp-settings-table .scfp-settings-table-list .scfp-field-visibility input[type="checkbox"], .scfp-settings-table .scfp-settings-table-list .scfp-field-required input[type="checkbox"], .scfp-settings-table .scfp-settings-table-list .scfp-field-export input[type="checkbox"] { width: 16px; height: 16px; }
+    .scfp-settings-table .scfp-settings-table-list .scfp-order { width: 28px; font-size: 12px; }
+    /*-----------------------------------------------------------------*/
+    .wp-admin.edit-php.post-type-form-entries .wp-list-table.posts th, .wp-admin.edit-php.post-type-form-entries .wp-list-table.posts td { display: none; }
+    .wp-admin.edit-php.post-type-form-entries .wp-list-table.posts .column-date, .wp-admin.edit-php.post-type-form-entries .wp-list-table.posts .column-title, .wp-admin.edit-php.post-type-form-entries .wp-list-table.posts .check-column { display: table-cell !important; }
+    .wp-admin.edit-php.post-type-form-entries .wp-list-table.posts .column-title { width: 55%; word-wrap: break-word; }
+    .wp-admin.edit-php.post-type-form-entries .wp-list-table.posts .column-date { width: auto; }
+    .wp-admin.edit-php.post-type-form-entries .widefat tbody th.check-column input[type="checkbox"] { margin-top: -5px; }
+    /*-----------------------------------------------------------------*/
+    .contact-form_page_scfp_plugin_options .agp-actions { padding-top: 10px; }
+    .contact-form_page_scfp_plugin_options h2 .nav-tab { font-size: 13px; padding: 5px 8px; }
+    /*-----------------------------------------------------------------*/
+    .contact-form_page_scfp_plugin_options .regular-select { width: 100%; }
+}
+/*-----------------------------------------------------------------*/
+/*---------- Styles for tablet 0 - 720px --------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (min-width: 0) and (max-width: 720px) {
+    .scfp-settings-table-mobile-scroll { overflow-y: auto; }
+}
+
+
+
+
