@@ -110,7 +110,7 @@ html {
 border-radius: 12px !important;
 -webkit-box-shadow: inset 0 0 20px 2px $shadow-color !important;
 box-shadow: inset 0 0 20px 2px $shadow-color !important;
-              overflow: hidden !important;
+              //overflow: hidden !important;
               opacity: 0.9 !important;
             }
           }
@@ -130,7 +130,7 @@ box-shadow: inset 0 0 20px 2px $shadow-color !important;
 border-radius: 12px !important;
 //-webkit-box-shadow: 0 0 40px 0px $shadow-color !important;
 //box-shadow: 0 0 40px 0px $shadow-color !important;
-            overflow: hidden !important;
+            //overflow: hidden !important;
             //margin-bottom: 15px;
 
             header {
@@ -181,7 +181,7 @@ border-radius: 12px !important;
               border: 1px solid $border-color !important;
 -webkit-border-radius: 12px !important;
 border-radius: 12px !important;
-              overflow: hidden !important;
+              //overflow: hidden !important;
               margin-bottom: 0 !important;
 
               &:not(&[id^="crayon-"]), *:not(div[id^="crayon-"] *) {
@@ -227,7 +227,7 @@ box-shadow: none !important;
 -webkit-border-radius: 6px !important;
 border-radius: 6px !important;
                   margin: 10px 1% 10px 0 !important;
-                  overflow: hidden !important;
+                  //overflow: hidden !important;
                 }
               }
 

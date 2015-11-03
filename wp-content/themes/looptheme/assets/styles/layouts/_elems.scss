@@ -1,94 +1,11 @@
-html body:blur,
-html body.static,
-html body.mover {
-
-  > div.wrap.container > div > .main {
-    p {
-      a {
-        img:not(.masonry img):not(img.wp-smiley) {
-          width: 100% !important;
-          height: auto !important;
-          max-width: 36% !important;
-          margin-right: 2% !important;
-          margin-bottom: 2% !important;
-
-          &:hover {
-            cursor: pointer;
-          }
-        }
-      }
-    }
-
-    > h3 > strong {
-      &, * {
-        color: $white-color !important;
-        text-shadow: 1px 1px 1px $black-color !important;
-      }
-    }
-  }
-
-  > div.wrap.container > div > .main > div.page-header > h1 > i {
-    opacity: 0.9 !important;
-    &, * {
-      color: $green-font-color !important;
-      text-shadow: 0 0 2px $shadow-color !important;
-    }
-  }
-
-  div > div > section.widget {
-
-    > h3 > i {
-      display: inline-block;
-      margin-right: 0.125em !important;
-      opacity: 0.9 !important;
-      &, * {
-        color: $tertiary-font-color !important;
-        text-shadow: 0 0 2px $tertiary-color !important;
-      }
-    }
-
-    .tagcloud {
-      a {
-        &, * {
-          color: $yellow-font-color !important;
-          text-shadow: 1px 1px 3px $black-color !important;
-          opacity: 0.8 !important;
-        }
-      }
-    }
-
-  }
-
-  time.updated i {
-    display: inline-block;
-    margin-right: 0.125em !important;
-    opacity: 0.75 !important;
-    &, * {
-      color: $yellow-font-color !important;
-      text-shadow: 0 0 2px $yellow-font-color !important;
-      opacity: 0.8 !important;
-    }
-  }
-
-  input, button {
-    margin-bottom: 10px !important;
-    &, * {
-      color: $white-color !important;
-      text-shadow: 0 0 1px $white-color !important;
-    }
-  }
-
-}
-
-html body:hover #imagelightbox {
-z-index: 80000000 !important;
-}
+// CSS3 MOVEMENTS
 
 /* ******************************************************************************** */
 
 html {
-  position: inherit !important;
-  display: block !important;
+  position: absolute !important;
+  float: left !important;
+  display: inline-block !important;
   width: 100% !important;
   height: 100% !important;
   background-color: #081018 !important;
@@ -99,6 +16,8 @@ html {
 transition: all 100ms ease-in-out !important;
 z-index: 0 !important;
 margin-top: 0 !important;
+margin-top: 0% !important;
+margin-bottom: 0% !important;
 }
 
 body {
@@ -107,7 +26,8 @@ body {
   width: 100% !important;
   height: 100% !important;
   min-height: 100% !important;
-margin-top: 0 !important;
+margin-top: 0% !important;
+margin-bottom: 0% !important;
 -webkit-transition: all 250ms ease-in-out !important;
 -moz-transition: all 250ms ease-in-out !important;
 -ms-transition: all 250ms ease-in-out !important;
@@ -127,6 +47,7 @@ body.freezed {
 -ms-transform: scale(1) !important;
 transform: scale(1) !important;
 margin-top: 0% !important;
+margin-bottom: 0% !important;
 -webkit-transition: all 6000ms ease-in-out !important;
 -moz-transition: all 6000ms ease-in-out !important;
 -ms-transition: all 6000ms ease-in-out !important;
@@ -136,8 +57,6 @@ z-index: 0 !important;
 }
 
 /* ******************************************************************************** */
-
-// CSS3 MOVEMENTS
 
 // SPACESCENE
 
@@ -221,6 +140,8 @@ margin-bottom: -25% !important;
   img {
     position: relative;
     z-index: 80000000 !important;
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
   }
 
 -webkit-transition: all 18000ms ease-in-out !important;
@@ -308,6 +229,9 @@ margin-bottom: 0% !important;
 html body .container nav {
 opacity: 0.001 !important;
 
+margin-top: 0% !important;
+margin-bottom: 0% !important;
+
 -webkit-transition: all 20000ms ease-in-out !important;
 -moz-transition: all 20000ms ease-in-out !important;
 -ms-transition: all 20000ms ease-in-out !important;
@@ -330,6 +254,9 @@ transform: scale(1) !important;
 
 left: 8% !important;
 
+margin-top: 0% !important;
+margin-bottom: 0% !important;
+
 z-index: 88888888 !important;
 }
 
@@ -349,16 +276,22 @@ opacity: 0.5 !important;
 -ms-transition: all 6000ms ease-in-out !important;
 -o-transition: all 6000ms ease-in-out !important;
 transition: all 6000ms ease-in-out !important;
+
+margin-top: 0% !important;
+margin-bottom: 0% !important;
 }
 html body.static:not(body.freezed) .backgroundTop,
 html body:hover .backgroundTop {
--moz-transform: scale(1.75) !important;
--webkit-transform: scale(1.75) !important;
--o-transform: scale(1.75) !important;
--ms-transform: scale(1.75) !important;
-transform: scale(1.75) !important;
+-moz-transform: scale(1) !important;
+-webkit-transform: scale(1) !important;
+-o-transform: scale(1) !important;
+-ms-transform: scale(1) !important;
+transform: scale(1) !important;
 
 opacity: 0.999 !important;
+
+margin-top: 0% !important;
+margin-bottom: 0% !important;
 }
 
 html body .fa-inverse {
@@ -610,5 +543,39 @@ html body > div.wrap.container > div > .main > article > div > div > p > img.emo
     margin: 0 !important;
     text-shadow: none !important;
     box-shadow: none !important;
+  }
+}
+
+html body {
+  > header,
+  > .container.wrap,
+  > footer {
+    &, * {
+        margin-top: 0% !important;
+        margin-bottom: 0% !important;
+    }
+  }
+}
+
+html body div.gotoTop {
+  display: none !important;
+  width: auto !important;
+  height: 0 !important;
+}
+
+html body {
+  input,
+  select,
+  textarea {
+    margin: 10px 0 0 !important;
+  }
+}
+
+html body a,
+html body p a img,
+html body>div.wrap.container>div>main>*+*+*+* {
+  &, * {
+     position: relative !important;
+     z-index: 999999970 !important;
   }
 }

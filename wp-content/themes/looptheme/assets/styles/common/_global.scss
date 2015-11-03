@@ -19,6 +19,10 @@ transform: scale(1) !important;
 -ms-transition: none !important;
 -o-transition: none !important;
 transition: none !important;
+  box-sizing: content-box !important;
+  border: none !important;
+  outline: none !important;
+  overflow: visible !important;
 }
 
 div[id*="extension_"] {
@@ -258,7 +262,7 @@ box-sizing: border-box !important;
       border: 1px solid $highblue-border-color !important;
       -webkit-border-radius: 7px !important;
       border-radius: 7px !important;
-      overflow: hidden !important;
+      //overflow: hidden !important;
       opacity: $font-opacity !important;
       resize: none !important;
       margin-top: 15px !important;
@@ -335,7 +339,7 @@ box-shadow: 0 0 16px 0 $green-font-color !important;
           border-radius: 12px !important;
 -webkit-box-shadow: 0 0 20px 8px $black-color !important;
 box-shadow: 0 0 20px 8px $black-color !important;
-          overflow: hidden !important;
+          //overflow: hidden !important;
           z-index: 20000 !important;
         }
 
