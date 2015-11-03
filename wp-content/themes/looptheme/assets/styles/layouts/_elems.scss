@@ -70,7 +70,6 @@ html body:not(body.static) {
   }
 
   input, button {
-    margin-bottom: 10px !important;
     &, * {
       color: $white-color !important;
       text-shadow: 0 0 1px $white-color !important;

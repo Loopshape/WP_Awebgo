@@ -6388,9 +6388,6 @@ function extend( a, b ) {
                             // Set FOCUS on BODY when document-load finishes
                             if ($('html').hasClass('init')) {
                                 $('html').removeClass('init');
-                                $('body>*,body>*>*,body>*>*>*,body>*>*>*>*,body>*>*>*>*>*,body>*>*>*>*>*>*,body>*>*>*>*>*>*+*').animate({
-                                    'opacity' : '+=0.999'
-                                }, 2000);
                                 $('body').addClass('mover').focus();
                             }
 

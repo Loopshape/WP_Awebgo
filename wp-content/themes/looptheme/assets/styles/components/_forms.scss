@@ -4,4 +4,16 @@ html body {
     margin-right: 2% !important;
   }
 
+  input, button {
+    width: 100% !important;
+  }
+
+  .newsletter {
+    form {
+      display: inline-block;
+      width: 100% !important;
+      padding-bottom: 15px !important;
+    }
+  }
+
 }
