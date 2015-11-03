@@ -105,6 +105,10 @@ border-radius: 15px !important;
               width: 100%;
               max-width: 18%;
               margin-right: 12%;
+
+              button {
+                width: auto !important;
+              }
             }
           }
         }
