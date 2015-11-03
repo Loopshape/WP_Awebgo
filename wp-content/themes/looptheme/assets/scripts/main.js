@@ -21,7 +21,7 @@
 
         var scriptdata = function() {
 
-            var _scrollElem = 'body > header';
+            var _scrollElem = 'body>header';
 
             // Use this variable to set up the common and page specific functions. If you
             // rename this variable, you will also need to rename the namespace below.
@@ -111,37 +111,62 @@
 
                         $(function($) {
 
-                            // Set FOCUS on BODY when document-load finishes
+                            // Check if HTML-DOM is initialized and remove flag
+                            $('body').removeClass('freezed');
                             if ($('html').hasClass('init')) {
                                 $('html').removeClass('init');
-                                $('body>*,body>*>*,body>*>*>*,body>*>*>*>*,body>*>*>*>*>*,body>*>*>*>*>*>*,body>*>*>*>*>*>*+*').animate({
-                                    'opacity' : '+=0.999'
-                                }, 2000);
-                                $('body').addClass('mover').focus();
+                                // Check COOKIE for STATIC-DOM activated
+                                if (Cookies.set('awebgo_staticdom', {
+                                    path : ''
+                                }) !== false) {
+                                    $('img,div').css({
+                                        'filter' : 'none',
+                                        '-webkit-transition' : 'all 0ms linear',
+                                        '-moz-transition' : 'all 0ms linear',
+                                        '-ms-transition' : 'all 0ms linear',
+                                        '-o-transition' : 'all 0ms linear',
+                                        'transition' : 'all 0ms linear'
+                                    });
+                                    if ($('body').hasClass('mover')) {
+                                        $('body').removeClass('mover');
+                                    }
+                                    if ($('body').hasClass('static')) {
+                                        $('body').removeClass('static');
+                                    }
+                                }
+
+                                // Init CSS3-TRANSITIONS
+                                if ($('body').hasClass('home') && !$('body').hasClass('freezed')) {
+                                    $('body').addClass('mover');
+                                }
                             }
 
-                            $('div.laptopArea img').on('click', function(event) {
-                                event.preventDefault();
-                                $('.laptopArea img').animate({
-                                    'opacity' : '-=0.999'
-                                }, 1500).hide();
-                                if ($('body').hasClass('static')) {
-                                    $('body').removeClass('static');
+                            // Define the STATIC-DOM switch
+                            $('div.laptopArea img').on('click', function(e) {
+                                e.preventDefault();
+                                if (Cookies.set('awebgo_staticdom', {
+                                    path : ''
+                                })) {
+                                    Cookies.set('awebgo_staticdom', true, {
+                                        path : ''
+                                    });
+                                    $('body').addClass('freezed');
+                                    $('.laptopArea img').css({
+                                        'filter' : 'greyscale(100%)'
+                                    });
+                                } else {
+                                    Cookies.set('awebgo_staticdom', false, {
+                                        path : ''
+                                    });
+                                    $('body').removeClass('freezed');
+                                    $('.laptopArea img').css({
+                                        'filter' : 'greyscale(0%)'
+                                    });
                                 }
-                                if ($('body').hasClass('mover')) {
-                                    $('body').removeClass('mover');
-                                }
+
+                                // Set BODY to colorful mode
+                                $('body').addClass('colorful');
                             });
-
-                            // Init CSS3-TRANSITIONS
-                            if (!$('body').hasClass('mover') && $('body').hasClass('home')) {
-                                $('body').addClass('mover');
-                            } else {
-                                $('body').hasClass('static');
-                            }
-
-                            // Set BODY to colorful mode
-                            $('body').addClass('colorful');
 
                             // Calculate MEDIAQUERY settings for viewport
                             var _mediaQueryFactor = 10 / ($(window).innerWidth() / 256);
@@ -205,7 +230,6 @@
                                                 $(this).hide();
                                             });
                                         });
-                                        return false;
                                     }
                                 }
                             });
@@ -231,7 +255,7 @@
                             // Coded by Arjuna Noorsanto
                             $('a:not(a[data-rel^="lightbox"])').on('click', function(event) {
                                 _href = $(this).prop('href');
-                                if($('li[id^="menu-item"]>a,.tagcloud>a') || $(this).hasClass('gotoSideRight')) {
+                                if ($('li[id^="menu-item"]>a,.tagcloud>a') || $(this).hasClass('gotoSideRight')) {
                                     window.location = _href;
                                 }
                                 if ($(this).hasClass('external')) {
@@ -248,7 +272,7 @@
                                     $('.container.wrap').animate({
                                         'opacity' : '-=1'
                                     }, 1000, function() {
-                                        if ($(this).hasClass('internal') === true || $(this).hasClass('gotoSideRight')) {
+                                        if ($(this).hasClass('internal') || $(this).hasClass('gotoSideRight')) {
                                             return true;
                                         }
                                         if ($('a:not(a[data-rel^="lightbox"])').length !== 0) {
@@ -257,10 +281,7 @@
                                         event.preventDefault();
                                         window.location = _href;
                                     });
-                                    return false;
-
                                 }
-                                return true;
                             });
 
                             // ISOTOPE item grid handler
@@ -342,23 +363,8 @@
                                 $('body').css('min-width', $window).css('max-width', $window);
                             }
 
-                            if ($('article.post').length !== 0) {
-
-                                var ci = 0;
-                                var _classes = $(this).attr('class');
-                                var _cname = [];
-
-                                if (_classes.indexOf(ci) >= 0) {
-
-                                    _cname[ci] = _classes.indexOf(ci);
-                                    var _char = _cname.str.split("-");
-                                    var name = _char[1];
-
-                                    console.log('cName: ' + name);
-
-                                    ci++;
-                                }
-                            }
+                            // Declare the Document build-up finished :)
+                            $('body').addClass('freezed');
 
                         });
                     }

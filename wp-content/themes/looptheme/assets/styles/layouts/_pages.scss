@@ -15,6 +15,11 @@ html {
     //color: $primary-font-color;
     margin-bottom: 15px !important;
 
+    > header,
+    > footer {
+      z-index: 999999990 !important;
+    }
+
     > header > div > nav:not(nav) {
       > * {
         background-color: transparent !important;
@@ -48,13 +53,16 @@ html {
           border: 1px solid $border-color !important;
           -webkit-box-shadow: 0 0 10px 3px $shadow-color;
           box-shadow: 0 0 10px 3px $shadow-color;
-          z-index: auto !important;
-          overflow: hidden !important;
+          z-index: 999999900 !important;
+          > * {
+            z-index: 999999999 !important;
+          }
+          //overflow: hidden !important;
           .page-header {
             border-color: $secondary-color !important;
             border-width: 2px !important;
-            margin-top: -15px !important;
-            margin-bottom: -30px !important;
+            margin-top: 2% !important;
+            margin-bottom: 1% !important;
           }
           div {
             h1 {
@@ -86,7 +94,7 @@ html {
 border-radius: 15px !important;
 //-webkit-box-shadow: 0 0 45px 16px rgba(0,0,0,0.75) !important;
 //box-shadow: 0 0 45px 16 rgba(0,0,0,0.75) !important;
-            overflow: hidden !important;
+            //overflow: hidden !important;
           }
           .input-group {
             position: relative;
@@ -135,14 +143,17 @@ border-radius: 15px !important;
 border-radius: 12px !important;
 -webkit-box-shadow: 0 0 10px 3px $shadow-color !important;
 box-shadow: 0 0 10px 3px $shadow-color !important;
-        overflow: hidden !important;
+        //overflow: hidden !important;
 
         .container {
+          overflow: visible !important;
+
           .widget {
             display: block !important;
             margin: 1% !important;
-            background-color: $primary-color;
-            background-image: url("/wp-content/themes/looptheme/assets/images/MetalField.png") !important;
+            background-color: /*$primary-color*/none !important;
+            background-image: /*url("/wp-content/themes/looptheme/assets/images/MetalField.png")*/none !important;
+            background: transparent !important;
             background-size: 50%;
             background-position: top left;
             background-attachment: scroll;
@@ -293,4 +304,91 @@ html > body .container > footer a {
   &:hover, &:hover * {
     color: $green-font-color !important;
   }
+}
+
+html body:blur,
+html body.static,
+html body.mover {
+
+  > div.wrap.container > div > .main {
+    p {
+      a {
+        img:not(.masonry img):not(img.wp-smiley) {
+          width: 100% !important;
+          height: auto !important;
+          max-width: 36% !important;
+          margin-right: 2% !important;
+          margin-bottom: 2% !important;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    > h3 > strong {
+      &, * {
+        color: $white-color !important;
+        text-shadow: 1px 1px 1px $black-color !important;
+      }
+    }
+  }
+
+  > div.wrap.container > div > .main > div.page-header > h1 > i {
+    opacity: 0.9 !important;
+    &, * {
+      color: $green-font-color !important;
+      text-shadow: 0 0 2px $shadow-color !important;
+    }
+  }
+
+  div > div > section.widget {
+    overflow: visible !important;
+
+    > h3 > i {
+      display: inline-block;
+      margin-right: 0.125em !important;
+      opacity: 0.9 !important;
+      &, * {
+        color: $tertiary-font-color !important;
+        text-shadow: 0 0 2px $tertiary-color !important;
+      }
+    }
+
+    .tagcloud {
+      a {
+        &, * {
+          color: $yellow-font-color !important;
+          text-shadow: 1px 1px 3px $black-color !important;
+          opacity: 0.8 !important;
+        }
+      }
+    }
+
+  }
+
+  time.updated i {
+    display: inline-block;
+    margin-right: 0.125em !important;
+    opacity: 0.75 !important;
+    &, * {
+      color: $yellow-font-color !important;
+      text-shadow: 0 0 2px $yellow-font-color !important;
+      opacity: 0.8 !important;
+    }
+  }
+
+  input, button {
+    margin-bottom: 10px !important;
+    &, * {
+      color: $white-color !important;
+      text-shadow: 0 0 1px $white-color !important;
+    }
+  }
+
+}
+
+html body:hover #imagelightbox {
+z-index: 80000000 !important;
 }
