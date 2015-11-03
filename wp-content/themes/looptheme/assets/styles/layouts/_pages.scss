@@ -15,6 +15,11 @@ html {
     //color: $primary-font-color;
     margin-bottom: 15px !important;
 
+    > header,
+    > footer {
+      z-index: 999999990 !important;
+    }
+
     > header > div > nav:not(nav) {
       > * {
         background-color: transparent !important;
@@ -48,13 +53,16 @@ html {
           border: 1px solid $border-color !important;
           -webkit-box-shadow: 0 0 10px 3px $shadow-color;
           box-shadow: 0 0 10px 3px $shadow-color;
-          z-index: auto !important;
+          z-index: 999999900 !important;
+          > * {
+            z-index: 999999999 !important;
+          }
           overflow: hidden !important;
           .page-header {
             border-color: $secondary-color !important;
             border-width: 2px !important;
-            margin-top: -15px !important;
-            margin-bottom: -30px !important;
+            margin-top: 2% !important;
+            margin-bottom: 1% !important;
           }
           div {
             h1 {

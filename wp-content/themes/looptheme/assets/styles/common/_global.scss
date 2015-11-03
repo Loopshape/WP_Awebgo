@@ -1,3 +1,26 @@
+* {
+  position: inherit !important;
+  color: #def !important;
+  background: none !important;
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+-moz-transform: scale(1) !important;
+-webkit-transform: scale(1) !important;
+-o-transform: scale(1) !important;
+-ms-transform: scale(1) !important;
+transform: scale(1) !important;
+  zoom: 1 !important;
+  z-index: 1 !important;
+  -moz-backface-visibility: hidden !important;
+-webkit-transition: none !important;
+-moz-transition: none !important;
+-ms-transition: none !important;
+-o-transition: none !important;
+transition: none !important;
+}
+
 div[id*="extension_"] {
   display: none !important;
 }

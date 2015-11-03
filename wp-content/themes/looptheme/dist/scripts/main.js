@@ -6526,6 +6526,7 @@ function extend( a, b ) {
                         $(function($) {
 
                             // Check if HTML-DOM is initialized and remove flag
+                            $('body').removeClass('freezed');
                             if ($('html').hasClass('init')) {
                                 $('html').removeClass('init');
                                 // Check COOKIE for STATIC-DOM activated
@@ -6546,18 +6547,12 @@ function extend( a, b ) {
                                     if ($('body').hasClass('static')) {
                                         $('body').removeClass('static');
                                     }
-                                    $('body').addClass('freezed');
-                                } else {
-                                    Cookies.set('awebgo_staticdom', false, {
-                                        path : ''
-                                    });
-                                    $('body').removeClass('freezed');
                                 }
-                            }
 
-                            // Init CSS3-TRANSITIONS
-                            if ($('body').hasClass('home')) {
-                                $('body').addClass('mover');
+                                // Init CSS3-TRANSITIONS
+                                if ($('body').hasClass('home') && !$('body').hasClass('freezed')) {
+                                    $('body').addClass('mover');
+                                }
                             }
 
                             // Define the STATIC-DOM switch
@@ -6566,33 +6561,26 @@ function extend( a, b ) {
                                 if (Cookies.set('awebgo_staticdom', {
                                     path : ''
                                 })) {
-                                    Cookies.set('awebgo_staticdom', false, {
-                                        path : ''
-                                    });
-                                    $('body').removeClass('freezed');
-                                    $('.laptopArea img').css({
-                                        'filter' : 'invert(0%)'
-                                    });
-                                } else {
                                     Cookies.set('awebgo_staticdom', true, {
                                         path : ''
                                     });
                                     $('body').addClass('freezed');
                                     $('.laptopArea img').css({
-                                        'filter' : 'invert(100%)'
+                                        'filter' : 'greyscale(100%)'
+                                    });
+                                } else {
+                                    Cookies.set('awebgo_staticdom', false, {
+                                        path : ''
+                                    });
+                                    $('body').removeClass('freezed');
+                                    $('.laptopArea img').css({
+                                        'filter' : 'greyscale(0%)'
                                     });
                                 }
-                                window.location.href = '/';
-                                return false;
+
+                                // Set BODY to colorful mode
+                                $('body').addClass('colorful');
                             });
-
-                            // Set BODY to colorful mode
-                            $('body').addClass('colorful');
-
-                            // Show the content
-                            $('body>*,body>*>*,body>*>*>*,body>*>*>*>*,body>*>*>*>*>*,body>*>*>*>*>*>*,body>*>*>*>*>*>*+*').animate({
-                                'opacity' : '+=0.999'
-                            }, 1000);
 
                             // Calculate MEDIAQUERY settings for viewport
                             var _mediaQueryFactor = 10 / ($(window).innerWidth() / 256);
@@ -6788,6 +6776,9 @@ function extend( a, b ) {
                             } else {
                                 $('body').css('min-width', $window).css('max-width', $window);
                             }
+
+                            // Declare the Document build-up finished :)
+                            $('body').addClass('freezed');
 
                         });
                     }
