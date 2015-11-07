@@ -6389,13 +6389,34 @@ function extend( a, b ) {
                                 event.preventDefault();
                                 $('.laptopArea img').animate({
                                     'opacity' : '-=0.999'
-                                }, 1500).hide();
+                                }, 1500, function() {
+                                    $(this).hide();
+                                });
                                 if ($('body').hasClass('static')) {
                                     $('body').removeClass('static');
                                 }
                                 if ($('body').hasClass('mover')) {
                                     $('body').removeClass('mover');
                                 }
+                                if (!$('body').hasClass('freezed')) {
+                                    $('body').addClass('freezed');
+                                }
+                                $('*').css({
+                                    '-webkit-transition' : 'all 0ms linear',
+                                    '-moz-transition' : 'all 0ms linear',
+                                    '-ms-transition' : 'all 0ms linear',
+                                    '-o-transition' : 'all 0ms linear',
+                                    'transition' : 'all 0ms linear',
+                                    '.saturate' : '{-webkit-filter: saturate(0);}',
+                                    '.grayscale' : '{-webkit-filter: grayscale(0%);}',
+                                    '.contrast' : '{-webkit-filter: contrast(100%);}',
+                                    '.brightness' : '{-webkit-filter: brightness(1);}',
+                                    '.blur' : '{-webkit-filter: blur(0px);}',
+                                    '.invert' : '{-webkit-filter: invert(0%);}',
+                                    '.sepia' : '{-webkit-filter: sepia(0%);}',
+                                    '.huerotate' : '{-webkit-filter: hue-rotate(0deg);}',
+                                    '.rss.opacity' : '{-webkit-filter: opacity(0%);}'
+                                });
                             });
 
                             // Init CSS3-TRANSITIONS
@@ -6498,17 +6519,15 @@ function extend( a, b ) {
                                 _href = $(this).prop('href');
                                 if ($(this).hasClass('external')) {
                                     event.preventDefault();
-                                    $('body').addClass('static');
                                     $('.container.wrap').animate({
-                                        'opacity' : '-=1'
+                                        'opacity' : '-=2'
                                     }, 1000, function() {
                                         window.open(_href, '_blank');
                                     });
                                     return false;
                                 } else {
-                                    $('body').addClass('static');
                                     $('.container.wrap').animate({
-                                        'opacity' : '-=1'
+                                        'opacity' : '-=2'
                                     }, 1000, function() {
                                         if ($(this).hasClass('internal') === true || $(this).hasClass('gotoSideRight')) {
                                             return true;
@@ -6520,7 +6539,7 @@ function extend( a, b ) {
                                         window.location = _href;
                                     });
                                 }
-                                if($('li[id^="menu-item"]>a,.tagcloud>a') || $(this).hasClass('gotoSideRight')) {
+                                if ($('li[id^="menu-item"]>a,.tagcloud>a') || $(this).hasClass('gotoSideRight')) {
                                     window.location = _href;
                                 }
                                 return false;
@@ -6628,7 +6647,7 @@ function extend( a, b ) {
                         // Set FOCUS on BODY when document-load finishes
                         if ($('html').hasClass('init')) {
                             $('html').removeClass('init');
-                            if($('body').hasClass('home')===true) {
+                            if ($('body').hasClass('home') === true) {
                                 $('body').addClass('mover');
                             }
                             window.location.href = '#pageTop';
