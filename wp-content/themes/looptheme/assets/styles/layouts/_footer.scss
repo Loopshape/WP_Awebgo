@@ -9,12 +9,8 @@ html body {
     height: auto !important;
     background-color: none !important;
     border-top: 5px solid $footer-border-color !important;
-    padding: 2% !important;
+    padding: 0 1% !important;
     z-index: 1 !important;
-
-    > * > * {
-      margin: 0 1.5% 2% !important;
-    }
 
 //-webkit-border-radius: 7px !important;
 //border-radius: 7px !important;
@@ -33,8 +29,10 @@ box-shadow: 0 0 6px 0 $shadow-color;
     }
 
     .container {
-      margin-top: 2% !important;
-      margin-bottom: 4% !important;
+      width: auto !important;
+      margin: 0 auto !important;
+      margin-top: 1% !important;
+      margin-bottom: 2% !important;
 
       a.brand {
         font-size: 4.5em !important;
@@ -50,7 +48,8 @@ box-shadow: 0 0 6px 0 $shadow-color;
         float: left;
         width: 98% !important;
         max-width: 48%;
-        padding: 0 2% 2% 2%;
+        padding: 0 2% 2% !important;
+        margin: 0 auto !important;
         background-color: $primary-color !important;
         background-image: url('/wp-content/themes/looptheme/assets/images/MetalArea.png') !important;
         background-size: 50%;
@@ -113,7 +112,6 @@ border-radius: 12px !important;
         display: block;
         width: 100%;
         height: auto !important;
-        padding: 0 0.5em !important;
         vertical-align: middle !important;
 
         &, * {

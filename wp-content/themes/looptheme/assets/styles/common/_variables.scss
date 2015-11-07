@@ -1,3 +1,10 @@
+@viewport {
+    width: 1366px !important;
+}
+@-ms-viewport {
+  width: device-width
+}
+
 // Glyphicons font path
 $icon-font-path:        "../fonts/";
 

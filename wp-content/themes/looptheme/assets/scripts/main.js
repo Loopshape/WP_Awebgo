@@ -155,41 +155,6 @@
                             // Set BODY to colorful mode
                             $('body').addClass('colorful');
 
-                            // Calculate MEDIAQUERY settings for viewport
-                            var _mediaQueryFactor = 10 / ($(window).innerWidth() / 256);
-
-                            if (_mediaQueryFactor !== 0) {
-
-                                $('*').each(function() {
-
-                                    var padValTop = $(this).attr('padding-top') - _mediaQueryFactor;
-                                    var padValBot = $(this).attr('padding-bottom') - _mediaQueryFactor;
-                                    var padValLeft = $(this).attr('padding-left') - _mediaQueryFactor;
-                                    var padValRight = $(this).attr('padding-right') - _mediaQueryFactor;
-
-                                    var marValTop = $(this).attr('margin-top') - _mediaQueryFactor;
-                                    var marValBot = $(this).attr('margin-bottom') - _mediaQueryFactor;
-                                    var marValLeft = $(this).attr('margin-left') - _mediaQueryFactor;
-                                    var marValRight = $(this).attr('margin-right') - _mediaQueryFactor;
-
-                                    if (padValTop !== null || padValBot !== null || padValLeft !== null || padValRight !== null) {
-                                        $(this).css('padding-top', padValTop);
-                                        $(this).css('padding-bot', padValBot);
-                                        $(this).css('padding-left', padValLeft);
-                                        $(this).css('padding-right', padValRight);
-                                    }
-
-                                    if (marValTop !== null || marValBot !== null || marValLeft !== null || marValRight !== null) {
-                                        $(this).css('margin-top', marValTop);
-                                        $(this).css('margin-bot', marValBot);
-                                        $(this).css('margin-left', marValLeft);
-                                        $(this).css('margin-right', marValRight);
-                                    }
-
-                                });
-
-                            }
-
                             // Add FONT-AWESOME via jQuery
                             $('section.widget h3').prepend('<i class="fa fa-square yellow"></i>&nbsp;');
                             $('body div.wrap.container div > * > div.page-header > h1').prepend('<i class="fa fa-edit green"></i>&nbsp;');
@@ -272,7 +237,7 @@
                             });
 
                             // ISOTOPE item grid handler
-                            var contentParagraph = 'p:not(.noline p):not(.impressum .main > p):not(.privacy-policy .main > p):not(.administration-website .main > p):not(.main div + div p:not(.masonry p)):not(form p):not(header p):not(.main blockquote > p):not(#commentform > p):not(.entry-content > p):not(.entry-summary > p)';
+                            var contentParagraph = 'p:not(.noline p):not(.impressum .main > p):not(.privacy-policy .main > p):not(.administration-website .main > p):not(.main div + div p:not(.masonry p)):not(form p):not(header p):not(.main blockquote > p):not(#commentform > p):not(.entry-content > p):not(.entry-summary > p):not(footer > p)';
                             if ($('.main').length !== 0) {
                                 var mainColWidth = $('.main p a[data-rel^="lightbox-"] img').innerWidth() + 28;
                                 $(contentParagraph).isotope({
@@ -339,33 +304,6 @@
                                 $('body > footer').css({
                                     'margin-top' : (((footerPosY - contentHeight) - headerHeight / 2) + 20)
                                 });
-                            }
-
-                            // Set BODY width to screen-width for better viewport resizing
-                            var $window = $(window).innerWidth();
-                            if ($window < 1280) {
-                                $window = 1280;
-                                $('body').css('min-width', $window).css('max-width', $window).css('overflow', 'scroll');
-                            } else {
-                                $('body').css('min-width', $window).css('max-width', $window);
-                            }
-
-                            if ($('article.post').length !== 0) {
-
-                                var ci = 0;
-                                var _classes = $(this).attr('class');
-                                var _cname = [];
-
-                                if (_classes.indexOf(ci) >= 0) {
-
-                                    _cname[ci] = _classes.indexOf(ci);
-                                    var _char = _cname.str.split("-");
-                                    var name = _char[1];
-
-                                    console.log('cName: ' + name);
-
-                                    ci++;
-                                }
                             }
 
                         });
