@@ -125,43 +125,31 @@ transition: all 500ms ease-in-out !important;
 // CSS3 MOVEMENTS
 
 html body .laptopArea {
-opacity: 0.001 !important;
-margin-top: /*-33%*/0% !important;
-}
-
-html body:not(body:hover) .laptopArea {
 -webkit-transition: all 4000ms ease-in-out !important;
 -moz-transition: all 4000ms ease-in-out !important;
 -ms-transition: all 4000ms ease-in-out !important;
 -o-transition: all 4000ms ease-in-out !important;
 transition: all 4000ms ease-in-out !important;
 
--moz-transform: scale(1.33) !important;
--webkit-transform: scale(1.33) !important;
--o-transform: scale(1.33) !important;
--ms-transform: scale(1.33) !important;
-transform: scale(1.33) !important;
+-moz-transform: scale(0.001) !important;
+-webkit-transform: scale(0.001) !important;
+-o-transform: scale(0.001) !important;
+-ms-transform: scale(0.001) !important;
+transform: scale(0.001) !important;
 
-opacity: 0.999 !important;
-
-//left: -28% !important;
-}
-html body:blur .laptopArea,
-html body .laptopArea {
--moz-transform: scale(0.01) !important;
--webkit-transform: scale(0.01) !important;
--o-transform: scale(0.01) !important;
--ms-transform: scale(0.01) !important;
-transform: scale(0.01) !important;
-
-z-index: 100000 !important;
 opacity: 0.001 !important;
 
-margin-top: 12.5% !important;
-left: 33.333% !important;
+left: 0% !important;
+margin-top: 0% !important;
+
+z-index: 100 !important;
+
+  > img {
+    position: relative;
+    z-index: 250000000 !important;
+  }
 }
 html body:hover .laptopArea {
-  cursor: pointer;
 -moz-transform: scale(1) !important;
 -webkit-transform: scale(1) !important;
 -o-transform: scale(1) !important;
@@ -172,50 +160,29 @@ opacity: 0.999 !important;
 
 left: 0% !important;
 margin-top: 0% !important;
-
-  img {
-    position: relative;
-    z-index: 80000000 !important;
-  }
 }
 
-html body:blur .laptopArea {
+// SPACESCENE
+
+html body .spaceScene {
 -moz-transform: scale(1) !important;
 -webkit-transform: scale(1) !important;
 -o-transform: scale(1) !important;
 -ms-transform: scale(1) !important;
 transform: scale(1) !important;
 
-opacity: 0.999 !important;
-
-left: -33% !important;
-margin-top: 50% !important;
+-webkit-transition: all 8000ms ease-in-out !important;
+-moz-transition: all 8000ms ease-in-out !important;
+-ms-transition: all 8000ms ease-in-out !important;
+-o-transition: all 8000ms ease-in-out !important;
+transition: all 8000ms ease-in-out !important;
 }
-
-// SPACESCENE
-
-html body.static .spaceScene,
-html body.mover .spaceScene,
 html body:hover .spaceScene {
 -moz-transform: scale(2) !important;
 -webkit-transform: scale(2) !important;
 -o-transform: scale(2) !important;
 -ms-transform: scale(2) !important;
 transform: scale(2) !important;
-}
-html body .spaceScene,
-html body:blur .spaceScene {
--moz-transform: scale(1) !important;
--webkit-transform: scale(1) !important;
--o-transform: scale(1) !important;
--ms-transform: scale(1) !important;
-transform: scale(1) !important;
-
--webkit-transition: all 10000ms ease-in-out !important;
--moz-transition: all 10000ms ease-in-out !important;
--ms-transition: all 10000ms ease-in-out !important;
--o-transition: all 10000ms ease-in-out !important;
-transition: all 10000ms ease-in-out !important;
 }
 
 // SUNSTREAM
@@ -229,11 +196,11 @@ transform: scale(1) !important;
 
 opacity: 0.999 !important;
 
--webkit-transition: all 10000ms ease-in-out !important;
--moz-transition: all 10000ms ease-in-out !important;
--ms-transition: all 10000ms ease-in-out !important;
--o-transition: all 10000ms ease-in-out !important;
-transition: all 10000ms ease-in-out !important;
+-webkit-transition: all 8000ms ease-in-out !important;
+-moz-transition: all 8000ms ease-in-out !important;
+-ms-transition: all 8000ms ease-in-out !important;
+-o-transition: all 8000ms ease-in-out !important;
+transition: all 8000ms ease-in-out !important;
 }
 html body.static .sunStream,
 html body:hover .sunStream {
@@ -310,7 +277,8 @@ opacity: 0.999 !important;
 left: 0% !important;
 }
 
-html body.mover .backgroundTop {
+html body.mover .backgroundTop,
+html body:blur .backgroundTop {
 -moz-transform: scale(1) !important;
 -webkit-transform: scale(1) !important;
 -o-transform: scale(1) !important;
@@ -319,11 +287,11 @@ transform: scale(1) !important;
 
 opacity: 0.5 !important;
 
--webkit-transition: all 10000ms ease-in-out !important;
--moz-transition: all 10000ms ease-in-out !important;
--ms-transition: all 10000ms ease-in-out !important;
--o-transition: all 10000ms ease-in-out !important;
-transition: all 10000ms ease-in-out !important;
+-webkit-transition: all 8000ms ease-in-out !important;
+-moz-transition: all 8000ms ease-in-out !important;
+-ms-transition: all 8000ms ease-in-out !important;
+-o-transition: all 8000ms ease-in-out !important;
+transition: all 8000ms ease-in-out !important;
 }
 html body.static .backgroundTop,
 html body:hover .backgroundTop {
@@ -404,7 +372,7 @@ html body > div.wrap.container > div > .main > p > a > img {
 //masonry
 html body div.masonry > p > a {}
 
-html body .laptopArea img {
+html body .laptopArea img:hover {
   cursor: pointer !important;
 }
 
@@ -554,13 +522,6 @@ transition: all 6000ms ease-in-out !important;
   }
 }
 
-html body .laptopArea {
-  z-index: 25000000 !important;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 html body img#imagelightbox {
   z-index: 80000000 !important;
   &:hover {
@@ -606,7 +567,9 @@ html body > div.wrap.container > div > .main > article > div > div > p > img.emo
   }
 }
 
-html body.static {
+html body.static,
+html body.static *,
+html body.static * + * {
 -webkit-transition: all 0ms linear !important;
 -moz-transition: all 0ms linear !important;
 -ms-transition: all 0ms linear !important;

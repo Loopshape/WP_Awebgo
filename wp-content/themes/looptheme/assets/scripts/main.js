@@ -343,8 +343,8 @@
 
                             // Set BODY width to screen-width for better viewport resizing
                             var $window = $(window).innerWidth();
-                            if ($window < 1024) {
-                                $window = 1024;
+                            if ($window < 1280) {
+                                $window = 1280;
                                 $('body').css('min-width', $window).css('max-width', $window).css('overflow', 'scroll');
                             } else {
                                 $('body').css('min-width', $window).css('max-width', $window);
