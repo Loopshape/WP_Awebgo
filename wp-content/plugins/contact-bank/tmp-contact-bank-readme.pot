@@ -500,15 +500,15 @@ msgid "If any problem occurs, please contact us at <a href=\"mailto:support@tech
 msgstr ""
 
 #. Found in changelog list item.
+msgid "Css Issues Fixed"
+msgstr ""
+
+#. Found in changelog list item.
 msgid "Few Bugs Fixed"
 msgstr ""
 
 #. Found in changelog list item.
 msgid "Database Engine updated"
-msgstr ""
-
-#. Found in changelog list item.
-msgid "Css Issues Fixed"
 msgstr ""
 
 #. Found in changelog list item.

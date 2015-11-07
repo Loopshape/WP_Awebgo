@@ -146,6 +146,7 @@ filter: blur(1px); /* Firefox 35+, eventually all */
         top: 0;
         clear: both;
         display: inline-block;
+        visibility: hidden !important;
         opacity: 1 !important;
         z-index: 1000000 !important;
 

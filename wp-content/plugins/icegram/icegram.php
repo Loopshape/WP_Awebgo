@@ -3,7 +3,7 @@
  * Plugin Name: Icegram
  * Plugin URI: http://www.icegram.com/
  * Description: All in one solution to inspire, convert and engage your audiences. Action bars, Popup windows, Messengers, Toast notifications and more. Awesome themes and powerful rules.
- * Version: 1.9.8.1
+ * Version: 1.9.9
  * Author: icegram
  * Author URI: http://www.icegram.com/
  *
@@ -35,7 +35,7 @@ class Icegram {
     
     function __construct() {
 
-        $this->version = "1.9.8.1";
+        $this->version = "1.9.9";
         $this->shortcode_instances = array();
         $this->mode = 'local';
         $this->plugin_url   = untrailingslashit( plugins_url( '/', __FILE__ ) );
@@ -58,6 +58,7 @@ class Icegram {
             add_action( 'icegram_about_changelog', array( &$this, 'klawoo_subscribe_form' ) ); 
             add_action( 'icegram_settings_after', array( &$this, 'icegram_houskeeping' ) ); 
             add_action( 'admin_notices', array( &$this,'add_admin_notices'));
+            add_filter( 'ig_in_app_offers', array( &$this , 'add_in_app_offer' ) );
         } else {
             add_action( 'wp_footer', array( &$this, 'icegram_load_data' ));
         }
@@ -77,6 +78,7 @@ class Icegram {
         add_action( 'init', array( &$this, 'register_campaign_post_type' ) );
         add_action( 'init', array( &$this, 'register_message_post_type' ) );
 
+        add_action( 'icegram_loaded', array( &$this, 'load_compat_classes') );
 
         // execute shortcode in sidebar
         add_filter( 'widget_text', array(&$this , 'ig_widget_text_filter') );
@@ -93,17 +95,53 @@ class Icegram {
         }
 
     }
+
+    public function load_compat_classes() {
+
+        $compat_classes = (array) glob( $this->plugin_path . '/classes/compat/class-icegram-compat-*.php' );
+        if (empty($compat_classes)) {
+            return;
+        }
+
+        $active_plugins = (array) get_option('active_plugins', array());
+        if (is_multisite()) {
+            $active_plugins = array_merge($active_plugins, get_site_option('active_sitewide_plugins', array()));
+        }
+        $active_plugins = array_unique( array_merge( array_values($active_plugins), array_keys($active_plugins)) );
+        $active_plugins_with_slugs = array();
+        foreach ($active_plugins as $key => $value) {
+            $slug = dirname( $value );
+            if ($slug == '.') {
+                unset($active_plugins[$key]);
+            } else {
+                $active_plugins[ $key ] = $slug;
+            }
+        }
+
+        foreach ($compat_classes as $file) {
+            if (is_file ( $file )) {
+                $slug = str_replace('class-icegram-compat-', '', str_replace(".php", "", basename( $file )) );
+                if ( in_array($slug, $active_plugins)) {
+                    include_once( $file );
+                    $class_name = 'Icegram_Compat_'. str_replace('-', '_', $slug);
+                    if ( class_exists( $class_name ) ) {
+                        new $class_name();
+                    }
+                }
+            }
+        }
+    }
     public function add_admin_notices(){
         $active_plugins =  get_option( 'active_plugins', array() );
         ?>
         <style>
-            p.icegram_notice {
+            div.icegram_notice {
                 border-left: 4px solid hsl(94, 61%, 52%);
-                padding: 10px 12px;
+                padding: 1px 12px;
                 background-color: hsl(0, 100%, 100%);
                 -webkit-box-shadow: 0 1px 1px 0 hsla(0, 0%, 0%, 0.1);
                 box-shadow: 0 1px 1px 0 hsla(0, 0%, 0%, 0.1);
-                margin-right: 20px;
+                margin: 15px 20px 10px 6px;
             }
             a.ig-admin-btn{
                 margin-left: 10px;
@@ -136,11 +174,28 @@ class Icegram {
             if(!in_array('ig-analytics/ig-analytics.php', $active_plugins)){
                 //analytics 
                 $admin_notice_text = "Measure performance of your Icegram messages with the <b>free Analytics addon</b>. <a class='ig-admin-btn' href='http://www.icegram.com/addons/analytics/?utm_source=inapp&utm_campaign=freebonus&utm_medium=notices' target='_blank'>Cool, Let's begin</a>";
+                $no_offer_text = "No, I don\'t like offers...";
+            }else{
+                $admin_notice_text = apply_filters('ig_in_app_offers',$admin_notice_text);
+                $no_offer_text_set = array('save_money' => __('No, I don\'t want to save money ','icegram'),
+                                           'full_price' => __('No, I will buy at full price later','icegram'),
+                                           'insider_deals' => __('No, I don\'t like insider deals','icegram'),
+                                        );
+                $key = array_rand($no_offer_text_set);
+                $no_offer_text = $no_offer_text_set[$key];
             }
-            if ($admin_notice_text != '') {
-                echo "<p class='icegram_notice'>".$admin_notice_text." <a class='ig-admin-btn ig-admin-btn-secondary' href='?dismiss_admin_notice=1'>No, I don't like free bonuses...</a></p>";
+            if($admin_notice_text != ''){
+                echo '<div class="icegram_notice">
+                            <table><tbody><tr>
+                                <td><span class="dashicons dashicons-awards" style="font-size:3em;color:#b32727;margin-left: -0.2em;margin-right: 0.4em;margin-bottom: 0.45em;"></span></td>
+                                <td style="width:70%;padding:0.5em;">'.$admin_notice_text.'</td>
+                                <td style="text-align:right;"><a class="ig-admin-btn ig-admin-btn-secondary" href="?dismiss_admin_notice=1">'.$no_offer_text.'</a></td>
+                            </tr></tbody></table>
+                     </div>';
             }
         }
+        
+
     }
     public function dismiss_admin_notice(){
         if(isset($_GET['dismiss_admin_notice']) && $_GET['dismiss_admin_notice'] == '1'){
@@ -149,6 +204,44 @@ class Icegram {
             exit();
         }
     }
+
+    //add in app promotion offers here
+    public function add_in_app_offer($admin_notice_text){
+        $screen = get_current_screen(); 
+        if ( !in_array( $screen->id, array( 'ig_campaign', 'ig_message','edit-ig_message','edit-ig_campaign' ), true ) ) return '';
+        //set offer according to day
+        $timezone_format = _x('Y-m-d', 'timezone date format');
+        $current_wp_date = date_create(date_i18n($timezone_format));
+        
+        //offer 1 4th-20th Nov
+        $date_start = date_create('2015-11-6');
+        $date_finish = date_create('2015-11-20');
+        
+        $last_day_text_set = array('last' => __('Last Day Today!!!') ,'offer_end' => __('Offer Ends Today!!!'),'valid_till'=>__('Valid Only Till Midnight'));
+        $key = array_rand($last_day_text_set);
+        $last_day_text = $last_day_text_set[$key];
+        if($current_wp_date == $date_finish ){
+            $admin_notice_text = '<b>'. $last_day_text .' </b> - <a href="http://www.icegram.com/big-offer?utm_source=ig_promo&utm_medium=banner&utm_term='.$key.'&utm_campaign=big-offer", target="_icegram_offer">'.  '<b> ' . __('80% Off On Top Selling Add-ons', 'icegram') . ' </b></a> - '. __('Icegram\'s Best Deal Ever' ,'icegram');
+        }else if ( ( $current_wp_date >= $date_start ) && ( $current_wp_date <= $date_finish )) {
+            $admin_notice_text = '<a href="http://www.icegram.com/big-offer?utm_source=ig_promo&utm_medium=banner&utm_term=big&utm_campaign=big-offer", target="_icegram_offer">'. '<b> ' . __('80% Off On Top Selling Add-ons', 'icegram') . ' </b></a> - '. __('Icegram\'s Best Deal Ever' ,'icegram');
+        }
+
+        //offer 2 26th-30th Nov
+        $date_start1 = date_create('2015-11-26');
+        $date_finish1 = date_create('2015-11-30');
+        if($current_wp_date == $date_finish1 ){
+            $admin_notice_text = '<b>'. $last_day_text .'  </b> - <a href="http://www.icegram.com/big-offer?utm_source=ig_sale&utm_medium=banner&utm_term='.$key.'&utm_campaign=big-offer", target="_icegram_offer">'.  '<b>' . __('20% Off Storewide', 'icegram') . ' </b></a>';
+        }else if ( ( $current_wp_date >= $date_start1 ) && ( $current_wp_date <= $date_finish1 )) {
+            $admin_notice_text = '<b>'.__('Special Holiday Season - ').'</b><a href="http://www.icegram.com/big-offer?utm_source=ig_sale&utm_medium=banner&utm_term=holiday&utm_campaign=big-offer", target="_icegram_offer">'. '<b>' . __('20% Off Storewide', 'icegram') . ' </b></a>';
+        }
+
+        if ( !empty($admin_notice_text) ) {
+            return $admin_notice_text;
+        }
+
+        return $admin_notice_text;
+    }
+
     public function klawoo_subscribe_form() {
         ?>
         <div class="wrap">
@@ -528,6 +621,7 @@ class Icegram {
         $icegram_pre_data['post_obj']['action'] = 'display_messages';
         $icegram_pre_data['post_obj']['shortcodes'] = $this->shortcode_instances;
         $icegram_pre_data['post_obj']['cache_compatibility'] = $this->cache_compatibility;
+        $icegram_pre_data['post_obj']['device'] = $this->get_platform();
         wp_register_script('icegram_main_js' ,$this->plugin_url . '/assets/js/main.js', array ( 'jquery' ), $this->version,true);
         if( !wp_script_is( 'icegram_main_js' ) ) {
             wp_enqueue_script( 'icegram_main_js' );
@@ -635,6 +729,8 @@ class Icegram {
         }
         
         do_action('icegram_print_js_css_data', $icegram_data);
+
+        do_action('icegram_data_printed');
     }
 
     function print_js_css_data( $icegram_data ) {
@@ -848,7 +944,7 @@ class Icegram {
                 unset( $valid_messages[$id] );
                 continue;
             }
-			// Remove message if message type is uninstalled
+            // Remove message if message type is uninstalled
             $class_name = 'Icegram_Message_Type_' . str_replace(' ', '_', ucwords(str_replace('-', ' ', $message_data['type'])));
             if( !class_exists( $class_name ) ) {
                 unset( $valid_messages[$id] );

@@ -155,6 +155,12 @@
 
 			data.has_events = $date.hasClass( 'tribe-events-has-events' );
 
+			// Backwards compatibility
+			// @todo "Check if we can remove this check"
+			if ( data.has_events ) {
+				data.date_name = '';
+			}
+
 			$triggers.removeClass( 'mobile-active' )
 				// If full_date_name is empty then default to highlighting the first day of the current month
 				.filter( _active ).addClass( 'mobile-active' );
@@ -221,7 +227,7 @@
 
 		tribe_month_view_init( true );
 
-		$( te ).on( 'tribe_ev_resizeComplete', function() {
+		$( te ).on( 'resize-complete.tribe', function() {
 			tribe_month_view_init( true );
 		} );
 
@@ -358,11 +364,11 @@
 			tribe_events_bar_calendar_ajax_actions( e );
 		} );
 
-		$( te ).on( "tribe_ev_runAjax", function() {
+		$( te ).on( 'run-ajax.tribe', function() {
 			tribe_events_calendar_ajax_post();
 		} );
 
-		$( te ).on( "tribe_ev_updatingRecurrence", function() {
+		$( te ).on( 'updating-recurrence.tribe', function() {
 			ts.date = $( '#tribe-events-header' ).data( "date" );
 			if ( ts.filter_cats ) {
 				td.cur_url = $( '#tribe-events-header' ).data( 'baseurl' ) + ts.date + '/';
@@ -417,12 +423,20 @@
 					}
 				}
 
+				/**
+				 * DEPRECATED: tribe_ev_serializeBar has been deprecated in 4.0. Use serialize-bar.tribe instead
+				 */
 				$( te ).trigger( 'tribe_ev_serializeBar' );
+				$( te ).trigger( 'serialize-bar.tribe' );
 
 				ts.params = $.param( ts.params );
 				ts.url_params = $.param( ts.url_params );
 
+				/**
+				 * DEPRECATED: tribe_ev_collectParams has been deprecated in 4.0. Use collect-params.tribe instead
+				 */
 				$( te ).trigger( 'tribe_ev_collectParams' );
+				$( te ).trigger( 'collect-params.tribe' );
 
 				if ( ts.pushcount > 0 || ts.filters || td.default_permalinks ) {
 					ts.do_string = true;
@@ -440,7 +454,11 @@
 				dbug && debug.time( 'Month View Ajax Timer' );
 				// @endif
 
+				/**
+				 * DEPRECATED: tribe_ev_ajaxStart and tribe_ev_monthView_AjaxStart have been deprecated in 4.0. Use ajax-start.tribe and month-view-ajax-start.tribe instead
+				 */
 				$( te ).trigger( 'tribe_ev_ajaxStart' ).trigger( 'tribe_ev_monthView_AjaxStart' );
+				$( te ).trigger( 'ajax-start.tribe' ).trigger( 'month-view-ajax-start.tribe' );
 
 				$.post(
 					TribeCalendar.ajaxurl,
@@ -498,7 +516,11 @@
 								}, ts.page_title, td.cur_url );
 							}
 
+							/**
+							 * DEPRECATED: tribe_ev_ajaxSuccess and tribe_ev_monthView_AjaxSuccess have been deprecated in 4.0. Use ajax-success.tribe and month-view-ajax-success.tribe instead
+							 */
 							$( te ).trigger( 'tribe_ev_ajaxSuccess' ).trigger( 'tribe_ev_monthView_ajaxSuccess' );
+							$( te ).trigger( 'ajax-success.tribe' ).trigger( 'month-view-ajax-success.tribe' );
 
 							// @ifdef DEBUG
 							dbug && debug.timeEnd( 'Month View Ajax Timer' );

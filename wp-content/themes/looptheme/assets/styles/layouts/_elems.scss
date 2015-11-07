@@ -518,6 +518,7 @@ transition: all 6000ms ease-in-out !important;
   }
 }
 
+html body,
 html body:focus {
 // CONTRAST
 filter: contrast(150%) !important;
@@ -535,6 +536,7 @@ filter: grayscale(17.5%) !important;
   header,
   footer,
   .container.wrap,
+  .container>nav,
   footer.content-info {
 -webkit-transition: all 6000ms ease-in-out !important;
 -moz-transition: all 6000ms ease-in-out !important;
@@ -542,7 +544,21 @@ filter: grayscale(17.5%) !important;
 -o-transition: all 6000ms ease-in-out !important;
 transition: all 6000ms ease-in-out !important;
 
-    opacity: 0.999 !important;
+    &, * {
+      opacity: 0.999 !important;
+    }
+  }
+}
+html body.init {
+  .container>nav {
+    &, * {
+      opacity: 0.001 !important;
+    }
+  }
+}
+html body:hover {
+  .container>nav {
+    visibility: visible !important;
   }
 }
 
@@ -558,6 +574,13 @@ html body:blur {
 transition: all 6000ms ease-in-out !important;
 
     opacity: 0.001 !important;
+  }
+}
+
+html body .laptopArea {
+  z-index: 25000000 !important;
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -604,4 +627,12 @@ html body > div.wrap.container > div > .main > article > div > div > p > img.emo
     text-shadow: none !important;
     box-shadow: none !important;
   }
+}
+
+html body.static {
+-webkit-transition: all 0ms linear !important;
+-moz-transition: all 0ms linear !important;
+-ms-transition: all 0ms linear !important;
+-o-transition: all 0ms linear !important;
+transition: all 0ms linear !important;
 }

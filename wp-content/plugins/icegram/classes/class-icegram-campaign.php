@@ -106,13 +106,13 @@ if ( !class_exists( 'Icegram_Campaign' ) ) {
 		}
 		
 		function _is_valid_time( $campaign_valid, $campaign, $options ) {
+
 			if( !$campaign_valid ) {
 				return $campaign_valid;
 			}
 			if ( !empty( $campaign->rules_summary['when']['when'] ) && $campaign->rules_summary['when']['when'] == 'always' ) {
 				return true;
 			}
-
 			if ( ( !empty( $campaign->rules_summary['when']['from'] ) && time() > strtotime( $campaign->rules_summary['when']['from'] . " 00:00:00") ) && ( !empty( $campaign->rules_summary['when']['to'] ) && strtotime( $campaign->rules_summary['when']['to'] . " 23:59:59") > time() ) ) {
 				return true;
 			}

@@ -21,6 +21,7 @@ if ( !class_exists( 'Icegram_Campaign_Admin' ) ) {
 	       	//duplicate campaign
 	        add_filter( 'post_row_actions', array(&$this , 'add_campaign_action'), 10, 2 );
 	        add_action('admin_init', array(&$this ,'duplicate_campaign') ,10, 1);
+
 	        $this->site_url = home_url().'/';
 			
 			$this->default_target_rules = apply_filters( 'icegram_campaign_default_rules',
@@ -667,5 +668,6 @@ if ( !class_exists( 'Icegram_Campaign_Admin' ) ) {
 				Icegram::duplicate( $_REQUEST['campaign_id'] );
 			}
 		}
+		
 	}
 }

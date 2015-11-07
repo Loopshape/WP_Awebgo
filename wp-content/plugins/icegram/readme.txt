@@ -4,7 +4,7 @@ Donate link: http://www.icegram.com/
 Tags: popup, window, hellobar, optin, lead capture, marketing, form, notification, messenger, targeting, monster, ninja ,wordpress lead generation, wordpress lightbox optin, wordpress lightbox optin form, wordpress lightbox optins, wordpress mobile optin forms, wordpress mobile popup, wordpress mobile popups, wordpress optin form, wordpress overlay popup, wordpress popup, wordpress popup form, wordpress popup plugin, wordpress popup solution, wordpress popups ,  popups, subscribe,  wp popups, optin bars, action grabber, constant contact, toast notifications, leads, lists,  builder, action bar,  floating bar, footer bar, hellobar alternative, pop over, Popup plugin, aweber, campaign monitor, constant contact, email list, exit-intent, getresponse, analytics, Hubspot, icontact, infusionsoft, newsletter,  Mailing list pop-up, retargeting, Animation,Popups with Animation ,Responsive Popup, split testing,  AB testing
 Requires at least: 3.9
 Tested up to: 4.3.1
-Stable tag: 1.9.8.1
+Stable tag: 1.9.9
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -153,6 +153,9 @@ Contact Us, provide as much detail of the problem as you can. We will try to sol
 3. Editing an Icegram campaign - add multiple messages, edit them, targeting rules, full HTML editor, themes and more
 
 == Upgrade Notice ==
+= 1.9.9 = 
+Compatibility with Contact Form 7.
+
 = 1.9.8.1 = 
 Added sprite image for close buttons and other fixes.
 
@@ -251,10 +254,14 @@ Initial Release
 
 
 == Changelog ==
+= 1.9.9 =
+* Fix: CF7(Contact Form 7) Ajax submission was not working
+* Fix: CF7 redirection was not working
+* Fix: CF7 was changing URL after form submission
+
 = 1.9.8.1 =
-Enhancement: Added sprite image for close buttons
-Fix: Retargeting issues with HTTP and HTTPS
-Fix: Close button of Airmail and Compel theme was not visible in popup
+* Enhancement: Added sprite image for close buttons
+* Fix: Retargeting issues with HTTP and HTTPS
 
 = 1.9.8 =
 * New: Added translation for Italian

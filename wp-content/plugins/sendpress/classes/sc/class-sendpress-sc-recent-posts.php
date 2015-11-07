@@ -100,63 +100,40 @@ class SendPress_SC_Recent_Posts extends SendPress_SC_Base {
 			$args['tag'] = $tag;
 		}
 
-		if($columns < 1){
-			$columns = 1;
-		}
+		if( strlen($datespan) > 0 ){
+			$after = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('-1 day')));
+			$before = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('now')));
 
-		//SendPress_Error::log($args);
+			if(is_numeric($datespan)){
+				$after = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('-'.$datespan.' day')));
+				$before = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('now')));
+			}
 
-		$return_string = '';
-	   	if($content){
-	      	$return_string = $content;
-	  	}
+			if($datespan === 'weekly'){
+				$after = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('-1 week')));
+				$before = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('now')));
+			}
 
-	  	//$margin = ($alternate && strtolower($imgalign) === 'left') ? '0px 10px 10px 0px' : '0px 0px 10px 10px';
-
-	  	//$return_string .= '<div>';
-	   	//query_posts($args);
-
-	  	/*
-
-		$after = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('-1 day')));
-		$before = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('now')));
-
-		$default_args = array(
-			'date_query' => array(
+			$args['date_query'] = array(
 				array(
 					'after'     => $after,
 					'before'    => $before,
 					'inclusive' => true
 				)
-			)
-		);
-
-		if($type === 'weekly'){
-
-			$after = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('-1 week')));
-			$before = get_date_from_gmt(date('Y-m-d H:i:s',strtotime('now')));
-
-			$default_args = array(
-				'date_query' => array(
-					array(
-						'after'     => $after,
-						'before'    => $before,
-						'inclusive' => true
-					)
-				)
 			);
 		}
-		*/
 
+		if($columns < 1){
+			$columns = 1;
+		}
 
-
-
+		$return_string = '';
+	   	if($content){
+	      	$return_string = $content;
+	  	}		
+		
 	   	$query = new WP_Query($args);
 		if($query->have_posts()){
-
-
-			SendPress_Error::log("cols: ".$columns);
-			SendPress_Error::log("posts found: ".$query->found_posts);
 
 			$number_of_columns = 1;
 			if($query->found_posts > 1){
@@ -166,8 +143,6 @@ class SendPress_SC_Recent_Posts extends SendPress_SC_Base {
 			if($number_of_columns > 3){
 				$number_of_columns = 3;
 			}
-
-			SendPress_Error::log("number of cols: ".$number_of_columns);
 
 			$column_template = "";
 			$col1 = "";
@@ -229,8 +204,6 @@ class SendPress_SC_Recent_Posts extends SendPress_SC_Base {
 	          	$template = '';
 	          	$idx++;
 	          	$current_column++;
-
-	          	SendPress_Error::log("current column: ".$current_column ." - num: ".$number_of_columns);
 
 	          	if( $current_column == $number_of_columns){
 	          		$current_column = 0;
@@ -325,7 +298,7 @@ class SendPress_SC_Recent_Posts extends SendPress_SC_Base {
 	}
 
 	public static function docs(){
-		return __('This shortcode creates a listing of Posts in emails or on pages.  Use the following options to customize the output: <br><br><b>posts</b> - number of posts to display. (defaults to 1)<br><b>uid</b> - the user id of the author you would like to see.<br><b>imgalign</b> - Align images left or right. (defaults to left)<br><b>alternate</b> - when writing posts, alternate the thumbnail images. (defaults to false)<br><b>readmoretext</b> - the text for the readmore link (defaults to Read More)<br><b>columns</b> - the number of columns your posts should display in.  Max number of columns is 3.', 'sendpress');
+		return __('This shortcode creates a listing of Posts in emails or on pages.  Use the following options to customize the output: <br><br><b>posts</b> - number of posts to display. (defaults to 1)<br><b>uid</b> - the user id of the author you would like to see.<br><b>imgalign</b> - Align images left or right. (defaults to left)<br><b>alternate</b> - when writing posts, alternate the thumbnail images. (defaults to false)<br><b>readmoretext</b> - the text for the readmore link (defaults to Read More)<br><b>columns</b> - the number of columns your posts should display in.  Max number of columns is 3.<br><b>datespan</b> - number of days of posts to render.  Can be set to "daily", "weekly", or a number of days (datespan=3 for the last three days for exmaple) (defaults to daily.)', 'sendpress');
 	}
 
 

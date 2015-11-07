@@ -111,12 +111,6 @@
 
                         $(function($) {
 
-                            // Set FOCUS on BODY when document-load finishes
-                            if ($('html').hasClass('init')) {
-                                $('html').removeClass('init');
-                                $('body').addClass('mover').focus();
-                            }
-
                             $('div.laptopArea img').on('click', function(event) {
                                 event.preventDefault();
                                 $('.laptopArea img').animate({
@@ -356,6 +350,17 @@
                             }
 
                         });
+
+                        // Set FOCUS on BODY when document-load finishes
+                        if ($('html').hasClass('init')) {
+                            $('html').removeClass('init');
+                            if($('body').hasClass('home')===true) {
+                                $('body').addClass('mover');
+                            }
+                            window.location.href = '#pageTop';
+                        }
+                        $('body').addClass('freezed').focus();
+
                     }
                 }
             };
