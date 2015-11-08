@@ -8,6 +8,12 @@ html {
 
     p {
       color: $fifth-color !important;
+      z-index: 0 !important;
+
+      > a {
+        position: relative !important;
+        z-index: 999999999 !important;
+      }
     }
 
     > .container {
