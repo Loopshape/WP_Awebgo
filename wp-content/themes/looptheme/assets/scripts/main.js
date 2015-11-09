@@ -111,12 +111,14 @@
 
                         $(function($) {
 
-                            $('div.laptopArea img').on('click', function(event) {
-                                event.preventDefault();
-                                $('.laptopArea img').animate({
-                                    'opacity' : '-=0.999'
-                                }, 1500, function() {
-                                    $(this).hide();
+                            $('div.laptopArea img').on('click', function(e) {
+                                //e.preventDefault();
+                                $(this).css({
+                                    '-moz-transform' : 'scale(0.75)',
+                                    '-webkit-transform' : 'scale(0.75)',
+                                    '-o-transform' : 'scale(0.75)',
+                                    '-ms-transform' : 'scale(0.75)',
+                                    'transform' : 'scale(0.75)'
                                 });
                                 if ($('body').hasClass('static')) {
                                     $('body').removeClass('static');
@@ -124,25 +126,40 @@
                                 if ($('body').hasClass('mover')) {
                                     $('body').removeClass('mover');
                                 }
-                                if (!$('body').hasClass('freezed')) {
-                                    $('body').addClass('freezed');
-                                }
-                                $('*').css({
-                                    '-webkit-transition' : 'all 0ms linear',
-                                    '-moz-transition' : 'all 0ms linear',
-                                    '-ms-transition' : 'all 0ms linear',
-                                    '-o-transition' : 'all 0ms linear',
-                                    'transition' : 'all 0ms linear',
-                                    '.saturate' : '{-webkit-filter: saturate(0);}',
-                                    '.grayscale' : '{-webkit-filter: grayscale(0%);}',
-                                    '.contrast' : '{-webkit-filter: contrast(100%);}',
-                                    '.brightness' : '{-webkit-filter: brightness(1);}',
-                                    '.blur' : '{-webkit-filter: blur(0px);}',
-                                    '.invert' : '{-webkit-filter: invert(0%);}',
-                                    '.sepia' : '{-webkit-filter: sepia(0%);}',
-                                    '.huerotate' : '{-webkit-filter: hue-rotate(0deg);}',
-                                    '.rss.opacity' : '{-webkit-filter: opacity(0%);}'
+                                $('html,body,section,.main>div,footer').css({
+                                    '-moz-transform' : 'scale(1)',
+                                    '-webkit-transform' : 'scale(1)',
+                                    '-o-transform' : 'scale(1)',
+                                    '-ms-transform' : 'scale(1)',
+                                    'transform' : 'scale(1)',
+                                    //'-webkit-filter' : 'saturate(0%)',
+                                    '-webkit-filter' : 'contrast(125%)',
+                                    '-webkit-filter' : 'brightness(0.95)',
+                                    //'-webkit-filter' : 'blur(0px)',
+                                    //'-webkit-filter' : 'invert(0%)',
+                                    //'-webkit-filter' : 'sepia(0%)',
+                                    //'-webkit-filter' : 'hue-rotate(0deg)',
+                                    //'-webkit-filter' : 'opacity(0%)',
+                                    //'-webkit-filter' : 'grayscale(100%)',
+                                    '-webkit-box-shadow' : 'none',
+                                    'box-shadow' : 'none'
                                 });
+                                $('html>body>img,html>body>div>img,html>body *[id^="tooltipsy"],html>body div.gotoTop').css({
+                                    'opacity' : '0'
+                                });
+                                $('*:not(*>*>*>*>*>*,*>*>*>*,*>*)').css({
+                                    'background' : 'none',
+                                    'background-image' : 'none',
+                                    'background-color' : 'transparent',
+                                    'color' : 'transparent',
+                                    'border' : 'none',
+                                    'opacity' : '0'
+                                });
+                                $('body>footer>.footerArea,div.spaceScene,div.gotoTop,div[id^="tooltipsy"]').remove();
+                                $('body>footer').css({
+                                    'background-color' : '#123'
+                                });
+                                return true;
                             });
 
                             // Init CSS3-TRANSITIONS

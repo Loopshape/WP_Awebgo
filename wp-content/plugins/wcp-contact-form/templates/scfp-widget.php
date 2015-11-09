@@ -50,6 +50,7 @@
 <div class="scfp-form-content scfp-form-widget<?php echo $content_classes;?>">
     <form class="scfp-form" id="<?php echo $id;?>"  method="post" action=""<?php echo !empty($formSettings['html5_enabled']) ? '' : ' novalidate';?>>
         <input type="hidden" name="form_id" value="<?php echo $id;?>"/>
+        <input type="hidden" name="action" value="scfp-form-submit"/>
         <?php 
         foreach( $fieldsSettings as $key => $field ): 
             if (!empty($field['visibility']) && !empty($field['field_type'])) :

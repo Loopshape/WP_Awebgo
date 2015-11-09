@@ -9,6 +9,8 @@
 @background_color : '';
 @button_color : '';
 @text_color : '';
+@hover_button_color : '';
+@hover_text_color : '';
 
 #@{id} .scfp-form-row input, #@{id} .scfp-form-row textarea, #@{id} .scfp-form-row .scfp-captcha-image-wrapper { 
     .no_border (@no_border) when (@no_border=~'') {
@@ -60,6 +62,17 @@
     .text_color (@text_color) when not (@text_color=~'') {
         color: @text_color!important;
     } .text_color (@text_color);        
+}
+
+#@{id} .scfp-form-action .scfp-form-submit:hover {
+    .hover_button_color (@hover_button_color) when not (@hover_button_color=~'') {
+        background-color: @hover_button_color!important;
+        opacity: 1!important;        
+    } .hover_button_color (@hover_button_color);        
+    
+    .hover_text_color (@hover_text_color) when not (@hover_text_color=~'') {
+        color: @hover_text_color!important;
+    } .hover_text_color (@hover_text_color); 
 }
 
 #@{id} .scfp-form-row .scfp-form-field:focus:required:valid { 

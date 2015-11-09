@@ -196,6 +196,8 @@ class SCFP extends Agp_Module {
                 'background_color' => !empty($styleSettings['background_color']) ? $styleSettings['background_color'] : '',
                 'button_color' => !empty($styleSettings['button_color']) ? $styleSettings['button_color'] : '',
                 'text_color' => !empty($styleSettings['text_color']) ? $styleSettings['text_color'] : '',  
+                'hover_button_color' => !empty($styleSettings['hover_button_color']) ? $styleSettings['hover_button_color'] : '',
+                'hover_text_color' => !empty($styleSettings['hover_text_color']) ? $styleSettings['hover_text_color'] : '',              
             )
         );
         
@@ -218,7 +220,16 @@ class SCFP extends Agp_Module {
         if (!empty($atts['id'])) {
             $id = $atts['id'];
             $form = new SCFP_Form($id);
-            $form->submit($_POST);
+            
+            if ( isset($_POST['form_id']) && $_POST['form_id'] == $id 
+                && isset($_POST['action']) && $_POST['action'] == 'scfp-form-submit' ) 
+            {        
+                $form->submit($_POST);
+                
+                unset($_POST['action']);                
+                unset($_POST['form_id']);
+            }
+            
             $atts['form'] = $form;
             return $this->getTemplate('scfp', $atts);                
         }
@@ -240,7 +251,16 @@ class SCFP extends Agp_Module {
         if (!empty($atts['id'])) {
             $id = $atts['id'];
             $form = new SCFP_Form($id);
-            $form->submit($_POST);
+            
+            if ( isset($_POST['form_id']) && $_POST['form_id'] == $id 
+                && isset($_POST['action']) && $_POST['action'] == 'scfp-form-submit' ) 
+            {        
+                $form->submit($_POST);
+                
+                unset($_POST['action']);                
+                unset($_POST['form_id']);
+            }
+            
             $atts['form'] = $form;
             return $this->getTemplate('scfp-widget', $atts);                
         }    

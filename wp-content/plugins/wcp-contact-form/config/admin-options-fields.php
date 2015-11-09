@@ -116,6 +116,26 @@ return array(
                 'atts' => array(
                 ),                                
             ),        
+            'hover_button_color' => array(
+                'type' => 'colorpicker',
+                'label' => 'Hover Background Color',
+                'default' => '',
+                'section' => 'send_button_settings',
+                'class' => 'scfp-color-picker',
+                'note' => 'option allows to change background color of the "Submit" button',
+                'atts' => array(
+                ),                                
+            ),
+            'hover_text_color' => array(
+                'type' => 'colorpicker',
+                'label' => 'Hover Text Color',
+                'default' => '',
+                'section' => 'send_button_settings',
+                'class' => 'scfp-color-picker',
+                'note' => 'option allows to change text color of the "Submit" button',
+                'atts' => array(
+                ),                                
+            ),        
             'field_label_text_color' => array(
                 'type' => 'colorpicker',
                 'label' => 'Label Color',

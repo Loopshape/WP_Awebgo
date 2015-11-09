@@ -171,18 +171,18 @@ html body .spaceScene {
 -ms-transform: scale(1) !important;
 transform: scale(1) !important;
 
--webkit-transition: all 8000ms ease-in-out !important;
--moz-transition: all 8000ms ease-in-out !important;
--ms-transition: all 8000ms ease-in-out !important;
--o-transition: all 8000ms ease-in-out !important;
-transition: all 8000ms ease-in-out !important;
+-webkit-transition: all 6000ms ease-in-out !important;
+-moz-transition: all 6000ms ease-in-out !important;
+-ms-transition: all 6000ms ease-in-out !important;
+-o-transition: all 6000ms ease-in-out !important;
+transition: all 6000ms ease-in-out !important;
 }
 html body:hover .spaceScene {
--moz-transform: scale(2) !important;
--webkit-transform: scale(2) !important;
--o-transform: scale(2) !important;
--ms-transform: scale(2) !important;
-transform: scale(2) !important;
+-moz-transform: scale(1.5) !important;
+-webkit-transform: scale(1.5) !important;
+-o-transform: scale(1.5) !important;
+-ms-transform: scale(1.5) !important;
+transform: scale(1.5) !important;
 }
 
 // SUNSTREAM
