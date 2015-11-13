@@ -122,7 +122,7 @@ return array(
                 'default' => '',
                 'section' => 'send_button_settings',
                 'class' => 'scfp-color-picker',
-                'note' => 'option allows to change background color of the "Submit" button',
+                'note' => 'option allows to change hover background color of the "Submit" button',
                 'atts' => array(
                 ),                                
             ),
@@ -132,7 +132,7 @@ return array(
                 'default' => '',
                 'section' => 'send_button_settings',
                 'class' => 'scfp-color-picker',
-                'note' => 'option allows to change text color of the "Submit" button',
+                'note' => 'option allows to change hover text color of the "Submit" button',
                 'atts' => array(
                 ),                                
             ),        
@@ -145,7 +145,17 @@ return array(
                 'note' => 'option allows to change color of field labels (labels are displayed above the form fields)',
                 'atts' => array(
                 ),                                
-            ),                                       
+            ),                    
+            'field_label_marker_text_color' => array(
+                'type' => 'colorpicker',
+                'label' => '"Required" Marker Color',
+                'default' => '',
+                'section' => 'field_style_settings',
+                'class' => 'scfp-color-picker',
+                'note' => 'option allows to change color of "Required" marker (*)',
+                'atts' => array(
+                ),                                
+            ),                                
             'field_text_color' => array(
                 'type' => 'colorpicker',
                 'label' => 'Text Color',

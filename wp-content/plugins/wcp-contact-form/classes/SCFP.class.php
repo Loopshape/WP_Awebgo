@@ -191,6 +191,7 @@ class SCFP extends Agp_Module {
                 'border_style' => !empty($styleSettings['border_style']) ? $styleSettings['border_style'] : '',
                 'border_color' => !empty($styleSettings['border_color']) ? $styleSettings['border_color'] : '',            
                 'field_label_text_color' => !empty($styleSettings['field_label_text_color']) ? $styleSettings['field_label_text_color'] : '',
+                'field_label_marker_text_color' => !empty($styleSettings['field_label_marker_text_color']) ? $styleSettings['field_label_marker_text_color'] : '',            
                 'field_text_color' => !empty($styleSettings['field_text_color']) ? $styleSettings['field_text_color'] : '',
                 'no_background' => !empty($styleSettings['no_background']) ? $styleSettings['no_background'] : '',
                 'background_color' => !empty($styleSettings['background_color']) ? $styleSettings['background_color'] : '',

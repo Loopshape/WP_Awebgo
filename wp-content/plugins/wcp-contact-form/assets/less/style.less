@@ -1,5 +1,6 @@
 @id : '';
 @field_label_text_color : '';
+@field_label_marker_text_color : '';
 @field_text_color : '';
 @no_border : '';
 @border_size : '';
@@ -48,6 +49,11 @@
     .field_label_text_color (@field_label_text_color) when not (@field_label_text_color=~'') {
         color: @field_label_text_color!important;
     } .field_label_text_color (@field_label_text_color);        
+}
+#@{id} .scfp-form-row .scfp-form-label .scfp-form-field-required {
+    .field_label_marker_text_color (@field_label_marker_text_color) when not (@field_label_marker_text_color=~'') {
+        color: @field_label_marker_text_color!important;
+    } .field_label_marker_text_color (@field_label_marker_text_color);        
 }
 #@{id} .scfp-captcha .scfp-captcha-refresh .scfp-captcha-refresh-inner-icon .scfp-icon-refresh {
     .field_text_color (@field_text_color) when not (@field_text_color=~'') {

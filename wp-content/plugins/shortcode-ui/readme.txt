@@ -3,7 +3,7 @@ Contributors: fusionengineering, mattheu, danielbachhuber, zebulonj, goldenapple
 Tags: shortcodes
 Requires at least: 4.1
 Tested up to: 4.4
-Stable tag: 0.6.0
+Stable tag: 0.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,17 +13,17 @@ Shortcake makes using WordPress shortcodes a piece of cake.
 
 Used alongside `add_shortcode`, Shortcake supplies a user-friendly interface for adding a shortcode to a post, and viewing and editing it from within the content editor.
 
-Once you've installed the plugin, you'll need to [register UI for your shortcodes](https://github.com/wp-shortcake/shortcake/wiki/Registering-Shortcode-UI). For inspiration, check out [examples of Shortcake in the wild](https://github.com/wp-shortcode/shortcake/wiki/Shortcode-UI-Examples).
+Once you've installed the plugin, you'll need to [register UI for your shortcodes](https://github.com/wp-shortcake/shortcake/wiki/Registering-Shortcode-UI). For inspiration, check out [examples of Shortcake in the wild](https://github.com/wp-shortcake/shortcake/wiki/Shortcode-UI-Examples).
 
-To report bugs or feature requests, [please use Github issues](https://github.com/wp-shortcode/shortcake/issues).
+To report bugs or feature requests, [please use Github issues](https://github.com/wp-shortcake/shortcake/issues).
 
 == Installation ==
 
 Shortcake can be installed like any other WordPress plugin.
 
-Once you've done so, you'll need to [register the UI for your code](https://github.com/wp-shortcode/shortcake/wiki/Registering-Shortcode-UI).
+Once you've done so, you'll need to [register the UI for your code](https://github.com/wp-shortcake/shortcake/wiki/Registering-Shortcode-UI).
 
-New in 0.4.0 is the ability to [attach javascript functions to event attribute updates](https://github.com/wp-shortcode/shortcake/wiki/Event-Attribute-Callbacks). Action hooks can be used to dynamically show or hide a field based on the value of another, or to implement custom validation rules.
+New in 0.4.0 is the ability to [attach javascript functions to event attribute updates](https://github.com/wp-shortcake/shortcake/wiki/Event-Attribute-Callbacks). Action hooks can be used to dynamically show or hide a field based on the value of another, or to implement custom validation rules.
 
 == Frequently Asked Questions ==
 
@@ -50,6 +50,10 @@ We've removed the compatibility shim for the `placeholder` attribute argument. Y
 We've removed the compatibility shim for the magical `content` attribute. If you were using this to support editing inner content, you'll need to change your UI registration to use `inner_content`.
 
 == Changelog ==
+
+= 0.6.1 (November 9, 2015) =
+* Fixes JavaScript TypeError when clicking media frame menu items.
+* Corrects links in readme.
 
 = 0.6.0 (November 2, 2015) =
 * Supports an optional `encode=true` argument for attributes, to allow limited HTML support. Attributes need to be run through `shortcode_atts()` in order to be properly decoded.

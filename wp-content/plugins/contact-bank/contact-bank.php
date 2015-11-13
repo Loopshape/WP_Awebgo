@@ -4,7 +4,7 @@ Plugin Name: Contact Bank Lite Edition
 Plugin URI: http://tech-banker.com
 Description: Build Complex, Powerful Contact Forms in Just Seconds. No Programming Knowledge Required! Yeah, It's Really That Easy.
 Author: Tech Banker
-Version: 2.0.338
+Version: 2.0.339
 Author URI: http://tech-banker.com
 License: GPLv3 or later
  */
@@ -73,7 +73,7 @@ function create_global_menus_for_contact_bank()
 	{
 		$cb_role = "administrator";
 	}
-	else 
+	else
 	{
 		$cb_role = $wpdb->prefix . "capabilities";
 		$current_user->role = array_keys($current_user->$cb_role);
@@ -133,10 +133,10 @@ function create_global_menus_for_contact_bank()
 		break;
 		case "contributor":
 			break;
-				
+
 		case "subscriber":
 			break;
-		
+
 	}
 }
 /* Function Name : contact_bank
@@ -149,7 +149,7 @@ function create_global_menus_for_contact_bank()
  */
 function contact_bank()
 {
-	
+
 	global $wpdb,$current_user,$cb_user_role_permission;
 	if (is_super_admin())
 	{
@@ -190,7 +190,7 @@ function contact_dashboard()
 		$cb_role = $wpdb->prefix . "capabilities";
 		$current_user->role = array_keys($current_user->$cb_role);
 		$cb_role = $current_user->role[0];
-	}	
+	}
 	if(file_exists(CONTACT_BK_PLUGIN_DIR ."/views/header.php"))
 	{
 		include_once CONTACT_BK_PLUGIN_DIR ."/views/header.php";
@@ -583,7 +583,7 @@ if(isset($_REQUEST["action"]))
 	switch($_REQUEST["action"])
 	{
 		case "add_contact_form_library":
-			
+
 			add_action( "admin_init", "add_contact_form_library");
 			function add_contact_form_library()
 			{
@@ -603,11 +603,11 @@ if(isset($_REQUEST["action"]))
 					include_once CONTACT_BK_PLUGIN_DIR . "/lib/contact_view-class.php";
 				}
 			}
-			
+
 		break;
-			
+
 		case "frontend_contact_form_library":
-				
+
 			add_action( "admin_init", "frontend_contact_form_library");
 			function frontend_contact_form_library()
 			{
@@ -616,11 +616,11 @@ if(isset($_REQUEST["action"]))
 					include_once CONTACT_BK_PLUGIN_DIR . "/lib/contact_bank_frontend-class.php";
 				}
 			}
-			
+
 		break;
-		
+
 		case "email_contact_form_library":
-			
+
 			add_action( "admin_init", "email_contact_form_library");
 			function email_contact_form_library()
 			{
@@ -640,11 +640,11 @@ if(isset($_REQUEST["action"]))
 					include_once CONTACT_BK_PLUGIN_DIR . "/lib/contact_bank_email-class.php";
 				}
 			}
-			
+
 		break;
-		
+
 		case "email_management_contact_form_library":
-			
+
 			add_action( "admin_init", "email_management_contact_form_library");
 			function email_management_contact_form_library()
 			{
@@ -653,11 +653,11 @@ if(isset($_REQUEST["action"]))
 					include_once CONTACT_BK_PLUGIN_DIR . "/lib/contact_bank_email_management.php";
 				}
 			}
-			
+
 		break;
-		
+
 		case "frontend_data_contact_library":
-			
+
 			add_action( "admin_init", "frontend_data_contact_library");
 			function frontend_data_contact_library()
 			{
@@ -677,11 +677,11 @@ if(isset($_REQUEST["action"]))
 					include CONTACT_BK_PLUGIN_DIR . "/lib/contact_frontend_data_class.php";
 				}
 			}
-			
+
 		break;
-		
+
 		case "show_form_control_data_contact_library":
-			
+
 			add_action( "admin_init", "show_form_control_data_contact_library");
 			function show_form_control_data_contact_library()
 			{
@@ -701,11 +701,11 @@ if(isset($_REQUEST["action"]))
 					include CONTACT_BK_PLUGIN_DIR . "/lib/contact_bank_show_form_control_data-class.php";
 				}
 			}
-		
+
 		break;
-		
+
 		case "layout_settings_contact_library":
-			
+
 			add_action( "admin_init", "layout_settings_contact_library");
 			function layout_settings_contact_library()
 			{
@@ -725,7 +725,7 @@ if(isset($_REQUEST["action"]))
 					include CONTACT_BK_PLUGIN_DIR . "/lib/contact_bank_layout_settings-class.php";
 				}
 			}
-		
+
 		break;
 	}
 }
@@ -807,11 +807,11 @@ function extract_short_code($form_id,$show_title,$show_desc)
 }
 function add_contact_bank_icon($meta = TRUE)
 {
-	if (!is_user_logged_in() ) 
+	if (!is_user_logged_in() )
 	{
 		return;
 	}
-	else 
+	else
 	{
 		global $wp_admin_bar,$wpdb,$current_user;
 		if (is_super_admin())
@@ -824,11 +824,11 @@ function add_contact_bank_icon($meta = TRUE)
 			$current_user->role = array_keys($current_user->$cb_role);
 			$cb_role = $current_user->role[0];
 		}
-		
+
 		switch ($cb_role)
 		{
 			case "administrator":
-				
+
 			$wp_admin_bar->add_menu( array(
 			"id" => "contact_bank_links",
 			"title" =>  "<img src=\"".plugins_url("/assets/images/icon.png",__FILE__)."\" width=\"25\" height=\"25\" style=\"vertical-align:text-top; margin-right:5px;\" />Contact Bank" ,
@@ -888,14 +888,14 @@ function add_contact_bank_icon($meta = TRUE)
 					"href" => site_url() . "/wp-admin/admin.php?page=contact_bank_recommended_plugins",
 					"title" => __("Recommendations", contact_bank))
 			);
-		
+
 			$wp_admin_bar->add_menu(array(
 					"parent" => "contact_bank_links",
 					"id" => "pro_version_links",
 					"href" => site_url() . "/wp-admin/admin.php?page=contact_pro_version",
 					"title" => __("Premium Editions", contact_bank))
 			);
-		
+
 			$wp_admin_bar->add_menu(array(
 					"parent" => "contact_bank_links",
 					"id" => "contact_bank_other_services_links",
@@ -903,14 +903,14 @@ function add_contact_bank_icon($meta = TRUE)
 					"title" => __("Our Other Services", contact_bank))
 			);
 			break;
-			
+
 			case "editor":
 			$wp_admin_bar->add_menu( array(
 				"id" => "contact_bank_links",
 				"title" =>  "<img src=\"".plugins_url("/assets/images/icon.png",__FILE__)."\" width=\"25\" height=\"25\" style=\"vertical-align:text-top; margin-right:5px;\" />Contact Bank" ,
 				"href" => site_url() ."/wp-admin/admin.php?page=contact_dashboard",
 			));
-		
+
 			$wp_admin_bar->add_menu( array(
 				"parent" => "contact_bank_links",
 				"id"     => "dashboard_links",
@@ -953,7 +953,7 @@ function add_contact_bank_icon($meta = TRUE)
 				"href"  => site_url() ."/wp-admin/admin.php?page=contact_feature_request",
 				"title" => __( "Feature Requests", contact_bank))         /* set the sub-menu name */
 			);
-		
+
 			$wp_admin_bar->add_menu( array(
 				"parent" => "contact_bank_links",
 				"id"     => "system_status_data_links",
@@ -966,14 +966,14 @@ function add_contact_bank_icon($meta = TRUE)
 				"href" => site_url() . "/wp-admin/admin.php?page=contact_bank_recommended_plugins",
 				"title" => __("Recommendations", contact_bank))
 			);
-		
+
 			$wp_admin_bar->add_menu(array(
 				"parent" => "contact_bank_links",
 				"id" => "pro_version_links",
 				"href" => site_url() . "/wp-admin/admin.php?page=contact_pro_version",
 				"title" => __("Premium Editions", contact_bank))
 			);
-		
+
 			$wp_admin_bar->add_menu(array(
 				"parent" => "contact_bank_links",
 				"id" => "contact_bank_other_services_links",
@@ -981,7 +981,7 @@ function add_contact_bank_icon($meta = TRUE)
 				"title" => __("Our Other Services", contact_bank))
 			);
 			break;
-			
+
 			case "author":
 			$wp_admin_bar->add_menu( array(
 				"id" => "contact_bank_links",
@@ -1036,14 +1036,14 @@ function add_contact_bank_icon($meta = TRUE)
 				"href" => site_url() . "/wp-admin/admin.php?page=contact_bank_recommended_plugins",
 				"title" => __("Recommendations", contact_bank))
 			);
-		
+
 			$wp_admin_bar->add_menu(array(
 				"parent" => "contact_bank_links",
 				"id" => "pro_version_links",
 				"href" => site_url() . "/wp-admin/admin.php?page=contact_pro_version",
 				"title" => __("Premium Editions", contact_bank))
 			);
-				
+
 			$wp_admin_bar->add_menu(array(
 				"parent" => "contact_bank_links",
 				"id" => "contact_bank_other_services_links",
@@ -1055,7 +1055,7 @@ function add_contact_bank_icon($meta = TRUE)
 	}
 }
 add_action( "media_buttons_context", "add_contact_shortcode_button", 1);
-function add_contact_shortcode_button($context) 
+function add_contact_shortcode_button($context)
 {
 add_thickbox();
 $context .= "<a href=\"#TB_inline?width=300&height=400&inlineId=contact-bank\"  class=\"button thickbox\"  title=\"" . __("Add Contact Bank Form", contact_bank) . "\">

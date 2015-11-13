@@ -1,0 +1,2114 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "SendPress Newsletters"
+msgstr ""
+
+#. Short description.
+msgid "A Newsletter Plugin for WordPress to create, send, manage and track your Newsletters in one place."
+msgstr ""
+
+#. Screenshot description.
+msgid "Email Lists."
+msgstr ""
+
+#. Screenshot description.
+msgid "Email Edit Example."
+msgstr ""
+
+#. Screenshot description.
+msgid "Send Screen."
+msgstr ""
+
+#. Screenshot description.
+msgid "Confirm Send."
+msgstr ""
+
+#. Screenshot description.
+msgid "Subscriber Lists."
+msgstr ""
+
+#. Screenshot description.
+msgid "All Subscribers."
+msgstr ""
+
+#. Screenshot description.
+msgid "Subscriber Edit."
+msgstr ""
+
+#. Screenshot description.
+msgid "Settings &amp; Style."
+msgstr ""
+
+#. Screenshot description.
+msgid "Emails &amp; Pages."
+msgstr ""
+
+#. Screenshot description.
+msgid "Sending Account."
+msgstr ""
+
+#. Screenshot description.
+msgid "Permissions."
+msgstr ""
+
+#. Screenshot description.
+msgid "Notifications."
+msgstr ""
+
+#. Screenshot description.
+msgid "Reports."
+msgstr ""
+
+#. Screenshot description.
+msgid "Queue."
+msgstr ""
+
+#. Screenshot description.
+msgid "Pro Tab."
+msgstr ""
+
+#. Found in description header.
+msgid "Newsletter Features"
+msgstr ""
+
+#. Found in description header.
+msgid "Auto Cron"
+msgstr ""
+
+#. Found in description header.
+msgid "Check out our 2 minute run through video"
+msgstr ""
+
+#. Found in description header.
+msgid "SendPress Newsletters Pro Features"
+msgstr ""
+
+#. Found in description header.
+msgid "Support"
+msgstr ""
+
+#. Found in description list item.
+msgid "<strong>Unlimited Subscribers</strong>"
+msgstr ""
+
+#. Found in description list item.
+msgid "<strong>Unlimited Responsive Newsletters</strong> with tracking"
+msgstr ""
+
+#. Found in description list item.
+msgid "Simple editor. With an <strong>code-free experience</strong>"
+msgstr ""
+
+#. Found in description list item.
+msgid "Customizable <strong>subscription widget</strong>, <strong>page</strong> or <strong>custom form</strong>"
+msgstr ""
+
+#. Found in description list item.
+msgid "Sync WordPress roles to newsletter subscriber lists"
+msgstr ""
+
+#. Found in description list item.
+msgid "<strong>Single</strong> And <strong>Double Opt-In</strong>"
+msgstr ""
+
+#. Found in description list item.
+msgid "Html and Text versions of Newsletters "
+msgstr ""
+
+#. Found in description list item.
+msgid "<strong>Customizable Newsletter Templates</strong> with easy to use theme styler"
+msgstr ""
+
+#. Found in description list item.
+msgid "Stat tracking for each email: clicks, opens and unsubscribes. "
+msgstr ""
+
+#. Found in description list item.
+msgid "Send with your web host or Gmail for free"
+msgstr ""
+
+#. Found in description list item.
+msgid "Verified compatible with: <a href=\"https://wordpress.org/plugins/postman-smtp/\">Postman SMTP Mailer/Email Log</a>"
+msgstr ""
+
+#. Found in description list item.
+msgid "<strong>Scheduled Sending</strong> of newsletters"
+msgstr ""
+
+#. Found in description list item.
+msgid "<strong>API Sending</strong> for Mandrill, Sendgrid, Mailgun and Elastic Email"
+msgstr ""
+
+#. Found in description list item.
+msgid "Automated <strong>Bounce handling</strong> "
+msgstr ""
+
+#. Found in description list item.
+msgid "Advanced report details ( see clicked links and subscriber details )"
+msgstr ""
+
+#. Found in description list item.
+msgid "<strong>Custom HTML Templates</strong> use any newsletter template you want"
+msgstr ""
+
+#. Found in description list item.
+msgid "Campaign Tracking: <strong>Google Analytics</strong>, KissMetrics, etc…"
+msgstr ""
+
+#. Found in description list item.
+msgid "Check your <strong>spam</strong> score ( Spamassasin )"
+msgstr ""
+
+#. Found in description list item.
+msgid "1 Year of updates and Premium Support"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "SendPress Newsletters is an easy to use WordPress newsletter plugin that has all the features you need. Create newsletter templates with your style and edit content just like you would a post in WordPress. Easily import post content from your site and schedule newsletters to be sent at the right time. Start sending great emails and newsletters today right from WordPress with our newsletter plugin."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "We help make sure your newsletters are sent. You can enable Auto Cron from the admin panel and then our systems will check your site every 15 minutes to make sure your newsletters are sent. Check out our knowledge base article <a href=\"http://docs.sendpress.com/article/65-what-is-autocron\">What is AutoCron?</a> for more info."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "http://vimeo.com/56978344"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Please check out our Docs site <a href=\"http://docs.sendpress.com/\">http://docs.sendpress.com/</a> if you need help with anything or our <a href=\"https://wordpress.org/support/plugin/sendpress\">WordPress Forum</a>."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Pro customers have direct access to our ticket system via <a href=\"https://sendpress.com/your-account/\">Your Account</a> page on SendPress.com."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "<strong>Follow <a href=\"https://github.com/brewlabs/sendpress\">SendPress Newsletters on GitHub</a></strong>"
+msgstr ""
+
+#. Found in installation header.
+msgid "Right within WordPress"
+msgstr ""
+
+#. Found in installation header.
+msgid "Uploading a zip file"
+msgstr ""
+
+#. Found in installation header.
+msgid "Good old FTP"
+msgstr ""
+
+#. Found in installation list item.
+msgid "In your Admin, go to menu Plugins &gt; Add"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Search for <code>SendPress</code>"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Click to install"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin"
+msgstr ""
+
+#. Found in installation list item.
+msgid "A new menu <code>SendPress</code> will appear in your Admin"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Download the plugin (.zip file) on the right column of this page"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Select the tab \"Upload\""
+msgstr ""
+
+#. Found in installation list item.
+msgid "Upload the .zip file you just downloaded"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Upload <code>sendpress</code> folder to the <code>/wp-content/plugins/</code> directory"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin through the 'Plugins' menu in WordPress"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: send confirmation emails directly"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: return path on boucen handler"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: old template double footer"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: add date range to recent posts shortcode"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: added more logs around sending"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Support for WP Email Delivery https://www.wpemaildelivery.com"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: System email setup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Confirmations not sending fast"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Emails being marked as bounce when they send correctly"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: AutoCron background jobs set to daily and weekly now"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: add support for api.wped.co"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Autoresponders being release early"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Add sslverifiy option to wped"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Confirmation emails not always sending "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: manage shortcode url"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Added error handling around autocron"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: wped sending with error tracking"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: WP Email Delivery Url"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: WP Email Delivery Support"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Overview page stats update"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Make sure subscriber is still active when sending"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: text domain settings for wp.org "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Old template system using wrong template"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: List limit per subscriber now at 500"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: added try catch to link tracker to log errors"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Column support for sp-recent-posts"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: List Create Error"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Post notifiction display errors"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Widget text showing when it should not"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: List Create and Edit"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Recent posts shortcode"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: New filters for limiting sending options"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: bug fix for widget without CSS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Prep for SendPress Delivery"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Improve sending from autocron"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: added check to Overview page for Pro"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Link tracker for clicks"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Check is_email on sending for double verification"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Link tracker"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: SPNL Logger"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Issue when using wp_mail for sending"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Ready for WordPress 4.3"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: add option to repair db tables"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Updated all reports to new stats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Email sending count"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Basic system check"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Missing $wpdb when using prepare"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Links not always tracked properly"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Add Subscriber Screen"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: custom filter for list syncing - spnl-role-sync-get-user-args"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Security update causing files to load on non SendPress pages"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: List sync not pulling all WordPress users"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Signup widget"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: add signup tracker to emails sent out"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: add ability to validate hex codes "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Import CSV not loading correctly"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Templates having path saved in database"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: SendPress_Data added $wpdb-&gt;prepare to some queries"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: added hex validation for editor"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Code cleanup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Tighten security"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Some area's not working from security update"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Security Release."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Pro post notification list setup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Translation files"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Linked plugin to http://wp-translations.org/"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Pro: Elastic Email module"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: email tracker in gmail not always getting stats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: slow link tracker response to click"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Various spelling and missing translated text"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Language Translations"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: link tracker to use wp_remote_post"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: website sending to support Postman SMTP"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: add system check to api"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Post notification bulk update"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Sending Code"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: link tracker"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: API bug"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Slow loading on pages"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Error when plugin can't connect to sendpress.com"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: install on WP Engine"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: shortcode placeholder issue"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: shortcode post data"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Add new phpmailer code for sending emails"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: sp-recent-posts shortcode update"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: link tracker encoding"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: SendPress JSON API"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: User Meta Query SYNC for lists"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Update redirects causing permission issue"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Removed unused vars"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Small bug fixes"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: lowered filter priority on 'template_include'"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Some redirects missing admin.php"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: XSS Fixes and security review"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Test report stats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Manage shortcode display"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Link tracking for mailto links"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Recent Post shortcode - responsive update"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Added IP to CSV Import"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: error_log call removed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Beta: Override header and footer when editing email"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Added links to new docs site"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: sp-recent-posts responsive email support"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Confirmation email uses new templates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Query to calculate total sent"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: System Starter email Template"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Pro: Run shortcodes on custom templates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Manage Page and Shortcode"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Some Ajax calls not working on Front End"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Manage Page Shortcode with redirect option"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Query Optimization for Queue"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Optimized subscriber tables"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: SP edit button on visual editor"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Better Stat Notification Query"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Ajax subscribe call return status for existing subscribers"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Autocron check increased to 5 minutes"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Overview page not loading on some sites"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "WP.org SVN cleanup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: SQL error on some installs"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Autocron running speed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Send now not updating"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Soft delete Reports"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: added new stat tracker"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Sending popup not always responding"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: AutoCron stoping for some sites"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Loading icon when CSS is off"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: options sometimes returning wp_error"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Video embeds in emails"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: AutoCron status check"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Sending not working in some cases"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: pdfprnt_content conflict"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: mailto: missing @ symbol"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Email Titles not always showing"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: tables not installing"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Link tracking updates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Sending speed improved"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Update to overview page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Widget breaking on some admin screens"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Removed redirect to Whats New Page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Whats new page showing more then it should"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: don't track links starting with #"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: pro custom templates not loading "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: SSL error on template style page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Multiple templates created in some cases"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Moved update script to admin init and check user permissions first"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Update widget code to prevent broken widgets page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Changed plugin widget loader"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Template updates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Translation Strings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Transifex files updated"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Recent Post Shortcode"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Multisite Setup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Custom tags showing in emails"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Plugin install when site is created"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Update sending to improve speed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: form shortcode missing list id"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Multisite install now creates all tables"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: widget setup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Template names getting reset"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Stop extra template creations"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Remove extra settings from new settings posts"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Template spacing and disable issues"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Added link to template setup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Missing variables in cron"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Pro table easier to use"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Better style in-liner"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Email tag system"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Form builder/Widget"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Responsive Templates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Email Editor and styler"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Email Cache Builder - reduce memory usage"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Array index issue for new template system"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Template showing php code in some clients"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: SendPress options full of extra data"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Switched everything to esc_sql()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: DomDocument Error when sending emails if class missing"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Issue with email cache"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: sending stoping at random points"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Line breaks not formatted correctly"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Blank email sending"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Lower memory usage when sending"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Notification email fixed to support multiples"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Overview stat fix"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Duplicate email sending to subscribers"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Translation code added"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Support to turn off mailto tracking"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Added some more unit tests"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Shortcode conflict (WooCommerce)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Speed of email rendering"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Settings post type (Moving settings to custom post)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Overview has preview of Pro Charts 2.0"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: re-queue all emails fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: UI display issues"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Overview subscriber count"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Javascript error on some pages"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: CSS fixes for views"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: TinyMCE error fix"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: DB Support for PRO"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Stats caching to reduce db load"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Passed 100K Downloads - Thanks for using SendPress"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Role list sync updated"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: CSS Update for Widget Form"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Widget post data"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Views for Queue health"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: AutoCron activation pro discount"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Logging Class for Errors"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Import changing status of users"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Import not check for valid .CSV"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: ob_start in shortcode (fixes broken front-ends)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Pro key management"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: styling on wpengine.com"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: List Sync not updating all users"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: multiple sptemplates being created on some hosts"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Duplicate template check added to Advanced Settings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Travis CLI tests updated"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Pro installer should always use SSL"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Code fix for PHP 5.2 - T_PAAMAYIM_NEKUDOTAYIM Error"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: CSS conflicts on WPEngine"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Unsubscribe Shortcode"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Recent Posts Shortcode"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Signup Shortcode"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Shortcode Docs on Help Page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Bug in SendPress_View that may cause white screen in SendPress"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Saving Sending Account"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Social Icon sorting "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Converted all SendPress API calls to SSL"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: App.net Social Icon"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: SendPress Pro update reminder"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Set add Emails to Queue Ajax call count"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Error sending when no social icons set"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Error message on CSV Import"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Template no saving correctly"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Default Sender no longer set to old"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Settings tabs renamed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Moved testing to sending account"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: On state added to menu"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Social Icon Setup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Hourly and Daily send count being off"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Mark lists and Reports as tests"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Added tabs to Reports section to support tests"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Queue History Tab - see what has been sent"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Added option to repair events table"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Bugs from updated UI"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Pro missing send count on reports"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: removed Presstrends Code"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Sending alert so you have to pick list"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Shortcodes from WooCommerce causing conflict"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Reports sending and queue totals more accurate"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Message sending should be slightly faster ( Less DB calls per message )"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Shortcodes not running with AutoCron"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Added higher limits for AutoCron sending"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Menu item says <code>SendPress Pro</code> if pro is installed    "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: [sendpress-posts] shortcode "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Permissions on custom roles"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: dbDelta duplicate key warning"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: static missing from plugin activation function"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Widget not saving info"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: ' sometimes showing odd characters in emails"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: lists_checked not always set"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: WordPress role sync now AJAX based"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Export option on all subscribers screen"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Advanced Settings for fine tuning SendPress install"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Youtube and Vimeo videos converted to images"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: increased Minimum required WordPress version to 3.7 "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Error being logged for notifications"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Errors when trying to view email that has been deleted"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Missing UI styles from bootstrap3 update"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Subscriber Total on overview"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Shortcode now allows for lists unchecked by default"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: SendPress editor button not working"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Pro Activation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Re-queue Buttons fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Admin UI Upgrade"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: New Overview Page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Reports missing title"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Variable assignment causing errors"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Faster AutoCron"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: 3.8 display issue"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Delete Subscribers fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Notifications Update"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Hipchat notifications"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: 3.8 display issues"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Shortcode for signup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: List create and Role sync settings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Report counts and times"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: AutoCron causing empty entry in error logs"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: uninstall errors"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: PHPmailer email encoding "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Queue count being off"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Unistall fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Character encoding fixes"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Notification sometimes showing wrong list name"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: error on uninstall"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: notification showing wrong text"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: console.log in script file"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: unsubscribe not being register in some cases"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: admin notifications sometimes creating error"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: DB updates faster and better on large lists"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: call to static function SendPress_Error::log"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: Pro activation checking without Pro installed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Option to try and install missing tables added to Advanced"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Update timeout on 100K+ subscriber lists"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "WordPress role sync first and last name"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix blank confirmation email"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix confirm email link now uses home_url"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New send test email for edit screen"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "ajax loading image for widgets"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update script now uses dbDelta"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "WordPress role sync"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Scheduled Sending"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Better character encoding support"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix for bulk actions"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Support for MP6 UI"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New Logos added"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix for notifications"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix for events being saved"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug with 'Send Emails Now' fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed bad table name in SendPress_Data"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improved CSV import for different column formats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Auto Cron now more stable"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Unsubscribe link redirects to manage page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New Error Logging Class"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added new indexes to Custom Tables"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "WebHook for Bounce Handling Event- requires Pro"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "CSV Import"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "cron sending fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "email sometimes missing body text fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "AutoCron update "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New Screenshots"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Translation Updates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Delete Subscriber from system"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Better Queue Info and Stats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New \"All Subscribers\" View"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Full text search of subscribers"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Unsubscribe link not always working"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Free SendPress Pro Autocron added"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Queue updated to run faster"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "DB Tables updated for Windows"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Switched front-end pages to check home_url()"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "email encoding not always saving"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "email encoding options"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "forms and iframe updates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "s2member conflict fix"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "sending speed saving"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "forms not posting emails correctly"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fixed key activation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fixed manage link in email unsubscribing users"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fixed reports not showing correct emails"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added Support for s2member roles"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated senders to have the correct return path"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added new queue creator - help reduce memory usage and timeouts"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "better support for large lists"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added manage subscription link to template"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Support for Mandrill sending in Pro"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added check before sending confirmation email"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "change template encoding to 8bit"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "update subscriber add UI"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix for Send Confirm Screen"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "SendPress Pro Amazon SES Enabled"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New rewrite rules for email previews"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added new translations"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed bad url on cancel button"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added SendPress image size"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Template rendering bug fix for public views"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Premalink 404 error fix"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "add support for custom WordPress roles mapped to SP permisions"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "DB Table check in Help Section"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added clickable link to confirmation emails"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug fix for public pages"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Simple Notifications added"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Extra spacing in template fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed broken links"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "View link errors fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Minor updates for php 5.2"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Subscriber Widget saving update"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added more tracking to subscriber events"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New Pro options"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Better php 5.2 support"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Author Editing email fix"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Sign-up Post fix"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New View access controls"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Pro tab activated"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Email HTML filter"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed for confirmation link in href"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed a few typos"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Remove all custom post type posts on uninstall"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix for cron not sending on some hosts"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New Qeueue manager for emails per day and per hour"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Ability to use theme template for SendPress Pages"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New forms page for each list "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated Widget to support multiple lists"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Screen options for table views"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Queue info to reports screen"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Auto create text version of emails"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improved Cron and sending overall"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "HTML Support in Widget description"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Insert Post with title links back to post"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Multilple other bug fixes and code updates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "uninstall file error fixed."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Security check added to all files"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "DB Error on unistall and reinstall"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Active Subscribers bug in 3.5 fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Spanish Translation Started"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Remove all subscribers from list added"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "PHP 5.2 bug fixed"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Double Optin added"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Code optimized for memory usage and loading"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added better Language/Translation Support "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added option to remove all emails from Queue"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed extra \\ showing in some settings"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added email template text to translation code"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Simplified Settings and created Help section"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added checks for W3 Total Cache"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Stopped plugin from creating multiple cron calls"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed link for setup notice"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed CAN-SPAM as required"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Permisions settings for WordPress Roles"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Implimented SendPress View class"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated link tracking to use a single token"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed issue with facebook plugin posting emails to facebook"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Styler bugs fixed - text color, border and links"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Convert Lists to Custom Post Type"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added more fields to email personalize screen"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated Open and Click tracking to be more accurate"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed image alignment when sending emails with images"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added filters and hooks to reports section"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added List Settings button on subscribers page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Code cleanup and refactoring."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "SP button added to editor "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "-Added Ability to insert post into email"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "-Added Ability to insert subscriber info into email"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Social Media added to template"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Ability to use Custom CSS "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Shortcode Documentation added to settings page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New SP logo added"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed special characters from test email title"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Active Subscriber count off on lists screen"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "scripts using wp_footer now optional uses wp_head by default"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "link styles wrong in some mail clients"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "plugin activation updated to streamline table creation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "uninstall updated to remove all tables and options "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Patch for broken JS on SendPress settings screens."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Removed PHP Shortcode Syntax  "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Sending through Gmail broken  "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Email preview broken on send page  "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Deleting e-mails from queue that did not send does not work"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Renaming and creating a subscriber list fails without error message"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Make List public by default on creation."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Send e-mail hangs in Safari under WordPress 3.4.1 "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Send Emails Now behavior in Internet Explorer hangs with strange output "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Inserting images into Newsletter body replaces header image"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Unable to delete a user or list "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Bulk delete of subscribers fails  "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: A list cannot be made private  "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bug Fix: Special characters in the subject line get distorted  "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added exclude_from_search to custom post types"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "removed use of str_getcsv"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added unofficial support of WP 3.2+"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added opt-in feedback option"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "First version on WP.org"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Previous releases can be downloaded from <a href=\"https://github.com/brewlabs/sendpress/releases\">GitHub</a>"
+msgstr ""
+
+#. Found in faq header.
+msgid "Getting a 404 error?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How do I test Beta releases?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How do you contact us?"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "To get rid of the 404 error when viewing an email, you need to re-save your permalink structure. Go to Settings &gt; Permalinks and click \"Save Changes\"."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "We only recommend you do this only in a test environment. You can get the <a href=\"https://github.com/brewlabs/sendpress-beta-tester\">SendPress Beta Tester Plugin</a> from GitHub. This will pull the most recent code from Github using the WordPress updater."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Main Site: <a href=\"https://sendpress.com\">https://sendpress.com</a>"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Twitter: <a href=\"http://twitter.com/sendpress\">@sendpress</a>"
+msgstr ""

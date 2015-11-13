@@ -48,12 +48,14 @@ class SCFP_Form extends Agp_Module {
                 if (!empty($field['visibility'])) {
                     switch ( $field['field_type'] ) {
                         case 'checkbox':
-                           $this->data[$key] = !empty($postData['scfp-'.$key]) ? 1 : 0;
+                            $this->data[$key] = !empty($postData['scfp-'.$key]) ? 1 : 0;
                             break;
                         default:
                             $this->data[$key] = !empty($postData['scfp-'.$key]) ? esc_attr($postData['scfp-'.$key]) : '';
                             break;
                     }
+                    
+                    $this->data[$key] = stripslashes_deep( $this->data[$key] );
                 }
             }
             
@@ -103,10 +105,6 @@ class SCFP_Form extends Agp_Module {
            //captcha error
            
            if ($fields[$key]['field_type'] == 'captcha'  &&  ( empty( $_SESSION['captcha-'.$this->id][$key] ) || strtolower( trim($value ) ) != strtolower( trim($_SESSION['captcha-'.$this->id][$key] ))) ) {
-               
-//               var_dump($_SESSION['captcha-'.$this->id][$key]);
-//               var_dump(strtolower( trim($value ) ));
-               
                $this->error[$key] = 'captcha_error';
                continue;
            }
@@ -196,8 +194,8 @@ class SCFP_Form extends Agp_Module {
         
         if (empty($settings['disable'])) {
             $to = !empty($settings['another_email']) ? $settings['another_email'] : get_option('admin_email');
-            $subject = !empty($settings['subject']) ? $settings['subject'] : '';
-            $message = $this->applyEmailVars( nl2br(!empty($settings['message']) ? $settings['message'] : '') );
+            $subject = stripslashes ( !empty($settings['subject']) ? $settings['subject'] : '' );
+            $message = stripslashes ( $this->applyEmailVars( nl2br(!empty($settings['message']) ? $settings['message'] : '') ) );
             $content = $this->getTemplate('email/mail-template', array('message' => $message));            
 
             add_filter( 'wp_mail_content_type', array($this, 'sendHtmlContentType') );        
@@ -212,8 +210,8 @@ class SCFP_Form extends Agp_Module {
             $email_field = !empty($settings['user_email']) ? $settings['user_email'] : 'email';
             
             $to = !empty($this->data[$email_field]) ? $this->data[$email_field] : '';
-            $subject = !empty($settings['user_subject']) ? $settings['user_subject'] : '';
-            $message = $this->applyEmailVars( nl2br(!empty($settings['user_message']) ? $settings['user_message'] : '') );            
+            $subject = stripslashes ( !empty($settings['user_subject']) ? $settings['user_subject'] : '' );
+            $message = stripslashes ( $this->applyEmailVars( nl2br(!empty($settings['user_message']) ? $settings['user_message'] : '') ) );            
             $content = $this->getTemplate('email/mail-template', array('message' => $message));            
 
             add_filter( 'wp_mail_content_type', array($this, 'sendHtmlContentType') );        

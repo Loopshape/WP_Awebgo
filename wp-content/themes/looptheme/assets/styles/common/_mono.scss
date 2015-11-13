@@ -1,0 +1,8 @@
+html > body.mono {
+
+  *:not(time) {
+    background-image: none !important;
+    background-color: none !important;
+  }
+
+}

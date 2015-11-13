@@ -110,8 +110,12 @@ Upgrade normally
 
 == Changelog ==
 
+= 4.9.9 =
+* Fixed: vote popup at plugins page
+* Minor improvements, fixes
+
 = 4.9.8.1 =
-* Fixed: compatibility with WordPress 4.3
+* Fixed: compatibility with WordPress 4.3+
 * Added: lightbox captions for slider, carousel and custom_gallery. Commit by [Valentino Pistis](https://github.com/vpistis)
 * Changed: text domain from 'su' to 'shortcodes-ultimate'
 

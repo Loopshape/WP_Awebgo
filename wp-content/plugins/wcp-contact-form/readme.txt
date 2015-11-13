@@ -302,6 +302,10 @@ Path to the templates folder inside the active theme:
 14. Admin Panel :: Settings :: reCAPTCHA 
 
 == Changelog ==
+= 2.4.0 = 
+* fixed: Removed strip slashes from submited form fields
+* added: Added ability to change color for "Required" marker via plugin settings
+
 = 2.3.8 =
 * fixed: Fixed issue with multiple form submit for some site configurations
 * added: Added ability to change background / text colors on hover for "Submit" button via plugin settings
