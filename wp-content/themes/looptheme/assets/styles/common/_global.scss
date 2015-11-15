@@ -329,6 +329,16 @@ box-shadow: 0 0 20px 8px $black-color !important;
           z-index: 20000 !important;
         }
 
+        .masonry {
+          a {
+            clear: none !important;
+
+            img {
+              width: auto !important;
+            }
+          }
+        }
+
         .single.post.thumbnail {
           img {
             max-width: 100%;

@@ -1,8 +1,25 @@
 html > body.mono {
 
-  *:not(time) {
+  *:not(time):not(button):not(input[type="submit"]) {
     background-image: none !important;
     background-color: none !important;
+  }
+
+  *:not(time):not(button):not(input[type="submit"]), >footer *:not(time):not(button):not(input[type="submit"]) {
+-webkit-transition: none !important;
+-moz-transition: none !important;
+-ms-transition: none !important;
+-o-transition: none !important;
+transition: none !important;
+    text-shadow: 0 0 0 #000 !important;
+-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
+box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
+  }
+
+  //img.webArea,
+  div.spaceScene,
+  div.dotArea {
+    display: none !important;
   }
 
 }
