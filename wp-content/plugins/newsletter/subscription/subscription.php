@@ -533,10 +533,11 @@ class NewsletterSubscription extends NewsletterModule {
      * @return type
      */
     function mail($to, $subject, $message) {
+        $options_template = $this->get_options('template');
         // If the template setup on administrative panel is enabled, use it, if not
         // use the default old templating system.
-        if ($this->options['template_enabled'] == 1) {
-            $template = $this->options['template'];
+        if (!empty($options_template['enabled'])) {
+            $template = $options_template['template'];
             if (strpos($template, '{message}') === false) {
                 $template .= '{message}';
             }
@@ -649,7 +650,7 @@ class NewsletterSubscription extends NewsletterModule {
         if ($user->status == 'C') {
             $newsletter->set_user_status($user->id, 'U');
 
-            if (!isset($this->options['unsubscribed_disabled'])) {
+            if (empty($this->options['unsubscribed_disabled'])) {
                 $this->mail($user->email, $newsletter->replace($this->options['unsubscribed_subject'], $user), $newsletter->replace($this->options['unsubscribed_message'], $user));
             }
             $this->notify_admin($user, 'Newsletter unsubscription');

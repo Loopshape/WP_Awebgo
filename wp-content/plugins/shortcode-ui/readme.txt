@@ -3,7 +3,7 @@ Contributors: fusionengineering, mattheu, danielbachhuber, zebulonj, goldenapple
 Tags: shortcodes
 Requires at least: 4.1
 Tested up to: 4.4
-Stable tag: 0.6.1
+Stable tag: 0.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,10 @@ We've removed the compatibility shim for the `placeholder` attribute argument. Y
 We've removed the compatibility shim for the magical `content` attribute. If you were using this to support editing inner content, you'll need to change your UI registration to use `inner_content`.
 
 == Changelog ==
+
+= 0.6.2 (November 12, 2015) =
+* Bug fix: Listens for "change" event on radio buttons and checkboxes to ensure shortcode attributes are updated.
+* Bug fix: Ensures `register_shortcode_ui` is always run before calling get_shortcodes(). Fixes post select AJAX callback when using `register_shortcode_ui` hook.
 
 = 0.6.1 (November 9, 2015) =
 * Fixes JavaScript TypeError when clicking media frame menu items.
