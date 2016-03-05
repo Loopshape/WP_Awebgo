@@ -1,22 +1,13 @@
 {
-  "name": "sage",
-  "homepage": "https://roots.io/sage/",
+  "name": "Awebgo LoopTheme",
+  "homepage": "http://loopshape.chimuwaves.de/",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Arjuna Noorsanto <awebgo.net@gmail.com>"
   ],
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "gsap": "*",
-    "modernizr": "2.8.2",
-    "bootstrap-sass-official": "3.3.5",
-    "tooltipsy": "*",
-    "matchheight": "~0.6.0",
-    "jquery-mousewheel": "*",
-    "simplr-smoothscroll": "*",
-    "font-awesome": "~4.4.0",
-    "isotope": "~2.2.2",
-    "jquery-bridget": "~1.1.0"
+    "requirejs": "~2.1.20"
   },
   "overrides": {
     "gsap": {
@@ -75,5 +66,31 @@
         "outlayer.js"
       ]
     }
-  }
+  },
+  "description": "Theme for WordPress-Templates",
+  "main": "index.php",
+  "moduleType": [
+    "amd",
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "web",
+    "development",
+    "media",
+    "production",
+    "loopshape",
+    "awebgo",
+    "arjuna",
+    "noorsanto",
+    "site",
+    "content"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
