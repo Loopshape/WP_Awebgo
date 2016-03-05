@@ -83,7 +83,7 @@ html {
       }
     }
 
-    * {
+    *:not(i.fa) {
       font-family: 'Josefin Sans', sans-serif !important;
       line-height: 134% !important;
       border-collapse: collapse !important;
@@ -135,10 +135,6 @@ box-sizing: border-box !important;
       margin-bottom: 5px !important;
     }
 
-    i {
-      font-family: 'FontAwesome' !important;
-    }
-
     h1,
     h2,
     h3,
@@ -154,7 +150,7 @@ box-sizing: border-box !important;
       font-weight: normal !important;
       color: $tertiary-color !important;
       opacity: 0.98 !important;
-      &, * {
+      &, *:not(i.fa) {
         color: $green-font-color !important;
         text-shadow: 0 0 0.66px $green-font-color !important;
         opacity: 0.8;

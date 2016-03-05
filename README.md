@@ -4,6 +4,6 @@
 <br>
 <br>
 #### Visit Website-URL<br>
-http://loop.arcturus.uberspace.de/
+http://loopshape.chimuwaves.de/
 ----
-contact: webdevelopment@kabelmail.de
+contact: awebgo.net@gmail.com

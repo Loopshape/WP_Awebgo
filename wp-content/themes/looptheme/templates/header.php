@@ -2,7 +2,7 @@
 <img class="webArea" src="/wp-content/uploads/2015/09/raw_background.jpg" alt="" width="auto" height="100%">
 <div class="spaceScene"></div>
 <div class="laptopArea">
-	<img src="http://loop.arcturus.uberspace.de/wp-content/uploads/2015/10/3D_Laptop.png" alt="" width="50%" height="auto" class="hastip" title="[Klick] Static DOM aktivieren">
+	<img src="/wp-content/uploads/2015/10/3D_Laptop.png" alt="" width="50%" height="auto" class="hastip" title="[Klick] Static DOM aktivieren">
 </div>
 <div class="dotArea"></div>
 <header class="banner" role="banner">

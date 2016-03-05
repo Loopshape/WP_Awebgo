@@ -1,13 +1,15 @@
 // Grid system by Sage.IO
+/*
 .main {
   @include make-sm-column($main-sm-columns);
-  .sidebar-primary & {
+  @include sidebar-primary & {
     @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
   }
 }
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
 }
+*/
 
 // ***********************************************************************
 // https://css-tricks.com/snippets/css/media-queries-for-standard-devices/

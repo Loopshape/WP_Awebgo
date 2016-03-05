@@ -1,18 +1,23 @@
+/*
+ * AWEBGO CSS3-THEME
+ * created by: Arjuna Noorsanto
+ * contact: awebgo.net@gmail.com
+ */
 html {
-  position: relative;
-  display: block;
+  position: relative !important;
+  display: block !important;
   width: 100% !important;
   height: 100% !important;
   color: transparent !important;
   opacity: 1 !important;
   body {
-    position: relative;
-    display: inline-block;
+    position: relative !important;
+    display: inline-block !important;
     width: 100% !important;
     height: auto !important;
     min-height: 100% !important;
     opacity: 1 !important;
-    //color: $primary-font-color;
+    //color: $primary-font-color !important;
     margin-bottom: 15px !important;
 
     > header > div > nav:not(nav) {
@@ -20,12 +25,13 @@ html {
         background-color: transparent !important;
       }
     }
+    
     > .container {
-      position: relative;
+      position: relative !important;
       background: transparent !important;
       .content {
-        position: relative;
-        min-height: 100%;
+        position: relative !important;
+        min-height: 100% !important;
         p.byline.author.vcard {
           &, * {
             color: $green-font-color !important;
@@ -33,21 +39,21 @@ html {
         }
         .main,
         .sidebar {
-          position: relative;
-          display: inline-block;
+          position: relative !important;
+          display: inline-block !important;
           width: 100% !important;
-          max-width: 70%;
-          background-color: $primary-color;
+          max-width: 70% !important;
+          background-color: $primary-color !important;
           background-image: url("/wp-content/themes/looptheme/assets/images/MetalArea.png") !important;
-          background-size: 50%;
-          background-position: top left;
-          background-attachment: scroll;
+          background-size: 50% !important;
+          background-position: top left !important;
+          background-attachment: scroll !important;
           padding: 15px !important;
           -webkit-border-radius: 7px !important;
           border-radius: 7px !important;
           border: 1px solid $border-color !important;
-          -webkit-box-shadow: 0 0 10px 3px $shadow-color;
-          box-shadow: 0 0 10px 3px $shadow-color;
+          -webkit-box-shadow: 0 0 10px 3px $shadow-color !important;
+          box-shadow: 0 0 10px 3px $shadow-color !important;
           z-index: auto !important;
           overflow: hidden !important;
           .page-header {
@@ -72,8 +78,8 @@ html {
           margin-left: 2% !important;
           > * {
             /*
-            background: url("/wp-content/themes/looptheme/assets/images/MetalPanel.png");
-            background-size: 100%;
+            background: url("/wp-content/themes/looptheme/assets/images/MetalPanel.png") !important;
+            background-size: 100% !important;
             padding: 15px !important;
             -webkit-border-radius: 12px !important;
             border-radius: 12px !important;
@@ -89,22 +95,22 @@ border-radius: 15px !important;
             overflow: hidden !important;
           }
           .input-group {
-            position: relative;
-            display: inline-block;
-            float: left;
-            width: 100%;
+            position: relative !important;
+            display: inline-block !important;
+            float: left !important;
+            width: 100% !important;
             min-height: 45px !important;
-            padding-bottom: 45px;
+            padding-bottom: 45px !important;
             > input {
-              float: left;
-              min-width: 50%;
-              max-width: 64%;
+              float: left !important;
+              min-width: 50% !important;
+              max-width: 64% !important;
             }
             > span {
-              float: right;
-              width: 100%;
-              max-width: 18%;
-              margin-right: 12%;
+              float: right !important;
+              width: 100% !important;
+              max-width: 18% !important;
+              margin-right: 12% !important;
 
               button {
                 width: auto !important;
@@ -122,7 +128,7 @@ border-radius: 15px !important;
     footer.content-info {
       display: block !important;
       background-color: $footer-color !important;
-      margin: 0;
+      margin: 0 !important;
       padding: 2% 5% 4% !important;
       -webkit-box-shadow: inset 0 0 50% 0 $shadow-color !important;
       box-shadow: inset 0 0 50% 0 $shadow-color !important;
@@ -130,11 +136,11 @@ border-radius: 15px !important;
       div.footerArea {
         margin: 1% 0 0 !important;
         padding: 1% 0 0 !important;
-        /*background-color: $primary-color;*/
+        /*background-color: $primary-color !important;*/
         background-image: url("/wp-content/themes/looptheme/assets/images/MetalArea.png") !important;
-        background-size: 50%;
-        background-position: top left;
-        background-attachment: scroll;
+        background-size: 50% !important;
+        background-position: top left !important;
+        background-attachment: scroll !important;
 -webkit-border-radius: 12px !important;
 border-radius: 12px !important;
 -webkit-box-shadow: 0 0 10px 3px $shadow-color !important;
@@ -145,34 +151,34 @@ box-shadow: 0 0 10px 3px $shadow-color !important;
           .widget {
             display: block !important;
             margin: 1% !important;
-            /*background-color: $primary-color;*/
+            /*background-color: $primary-color !important;*/
             background-image: url("/wp-content/themes/looptheme/assets/images/MetalField.png") !important;
-            background-size: 50%;
-            background-position: top left;
-            background-attachment: scroll;
-//-webkit-box-shadow: 0 0 7px 1px $shadow-color;
-//box-shadow: 0 0 7px 1px $shadow-color;
+            background-size: 50% !important;
+            background-position: top left !important;
+            background-attachment: scroll !important;
+//-webkit-box-shadow: 0 0 7px 1px $shadow-color !important;
+//box-shadow: 0 0 7px 1px $shadow-color !important;
           }
 
           .widget_calendar,
           .widget_tag_cloud,
           .widget_newsletterwidget {
-            position: relative;
-            display: inline-block;
-            float: left;
-            width: 100%;
-            //max-width: 23%;
+            position: relative !important;
+            display: inline-block !important;
+            float: left !important;
+            width: 100% !important;
+            //max-width: 23% !important;
           }
           .widget_calendar {
             table#wp-calendar {
-              clear: both;
-              position: relative;
+              clear: both !important;
+              position: relative !important;
               width: 100% !important;
-              max-width: 95%;
+              max-width: 95% !important;
               height: auto !important;
               caption {
-                font-size: 1.625em;
-                font-weight: bold;
+                font-size: 1.625em !important;
+                font-weight: bold !important;
                 color: $green-font-color !important;
               }
               thead,
@@ -181,14 +187,14 @@ box-shadow: 0 0 10px 3px $shadow-color !important;
                 tr {
                   * {
                     font-weight: bold !important;
-                    text-align: center;
-                    vertical-align: middle;
+                    text-align: center !important;
+                    vertical-align: middle !important;
                     padding: 0.3em 0.45em !important;
                   }
                   th {
-                    display: inline-block;
+                    display: inline-block !important;
                     padding: 0.45em 0.682em !important;
-                    content: " ";
+                    content: " " !important;
                   }
                   td#today {
                     font-size: 1.05em !important;
@@ -232,35 +238,35 @@ box-shadow: 0 0 10px 3px $shadow-color !important;
                 }
               }
               tbody {
-                display: inline-block;
-                //background-color: $primary-color;
+                display: inline-block !important;
+                //background-color: $primary-color !important;
                 background-color: rgba(35,49,66,1) !important;
                 background-image: url("/wp-content/themes/looptheme/assets/images/MetalField.png") !important;
-                background-size: 50%;
-                background-position: top left;
-                background-attachment: scroll;
+                background-size: 50% !important;
+                background-position: top left !important;
+                background-attachment: scroll !important;
                 border: 1px solid transparent !important;
                 -webkit-border-radius: 7px !important;
                 border-radius: 7px !important;
                 overflow: hidden !important;
               }
               tfoot {
-                display: none;
+                display: none !important;
               }
             }
           }
           .widget_tag_cloud {
             .tagcloud {
               a {
-                position: relative;
-                display: inline-block;
+                position: relative !important;
+                display: inline-block !important;
                 color: $tertiary-color !important;
                 background-color: none !important;
-                //rgba(8,18,28,1);
+                //rgba(8,18,28,1) !important;
                 background: url("/wp-content/themes/looptheme/assets/images/RedStoneArea.png") repeat !important;
                 background-size: 50% !important;
-                background-position: top left;
-                background-attachment: fixed;
+                background-position: top left !important;
+                background-attachment: fixed !important;
                 padding: 0.5em 0.725em !important;
                 margin-top: 10px !important;
                 margin-right: 0.5em !important;
@@ -298,3 +304,9 @@ html > body .container > footer a {
     color: $green-font-color !important;
   }
 }
+
+html > body i.fa {
+  &, * {
+    font-family: 'FontAwesome' !important;
+  }
+} 

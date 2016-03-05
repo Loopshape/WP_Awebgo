@@ -5,6 +5,17 @@
   width: device-width
 }
 
+@mixing list-unstyled {
+  ul, ol {
+    visibility: visible;
+  }
+}
+
+// Calculation definitions
+$line-height-computed: 120% !important;
+$screen-sm-min: 640px;
+$thumbnail-caption-padding: 15px;
+
 // Glyphicons font path
 $icon-font-path:        "../fonts/";
 
