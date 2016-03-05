@@ -1,9 +1,9 @@
 ﻿=== Contact Bank - Contact Forms Builder ===
 Contributors: contact-banker, Gallery-Bank
-Tags: admin, advanced form, best contact form plugin, buddypress, category, contact, contact button, contact form, contact form builder, Contact Form Builder with recaptcha, contact form plugin, contact forms, contact forms plugin, contact manager, contact us, contact us form, contacts form plugin, custom form, feedback, feedback form, feedback forms, form, forms, forms plugin, post feedback, web form, web-page feedback, wordpress contact form
-Requires at least: 3.0
+Tags: admin, advanced form, best contact form plugin, contact, contact button, contact form, contact form builder, Contact Form Builder with recaptcha, contact form plugin, contact forms, contact forms plugin, contact manager, contact us, contact us form, contacts form plugin, custom form, feedback, feedback form, feedback forms, form, forms, forms plugin, post feedback, web form, wordpress contact form
+Requires at least: 3.1
 Tested up to: 4.3.1
-Stable tag: 2.0.339
+Stable tag: 2.0.341
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -548,6 +548,14 @@ In order to set Shortcode for a Form, you need to follow these steps :
 
 
 == Changelog ==
+
+= 2.0.341 =
+
+* Few Bugs Fixed
+
+= 2.0.340 =
+
+* Few Formatting Issues Fixed.
 
 = 2.0.339 =
 
