@@ -4,6 +4,6 @@
 <br>
 <br>
 #### Visit Website-URL<br>
-http://loopshape.chimuwaves.de/
+http://loopshape.de/
 ----
-contact: awebgo.net@gmail.com
+contact: webscreen.designer@gmail.com
